@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>积杯说明</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <link rel="stylesheet" href="css/weuix.min.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script src="js/zepto.min.js"></script>
+    <!--<script src="js/vue.min.js"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <style>
+        .weui_article {
+            padding: 0;
+            font-size: inherit;
+        }
+        .weui_article p{
+            margin: 0;
+        }
+        .weui_article p.ban-3{
+            background-color: #f8f8f8;
+        }
+        .weui_article .slide{
+            overflow: inherit;
+            height: 350px;
+        }
+        .weui_article .slide li{
+            height: auto;
+        }
+        .weui_article .slide li a{
+            display: block;
+            height: auto;
+        }
+        .weui_article .slide li img{
+            height: auto;
+            display: block;
+        }
+        .weui_article .slide .dot span{
+            background-color: #b4b4b4;
+            width: 10px;
+            height: 10px;
+            border: none;
+        }
+        .weui_article .slide .dot .cur{
+            background-color: #f7ba5b;
+        }
+        .weui_article .weui_btn_area .ex-btn{
+            width: 40%;
+            border-radius: 30px;
+            background-color: #f7ba5b;
+            font-size: 22px;
+        }
+    </style>
+
+</head>
+<body>
+
+
+<div class="weui_article" id="activeIndex">
+    <section>
+        <p><img :src=""> </p>
+        <p><img :src=""> </p>
+        <p class="ban-3">
+            <img src="../../../static/b2b-reception/images/water/water-3.jpg">
+            <div class="weui_btn_area">
+                <a href="javascript:" class="weui_btn weui_btn_primary ex-btn">立即兑换</a>
+            </div>
+        </p>
+    </section>
+</div>
+
+<script src="js/active-index.js"></script>
+</body>
+
+</html>

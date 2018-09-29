@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>账户明细</title>
+    <link rel="stylesheet" href="../frame/weui-master/style/icon.css">
+    <link rel="stylesheet" href="../frame/weui-master/style/weui.css">
+    <link rel="stylesheet" href="../frame/weui-master/style/weui2.css">
+    <link rel="stylesheet" href="../frame/weui-master/style/weui3.css">
+    <link rel="stylesheet" href="../frame/weui-master/style/weuix.min.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/lottery.css">
+    <script src="../js/jQuery/jQuery-2.1.4.min.js"></script>
+    <script src="../frame/weui-master/zepto.min.js"></script>
+    <script>
+        $(function(){
+
+            //列表折叠
+            $('.js-category').click(function(){
+                $parent = $(this).parent('li');
+                if($parent.hasClass('js-show')){
+                    $parent.removeClass('js-show');
+                    $(this).find('i').removeClass('icon-35').addClass('icon-74');
+                }else{
+                    $parent.siblings().removeClass('js-show');
+                    $parent.addClass('js-show');
+                    $(this).find('i').removeClass('icon-74').addClass('icon-35');
+                    $parent.siblings().find('i').removeClass('icon-35').addClass('icon-74');
+                }
+            });
+        });
+
+
+    </script>
+</head>
+<body>
+
+<div class="weui_cells weui_cells-lottery-list">
+    <div class="weui_cell">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p class="f12">
+            七乐彩<b>【2017131】</b>三等奖
+            </p>
+            <p class="f12 f-gray">2017-05-23 11：08</p>
+        </div>
+        <div class="weui_cell_ft">
+            <p class="f-red">+ 100</p>
+            <p class="f12">余额：100</p>
+        </div>
+    </div>
+
+</div>
+
+<div class="page-bd point-img point-img-2">
+    <ul class="b2b-sea-list">
+        <li>
+            <div class="weui-flex js-category weui_cell">
+                <div class="weui-flex-item weui_cell_bd weui_cell_primary">
+                    <p class="point-col-black point-mar-bottom">彩金提现</p>
+                    <p class="point-col-black point-mar-bottom f-gray">2017-05-23 11：08</p>
+                </div>
+
+                <div class="weui_cell_ft">
+                    <p class="f-red">+ 100<i class="icon icon-74 f-gray"></i></p>
+                    <p class="f12">余额：100</p>
+                </div>
+            </div>
+            <div class="page-category js-categoryInner b2b-js-categoryInner b2b-js-categoryInner-2">
+                <div class="weui_cell">
+                    <div class="weui_cell_bd weui_cell_primary">
+                        <p class="f-gray">线下汇款</p>
+                    </div>
+                    <div class="weui_cell_ft">张三</div>
+                </div>
+                <div class="weui_cell">
+                    <div class="weui_cell_bd weui_cell_primary">
+                        <p><span class="red">1000</span>元</p>
+                    </div>
+                    <div class="weui_cell_ft">2017-07-17  18:45</div>
+                </div>
+            </div>
+        </li>
+
+    </ul>
+</div>
+<div class="weui_cells weui_cells-lottery-list weui_cells-lottery-list-2">
+    <div class="weui_cell">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p class="f12">彩金提现手续费</p>
+            <p class="f12">2017-05-23 11：08</p>
+        </div>
+        <div class="weui_cell_ft">
+            <p class="f12 f-green">-1</p>
+            <p class="f12">余额：99</p>
+        </div>
+    </div>
+
+    <div class="weui_cell">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p class="f12">双色球<b>【2017131】</b>三等奖</p>
+            <p class="f12 f-gray">2017-05-23 11：08</p>
+        </div>
+        <div class="weui_cell_ft">
+            <p class="f12 f-red">+100</p>
+            <p class="f12">余额：99</p>
+        </div>
+    </div>
+</div>
+<!--<div class="weui_btn_area">-->
+    <!--<a id="reset" href="javascript:" class="weui_btn weui_btn_primary" >返回</a>-->
+<!--</div>-->
+<section class="weui-menu borNt">
+    <a class="weui-menu-inner borNl weui_btn weui_btn_primary" href="#">
+        <span>返回</span>
+    </a>
+</section>
+</body>
+</html>

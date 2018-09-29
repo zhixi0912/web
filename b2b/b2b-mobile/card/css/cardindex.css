@@ -1,0 +1,388 @@
+@CHARSET "UTF-8";
+.cardbar{
+    width: 100%;
+    /* 	border-bottom: 1px solid #bcb8b5; */
+}
+.cardbarmain{
+    height:70px;
+    margin: 0 5px;
+    /* 	background-image:linear-gradient(to right,#218f2e,#42dc83); */
+    border-radius: 5px;
+    position: relative;
+}
+.cardbarmainimg{
+    width: 44px;
+    height:44px;
+    margin:0 20px;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    top: 13px;
+    overflow: hidden;
+}
+.cardbarmainimg img{
+    width: 100%;
+}
+.cardbarmainp{
+    position: absolute;
+    top: 20px;
+    left: 90px;
+}
+.cardbarmainr{
+    position: absolute;
+    right: 10px;
+    top:24px;
+    border-radius: 50px;
+    border: 1px solid #fff;
+    padding: 4px 6px
+}
+.bg-f2{
+    background: #ececec!important;
+}
+.electronics{
+    border: 1px solid #dcd6d6;
+    position: relative;
+    background: #fff;
+    border-radius: 5px;
+
+}
+.posl{
+    position: absolute;
+    left: -14px;
+    top:50%;
+    margin-top:-10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #ececec;
+    border-right: 1px solid #dcd6d6;
+}
+.posr{
+    position: absolute;
+    right: -14px;
+    top:50%;
+    margin-top:-10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #ececec;
+    border-left: 1px solid #dcd6d6;
+}
+.electronics .weui_cells_access .weui_cell:not(.no_access):active {
+    background-color: #ececec;
+}
+.f-gray82{
+    color:#828282;
+}
+.mt-4{
+    margin-top: -4px;
+}
+.poscardsrc2 img{
+    width:50px;
+    position: absolute;
+    right: 10px;
+    top:0px;
+}
+.member{
+    width: 100%;
+    position: relative;
+}
+.membermain{
+    width: calc(100% - 40px);
+    padding: 20px;
+}
+.membercard{
+    background-image:linear-gradient(to right,#218f2e,#42dc83);
+    border-radius:20px;
+}
+.memberlimg img{
+    width: 80px;
+    height:80px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.memberr{
+    border-radius: 50px;
+    border: 1px solid #fff;
+    padding: 4px 6px;
+}
+.memberbar{
+    width: 100%;
+}
+.wid50{
+    width: 50%;
+    box-sizing: border-box;
+}
+.borderr{
+    border-right: 1px solid #ccc;
+}
+.bordert{
+    border-top: 1px solid #ccc;
+    width: 95%;
+    margin: 0 auto;
+}
+.borderb{
+    border-bottom: 1px solid #ccc;
+    width: 95%;
+    margin: 0 auto;
+}
+
+
+
+
+.fix-btn{
+    bottom: 0;
+    position: fixed;
+    left: 0;
+    width: 100%;
+}
+.fix-btn .btn-num{
+    flex-grow:2;
+    color: #333;
+}
+.fix-btn .num-or{
+    color: #ff6600;
+}
+.fix-btn .btn-cl{
+    flex-grow:1;
+    background-color: #3aaa2c;
+    color: #fff;
+}
+.fix-btn .btn-cl-gr{
+    background-color: #d0d0d0;
+}
+.card-list .weui-flex{
+    padding-bottom: 15px;
+    display: block;
+}
+.card-list .weui-flex .weui-flex-item{
+    display: inline-block;
+    width: 32%;
+}
+.card-list .placeholder{
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    color: #999;
+}
+.card-list .ck .placeholder{
+    background-color: #3aaa2c;
+    color: #fff;
+    border-color: #3aaa2c;
+}
+.num-add .weui_cell_ft{
+    margin: 0 auto;
+}
+.num-add  .num-add-inp:before{
+    display: none
+}
+.num-add  .weui-number-input{
+    height: 60px
+
+}
+.num-add .weui-number{
+    height: 60px;
+    line-height: 58px;
+    min-width: 40px;
+    text-align: center;
+}
+.card-make .h-t2{
+    line-height: 60px;
+    padding-top: 30px;
+    text-indent: 5px;
+    color: #666;
+}
+.card-make .text-t1{
+    padding: 0 5px;
+    font-size: 12px;
+    color: #999;
+}
+.btn-bot{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+}
+.card-make .h-t1{
+    color: #333;
+    font-size: 16px;
+    padding-left:5px;
+}
+.card-make .h-t1 .h-t1-1{
+    color: #888;
+}
+.card-make .weui-number{
+    border: none;
+    color: #888;
+    font-size: 28px;
+}
+.f-t1{
+    color: #666;
+}
+.mt0{
+    margin-top:0 ;
+}
+.mtbefore:before,.mtbefore:after{
+    border: none;
+}
+
+/*2018-1-3ticketDetails景点门票样式*/
+.ticket{
+    position:relative;
+    top:10px;
+    margin:0 auto;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    background: #fff;
+    border-radius:10px;
+    /* overflow-x:hidden; */
+}
+.titletop{
+    width:100%;
+    height: 60px;
+    background: #f9f9f9;
+    border-bottom: 1px dashed #ccc;
+    position: relative;
+    border-radius: 5px;
+}
+.titletop:before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    display:block;
+    position:absolute;
+    left:-10px;
+    bottom:-10px;
+    background: #fd5e54;
+    border-radius: 50%;
+}
+.titletop:after{
+    content: "";
+    width: 20px;
+    height: 20px;
+    display:block;
+    position:absolute;
+    right:-10px;
+    bottom:-10px;
+    background: #fd5e54;
+    border-radius: 50%;
+}
+.titleimg{
+    height: 60px;
+    padding-left: 20px;
+    display: table-cell;
+    vertical-align: middle;
+    background: #f9f9f9;
+    border-radius: 5px;
+}
+.titleimg span{
+    margin-left: 10px;
+}
+.titleimg img{
+    width: 30px;
+    height: 30px;
+    vertical-align:middle;
+}
+.ticketmain{
+    width:95%;
+    margin:0 auto;
+    text-align: center;
+    padding-bottom:15px;
+    border-bottom: 1px dashed #ccc;
+}
+.mtbefore:before,.mtbefore:after{
+    border:none!important;
+}
+.introduction{
+    text-align: center;
+}
+.introduction img{
+    width: 95%;
+}
+.border-blbr{
+    border-radius: 0 0 5px 5px;
+}
+
+
+/* notice */
+.notice{
+    padding: 20px;
+}
+.noticetitle{
+    padding: 15px;
+    border-bottom: 1px solid;
+}
+.notice-p{
+    padding-top: 15px;
+    line-height: 30px;
+    text-indent: 2em;
+    color: #908f8f;
+}
+.intro{
+    padding: 15px;
+}
+.notice-p .intro{
+    text-indent: 0em;
+    text-align: center;
+}
+.notice-p .intro img{
+    width: 100%;
+}
+
+/* order */
+.order img{
+    width: 100%;
+}
+/* orderDetails*/
+.bg-white{
+    background: #fff;
+}
+.orderDetails-p{
+    padding: 10px;
+}
+/* 0104 */
+.f999{
+    color: #999;
+}
+.f4f{
+    color:#4f4f4f;
+}
+.f-red{
+    color:#fd5e54;
+}
+.btn60{
+    padding: 10px 0;
+    width: 60%;
+    margin: 0 auto;
+}
+.code-detail .titletop{
+    height: 100px;
+}
+.code-detail .titletop .titleimg{
+    padding: 0;
+    text-align: center;
+    line-height: 100px;
+    display: block;
+}
+.ticketmain-nobr{
+    border: none;
+}
+.ticketmain .code-img img{
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+.ticketmain .code-1{
+    padding: 20px 2%;
+}
+.ticketmain .code-1 img{
+    height: 100px;
+}
+.ticketmain .code-2{
+    padding: 20px 20%;
+    padding-bottom: 5px;
+}
+.noticep p{
+    line-height: 30px;
+    color: #908f8f;
+}

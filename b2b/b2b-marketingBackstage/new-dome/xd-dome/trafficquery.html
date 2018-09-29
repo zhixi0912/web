@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="wIDth=device-wIDth, initial-scale=1.0">
+    <!--360浏览器优先以webkit内核解析-->
+    <title>流量查询</title>
+    <link rel="shortcut icon" href="../../hAdmin/favicon.ico">
+    <link href="../../hAdmin/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="../../hAdmin/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="../../hAdmin/css/animate.css" rel="stylesheet">
+    <link href="../../frame/select2-4.0.3/css/select2.css" rel="stylesheet">
+    <link href="../../hAdmin/css/style.css" rel="stylesheet">
+    <link href="../../css/base.css?v=3.1.0" rel="stylesheet">
+    <link href="../../css/points-come/pointsCome.css" rel="stylesheet">
+
+</head>
+<body class="light-grey-bg">
+<div class="main">
+    <div class="white-bg">
+        <div class="page-header">
+            <h3 class="cooperh3">流量查询</h3>
+            <form class="form-horizontal clearfix">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">流量面额</label>
+                            <div class="col-sm-3">
+                                <select class="form-control sel-2">
+                                    <option>全部</option>
+                                    <option>100M</option>
+                                    <option>50M</option>
+                                    <option>20M</option>
+                                </select>
+                            </div>
+                            <label class="col-sm-2 control-label">商户</label>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control"  placeholder="请输入商户">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">充值手机</label>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control" placeholder="请输充值手机">
+                            </div>
+                            <label class="col-sm-2 control-label">处理状态</label>
+                            <div class="col-sm-3">
+                                <select class="form-control sel-2">
+                                    <option>全部</option>
+                                    <option>出票中</option>
+                                    <option>批处理</option>
+                                    <option>系统发放</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">成交时间</label>
+                            <div class="col-sm-2">
+                                <input type="email" class="form-control" placeholder="年/月/日">
+                            </div>
+                            <div class="fl control-label col-sm-1 tc">到</div>
+                            <div class="col-sm-2">
+                                <input type="email" class="form-control" placeholder="年/月/日">
+                            </div>
+                            <div class="col-sm-3 tr">
+                                <button type="button"class="btn btn-bg-orange ">查询</button>
+                                <button type="button" class="btn btn-gray ">导出</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+        <div class="page-body">
+            <table class="table table-bordered table-hover text-center btndemand">
+                <colgroup>
+                    <col class="col-xs-2"/>
+                    <col class="col-xs-2"/>
+                    <col class="col-xs-1"/>
+                    <col class="col-xs-2"/>
+                    <col class="col-xs-1"/>
+                    <col class="col-xs-1"/>
+                    <col class="col-xs-1"/>
+                </colgroup>
+                <thead>
+                <tr>
+                    <th class="text-center">成交时间</th>
+                    <th class="text-center">商户</th>
+                    <th class="text-center">订单号</th>
+                    <th class="text-center">用户ID</th>
+                    <th class="text-center">充值手机</th>
+                    <th class="text-center">流量面额（M）</th>
+                    <th class="text-center">处理状态</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2017-06-13 21:03：03</td>
+                        <td>上海来伊份食品有限公司</td>
+                        <td>20170613210303XX</td>
+                        <td>XXXXXXXXXX</td>
+                        <td>13885657530</td>
+                        <td>30</td>
+                        <td>出票中</td>
+                    </tr>
+                    <tr>
+                        <td>2017-06-13 21:03：03</td>
+                        <td>上海来伊份食品有限公司</td>
+                        <td>20170613210303XX</td>
+                        <td>XXXXXXXXXX</td>
+                        <td>13885657530</td>
+                        <td>30</td>
+                        <td>系统发放</td>
+                    </tr>
+                    <tr>
+                        <td>2017-06-13 21:03：03</td>
+                        <td>上海来伊份食品有限公司</td>
+                        <td>20170613210303XX</td>
+                        <td>XXXXXXXXXX</td>
+                        <td>13885657530</td>
+                        <td>30</td>
+                        <td>系统发放</td>
+                    </tr>
+                    <tr>
+                        <td>2017-06-13 21:03：03</td>
+                        <td>上海来伊份食品有限公司</td>
+                        <td>20170613210303XX</td>
+                        <td>XXXXXXXXXX</td>
+                        <td>13885657530</td>
+                        <td>30</td>
+                        <td>批处理</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="text-center">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-white"><i class="fa fa-chevron-left"></i>
+                    </button>
+                    <button class="btn btn-white">1</button>
+                    <button class="btn btn-white  active">2</button>
+                    <button class="btn btn-white">3</button>
+                    <button class="btn btn-white">4</button>
+                    <button type="button" class="btn btn-white"><i class="fa fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 全局js -->
+<script src="../../hAdmin/js/jquery.min.js?v=2.1.4"></script>
+<script src="../../hAdmin/js/bootstrap.min.js?v=3.3.6"></script>
+<script src="../../hAdmin/js/plugins/layer/layer.min.js"></script>
+<!-- Flot -->
+<script src="../../hAdmin/js/plugins/flot/jquery.flot.js"></script>
+<script src="../../hAdmin/js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+<script src="../../hAdmin/js/plugins/flot/jquery.flot.resize.js"></script>
+<script src="../../hAdmin/js/plugins/flot/jquery.flot.pie.js"></script>
+<!-- select2-4.0.3 -->
+<script src="../../frame/select2-4.0.3/js/select2.js"></script>
+<!-- 自定义js -->
+<script>
+    $(function () {
+        $(".sel-2").select2();
+    })
+</script>
+</body>
+</html>

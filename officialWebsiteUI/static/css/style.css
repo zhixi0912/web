@@ -1,0 +1,166 @@
+
+body{
+    background-color: #ffffff;
+}
+pre{
+    border: 1px solid #ccc;
+}
+.bs-example{
+    padding: 10px 0;
+}
+
+
+
+
+/*
+*input start
+*/
+.help-block{
+    color: #A8434D;
+    font-size: 12px;
+}
+.ps-control-label{
+    font-weight: normal;
+}
+.ps-star{
+    color: #ff0000;
+    margin-right: 3px;
+}
+.ps-form-control-lg{
+    border: none;
+    height: 40px;
+    border-radius:2px;
+    background-color: #F2F2F2;
+    -webkit-box-shadow:0px 1px 0px #B4B4B5;
+    box-shadow:0px 1px 0px #B4B4B5;
+}
+.ps-form-control-sm{
+    border: none;
+    height: 30px;
+    border-radius:2px;
+    background-color: #F2F2F2;
+    -webkit-box-shadow:0px 1px 0px #B4B4B5;
+    box-shadow:0px 1px 0px #B4B4B5;
+}
+.form-control:focus {
+    border-color: #3D434E;
+    outline: 0;
+    -webkit-box-shadow: 0px 1px 0px #3D434E;;
+    box-shadow: 0px 1px 0px #3D434E;;
+}
+.ps-form-control-warning{
+    background-color: #FFD6DA;
+    -webkit-box-shadow:0px 1px 0px #BA737A;
+    box-shadow:0px 1px 0px #BA737A;
+}
+.ps-form-control-success{
+    color: #63A740;
+    background-color: #D6FFDD;
+    -webkit-box-shadow:0px 1px 0px #5D8D55;
+    box-shadow:0px 1px 0px #5D8D55;
+}
+
+/*
+*btn start
+*/
+.ps-btn-lg{
+    border:none;
+    min-width: 200px;
+    min-height: 40px;
+    line-height: 28px;
+}
+.ps-btn-sm{
+    border:none;
+    min-width: 200px;
+    min-height: 30px;
+}
+.ps-btn-yellow{
+    color: #FAEAD0;
+    background-color: #F29600;
+    -webkit-box-shadow:0px 1px 0px #8C644E;
+    box-shadow:0px 1px 0px #8C644E;
+}
+.ps-btn-yellow:hover{
+    color: #F29600;
+    background-color: #FAEAD0;
+    -webkit-box-shadow:0px 1px 0px #F29600;
+    box-shadow:0px 1px 0px #F29600;
+}
+.ps-btn-yellow:focus{
+    color: #FAEAD0;
+    background-color: #F29600;
+    -webkit-box-shadow:inset 0px 1px 0px #8C644E;
+    box-shadow:inset 0px 1px 0px #8C644E;
+}
+.ps-btn-darkgrey{
+    color: #FFFFFF;
+    background-color: #B4B4B5;
+    -webkit-box-shadow:0px 1px 0px #999999;
+    box-shadow:0px 1px 0px #999999;
+}
+.ps-btn-darkgrey:hover{
+    color: #999999;
+    background-color: #F2F2F2;
+    -webkit-box-shadow:0px 1px 0px #B4B4B5;
+    box-shadow:0px 1px 0px #B4B4B5;
+}
+.ps-btn-darkgrey:focus{
+    color: #FFFFFF;
+    background-color: #999999;
+    -webkit-box-shadow:inset 0px 1px 0px #3D434E;
+    box-shadow:inset 0px 1px 0px #3D434E;
+}
+
+.ps-btn-lightgrey{
+    color: #B4B4B5;
+    background-color: #F2F2F2;
+    -webkit-box-shadow:none;
+    box-shadow:none;
+}
+.ps-btn-lightgrey:hover{
+    color: #B4B4B5;
+    background-color: #F2F2F2;
+    -webkit-box-shadow:none;
+    box-shadow:none;
+}
+.ps-btn-lightgrey:focus{
+    color: #B4B4B5;
+    background-color: #F2F2F2;
+    -webkit-box-shadow:none;
+    box-shadow:none;
+}
+/*
+*text start
+*/
+.ps-text-bgred{
+    color: #000000;
+    padding: 20px;
+    background-color: #FFD6DA;
+    border-radius:4px;
+    -webkit-box-shadow:inset 0px 1px 0px #A8434D;
+    box-shadow:0px 1px 0px #A8434D;
+}
+.ps-text-bgdarkgrey{
+    color: #000000;
+    padding: 20px;
+    background-color: #F2F2F2;
+    border-radius:4px;
+    -webkit-box-shadow:inset 0px 1px 0px #3D434E;
+    box-shadow:0px 1px 0px #3D434E;
+}
+.ps-text-bglightgrey{
+    color: #999999;
+    padding: 20px;
+    background-color: #F2F2F2;
+    border-radius:4px;
+    -webkit-box-shadow:inset 0px 1px 0px #B4B4B5;
+    box-shadow:0px 1px 0px #B4B4B5;
+}
+/*
+*time start
+*/
+.datetimepicker{
+    background-image: url("../images/calendar.png");
+    background-repeat: no-repeat;
+    background-position: 98% center;
+}

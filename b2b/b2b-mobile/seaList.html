@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>销售业绩查询</title>
+    <link rel="stylesheet" href="frame/weui-master/style/icon.css">
+    <link rel="stylesheet" href="frame/weui-master/style/weui.css">
+    <link rel="stylesheet" href="frame/weui-master/style/weui2.css">
+    <link rel="stylesheet" href="frame/weui-master/style/weui3.css">
+    <link rel="stylesheet" href="frame/weui-master/style/weuix.min.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jQuery/jQuery-2.1.4.min.js"></script>
+    <script src="frame/weui-master/zepto.min.js"></script>
+    <script>
+        var shopNum = 16;
+        $(function(){
+            //搜索加载
+            $('.searchbar_wrap').searchBar({
+                cancelText:"取消",
+                searchText:'查询',
+                onfocus: function (value) {
+
+                },
+                onblur:function(value) {
+
+                },
+                oninput: function(value) {
+
+                },
+                onsubmit:function(value){
+                },
+                oncancel:function(){
+
+                },
+
+                onclear:function(){
+
+                }
+            });
+            //列表折叠
+            $('.js-category').click(function(){
+                $parent = $(this).parent('li');
+                if($parent.hasClass('js-show')){
+                    $parent.removeClass('js-show');
+                    $(this).children('i').removeClass('icon-35').addClass('icon-74');
+                }else{
+                    $parent.siblings().removeClass('js-show');
+                    $parent.addClass('js-show');
+                    $(this).children('i').removeClass('icon-74').addClass('icon-35');
+                    $parent.siblings().find('i').removeClass('icon-35').addClass('icon-74');
+                }
+            });
+            //合计金额
+            var numb = 0;
+            $(".b2b-sea-list li").each(function () {
+                numb = numb + parseInt($(this).find(".red").text());
+                $("#rmb").text(numb);
+            });
+
+
+
+            scrollBottomTest();
+            addList(shopNum)
+
+
+        });
+
+
+
+
+
+
+        scrollBottomTest =function(){
+            $(window).scroll(function(){
+
+                var viewH =$(document).height();//可见高度
+                var contentH =$(window).height();//内容高度
+                var scrollTop =$(window).scrollTop();//滚动高度
+
+                if(viewH == contentH + scrollTop){ //到达底部100px时,加载新内容
+                    // 这里加载数据..
+                    shopNum+=4;
+                    addList(shopNum);
+                    console.log(viewH,contentH,scrollTop);
+                }else if(scrollTop==0){
+                    console.log("到顶了");
+                }
+
+            });
+        }
+
+        function addList(shopNum){
+
+            var str = '<li>'
+            +'<div class="weui-flex js-category">'
+            +'<div class="weui-flex-item">'
+            +'<p class="point-col-black point-mar-bottom">雪碧王者666第二弹</p>'
+            +'</div>'
+            +'<i class="icon icon-74 f-gray"></i>'
+            +'</div>'
+            +'<div class="page-category js-categoryInner b2b-js-categoryInner">'
+            +'<div class="weui_cell">'
+            +'<div class="weui_cell_bd weui_cell_primary">'
+            +'<p class="f-gray">线下汇款</p>'
+            +'</div>'
+            +'<div class="weui_cell_ft">张三</div>'
+            +'</div>'
+            +'<div class="weui_cell">'
+            +'<div class="weui_cell_bd weui_cell_primary">'
+            +'<p><span class="red">1020</span>元</p>'
+            +'</div>'
+            +'<div class="weui_cell_ft">2017-07-17  18:45</div>'
+            +'</div>'
+            +'</div>'
+            +'</li>';
+
+            for (var i=0;i<shopNum;i++){
+//                console.log(shopNum);
+                $(".b2b-sea-list").append(str);
+            }
+
+
+            var str = '<li>'
+                    +'<div class="weui-flex js-category">'
+                    +'<div class="weui-flex-item"> '
+                    +'</div>'
+                    +'</div>';
+            for (var i=0;i<numb;i++){
+                  var it = inter.i;
+            }
+        }
+    </script>
+</head>
+<body>
+
+<div class="searchbar_wrap">
+</div>
+
+<div class="page-bd point-img">
+    <ul class="b2b-sea-list">
+        <li>
+            <div class="weui-flex js-category">
+                <div class="weui-flex-item">
+                    <p class="point-col-black point-mar-bottom">雪碧王者666第二弹</p>
+                </div>
+                <i class="icon icon-74 f-gray"></i>
+            </div>
+            <div class="page-category js-categoryInner b2b-js-categoryInner">
+                <div class="weui_cell">
+                    <div class="weui_cell_bd weui_cell_primary">
+                        <p class="f-gray">线下汇款</p>
+                    </div>
+                    <div class="weui_cell_ft">张三</div>
+                </div>
+                <div class="weui_cell">
+                    <div class="weui_cell_bd weui_cell_primary">
+                        <p><span class="red">1000</span>元</p>
+                    </div>
+                    <div class="weui_cell_ft">2017-07-17  18:45</div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="weui-flex js-category">
+                <div class="weui-flex-item">
+                    <p class="point-col-black point-mar-bottom">雪碧王者666第二弹</p>
+                </div>
+                <i class="icon icon-74 f-gray"></i>
+            </div>
+            <div class="page-category js-categoryInner b2b-js-categoryInner">
+                <div class="weui_cell">
+                    <div class="weui_cell_bd weui_cell_primary">
+                        <p class="f-gray">线下汇款</p>
+                    </div>
+                    <div class="weui_cell_ft">张三</div>
+                </div>
+                <div class="weui_cell">
+                    <div class="weui_cell_bd weui_cell_primary">
+                        <p><span class="red">1020</span>元</p>
+                    </div>
+                    <div class="weui_cell_ft">2017-07-17  18:45</div>
+                </div>
+            </div>
+        </li>
+
+    </ul>
+</div>
+
+<div class="bottom-btn">
+    合计：<span class="red" id="rmb"></span>元
+</div>
+</body>
+</html>

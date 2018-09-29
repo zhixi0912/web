@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <!--360浏览器优先以webkit内核解析-->
+    <title>领取码</title>
+    <link rel="shortcut icon" href="hAdmin/favicon.ico">
+    <link href="hAdmin/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="hAdmin/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="frame/select2-4.0.3/css/select2.min.css?v=3.3.6" rel="stylesheet">
+    <link href="frame/datetimepicker/js/jquery-ui.css" rel="stylesheet">
+    <link href="frame/datetimepicker/jQuery-Timepicker-Addon/jquery-ui-timepicker-addon.css" rel="stylesheet">
+    <link href="hAdmin/css/animate.css" rel="stylesheet">
+    <link href="css/base.css?v=3.1.0" rel="stylesheet">
+    <link href="hAdmin/css/style.css?v=4.1.0" rel="stylesheet">
+    <link href="css/iframe-page.css" rel="stylesheet">
+    <link href="css/game/game-activity.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/page1.css">
+    <link rel="stylesheet" href="frame/weui-master/style/weuix.min.css">
+    <script src="hAdmin/js/jquery.min.js"></script>
+    <script src="frame/weui-master/zepto.min.js"></script>
+    <script>
+        $(document).on("click", "#showToast", function() {
+            $.toast("操作成功");
+        });
+
+        $(document).on("click", "#show-toast-cancel", function() {
+            $.toast("取消操作", "cancel");
+        });
+        $(document).on("click", "#show-toast-3", function() {
+            $.toast("禁止操作", "forbidden");
+        });
+        $(document).on("click", "#showLoading", function() {
+            $.showLoading();
+
+            setTimeout(function() {
+                $.hideLoading();
+            }, 3000)
+        });
+
+        $(document).on("click", "#sd1", function() {
+            $.alert("弹出对话框就是好", "标题");
+        });
+        $(document).on("click", "#sd2", function() {
+            $.confirm("您确定要删除吗?", "确认删除?", function() {
+                $.toast("删除成功!");
+            }, function() {
+                //取消操作
+            });
+        });
+        $(document).on("click", "#sd3", function() {
+            $.prompt("输入昵称看看", "你的昵称", function(text) {
+                $.alert("您的昵称是:"+text, "哦");
+            }, function() {
+                //取消操作
+            });
+        });
+        $(document).on("tap", "#sd4", function() {
+            $.modal({
+                title: "支付方式",
+                text: "选择你的支付方式",
+                buttons: [
+                    { text: "支付宝", onClick: function(){ $.alert("你选择了支付宝"); } },
+                    { text: "微信支付", onClick: function(){ $.alert("你选择了微信支付"); } },
+                    { text: "取消", className: "default"},
+                ]
+            });
+        });
+
+
+        $(function(){
+            $(document).on("click", "#sd5", function() {
+                $.toptips("错误提示");
+            });
+
+        })
+
+
+
+
+    </script>
+
+
+</head>
+<body>
+    <div class="tab-position">
+        <button class=" btn-red btn-red-bg btn-rule">规则</button>
+    </div>
+    <img class="mobile-bg" src="images/game/szm-bg.png">
+    <div class="mobile-box mobile-border">
+        <p class="pt20 f18 text-center f-red">奖品领取码</p>
+        <div class="border-bottom m20 ptb10">
+            <input type="text" class="mobile-box-input f14 text-center codeInput" placeholder="请输入您的奖品领取码">
+        </div>
+        <div class="text-center">
+            <button class="btn btn-w-m btn-red btnCodeNext" id="sd1">下一步</button>
+        </div>
+    </div>
+    <!--规则遮罩层-->
+    <div class="szmmask">
+        <div class="p5">
+            <ul class="nav nav-tabs szmmask-ul">
+                <li class="active"><a data-toggle="tab" href="#tab-1" aria-expanded="true"> 规则描述</a>
+                </li>
+                <li class=""><a data-toggle="tab" href="#tab-2" aria-expanded="false">中奖记录</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div id="tab-1" class="tab-pane active">
+                    <div class="panel-body">
+                        <div class="pt10">
+                            <p>规则描述：</p>
+                            <p class="f-black">感恩回馈大转盘</p>
+                        </div>
+                        <div class="pt10">
+                            <p>活动时间：</p>
+                            <p class="f-black">2017.9.22-2016.10.31</p>
+                        </div>
+                        <div class="pt10">
+                            <p>活动奖品：</p>
+                            <p class="f-black">通用积分，让天下没有被浪费的积分！</p>
+                        </div>
+                        <div class="pt10">
+                            <p>发奖时间：</p>
+                            <p class="f-black">中奖后，即时发放。</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="tab-2" class="tab-pane">
+                    <div class="panel-body">
+                        <ul class="szmmaskUlli">
+                            <li>
+                                <p class="f14 f-black">食之秘老客户感恩大回馈</p>
+                                <div class="clearfix">
+                                    <p class="fl">彩票一注</p>
+                                    <p class="fr">2017-05-23  11:08</p>
+                                </div>
+                            </li>
+                            <li>
+                                <p class="f14 f-black">食之秘大转盘</p>
+                                <div class="clearfix">
+                                    <p class="fl">镒钡积分500分</p>
+                                    <p class="fr">2017-05-23  11:08</p>
+                                </div>
+                            </li>
+                            <li>
+                                <p class="f14 f-black">食之秘刮刮乐</p>
+                                <div class="clearfix">
+                                    <p class="fl">流量500M</p>
+                                    <p class="fr">2017-05-23  11:08</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="p10 text-center">
+            <button class="btn btn-w-m btn-red btn-back">返回</button>
+        </div>
+    </div>
+    <div class="szmPopupfather">
+
+        <div class="szmPopup">
+            <div class=" szmCenter p15 pb20">
+                <label class="pt30">姓名：</label><input type="text" placeholder="请输入姓名" />
+                <label class="pt30">手机号：</label><input type="text" placeholder="请输入手机号" />
+                <label class="pt30">验证码：</label><input type="text" placeholder="请输入验证码" />
+            </div>
+            <div class="text-center">
+                <button class="btn btn-w-m btn-red btnCodeNext">领取奖品</button>
+            </div>
+            <div class="close_zj"><img src="images/game/close_1.png"></div>
+        </div>
+    </div>
+
+
+<!-- 全局js -->
+
+<!--<script src="hAdmin/js/bootstrap.min.js?v=3.3.6"></script>-->
+<!--<script src="hAdmin/js/plugins/layer/layer.min.js"></script>-->
+<script src="js/form-validator/game/game-szmmrsk.js"></script>
+
+</body>
+</html>

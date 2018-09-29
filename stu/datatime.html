@@ -1,0 +1,111 @@
+                                                                                                            <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>时间控件</title>
+    <link type="text/css" href="css/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" href="css/xinjin.css" rel="stylesheet"/>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="js/datapicker/jquery-ui.css">
+    <link rel="stylesheet" href="js/datapicker/style.css">
+    <link rel="stylesheet" href="js/swiper/swiper.min.css">
+    <link rel="stylesheet" href="css/xinjin-alert.css">
+
+</head>
+<body id="iframe">
+<div id="wrapper">
+    <!--右侧内容-->
+    <div id="page-wrapper" class="newFix">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label   class="col-sm-2 control-label text-center">活动周期：</label>
+                            <label   class="col-sm-1 control-label">开始时期</label>
+                            <div class="col-sm-2">
+                                <input type="text" id="start1"
+                                       class="form-control b2b-datetimepicker" name="start1" />
+                                <span id="start1Tip" class="help-block m-b-none"></span>
+                            </div>
+                            <label   class="col-sm-1 control-label">结束时间</label>
+                            <div class="col-sm-2">
+                                <input type="text" class="form-control b2b-datetime" id="end1" name="end1"/>
+                                <span id="end1Tip" class="help-block m-b-none"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label   class="col-sm-2 control-label text-center"></label>
+                            <label   class="col-sm-1 control-label">每日开始时间</label>
+                            <div class="col-sm-2">
+                                <input type="text" class="form-control b2b-time" id="startTime1" name="startTime1"/>
+                                <span id="startTime1Tip" class="help-block m-b-none"></span>
+                            </div>
+                            <label   class="col-sm-1 control-label">每日结束时间</label>
+                            <div class="col-sm-2">
+                                <input type="text" class="form-control b2b-time" id="endTime1" name="endTime1"/>
+                                <span id="endTime1Tip" class="help-block m-b-none"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--<script src="https://cdn.bootcss.com/jquery/1.11.1/jquery.js"></script>-->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<!--<script type="text/javascript" src="http://code.jquery.com/ui/1.11.0/jquery-ui.min.js"></script>-->
+<!--<script type="text/javascript" src="js/datapicker/jquery-ui.min.js"></script>-->
+<!--<script type="text/javascript" src="http://code.jquery.com/ui/1.9.1/jquery-ui.min.js"></script>-->
+<!--<script src="js/datetimepicker/jQuery-Timepicker-Addon/jquery-ui-timepicker-addon.js" type="text/javascript"></script>-->
+<!--<script src="js/datetimepicker/js/jquery.ui.datepicker-zh-CN.js.js" type="text/javascript"></script>-->
+<!--<script src="js/datetimepicker/js/jquery-ui-timepicker-zh-CN.js" type="text/javascript"></script>-->
+<script src="js/datetimepicker/1.11.0/jquery-ui.js" type="text/javascript"></script>
+<script src="js/datetimepicker/1.11.0/jquery-ui-timepicker-addon.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/swiper/swiper.js"></script>
+<script type="text/javascript" src="js/xinjin-alert.js"></script>
+<script type="text/javascript" src="js/formData/draw.js"></script>
+<script type="text/javascript" src="js/ajaxform.js"></script>
+<script type="text/javascript" src="js/vue.js"></script>
+
+<script>
+
+    $(function(){
+        $('.b2b-datetimepicker').datetimepicker({
+            needDay : true,
+            changeMonth : true, //显示月份
+            changeYear : true, //显示年份
+            showButtonPanel : true, //显示按钮
+            dateFormat : "yy-mm-dd"
+        });
+        // 时间设置
+        $('.b2b-datetime').datepicker({
+            needDay : true,
+            changeMonth : true, //显示月份
+            changeYear : true, //显示年份
+            showButtonPanel : true, //显示按钮
+            dateFormat : "yy-mm-dd"
+        });
+        $('.b2b-time').timepicker({
+            //showButtonPanel: false, //显示按钮
+            controlType: 'select',
+            //timeFormat: "HH:mm tt",
+        });
+    });
+
+
+</script>
+</body>
+</html>

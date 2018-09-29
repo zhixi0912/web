@@ -1,0 +1,26 @@
+
+.main{
+    padding-top: 34px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.light-grey-bg{
+    background-color: #f7f7f7;
+}
+.panel-padder-v{
+    padding-bottom: 40px;
+}
+.panel-padder-v h3{
+    text-indent: 15px;
+}
+.panel-padder-v .row{
+    margin-right: 0;
+    margin-left: 55px;
+    padding-top: 30px;
+}
+.panel-padder-v .row .text-h1{
+    font-size: 14px;
+}
+.warning-h1{
+
+}

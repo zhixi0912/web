@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>流量钱包</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <link rel="stylesheet" href="../../frame/weui-master/style/icon.css">
+    <link rel="stylesheet" href="../../frame/weui-master/style/weui.css">
+    <link rel="stylesheet" href="../../frame/weui-master/style/weui2.css">
+    <link rel="stylesheet" href="../../font/style.css">
+    <link rel="stylesheet" href="../../css/points-come/points-come.css">
+    <!--<script src="js/jQuery/jQuery-2.1.4.min.js"></script>-->
+    <script src="../../frame/weui-master/zepto.min.js"></script>
+    <script src="../../frame/weui-master/picker.js"></script>
+    <script src="../../frame/weui-master/select.js"></script>
+    <link rel="stylesheet" href="../../css/base.css">
+
+</head>
+
+<body ontouchstart style="background-color: #EBEBEB;">
+<div class="flow-wallet-head">
+    <div class="head-num">
+        350<span>M</span>
+    </div>
+    <a href="flowExchange.html" class="weui_btn weui_btn_plain_default f15">立即兑换</a>
+</div>
+<div class="weui_tab flow-wallet mb50" id="tab4">
+    <div class="weui_navbar">
+        <div class="weui_navbar_item tl f-888d95 pl15">免费流量明细</div>
+        <!--<div class="weui_navbar_item f-9292" onclick="form1()">积分兑换</div>-->
+    </div>
+    <div class="weui_tab_bd weui-hidden">
+        <!--扫码获积分-->
+        <div class="weui_tab_bd_item">
+            <form id="form1">
+                <div class="weui_cells weui_clls_checkbox mt1">
+                    <div class="weui_cells mt1">
+                        <div class="weui_cell">
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <p class="tx1">活动名称</p>
+                                <p class="tx2">2018-01-01 12:11:11</p>
+                            </div>
+                            <div class="weui_cell_ft">
+                                <p class="tx3 f-green ">+100 M</p>
+                                <p class="tx4">余额：100 M</p>
+                            </div>
+                        </div>
+                        <div class="weui_cell">
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <p class="tx1">活动名称</p>
+                                <p class="tx2">2018-01-01 12:11:11</p>
+                            </div>
+                            <div class="weui_cell_ft">
+                                <p class="tx3 f-red ">-100 M</p>
+                                <p class="tx4">余额：100 M</p>
+                            </div>
+                        </div>
+                        <div class="weui_cell">
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <p class="tx1">活动名称</p>
+                                <p class="tx2">2018-01-01 12:11:11</p>
+                            </div>
+                            <div class="weui_cell_ft">
+                                <p class="tx3 f-green">+100 M</p>
+                                <p class="tx4">余额：100 M</p>
+                            </div>
+                        </div>
+                        <div class="weui_cell">
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <p class="tx1">活动名称</p>
+                                <p class="tx2">2018-01-01 12:11:11</p>
+                            </div>
+                            <div class="weui_cell_ft">
+                                <p class="tx3 f-red ">-100 M</p>
+                                <p class="tx4 ">余额：100 M</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!--积点活动-->
+        <!--<div class="weui_tab_bd_item" style="display: none;">-->
+            <!--<form id="form2">-->
+                <!--<div class="weui_cells weui_clls_checkbox mt1">-->
+                    <!--<div class="weui_cells mt1">-->
+                        <!--<div class="weui_cell">-->
+                            <!--<div class="weui_cell_bd weui_cell_primary">-->
+                                <!--<p class="tx1">活动名称</p>-->
+                                <!--<p class="tx2">2018-01-01 12:11:11</p>-->
+                            <!--</div>-->
+                            <!--<div class="weui_cell_ft">-->
+                                <!--<p class="tx3 f-green">+100 M</p>-->
+                                <!--<p class="tx4">余额：100 M</p>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="weui_cell">-->
+                            <!--<div class="weui_cell_bd weui_cell_primary">-->
+                                <!--<p class="tx1">活动名称</p>-->
+                                <!--<p class="tx2">2018-01-01 12:11:11</p>-->
+                            <!--</div>-->
+                            <!--<div class="weui_cell_ft">-->
+                                <!--<p class="tx3 f-red">-100 M</p>-->
+                                <!--<p class="tx4">余额：100 M</p>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="weui_cell">-->
+                            <!--<div class="weui_cell_bd weui_cell_primary">-->
+                                <!--<p class="tx1">活动名称</p>-->
+                                <!--<p class="tx2">2018-01-01 12:11:11</p>-->
+                            <!--</div>-->
+                            <!--<div class="weui_cell_ft">-->
+                                <!--<p class="tx3 f-green ">+100 M</p>-->
+                                <!--<p class="tx4">余额：100 M</p>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="weui_cell">-->
+                            <!--<div class="weui_cell_bd weui_cell_primary">-->
+                                <!--<p class="tx1">活动名称</p>-->
+                                <!--<p class="tx2">2018-01-01 12:11:11</p>-->
+                            <!--</div>-->
+                            <!--<div class="weui_cell_ft">-->
+                                <!--<p class="tx3 f-red">-100 M</p>-->
+                                <!--<p class="tx4">余额：100 M</p>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="weui_cell">-->
+                            <!--<div class="weui_cell_bd weui_cell_primary">-->
+                                <!--<p class="tx1">活动名称</p>-->
+                                <!--<p class="tx2">2018-01-01 12:11:11</p>-->
+                            <!--</div>-->
+                            <!--<div class="weui_cell_ft">-->
+                                <!--<p class="tx3 f-red">-100 M</p>-->
+                                <!--<p class="tx4">余额：100 M</p>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="weui_cell">-->
+                            <!--<div class="weui_cell_bd weui_cell_primary">-->
+                                <!--<p class="tx1">活动名称</p>-->
+                                <!--<p class="tx2">2018-01-01 12:11:11</p>-->
+                            <!--</div>-->
+                            <!--<div class="weui_cell_ft">-->
+                                <!--<p class="tx3 f-red">-100 M</p>-->
+                                <!--<p class="tx4">余额：100 M</p>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="weui_cell">-->
+                            <!--<div class="weui_cell_bd weui_cell_primary">-->
+                                <!--<p class="tx1">活动名称</p>-->
+                                <!--<p class="tx2">2018-01-01 12:11:11</p>-->
+                            <!--</div>-->
+                            <!--<div class="weui_cell_ft">-->
+                                <!--<p class="tx3 f-red">-100 M</p>-->
+                                <!--<p class="tx4">余额：100 M</p>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</form>-->
+        <!--</div>-->
+    </div>
+
+</div>
+<section class="weui-menu borNt active-list-btn">
+    <a class="weui-menu-inner borNt" href="index.html">
+        <span>个人中心</span>
+    </a>
+</section>
+<script>
+    $(function () {
+        $('#tab4').tab({defaultIndex:0,activeClass:"tab-blue "});   })
+    function form1() {
+        document.getElementById("form1").reset()
+        return
+    }
+    function form2() {
+        document.getElementById("form2").reset()
+        return
+    }
+</script>
+</body>
+
+</html>

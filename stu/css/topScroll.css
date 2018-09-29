@@ -1,0 +1,97 @@
+/*¹ö¶¯*/
+
+.txtMarquee-top {
+    padding-top: 20px;
+}
+
+.tempWrap li {
+    width: 300px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #43b4e9;
+}
+
+.tempWrap ul li span {
+    color: #43b4e9;
+    font-size: 14px;
+    font-weight: 700
+}
+
+.tempWrap ul li a {
+    color: #43b4e9;
+    font-size: 14px;
+}
+
+/*ÌáÐÑ*/
+
+.remind {
+    width: 400px;
+    position:fixed;
+    bottom: -300px;
+    right: 22px;
+    /*border: 1px solid #ccc;*/
+    box-shadow:0 0 10px #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 30;
+}
+
+.remind-header {
+    width: 100%;
+    line-height: 35px;
+    background-color: #f6f6f6;
+    padding-left: 12px;
+
+}
+.remind-header button {
+     background-color: #fff;
+     width: 84px;
+     height: 24px;
+     border: 1px solid #d8d8d8;
+     border-radius: 5px;
+     line-height: 14px;
+    float: right;
+    margin: 5px 10px 0 0;
+ }
+.remind-header b {
+    float: right;
+    display: inline-block;
+    height: 14px;
+    width: 14px;
+    margin: 10px 10px 0 0;
+    background-image: url("../images/close.gif");
+    cursor: pointer;
+}
+.remind-header span {
+    font-size: 14px;
+    height: 35px;
+    color: #f86b56;
+}
+
+.remind-header i {
+    margin-left: 10px;
+    font-style: normal;
+}
+.remind-header em {
+    font-style: normal;
+}
+.remind-body ul{
+    margin: 0;
+    padding: 0 16px;
+    height: 222px;
+    overflow:auto
+}
+.remind-body {
+    background-color: #fff;
+
+}
+.remind-body p {
+    margin: 0;
+    line-height: 18px;
+}
+.remind-body li {
+    /*height: 55px;*/
+    padding: 10px;
+    border-bottom: 1px solid #f2f0f0;
+}

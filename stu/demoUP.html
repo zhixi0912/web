@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>列表</title>
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="css/font-awesome.css">
+    <style>
+        .mtb0{
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        .ps-file{
+            position: absolute; top: 5px;left: 18px;height: 100px;width: 100px;opacity: 0;
+        }
+        .row-main{
+            padding: 20px;
+        }
+
+
+        /*box*/
+        .up-box{
+            width: 500px;
+            padding: 20px;
+        }
+        .up-box .form-control{
+            padding: 0 100px 0 30px;
+            border-radius: 0;
+        }
+        .form-control-feedback-l{
+            left: 15px;
+            top:0;
+            line-height: 34px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .form-control-feedback-r{
+            width: auto;
+            padding: 7px 0px;
+            cursor: pointer;
+            color: #999;
+            z-index: 999;
+            pointer-events:auto;
+        }
+        .form-control-feedback-r a{
+            border-left: 1px solid #999;
+            display: block;
+            padding: 0 10px;
+            height: 20px;
+            line-height: 20px;
+            color: #999;
+        }
+        .form-control-feedback{
+            right: 20px;
+        }
+        a:focus, a:hover {
+            color: #999;
+            text-decoration: none;
+        }
+
+        /*numb-box*/
+        .numb-box{
+            width: 600px; margin: 200px auto
+        }
+    </style>
+</head>
+<body>
+<div class="numb-box">
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label class="col-sm-2 control-label">输入金额：</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="number" placeholder="请输入金额" maxlength="10">
+                <span class="help-block mtb0"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">统计结果：</label>
+            <div class="col-sm-10">
+                <p class="form-control-static" ><span id="showNumber"></span>元</p>
+            </div>
+        </div>
+    </form>
+</div>
+<div style=" width: 600px; margin: 200px auto">
+    <button id="demo" value="" class="btn btn-danger">新建资源</button>
+    <button id="demo2" value="" class="btn btn-danger">立即支付</button>
+</div>
+<script id="up-main" type="text/template">
+    <div class="row-main">
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label  class="col-sm-2 control-label">资源名称：</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="" placeholder="">
+                </div>
+            </div>
+            <div class="form-group">
+                <label  class="col-sm-2 control-label">资源内容：</label>
+                <div class="col-sm-10">
+                    <img src="images/demo/add-img-icon.png">
+                    <input type="file" class="form-control ps-file" id="" placeholder="选择新图像" >
+                </div>
+            </div>
+            <div class="form-group">
+                <label  class="col-sm-2 control-label">资源链接：</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="" placeholder="">
+                </div>
+            </div>
+
+        </form>
+    </div>
+</script>
+<script id="up-box" type="text/template">
+<div class="up-box">
+    <form class="form-horizontal">
+        <div class="form-group">
+            <div class="col-sm-12">
+                <input type="text" class="form-control" id="" placeholder="">
+                <span class="fa fa-lock form-control-feedback form-control-feedback-l"></span>
+                <span class="form-control-feedback form-control-feedback-r"><a href="" >忘记密码</a></span>
+                <span class="help-block mtb0">22</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-12">
+                <input type="text" class="form-control" id="" placeholder="">
+                <span class="fa fa-mobile form-control-feedback form-control-feedback-l"></span>
+                <span class="form-control-feedback form-control-feedback-r"><a href="" >获取验证码</a></span>
+                <span class="help-block mtb0">22</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-12">
+                <input type="text" class="form-control" id="" placeholder="">
+                <span class="fa fa-mobile form-control-feedback form-control-feedback-l"></span>
+                <span class="form-control-feedback form-control-feedback-r"><a href="" >图形验证码</a></span>
+                <span class="help-block mtb0">22</span>
+            </div>
+        </div>
+    </form>
+</div>
+</script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script src="js/layer/layer.js"></script>
+<script>
+    $(function () {
+        $("#demo").click(function () {
+            var upMain = $("#up-main").html();
+            layer.open({
+                type: 1
+                ,area: ['620px', '380px']
+                ,title: '温馨提示'
+                ,shade: 0.6
+                ,content: upMain
+                ,btn: ['确定','取消']
+                ,yes:function(index, layero){
+
+                },success: function(layero){
+                    layero.find('.layui-layer-btn').css('text-align', 'center')
+                }
+
+            });
+        });
+        $("#demo2").click(function () {
+            var upBox = $("#up-box").html();
+            layer.open({
+                type: 1
+                ,area: ['620px', '380px']
+                ,title: '温馨提示'
+                ,shade: 0.6
+                ,content: upBox
+                ,btn: ['确定','取消']
+                ,yes:function(index, layero){
+                    //
+                },success: function(layero){
+                    layero.find('.layui-layer-btn').css('text-align', 'center')
+                }
+
+            });
+        });
+
+        $("#number").keyup(function () {
+            var numb = $(this).val();
+            countNumb(numb);
+
+        });
+
+    })
+
+
+function countNumb(numb) {
+    if(numb.length<5){
+        var str = numb;
+        $("#showNumber").text(str);
+        return str;
+
+    }else {
+        numb = parseInt(numb);
+        numb = (numb/10000);
+        var str = numb+"万";
+        $("#showNumber").text(str);
+        return str;
+    }
+}
+</script>
+
+</body>
+</html>

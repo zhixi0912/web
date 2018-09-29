@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>活动查询_扫码获积分详情_活动详细</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <link rel="stylesheet" href="frame/weui-master/style/icon.css">
+    <link rel="stylesheet" href="frame/weui-master/style/weui.css">
+    <link rel="stylesheet" href="frame/weui-master/style/weui2.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!--<script src="js/jQuery/jQuery-2.1.4.min.js"></script>-->
+    <script src="frame/weui-master/zepto.min.js"></script>
+    <script src="frame/weui-master/picker.js"></script>
+    <script src="frame/weui-master/select.js"></script>
+    <script src="js/Integral%20purchasing/flowWallet.js"></script>
+    <script>
+        $(document).on("click", "#act", function() {
+            $.actions({
+                title: "选择操作",
+                actions: [
+                    {
+                        text: "激活",
+                        className: "color-primary",
+                        onClick: function() {
+                            $.alert("激活");
+                        }
+                    },
+                    {
+                        text: "延期",
+                        className: "color-warning",
+                        onClick: function() {
+                            $.alert("你选择了“延期”");
+                        }
+                    },
+                    {
+                        text: "作废",
+                        className: 'color-danger',
+                        onClick: function() {
+                            $.alert("你选择了“作废”");
+                        }
+                    }
+                ]
+            });
+        });
+
+    </script>
+</head>
+
+<body ontouchstart style="background-color: #EBEBEB;">
+<div class="weui_cells  weui-margin">
+    <div class="weui_cells_access">
+        <a class="weui_cell " href="javascript:;">
+            <div class="weui_cell_bd weui_cell_primary">
+                <p class="details-width fl">活动状态</p><span class="ml10 fl">创建待审核</span>
+            </div>
+            <div class="weui_cell_ft">全部</div>
+        </a>
+    </div>
+    <a class="weui_cell bg-gray more">
+        <button class="weui_cell_bd weui_cell_primary tcenter f16" id="act" >更多操作...</button>
+    </a>
+    <div class="weui_cell">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p class="details-width fl">总计</p><span class="ml10 fl">1,000</span> 张
+        </div>
+        <div class="weui_cell_ft mr15">
+            <p><span class="f-red mr5">1,000,000</span>钡</p>
+        </div>
+    </div>
+    <div class="weui_cell">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p class="details-width fl">活动名称</p>
+        </div>
+        <div class="weui_cell_ft">
+            <p class="active-short fl ">康师傅红烧牛肉面二维码营销上海五角场黄兴路促销活动</p>
+            <span class="icon icon-108 block fr mt10"></span>
+        </div>
+    </div>
+    <div class="weui_cell">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p class="details-width fl">活动展示</p>
+        </div>
+        <div class="weui_cell_ft mr15">二维码</div>
+    </div>
+    <div class="weui_cell">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p class="details-width fl">生成数量</p>
+        </div>
+        <div class="weui_cell_ft mr15">1000张</div>
+    </div>
+    <div class="weui_cell">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p class="details-width fl">单张积分</p>
+        </div>
+        <div class="weui_cell_ft mr15">1000钡</div>
+    </div>
+    <div class="weui_cell">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p class="details-width fl">领取规则</p>
+        </div>
+        <div class="weui_cell_ft mr15">不限领取次数</div>
+    </div>
+    <div class="weui_cell">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p class="details-width fl">活动开始</p>
+        </div>
+        <div class="weui_cell_ft mr15">2017-07-09</div>
+    </div>
+    <div class="weui_cell">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p class="details-width fl">活动结束</p>
+        </div>
+        <div class="weui_cell_ft mr15">2017-08-09</div>
+    </div>
+    <div class="weui_cell">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p class="details-width fl">每日开始</p>
+        </div>
+        <div class="weui_cell_ft mr15">12:00</div>
+    </div>
+    <div class="weui_cell">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p class="details-width fl">每日结束</p>
+        </div>
+        <div class="weui_cell_ft mr15">12:00</div>
+    </div>
+        <a class="weui_cell " href="javascript:;">
+            <div class="weui_cell_bd weui_cell_primary">
+                <p class=" fl">代打印(选填)</p><span class="ml10 fl">是</span>
+            </div>
+            <div class="weui_cells_access">
+                <div class="weui_cell_ft">已处理</div>
+            </div>
+        </a>
+</div>
+
+</body>
+
+</html>

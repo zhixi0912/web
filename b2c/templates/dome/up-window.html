@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--360浏览器优先以webkit内核解析-->
+
+
+    <title>通用弹窗</title>
+
+    <link rel="shortcut icon" href="../../static/b2c-reception/frame/hAdmin/favicon.ico">
+    <link href="../../static/b2c-reception/frame/hAdmin/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="../../static/b2c-reception/frame/hAdmin/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="../../static/b2c-reception/frame/ludo-jquery-treetable-3.2.0/css/jquery.treetable.css" rel="stylesheet">
+    <link href="../../static/b2c-reception/frame/ludo-jquery-treetable-3.2.0/css/jquery.treetable.theme.default.css" rel="stylesheet">
+    <link href="../../static/b2c-reception/frame/hAdmin/css/animate.css" rel="stylesheet">
+    <link href="../../static/b2c-reception/frame/hAdmin/css/style.css?v=4.1.0" rel="stylesheet">
+    <link href="../../static/b2c-reception/css/style.css?v=4.1.0" rel="stylesheet">
+</head>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content">
+        <div class="ibox">
+            <div class="top-title ibox-title">
+                <div class="row">
+                    <div class="col-sm-10">
+                        <div class="bs-callout bs-callout-info"><h4>类别管理</h4></div>
+                    </div>
+                    <div class="col-sm-2">
+                        <a class="btn btn-w-m btn-info" href="javascript:void(0);">保存设置</a>
+                    </div>
+                </div>
+            </div>
+            <div class="ibox-content">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">结算金额：</label>
+                        <div class="col-sm-8">
+                            <p class="form-control-static">1000元</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">商户名称：</label>
+                        <div class="col-sm-8">
+                            <p class="form-control-static">罗森有限公司</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">门店名称：</label>
+                        <div class="col-sm-8">
+                            <p class="form-control-static">2152121</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">户名：</label>
+                        <div class="col-sm-8">
+                            <p class="form-control-static">罗森</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">开户银行：</label>
+                        <div class="col-sm-8">
+                            <p class="form-control-static">浦发银行上海支行</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">开户帐号：</label>
+                        <div class="col-sm-8">
+                            <p class="form-control-static">324234234234</p>
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+            <div class="ibox-content">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">付款流水：</label>
+
+                        <div class="col-sm-8">
+                            <input type="text" placeholder="用户名" class="form-control">
+                            <span class="help-block m-b-none">请输入您注册时所填的E-mail</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-3 col-sm-8">
+                            <button class="btn btn-sm btn-info" type="button" id="up-win">提 交</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- 全局js -->
+    <script src="../../static/b2c-reception/frame/hAdmin/js/jquery.min.js?v=2.1.4"></script>
+    <script src="../../static/b2c-reception/frame/hAdmin/js/bootstrap.min.js?v=3.3.6"></script>
+    <script src="../../static/b2c-reception/frame/hAdmin/js/plugins/layer/layer.min.js"></script>
+    <!-- Flot -->
+    <script src="../../static/b2c-reception/frame/hAdmin/js/plugins/flot/jquery.flot.js"></script>
+    <script src="../../static/b2c-reception/frame/hAdmin/js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+    <script src="../../static/b2c-reception/frame/hAdmin/js/plugins/flot/jquery.flot.resize.js"></script>
+    <script src="../../static/b2c-reception/frame/hAdmin/js/plugins/flot/jquery.flot.pie.js"></script>
+    <!-- 自定义js -->
+    <script src="../../static/b2c-reception/frame/hAdmin/js/content.js"></script>
+    <!--flotdemo-->
+
+    <script id="tab-line-1" type="text/template">
+        <div class="ibox-content">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">结算金额：</label>
+                    <div class="col-sm-8">
+                        <p class="form-control-static">1000元</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">商户名称：</label>
+                    <div class="col-sm-8">
+                        <p class="form-control-static">罗森有限公司</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">门店名称：</label>
+                    <div class="col-sm-8">
+                        <p class="form-control-static">2152121</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">户名：</label>
+                    <div class="col-sm-8">
+                        <p class="form-control-static">罗森</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">开户银行：</label>
+                    <div class="col-sm-8">
+                        <p class="form-control-static">浦发银行上海支行</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">开户帐号：</label>
+                    <div class="col-sm-8">
+                        <p class="form-control-static">324234234234</p>
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+        <div class="ibox-content">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">付款流水：</label>
+
+                    <div class="col-sm-8">
+                        <input type="text" placeholder="用户名" class="form-control">
+                        <span class="help-block m-b-none">请输入您注册时所填的E-mail</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-offset-3 col-sm-8">
+                        <button class="btn btn-w-m btn-info" type="submit">提 交</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </script>
+<script>
+    $(function () {
+        $("#up-win").click(function () {
+            var str = $("#tab-line-1").html();
+
+            layer.open({
+                type: 1,
+                skin: 'layui-layer-demo', //样式类名
+                title: '付款信息',
+                closeBtn: 1, //不显示关闭按钮
+                anim: 2,
+                area: ['580px', '500px'],
+                shadeClose: true, //开启遮罩关闭
+                content: str
+            });
+        })
+    })
+
+</script>
+</body>
+
+</html>

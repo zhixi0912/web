@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--360浏览器优先以webkit内核解析-->
+    <title>规则设置-客户回馈</title>
+    <link rel="shortcut icon" href="hAdmin/favicon.ico">
+    <link href="hAdmin/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="hAdmin/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="frame/select2-4.0.3/css/select2.min.css?v=3.3.6" rel="stylesheet">
+    <link href="frame/datetimepicker/js/jquery-ui.css" rel="stylesheet">
+    <link href="frame/datetimepicker/jQuery-Timepicker-Addon/jquery-ui-timepicker-addon.css" rel="stylesheet">
+    <link href="hAdmin/css/animate.css" rel="stylesheet">
+    <link href="css/base.css?v=3.1.0" rel="stylesheet">
+    <link href="hAdmin/css/style.css?v=4.1.0" rel="stylesheet">
+    <link href="css/iframe-page.css" rel="stylesheet">
+    <link href="css/page.css" rel="stylesheet">
+    <link href="css/game/game-1.css" rel="stylesheet">
+    <link href="css/game/component.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/game/game-add-bj.css">
+    <link href="css/game/game-activity.css" rel="stylesheet">
+</head>
+<body>
+<div class=" wrapper wrapper-content">
+    <div class="ibox act">
+        <div class="top-title ibox-title">
+            <div class="row">
+                <div class="col-sm-9 f16 game-index-a">
+                    <div class="form-group">
+                        <a class="" href="game-index.html">我的活动</a>
+                        <a class="game-active" href="game-index.html">模板库</a>
+                        <a class="f-gray" href="game-index.html">活动定制</a>
+                        <a class="" href="game-activity1.html">运营活动管理</a>
+                    </div>
+                </div>
+                <div class="col-sm-3 tr">
+                    <div class="form-group f-black f16">
+                        <p>账户余额：<span class="f-orange">30</span>万钡</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ibox-content">
+            <div class="row">
+                <div class="col-sm-12 clearfix text-center">
+                    <div class="my-activity my-activity1 clearfix">
+                        <div class="my-act-ul">
+                            <span class="my-act-radius ">1</span>
+                            <p>活动创建</p>
+                        </div>
+                        <div class="my-act-ul2 ">
+                            <span class="my-act-span bg-gray"></span>
+                        </div>
+                        <div class="my-act-ul">
+                            <span class="my-act-radius bg-gray">2</span>
+                            <p>奖项结算</p>
+                        </div>
+                        <div class="my-act-ul2">
+                            <span class="my-act-span bg-gray"></span>
+                        </div>
+                        <div class="my-act-ul">
+                            <span class="my-act-radius bg-gray">3</span>
+                            <p>完成</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-5 clearfix">
+                    <div class="game-show-box mobile-bgfixd fr  clearfix">
+                        <div class="mobile-szmposbg">
+                            <div class="text-center mobile-szmposbg1"style="display: none;" >
+                                <button class="btn btn-w-m btn-success btn-line-height">替换背景</button>
+                            </div>
+                        </div>
+                        <img class="mobile-bg" src="images/game/szm-bg.png" />
+                        <div class="mobile-szm game-box-td">
+                            <div class="tab-position">
+                                <button class=" btn-red btn-red-bg">规则</button>
+                            </div>
+                            <div class="mobile-box mobile-border">
+                                <p class="pt20 f18 text-center f-red">奖品领取码</p>
+                                <div class="border-bottom m20 ptb10">
+                                    <input type="text"  class="mobile-box-input f14 text-center" placeholder="请输入您的奖品领取码"/>
+                                </div>
+                                <div class="text-center">
+                                    <button class="btn btn-w-m btn-red">下一步</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="right-box">
+                        <form class="form-horizontal" id="form2">
+                            <!-- step 2 -->
+                            <div class="step-2 stop-box">
+                                <h5 class="step-h1"><strong>规则设置</strong></h5>
+                                <div class="form-group mt15">
+                                    <label for="" class="col-sm-2 control-label">活动名称</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control " placeholder="食之秘客户回馈" maxlength="12" style="color: rgb(153, 153, 153);">
+                                        <span class="help-block" id="">请填写活动名称！</span>
+                                    </div>
+                                </div>
+                                <h5 class="step-h1 clearfix"><strong>奖品设置</strong><span class="t2 gray">（仅可设置一个奖品）</span>
+                                    <div class="t3 add-list fr">
+                                        <a class="red" id="reset">重置奖项</a>|
+                                        <div class="dropdown">
+                                            <a id="dLabel" class="add-shop" data-val="1" data-target="#"  data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">+添加奖品
+                                                <span class="caret"></span>
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="javascript:void(0)" class="btn integral">通用积分</a></li>
+                                                <li><a href="javascript:void(0)" class="btn caipiao">彩票</a></li>
+                                                <li><a href="javascript:void(0)" class="btn tyll">通用流量</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </h5>
+
+                                <div class="shop-list-box" >
+                                    <div class="slideTxtBox">
+                                        <div class="hd">
+                                            <ul class="clearfix"></ul>
+                                        </div>
+                                        <div class="bd"></div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <button type="button" class="btn btn-w-m btn-success" id="step-1">下一步</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 全局js -->
+<script src="hAdmin/js/jquery.min.js"></script>
+<script src="js/jquery-migrate-1.2.1.js"></script>
+<script src="js/ajaxform.js"></script>
+<script src="frame/formvalidator4.1.3/formValidatorRegex.js"></script>
+<script src="frame/formvalidator4.1.3/formValidator-4.1.3.js"></script>
+<script src="hAdmin/js/bootstrap.min.js?v=3.3.6"></script>
+<script src="hAdmin/js/plugins/layer/layer.min.js"></script>
+<script src="frame/select2-4.0.3/js/select2.min.js"></script>
+<!-- Flot -->
+<script src="hAdmin/js/plugins/flot/jquery.flot.js"></script>
+<script src="hAdmin/js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+<script src="hAdmin/js/plugins/flot/jquery.flot.resize.js"></script>
+<script src="hAdmin/js/plugins/flot/jquery.flot.pie.js"></script>
+<script src="frame/datetimepicker/js/jquery-ui.js"></script>
+<script src="frame/datetimepicker/jQuery-Timepicker-Addon/jquery-ui-timepicker-addon.js"></script>
+<script src="frame/datetimepicker/js/jquery-ui-timepicker-zh-CN.js"></script>
+<!-- 自定义js -->
+<script src="js/form-validator/game/game-add02-2.js"></script>
+</body>
+</html>
+

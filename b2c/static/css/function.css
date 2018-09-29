@@ -1,0 +1,26 @@
+.alertNoHide {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 1031;
+	transform: scaleY(.5);
+	transform-origin: top center;
+	transition: all .2s
+}
+
+.alertNoHide.show {
+	transform: scaleY(1);
+	transition: all .2s
+}
+
+.alertNoHide::after {
+	content: " ";
+	display: block;
+	position: absolute;
+	background-color: rgba(0, 0, 0, .5);
+	width: 100vw;
+	height: 100vh;
+	left: 0;
+	transform: translateY(16px)
+}

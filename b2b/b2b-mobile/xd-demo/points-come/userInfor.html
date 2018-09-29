@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>个人信息</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <link rel="stylesheet" href="../../frame/weui-master/style/icon.css">
+    <link rel="stylesheet" href="../../frame/weui-master/style/weui.css">
+    <link rel="stylesheet" href="../../frame/weui-master/style/weui2.css">
+    <link rel="stylesheet" href="../../font/style.css">
+    <link rel="stylesheet" href="../../css/points-come/points-come.css">
+    <script src="../../frame/weui-master/zepto.min.js"></script>
+    </script><script src="../../frame/weui-master/picker.js"></script>
+    <script src="../../frame/weui-master/picker-city.js"></script>
+    <script src="../../frame/weui-master/select.js"></script>
+    <link rel="stylesheet" href="../../css/base.css">
+    <!--<script src="../../js/jQuery/jQuery-2.1.4.min.js"></script>-->
+    <!--<script src="../../frame/SuperSlide.2.1.1/jquery.SuperSlide.2.1.1.js"></script>-->
+<script>
+    $(function(){
+        $("#ssx").cityPicker({
+            title: "选择省市县"
+        });
+        $("#d1").select({
+            title: "选择性别",
+            autoClose:true,
+
+            items: ['男','女'],
+            // onChange: function(d) {
+            //     $.alert("你选择了"+d.values);
+            // }
+        });
+        $("#text2").picker({
+            title: "选择性别",
+            toolbarCloseText:'确定',
+            cols: [
+                {
+                    textAlign: 'center',
+                    values: ['男','女']
+                }
+            ]
+        });
+    })
+</script>
+
+
+</head>
+<body style="background-color: #f8f8f8;">
+<div class="weui_panel weui_panel_access come-top noneborbefore mt15">
+    <div class="weui_panel_bd">
+        <a href="login.html" class="weui_media_box weui_media_appmsg">
+            <div class="weui_media_hd">
+                <img class="weui_media_appmsg_thumb" src="../../images/points-come/user-img.png" alt="">
+            </div>
+            <div class="weui_media_bd">
+                <h4 class="weui_media_title f-5d6668">小钡昵称</h4>
+                <p class="weui_media_desc f-5d6668 mt2"><span class="icon-Group-68 icon-come f-5d6668">&nbsp;13512345678</span></p>
+            </div>
+            <div class="weui_media_bd">
+                <p class="fr mr10 f-5d6668 mt7 f15">解绑</p>
+            </div>
+        </a>
+    </div>
+</div>
+<div class="weui_cells weui_cells_form weui_cells_form_come noneborbefore noneborafter mt15">
+        <div class="weui_cell_bd weui_cell_primary">
+            <div class="weui_cell">
+                <div class="weui_cell_hd"><label for="" class="weui_label">性别</label></div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <input class="weui_input" type="text" value="男" id='text2'/>
+                </div>
+                <div class="weui_cell_ft">
+                    <i class="weui_icon_right"></i>
+                </div>
+            </div>
+        </div>
+
+    <div class="weui_cell">
+        <div class="weui_cell_hd"><label for="" class="weui_label">地区</label></div>
+        <div class="weui_cell_bd weui_cell_primary">
+            <input class="weui_input" type="text" id='ssx' placeholder="请选择地址">
+        </div>
+        <div class="weui_cell_ft">
+            <i class="weui_icon_right"></i>
+        </div>
+    </div>
+    <div class="weui_cell">
+        <div class="weui_cell_hd"><label class="weui_label">年龄</label></div>
+        <div class="weui_cell_bd weui_cell_primary">
+            30
+        </div>
+    </div>
+</div>
+<!--<div class="weui_btn_area weui_btn_area_inline mt50">-->
+    <!--<a href="index.html" class="weui_btn  weui_btn_default bg-6A7-b f-343434">返回</a>-->
+    <!--<a href="index.html" class="weui_btn  bg-ED7">提交</a>-->
+<!--</div>-->
+<div class="posbtn clearfix">
+    <a href="index.html" class="posbtn1 close-popup posbtn2">返回</a>
+    <a href="index.html" class="posbtn1 close-popup ml5">提交</a>
+</div>
+
+</body>
+
+</html>

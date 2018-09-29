@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>最热免费活动</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <link rel="stylesheet" href="../../frame/weui-master/style/icon.css">
+    <link rel="stylesheet" href="../../frame/weui-master/style/weui.css">
+    <link rel="stylesheet" href="../../frame/weui-master/style/weui2.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../font/style.css">
+    <link rel="stylesheet" href="../../css/points-come/points-come.css">
+    <script src="../../frame/weui-master/zepto.min.js"></script>
+    <script src="../../frame/weui-master/swipe.js"></script>
+    <script src="../../frame/weui-master/select.js"></script>
+    <!--<script src="../../js/jQuery/jQuery-2.1.4.min.js"></script>-->
+    <!--<script src="../../frame/SuperSlide.2.1.1/jquery.SuperSlide.2.1.1.js"></script>-->
+    <script>
+        $(function(){
+            $('#slide2').swipeSlide({
+                autoSwipe:true,//自动切换默认是
+                speed:3000,//速度默认4000
+                continuousScroll:true,//默认否
+                transitionType:'cubic-bezier(0.22, 0.69, 0.72, 0.88)',//过渡动画linear/ease/ease-in/ease-out/ease-in-out/cubic-bezier
+                lazyLoad:true,//懒加载默认否
+                firstCallback : function(i,sum,me){
+                    me.find('.dot').children().first().addClass('cur');
+                },
+                callback : function(i,sum,me){
+                    me.find('.dot').children().eq(i).addClass('cur').siblings().removeClass('cur');
+                }
+            });
+            $('#slide3').swipeSlide({
+                autoSwipe:true,//自动切换默认是
+                speed:3000,//速度默认4000
+                continuousScroll:true,//默认否
+                transitionType:'ease-in',
+                axisX:false
+            });
+        });
+
+    </script>
+
+</head>
+<body style="background-color: #f8f8f8;">
+<div class="postop" style="position: fixed;top: 0;z-index: 9;width: 100%">
+    <div class="slides slidesbot" id="slide2">
+        <ul>
+            <li>
+                <a href="#">
+                    <img src="../../images/points-come/banner-1.png"/>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="../../images/points-come/banner-1-1.png"/>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+    <div class="slides" id="slide3" style="background:#eee;height:25px;line-height:25px;rgba(0, 0, 0, 0.01);vertical-align:middle;margin:0 auto;">
+        <ul>
+            <li><div  class='txt'><span class="icon-Group-71 block mlr10 fl mt5" ></span>好享瘦运动得彩票</div></li>
+            <li><div  class='txt'><span class="icon-Group-71 block mlr10 fl mt5" ></span>食之秘有福同享送福彩</div></li>
+            <li><div  class='txt'><span class="icon-Group-71 block mlr10 fl mt5" ></span>食之秘有福同享送福彩</div></li>
+        </ul>
+        <div class="right mr10"><button type="button" class="open-popup btnnone pos-popup mt2 f14 current" data-target="#popup1">上海</button><span class="icon icon-74"></span></div>
+    </div>
+    <div class="freemain bgWhite f-9292">
+        <ul class="clearfix">
+            <li class="weui-border-r"><a href="freeActivity.html" class="f-888d95">最新活动</a></li>
+            <li class="weui-border-r freeactive">最热活动</li>
+            <li><button type="button" class="open-popup btnnone f14 f-9292" data-target="#popup">筛选</button><span class="icon-Group-73 ml5" ></span></li>
+        </ul>
+    </div>
+</div>
+<div class="bothei">
+    <div class="freeimg bgWhite pb10">
+        <a class="freeimgbar" href="haoxiangshou.html">
+            <div class="posre">
+                <img src="../../images/points-come/ban-2-1.jpg"/>
+                <p class="posp"><span class="pl5">好享瘦运动得彩票</span></p>
+            </div>
+
+            <div class="ml10 freespan clearfix pt2">
+                <span>关注</span>
+                <span>游戏</span>
+                <span>参与</span>
+                <p class="fr mr10 f-888d95"><abbr class="icon-Group-72 mr5" ></abbr>16954</p>
+            </div>
+        </a>
+        <a class="freeimgbar" href="shizhimi.html">
+            <div class="posre">
+                <img src="../../images/points-come/ban-3-1.jpg"/>
+                <p class="posp"><span class="pl5">食之秘有福同享送福彩</span></p>
+            </div>
+
+            <div class="ml10 freespan clearfix pt2">
+                <span onclick="alert(1);">关注</span>
+                <span>游戏</span>
+                <span>参与</span>
+                <p class="fr mr10 f-888d95"><abbr class="icon-Group-72 mr5" ></abbr>1645</p>
+            </div>
+        </a>
+        <a class="freeimgbar" href="jifenlaila.html">
+            <div class="posre">
+                <img src="../../images/points-come/ban-4-1.jpg"/>
+                <p class="posp"><span class="pl5">积分来啦平台签到送积分</span></p>
+            </div>
+
+            <div class="ml10 freespan clearfix pt2">
+                <span onclick="alert(1);">关注</span>
+                <span>游戏</span>
+                <span>参与</span>
+                <p class="fr mr10 f-888d95"><abbr class="icon-Group-72 mr5" ></abbr>965</p>
+            </div>
+        </a>
+        <a class="freeimgbar" href="jifenlailaguaguale.html">
+            <div class="posre">
+                <img src="../../images/points-come/ban-5-1.jpg"/>
+                <p class="posp"><span class="pl5">积分来啦送幸运精彩刮出来</span></p>
+            </div>
+            <div class="ml10 freespan clearfix pt2">
+                <span onclick="alert(1);">关注</span>
+                <span>游戏</span>
+                <span>参与</span>
+                <p class="fr mr10 f-888d95"><abbr class="icon-Group-72 mr5" ></abbr>16</p>
+            </div>
+        </a>
+        <a class="freeimgbar" href="haoledi.html">
+            <div class="posre">
+                <img src="../../images/points-come/ban-1-1.jpg"/>
+                <p class="posp"><span class="pl5">好乐迪彩票大放送</span></p>
+            </div>
+
+            <div class="ml10 freespan clearfix pt2">
+                <span>关注</span>
+                <span>游戏</span>
+                <span>参与</span>
+                <p class="fr mr10 f-888d95"><abbr class="icon-Group-72 mr5" ></abbr>1</p>
+            </div>
+        </a>
+    </div>
+    <div id="popup" class="weui-popup-container" style="z-index: 10">
+        <div class="weui-popup-modal">
+            <div class="weui_article">
+                <div class="tr mt20 mb20">
+                    关闭<button class="icon-Path-124 mr20 ml5 close-popup btnnone f-888d95" ></button>
+                </div>
+                <div class="mark-main">
+                    <p class="p20 f20 weui-border-b">奖品分类</p>
+                    <div class="mark-span clearfix">
+                        <span class=" mark-spanact">积分</span>
+                        <span>彩票</span>
+                        <span>话费</span>
+                        <span>流量</span>
+                    </div>
+                    <p class="p20 f20 weui-border-b">活动分类</p>
+                    <div class="mark-span clearfix">
+                        <span>关注</span>
+                        <span>游戏</span>
+                        <span>下载</span>
+                        <span>消费</span>
+                        <span>注册</span>
+                        <span>信用卡</span>
+                        <span>其他</span>
+                    </div>
+                    <div class="posbtn">
+                        <button type="button" class="posbtn1 close-popup posbtn2">重置</button>
+                        <button type="button" class="posbtn1 close-popup ml5">完成</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="popup1" class="weui-popup-container" style="z-index: 10">
+        <div class="weui-popup-modal">
+                <div class="tr mt20 mb20">
+                    关闭<button class="icon-Path-124 mr20 ml5 close-popup btnnone f-888d95" ></button>
+                </div>
+                <div class="address">
+                    <p class="ptb10 pl15 bgWhite f-9292"><span class="mr10 f-black current">上海</span>当前选择</p>
+                    <p class="pl15 mt10 f-9292">历史访问城市</p>
+                    <div class="plr10 clearfix">
+                        <div class="address-item"><div class="placeholder bgWhite f-black close-popup">北京</div></div>
+                    </div>
+                    <p class="pl15 mt10 f-9292">国内热门城市</p>
+                    <div class="plr10 clearfix">
+                        <div class="address-item"><div class="placeholder bgWhite f-black close-popup">北京</div></div>
+                        <div class="address-item"><div class="placeholder bgWhite f-black close-popup">上海</div></div>
+                        <div class="address-item"><div class="placeholder bgWhite f-black close-popup">广州</div></div>
+                        <div class="address-item"><div class="placeholder bgWhite f-black close-popup">深圳</div></div>
+                        <div class="address-item"><div class="placeholder bgWhite f-black close-popup">成都</div></div>
+                        <div class="address-item"><div class="placeholder bgWhite f-black close-popup">杭州</div></div>
+                        <div class="address-item"><div class="placeholder bgWhite f-black close-popup">西安</div></div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(function () {
+        $(".address-item").click(function (btn) {
+            var currentBtn = $(btn.target).text();
+            $(".current").text(currentBtn);
+        });
+
+        $(".mark-main").find(".mark-span span").click(function(){
+            if($(this).hasClass("mark-spanact")){
+                $(this).removeClass("mark-spanact");
+            }else{
+                $(this).addClass("mark-spanact");
+            }
+        });
+        var tophei = $(".postop").height();
+        $(".bothei").css("margin-top",tophei+10)
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>卡券详情</title>
+    <link rel="stylesheet" href="../frame/weui-master/style/weui.css">
+    <link rel="stylesheet" href="../frame/weui-master/style/weui2.css">
+    <link rel="stylesheet" href="../frame/weui-master/style/weuix.min.css">
+    <link rel="stylesheet" href="css/cardindex.css">
+    <link rel="stylesheet" href="css/base.css">
+    <script src="../frame/weui-master/zepto.min.js"></script>
+</head>
+<body style="background:#fd5e54;">
+<div id="app" class="ticket">
+    <!-- title -->
+    <div class="titletop">
+        <div class="titleimg">
+        </div>
+    </div>
+    <!-- main -->
+    <div class="ticketmain">
+        <p class="ptb20 f4f f16">好乐迪</p>
+        <p class="f25 ptb10" v-text="ticketName">好乐迪100分钟代金券</p>
+        <div class="btn60">
+            <span class="weui_btn weui_btn_primary" onclick="location.href='usecard.html'">立即使用</span>
+        </div>
+        <p class="pt20 f4f">有效截至时间：<span>2018-03-19</span></p>
+    </div>
+    <!-- introduction -->
+    <div class="weui_cells weui_cells_access mt0 mtbefore border-blbr" id="Use">
+        <div class="weui_cell mtbefore">
+            <div class="weui_cell_bd weui_cell_primary">
+                <p class="f4f">使用须知</p>
+            </div>
+            <div class="weui_cell_ft"></div>
+        </div>
+    </div>
+    <div style="width: 100%;height: 10px;"></div>
+    <div class="weui_msg_img hide msg5">
+        <div class="bg-gray" style="width: 100%;height: 100%;">
+            <div class="notice">
+                <h1 class="noticetitle">使用须知</h1>
+                <div class="tl mt5 noticep">
+                    <p>一、使用时间：</p>
+                    <p>1、凭本券周日至周四全天至好乐迪上海门店享1元欢唱100分钟；</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(function () {
+        $("#Use").click(function () {
+            $(".msg5").fadeIn()
+        })
+        $(".msg5").click(function () {
+            $(".msg5").fadeOut()
+        })
+    })
+</script>
+</body>
+</html>

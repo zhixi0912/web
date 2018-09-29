@@ -1,0 +1,333 @@
+.top-title{
+    height: 50px;
+    padding: 10px;
+    color: #F29600;
+}
+.act .form-horizontal .control-label{
+    padding-top: 5px;
+}
+.tc{
+    text-align: center!important;
+}
+.btn-green {
+    color: #fff !important;
+    background-color: #27c24c;
+    border-color: #27c24c;
+    -webkit-box-shadow: 0 1px 1px rgba(90, 90, 90, 0.1);
+    box-shadow: 0 1px 1px rgba(90, 90, 90, 0.1);
+}
+.btn-orange {
+    color: #fff !important;
+    background-color: #F29600;
+    border-color: #F29600;
+    -webkit-box-shadow: 0 1px 1px rgba(90, 90, 90, 0.1);
+    box-shadow: 0 1px 1px rgba(90, 90, 90, 0.1);
+}
+.btn-red{
+    color: #fff !important;
+    background-color: #FC6262;
+    border-color: #FC6262;
+    -webkit-box-shadow: 0 1px 1px rgba(90, 90, 90, 0.1);
+    box-shadow: 0 1px 1px rgba(90, 90, 90, 0.1);
+}
+.btn-w-50{
+    width: 60px;
+    height: 30px;
+    line-height: 28px;
+    border-radius: 10px;
+}
+.f-blue{
+    color: #6BBCF3;
+}
+.f-red{
+    color: #FC6262;
+}
+.f-black{
+    color: #666;
+}
+.f-orange{
+    color: #F29600;
+}
+.act-line{
+    line-height: 30px;
+}
+.my-activity{
+    width: 645px;
+    margin: 20px auto;
+}
+.my-act-ul{
+    width: 60px;
+    text-align: center;
+    float: left;
+}
+.my-act-ul p{
+    padding-top:10px;
+}
+.my-act-radius{
+    width: 60px;
+    height: 60px;
+    display: block;
+    text-align: center;
+    line-height: 60px;
+    font-size: 30px;
+    margin: 0 auto;
+    color: #fff;
+    background: #F29600;
+    border-radius: 50%;
+}
+.my-act-radius1{
+    background: #f2d394!important;
+}
+.my-act-ul2{
+    width: 135px;
+    float: left;
+}
+.my-act-span{
+    width: 135px;
+    height: 3px;
+    background: #F29600;
+    display: block;
+    margin-top: 30px;
+}
+.bg-gray{
+    background: #ccc;
+}
+.game-active{
+    color: #F29600;
+    border-bottom: 2px solid #F29600;
+    padding: 18px 0;
+}
+.game-index-a a{
+    margin: 0 10px;
+}
+.game-btn{
+    width: 180px;
+    /*margin-left: 2px;*/
+}
+.game-btn-btn{
+    float: left;
+    height: 50px;
+    width: 50px;
+    border-radius: 3px;
+    margin-left: 7px;
+    margin-top: 15px;
+}
+.game-btn-btn a{
+    padding-top: 35px;
+    text-align: center;
+    display: block;
+    color: #fff;
+    height: 50px;
+    width: 50px;
+    border-radius: 3px;
+
+}
+.game-btn-btn a:hover{
+    color: #333;
+    transition: .5s;
+    height: 50px;
+    width: 50px;
+}
+.game-btn-btn p{
+    text-align: center;
+    line-height: 10px;
+}
+
+.game-btn-a1{
+    background: url("../../images/game/icon01.png") no-repeat 10px 4px ;
+}
+.game-btn-a1:hover{
+    background: #fff url("../../images/game/icon01_mouseover.png") no-repeat 10px 4px;
+}
+
+.game-btn-a2{
+    background: url("../../images/game/icon02.png") no-repeat 10px 4px ;
+}
+.game-btn-a2:hover{
+    background: #fff url("../../images/game/icon02_mouseover.png") no-repeat 10px 4px;
+}
+
+.game-btn-a3{
+    background: url("../../images/game/icon03.png") no-repeat 10px 4px ;
+}
+.game-btn-a3:hover{
+    background: #fff url("../../images/game/icon03_mouseover.png") no-repeat 10px 4px;
+}
+
+.game-btn-a4{
+    background: url("../../images/game/icon04.png") no-repeat 10px 4px ;
+}
+.game-btn-a4:hover{
+    background: #fff url("../../images/game/icon04_mouseover.png") no-repeat 10px 4px;
+}
+.game-btn-a5{
+    background: url("../../images/game/icon05.png") no-repeat 10px 4px ;
+}
+.game-btn-a5:hover{
+    background: #fff url("../../images/game/icon05_mouseover.png") no-repeat 10px 4px;
+}
+.game-btn-a6{
+    background: url("../../images/game/icon06.png") no-repeat 10px 4px ;
+}
+.game-btn-a6:hover{
+    background: #fff url("../../images/game/icon06_mouseover.png") no-repeat 10px 4px;
+}
+.tabs-container .nav-tabs > li.active > a{
+    color: #F29600!important;
+}
+.tabs-container{
+    padding: 20px;
+}
+.game-effect-ul li{
+    width: 25%;
+    float: left;
+    border-right:1px solid #ccc ;
+    padding: 20px;
+}
+.game-effect-ul li:last-child{
+    border-right: none;
+}
+.game-select{
+    height: 33px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    color: #999;
+}
+.game-effect{
+    line-height: 30px;
+    padding: 20px;
+    background: #F9F9F9;
+}
+.layui-layer-setwin a{
+    width: 15px!important;
+}
+
+
+
+
+.game-btn-dis1{
+    background:  url("../../images/game/icon01_disable.png") no-repeat 10px 4px;
+    opacity: .8;
+}
+.game-btn-dis1:hover{
+    background:  url("../../images/game/icon01_disable.png") no-repeat 10px 4px;
+    color: #fff!important;
+    opacity: .8;
+}
+.game-btn-dis2{
+    background:  url("../../images/game/icon02_disable.png") no-repeat 10px 4px;
+    opacity: .8;
+}
+.game-btn-dis2:hover{
+    background:  url("../../images/game/icon02_disable.png") no-repeat 10px 4px;
+    color: #fff!important;
+    opacity: .8;
+}
+.game-btn-dis3{
+    background:  url("../../images/game/icon03_disable.png") no-repeat 10px 4px;
+    opacity: .8;
+}
+.game-btn-dis3:hover{
+    background:  url("../../images/game/icon03_disable.png") no-repeat 10px 4px;
+    color: #fff!important;
+    opacity: .8;
+}
+.game-btn-dis4{
+    background:  url("../../images/game/icon04_disable.png") no-repeat 10px 4px;
+    opacity: .8;
+}
+.game-btn-dis4:hover{
+    background:  url("../../images/game/icon04_disable.png") no-repeat 10px 4px;
+    color: #fff!important;
+    opacity: .8;
+}
+.game-btn-dis5{
+    background:  url("../../images/game/icon05_disable.png") no-repeat 10px 4px;
+    opacity: .8;
+}
+.game-btn-dis5:hover{
+    background:  url("../../images/game/icon05_disable.png") no-repeat 10px 4px;
+    color: #fff!important;
+    opacity: .8;
+}
+.game-btn-dis6{
+    background:  url("../../images/game/icon06_disable.png") no-repeat 10px 4px;
+    opacity: .8;
+}
+.game-btn-dis6:hover{
+    background:  url("../../images/game/icon06_disable.png") no-repeat 10px 4px;
+    color: #fff!important;
+    opacity: .8;
+}
+
+/*1113*/
+.my-activity1{
+    width: 450px;
+}
+
+
+
+/*1227*/
+.activity-input{
+    width: 600px;
+    margin: 20px auto 0 auto;
+    text-align: left;
+}
+.activity-input p{
+    font-size: 16px;
+    font-weight: 600;
+}
+.input400{
+    width: 400px;
+    display: inline-block;
+}
+.input180{
+    width: 180px;
+    display: inline-block;
+}
+
+
+.wechat-02{
+    margin: 20px auto;
+    text-align: center;
+}
+.wechat-02 table th{
+    text-align: center;
+}
+.cursor{
+    cursor: pointer;
+}
+.word-wrap{
+    word-break:break-all;
+}
+.label110{
+    width: 120px;
+    display: inline-block;
+}
+.input280{
+    width: 380px;
+    display: inline-block;
+}
+.input410{
+    width: 510px;
+    margin: 10px auto;
+}
+.input410 input,select{
+    height: 35px!important;
+}
+.input410 .btncontrol{
+    height: 15px!important;
+    display: inline-block;
+}
+.switch{
+    display: inline-block;
+    top:5px;
+}
+.sapnline35{
+    display: inline-block;
+    line-height: 35px;
+    height: 35px;
+}
+.wechat02-p p{
+    line-height: 25px;
+}

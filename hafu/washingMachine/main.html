@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--360浏览器优先以webkit内核解析-->
+
+
+    <title>主页</title>
+
+    <link rel="shortcut icon" href="frame/hAdmin/favicon.ico">
+    <link href="frame/hAdmin/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="frame/hAdmin/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="frame/ludo-jquery-treetable-3.2.0/css/jquery.treetable.css" rel="stylesheet">
+    <link href="frame/ludo-jquery-treetable-3.2.0/css/jquery.treetable.theme.default.css" rel="stylesheet">
+    <link href="frame/hAdmin/css/animate.css" rel="stylesheet">
+    <link href="frame/hAdmin/css/style.css?v=4.1.0" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+</head>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content">
+        <div class="ibox">
+            <!--<div class="top-title ibox-title">-->
+                <!--<div class="row">-->
+                    <!--<div class="col-sm-10">-->
+                        <!--<div class="bs-callout bs-callout-info"><h4>类别管理</h4></div>-->
+                    <!--</div>-->
+                    <!--<div class="col-sm-2">-->
+                        <!--<a class="btn btn-w-m btn-info" href="javascript:void(0);">保存设置</a>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <div class="ibox-content">
+                <div class="row row-sm text-center">
+                    <div class="col-xs-3">
+                        <div class="panel padder-v item bg-yellow">
+                            <span class=" text-xs">设备数量</span>
+                            <div class="h1 font-thin h1">521</div>
+                            <span class=" text-xs">查看全部</span>
+                            <div class="top text-right w-full">
+                                <i class="fa fa-caret-down text-warning m-r-sm"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="panel padder-v item bg-info">
+                            <span class=" text-xs">渠道数量</span>
+                            <div class="h1 text-fff font-thin h1">521</div>
+                            <span class="text-xs">查看全部</span>
+                            <div class="top text-right w-full">
+                                <i class="fa fa-caret-down text-warning m-r-sm"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="panel padder-v item bg-primary">
+                            <span class=" text-xs">品牌数量</span>
+                            <div class="h1 text-fff font-thin h1">521</div>
+                            <span class="text-muted text-xs">查看全部</span>
+                            <div class="top text-right w-full">
+                                <i class="fa fa-caret-down text-warning m-r-sm"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="panel padder-v item bg-pink">
+                            <span class=" text-xs">品牌数量</span>
+                            <div class="font-thin h1">$129</div>    
+                            <span class="text-xs">近日盈利</span>
+                            <div class="bottom text-left">
+                                <i class="fa fa-caret-up text-warning m-l-sm"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="bs-callout bs-callout-info"><h4>设备分布</h4></div>
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title" style="border-bottom:none;background:#fff;">
+                                <h5>新增设备统计</h5>
+                            </div>
+                            <div class="ibox-content" style="border-top:none;">
+                                <div id="container" style="height:217px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <!-- 全局js -->
+    <script src="frame/hAdmin/js/jquery.min.js?v=2.1.4"></script>
+    <script src="frame/hAdmin/js/bootstrap.min.js?v=3.3.6"></script>
+    <script src="frame/hAdmin/js/plugins/layer/layer.min.js"></script>
+    <!-- Flot -->
+
+
+
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/simplex.js"></script>
+
+    <!-- 自定义js -->
+    <script src="frame/hAdmin/js/content.js"></script>
+    <!--flotdemo-->
+
+    <script type="text/javascript">
+        $(function () {
+            var dom = document.getElementById("container");
+            var myChart = echarts.init(dom);
+            var app = {};
+            option = null;
+            option = {
+                title: {
+                    text: '未来一周气温变化',
+                    subtext: '纯属虚构'
+                },
+                tooltip: {
+                    trigger: 'axis'
+                },
+                legend: {
+                    data:['最高气温','最低气温']
+                },
+                toolbox: {
+                    show: true,
+                    feature: {
+                        dataZoom: {
+                            yAxisIndex: 'none'
+                        },
+                        dataView: {readOnly: false},
+                        magicType: {type: ['line', 'bar']},
+                        restore: {},
+                        saveAsImage: {}
+                    }
+                },
+                xAxis:  {
+                    type: 'category',
+                    boundaryGap: false,
+                    data: ['周一','周二','周三','周四','周五','周六','周日']
+                },
+                yAxis: {
+                    type: 'value',
+                    axisLabel: {
+                        formatter: '{value} °C'
+                    }
+                },
+                series: [
+                    {
+                        name:'最高气温',
+                        type:'line',
+                        data:[11, 11, 15, 13, 12, 13, 10],
+                        markPoint: {
+                            data: [
+                                {type: 'max', name: '最大值'},
+                                {type: 'min', name: '最小值'}
+                            ]
+                        },
+                        markLine: {
+                            data: [
+                                {type: 'average', name: '平均值'}
+                            ]
+                        }
+                    },
+                    {
+                        name:'最低气温',
+                        type:'line',
+                        data:[1, -2, 2, 5, 3, 2, 0],
+                        markPoint: {
+                            data: [
+                                {name: '周最低', value: -2, xAxis: 1, yAxis: -1.5}
+                            ]
+                        },
+                        markLine: {
+                            data: [
+                                {type: 'average', name: '平均值'},
+                                [{
+                                    symbol: 'none',
+                                    x: '90%',
+                                    yAxis: 'max'
+                                }, {
+                                    symbol: 'circle',
+                                    label: {
+                                        normal: {
+                                            position: 'start',
+                                            formatter: '最大值'
+                                        }
+                                    },
+                                    type: 'max',
+                                    name: '最高点'
+                                }]
+                            ]
+                        }
+                    }
+                ]
+            };
+            ;
+            if (option && typeof option === "object") {
+                myChart.setOption(option, true);
+            }
+        })
+    </script>
+
+</body>
+
+</html>

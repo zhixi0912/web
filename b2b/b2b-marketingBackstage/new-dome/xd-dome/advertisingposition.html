@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--360浏览器优先以webkit内核解析-->
+    <title>活动广告位管理</title>
+    <link rel="shortcut icon" href="../../hAdmin/favicon.ico">
+    <link href="../../hAdmin/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="../../hAdmin/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="../../hAdmin/css/animate.css" rel="stylesheet">
+    <link href="../../hAdmin/css/style.css" rel="stylesheet">
+    <link href="../../css/base.css?v=3.1.0" rel="stylesheet">
+    <link href="../../css/points-come/pointsCome.css" rel="stylesheet">
+
+
+</head>
+<body class="light-grey-bg">
+<div class="main">
+    <div class="white-bg">
+        <div class="page-header">
+            <h3 class="cooperh3">活动广告位管理</h3>
+        </div>
+        <div class="clearfix mlr10 bgGray hei50 adv-btn">
+            <span class="fl f16 pl10">免费广告位管理</span>
+            <div class="fr">
+                <span class="tr f14 pr10 pt5">广告图尺寸750X234px</span>
+                <button type="button"class="btn btn-bg-orange">增加</button>
+                <button type="button" class="btn btn-gray mr10">重置</button>
+            </div>
+        </div>
+        <div class="page-body table-bor mlr10">
+            <table class="table table-hover mb0 text-center btndemand">
+                <colgroup>
+                    <col class="col-xs-1">
+                    <col class="col-xs-1">
+                    <col class="col-xs-3">
+                    <col class="col-xs-1">
+                    <col class="col-xs-1">
+                    <col class="col-xs-1">
+                </colgroup>
+                <thead>
+                <tr>
+                    <th class="text-center">状态</th>
+                    <th class="text-center">排序</th>
+                    <th class="text-center">文件名（鼠标移入可预览）</th>
+                    <th class="text-center">大小（K）</th>
+                    <th class="text-center">URL</th>
+                    <th class="text-center">-</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>有效</td>
+                        <td><div class=""><input type="text" class="inputborder wid50 mr5" placeholder="1"><a href="javascript:void(0);" class="blue">确定</a></div></td>
+                        <td class="geturl">1234564.jpg</td>
+                        <td>4098</td>
+                        <td>http://www.XXXX.com</td>
+                        <td class="blue modify">修改</td>
+                    </tr>
+                    <tr>
+                        <td>有效</td>
+                        <td><div class=""><input type="text" class="inputborder wid50 mr5" placeholder="1"><a href="javascript:void(0);" class="blue">确定</a></div></td>
+                        <td>1234564.jpg</td>
+                        <td>4098</td>
+                        <td>http://www.XXXX.com</td>
+                        <td class="blue">修改</td>
+                    </tr>
+                    <tr>
+                        <td>有效</td>
+                        <td><div class=""><input type="text" class="inputborder wid50 mr5" placeholder="1"><a href="javascript:void(0);" class="blue">确定</a></div></td>
+                        <td>1234564.jpg</td>
+                        <td>4098</td>
+                        <td>http://www.XXXX.com</td>
+                        <td class="blue">修改</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="text-center">
+            <div class="btn-group">
+                <button type="button" class="btn btn-white"><i class="fa fa-chevron-left"></i>
+                </button>
+                <button class="btn btn-white">1</button>
+                <button class="btn btn-white  active">2</button>
+                <button class="btn btn-white">3</button>
+                <button class="btn btn-white">4</button>
+                <button type="button" class="btn btn-white"><i class="fa fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 全局js -->
+<script src="../../hAdmin/js/jquery.min.js?v=2.1.4"></script>
+<script src="../../hAdmin/js/bootstrap.min.js?v=3.3.6"></script>
+<!--<script src="../../hAdmin/js/plugins/layer/layer.min.js"></script>-->
+<script src="../../layer/layer.js"></script>
+<!-- Flot -->
+<script src="../../hAdmin/js/plugins/flot/jquery.flot.js"></script>
+<script src="../../hAdmin/js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+<script src="../../hAdmin/js/plugins/flot/jquery.flot.resize.js"></script>
+<script src="../../hAdmin/js/plugins/flot/jquery.flot.pie.js"></script>
+<!-- 自定义js -->
+<script>
+    $(function () {
+        $(".modify").click(function () {
+            layer.open({
+                title: '在线调试'
+                ,content: '<form class="form-horizontal clearfix">\n' +
+                '    <div class="row">\n' +
+                '        <div class="col-sm-12">\n' +
+                '            <div class="form-group">\n' +
+                '                <label class="col-sm-3 control-label">*状态：</label>\n' +
+                '                <div class="col-sm-9">\n' +
+                '                    <div class="switch pt7">\n' +
+                '                        <div class="onoffswitch">\n' +
+                '                            <input type="checkbox" checked="" class="onoffswitch-checkbox" id="example1">\n' +
+                '                            <label class="onoffswitch-label" for="example1">\n' +
+                '                                <span class="onoffswitch-inner"></span>\n' +
+                '                                <span class="onoffswitch-switch"></span>\n' +
+                '                            </label>\n' +
+                '                        </div>\n' +
+                '                    </div>\n' +
+                '                </div>\n' +
+                '            </div>\n' +
+                '            <div class="form-group">\n' +
+                '                <label class="col-sm-3 control-label">*附件上传：</label>\n' +
+                '                <div class="col-sm-9">\n' +
+                '                    <div class="form-control posr"><span class="filetext"></span><div class="posblock">附件上传</div></div>' +
+                '                   <input type="file" class=" posinput" id="imgId">\n' +
+                '                </div>\n' +
+                '            </div>\n' +
+                '            <div class="form-group">\n' +
+                '                <label class="col-sm-3 control-label">*URL链接：</label>\n' +
+                '                <div class="col-sm-9">\n' +
+                '                    <input type="text" class="form-control">\n' +
+                '                </div>\n' +
+                '            </div>\n' +
+                '        </div>\n' +
+                '    </div>\n' +
+                '</form>'
+                ,area: ['500px', '280px']
+                ,btnAlign: 'c'
+                ,success: function(){
+                    $("#imgId").change(function () {
+                        $(".filetext").text($('#imgId').val())
+                    })
+                }
+            });
+        })
+
+
+    })
+</script>
+</body>
+</html>

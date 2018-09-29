@@ -1,0 +1,196 @@
+/*1110*/
+body{
+    width: 100%;
+    height: 100%;
+}
+.mobile-bg-fixd{
+    background: url("../images/game/mobile-bg.png") no-repeat center;
+    background-size: 100% auto;
+    position: relative;
+    min-height: 700px;
+}
+.mobile-bg{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    position: absolute;
+}
+.mobile-box{
+    width: 210px;
+    height: 210px;
+    position: absolute;
+    top: 200px;
+    left:0;
+    right: 0;
+    margin: 0 auto;
+}
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
+    .mobile-box{
+        width: 210px;
+        height: 210px;
+        position: absolute;
+        top: 200px;
+        left:0;
+        right: 0;
+        margin: 0 auto;
+    }
+}
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) {
+    .mobile-box{
+        top: 220px;
+    }
+}
+@media only screen and (min-device-width : 414px) and (max-device-width : 736px) {
+    .mobile-box{
+        top: 260px;
+    }
+}
+.mobile-bgfixd{
+    position: relative;
+}
+
+/*1113*/
+.mobile-szm{
+    background: url("../images/game/mobile-szmbg.png") no-repeat center;
+    background-size: 100% auto;
+    position: relative;
+    z-index: 9;
+    min-height: 700px;
+}
+.mobile-border{
+    border: 1px solid #f1f1f1;
+    box-shadow: 0 0 5px #f1f1f1;
+    border-radius: 10px;
+    background: #fff;
+}
+.mobile-box-input{
+    outline: none;
+    width: 100%;
+}
+.mobile-box-input::placeholder{
+    color: #ccc;
+}
+.tab-position{
+    position: absolute;
+    margin-right: 4px;
+    z-index: 9;
+}
+.btn-red-bg{
+    text-align: center;
+    outline: none;
+    border: none;
+    border-radius:0 5px 5px 0;
+}
+.mobile-szmposbg{
+    width: 280px;
+    height: 490px;
+    position: absolute;
+    z-index: 10;
+    top:106px;
+    left: 60px;
+}
+.mobile-szmposbg1{
+    width: 280px;
+    height: 490px;
+    position: absolute;
+    z-index: 10;
+}
+.btn-line-height{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    margin-left: -60px;
+}
+/*1114*/
+.szmmask{
+    width: 250px;
+    height: 350px;
+    position: absolute;
+    top: 200px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 10;
+    background: #fff;
+    border: 1px solid #f1f1f1;
+    box-shadow: 0 0 5px #f1f1f1;
+    border-radius: 10px;
+    display: none;
+}
+.szmmask-ul{
+    border-bottom: 1px solid #cccccc;
+}
+.szmmask-ul li{
+    width: 50%;
+    border: none;
+}
+.szmmask-ul .active{
+    border-bottom: 2px solid #f05c5c!important;
+}
+.szmmask-ul .active a{
+    color: #f05c5c!important;
+}
+.szmmask-ul a{
+    border: none!important;
+}
+.szmmask-ul li a:hover{
+    background: none;
+}
+.szmmaskUlli li{
+    padding: 5px 0;
+   border-bottom: 1px solid #ccc;
+}
+.szmmaskUlli .f-black{
+    color: #000;
+}
+.panel-body .f-black{
+    color: #000;
+}
+.szmmask .panel-body{
+    height: 240px;
+    overflow: auto;
+}
+.szmPopupfather{
+    position: relative;
+    background: rgba(0,0,0,.6);
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    display: none;
+    top:-3px;
+}
+.szmPopup{
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: 200px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 11;
+    background: #fff;
+    border: 1px solid #f1f1f1;
+    border-radius: 10px;
+    display: none;
+}
+.szmCenter label{
+    width: 60px;
+    color: #666;
+}
+.szmCenter input{
+    border-bottom: 1px solid #ccc;
+    width: 150px;
+    text-indent: 1em;
+    outline: none;
+    border-radius: 0;
+}
+.szmCenter input::placeholder{
+    color: #a7a7a7;
+}
+.close_zj{
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    z-index: 13;
+}
+

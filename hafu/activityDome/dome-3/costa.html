@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<!-- saved from url=(0081)https://mycosta.costa.net.cn/CostaQues/paper/store?paper_id=1&store_code=CN133252 -->
+<html style="font-size: 58.5938px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<!--<base href="https://mycosta.costa.net.cn:443/CostaQues/">--><base href=".">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimal-ui">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="format-detection" content="telephone=no">
+<title>costa问卷调查</title>
+<meta name="description" content="costa">
+<meta name="keywords" content="costa">
+<link rel="stylesheet" type="text/css" href="css/main.min.css">
+<script type="text/javascript" src="js/json2.js"></script>
+<script type="text/javascript">
+	var handlerOrientationChange = function(){
+        var width = (window.innerWidth <= 320) ? 320 : ((window.innerWidth >= 640) ? 640 : window.innerWidth);
+        var fontSize = 100 * (width / 640);
+        document.documentElement.style.fontSize = fontSize + "px";
+    };
+    window.onresize = handlerOrientationChange;
+    handlerOrientationChange();
+</script>
+</head>
+<body>
+	<section class="container" style="transform-origin: 0px 0px 0px; opacity: 1; transform: scale(1, 1);">
+		<div class="costa-survey">
+			<div class="survey-title">
+				<h1 class="st-slogen"><img src="images/slogen.png"></h1>
+				<p class="st-tips">感&nbsp;&nbsp;谢&nbsp;&nbsp;您&nbsp;&nbsp;提&nbsp;&nbsp;出&nbsp;&nbsp;宝&nbsp;&nbsp;贵&nbsp;&nbsp;建&nbsp;&nbsp;议&nbsp;&nbsp;！ </p>
+				<p class="st-tips st-font-eg">Thank you for taking the time to give us your feedback!</p>
+				<div class="st-ths">
+					<p>我们将评估您对最近一次在COSTA门店消费的反馈，以帮助我们更好的提高产品及服务质量。</p>
+					<p class="st-font-eg">To help assess the quality of our products and services, we would value your feedback about your most recent Costa Experience.</p>
+				</div>
+			</div>
+			<div class="survey-info">
+				<form>
+					<div class="flex-box">
+						<label>消费日期<br><em class="st-font-eg">Date</em></label>
+						<div class="select-wrap">
+							<input type="date" name="" id="paytime">
+						</div>
+					</div>
+					<div class="flex-box">
+						<label>消费时间<br><em class="st-font-eg">Time</em></label>
+						<div class="select-wrap">
+							<select name="time" id="time">
+								<option value="1">00:00 - 05:59</option>
+								<option value="2" selected="">06:00 - 08:59</option>
+								<option value="3">09:00 - 10:59</option>
+								<option value="4">11:00 - 13:59</option>
+								<option value="5">14:00 - 17:59</option>
+								<option value="6">18:00 - 23:59</option>
+							</select>
+						</div>
+					</div>
+					<div class="flex-box">
+						<label>城市<br><em class="st-font-eg">City</em></label>
+						<div class="input-wrap">
+							<input type="text" name="" value="常熟" readonly="">
+						</div>
+					</div>
+					<div class="flex-box flex-more-box">
+						<label>门店名称<br><em class="st-font-eg">Store Name</em></label>
+						<div class="input-wrap">
+							<p data-content="常熟印象城店&lt;br/&gt;Changshu incity">常熟印象城店</p>
+							<div class="tooltips">
+							</div>
+						</div>
+						<div class="btn-wrap">
+							<span class="more-content"></span>
+						</div>
+					</div>
+					<div class="flex-box flex-more-box">
+						<label>门店地址<br><em class="st-font-eg">Store Address</em></label>
+						<div class="input-wrap">
+							<p data-content="常熟市海虞南路88号印象城一楼&lt;br/&gt;1F,  No.88, Incity South Haiyu Rd, Changshu">常熟市海虞南路88号印象城一楼</p>
+							<div class="tooltips">
+								
+							</div>
+						</div>
+						<div class="btn-wrap">
+							<span class="more-content"></span>
+						</div>
+					</div>
+					<p class="sur-margin">感谢您留下相关信息</p>
+					<p class="st-font-eg">Very appreciate if you could leave your information</p>
+					<div class="flex-box">
+						<label>名 <em class="st-font-eg">/  First Name</em></label>
+						<div class="input-wrap">
+							<input type="text" name="" id="ufname" value="">
+						</div>
+					</div>
+					<div class="flex-box">
+						<label>姓 <em class="st-font-eg">/  Last  Name</em></label>
+						<div class="input-wrap">
+							<input type="text" name="" id="usname">
+						</div>
+					</div>
+					<div class="flex-box">
+						<label>手机号 <em class="st-font-eg">/ Mobile</em></label>
+						<div class="input-wrap">
+							<input type="tel" name="" id="mobile">
+						</div>
+					</div>
+					<p class="sur-margin">您是COSTA会员吗？</p>
+					<p class="st-font-eg">Are you  Costa Coffee club member? </p>
+					<div class="choose-box">
+						<label><input type="radio" name="yesno" value="0" id="yes_r">是 <em class="st-font-eg">YES</em></label>
+						<label><input type="radio" name="yesno" value="1" id="no_r">否 <em class="st-font-eg">NO</em></label>
+					</div>
+					<input type="hidden" value="1" id="paperId">
+					<input type="hidden" value="CN133252" id="storeCode">
+				</form>
+			</div>
+			<div class="survey-content">
+				<form class="ajax-form"><dl class="survey-qa"><dt><span class="num">1.</span><p>根据您本次在COSTA消费体验，您可能会将该家COSTA推荐给您的家人和朋友吗？<br><label style="font-size: .2rem">Based upon your experience  of this visit, how likely are you to recommend this Costa to your friends and family?</label></p></dt><dd><div class="score-bar"><span>差 <em>/ Poor</em></span><span>极好 <em>/ Excellent</em></span></div><div class="score-choose need radio"><input id="v-1-0" name="v_q1" type="radio" value="v-1-0"><label for="v-1-0">0</label><input id="v-1-1" name="v_q1" type="radio" value="v-1-1"><label for="v-1-1">1</label><input id="v-1-2" name="v_q1" type="radio" value="v-1-2"><label for="v-1-2">2</label><input id="v-1-3" name="v_q1" type="radio" value="v-1-3"><label for="v-1-3">3</label><input id="v-1-4" name="v_q1" type="radio" value="v-1-4"><label for="v-1-4">4</label><input id="v-1-5" name="v_q1" type="radio" value="v-1-5"><label for="v-1-5">5</label><input id="v-1-6" name="v_q1" type="radio" value="v-1-6"><label for="v-1-6">6</label><input id="v-1-7" name="v_q1" type="radio" value="v-1-7"><label for="v-1-7">7</label><input id="v-1-8" name="v_q1" type="radio" value="v-1-8"><label for="v-1-8">8</label><input id="v-1-9" name="v_q1" type="radio" value="v-1-9"><label for="v-1-9">9</label><input id="v-1-10" name="v_q1" type="radio" value="v-1-10"><label for="v-1-10">10</label></div></dd></dl><dl class="survey-qa"><dt><span class="num">2.</span><p>您会对该门店员工服务的友好和协助度如何打分？<br><label style="font-size: .2rem">How  would  you rate  the friendliness and helpfulness of the staff during the visit?</label></p></dt><dd><div class="score-bar"><span>差 <em>/ Poor</em></span><span>极好 <em>/ Excellent</em></span></div><div class="score-choose need radio"><input id="v-2-0" name="v_q2" type="radio" value="v-2-0"><label for="v-2-0">0</label><input id="v-2-1" name="v_q2" type="radio" value="v-2-1"><label for="v-2-1">1</label><input id="v-2-2" name="v_q2" type="radio" value="v-2-2"><label for="v-2-2">2</label><input id="v-2-3" name="v_q2" type="radio" value="v-2-3"><label for="v-2-3">3</label><input id="v-2-4" name="v_q2" type="radio" value="v-2-4"><label for="v-2-4">4</label><input id="v-2-5" name="v_q2" type="radio" value="v-2-5"><label for="v-2-5">5</label><input id="v-2-6" name="v_q2" type="radio" value="v-2-6"><label for="v-2-6">6</label><input id="v-2-7" name="v_q2" type="radio" value="v-2-7"><label for="v-2-7">7</label><input id="v-2-8" name="v_q2" type="radio" value="v-2-8"><label for="v-2-8">8</label><input id="v-2-9" name="v_q2" type="radio" value="v-2-9"><label for="v-2-9">9</label><input id="v-2-10" name="v_q2" type="radio" value="v-2-10"><label for="v-2-10">10</label></div></dd></dl><dl class="survey-qa"><dt><span class="num">3.</span><p>您会对该门店服务速度打几分？<br><label style="font-size: .2rem">How  would you  rate the  speed of service during your visit？</label></p></dt><dd><div class="score-bar"><span>差 <em>/ Poor</em></span><span>极好 <em>/ Excellent</em></span></div><div class="score-choose need radio"><input id="v-3-0" name="v_q3" type="radio" value="v-3-0"><label for="v-3-0">0</label><input id="v-3-1" name="v_q3" type="radio" value="v-3-1"><label for="v-3-1">1</label><input id="v-3-2" name="v_q3" type="radio" value="v-3-2"><label for="v-3-2">2</label><input id="v-3-3" name="v_q3" type="radio" value="v-3-3"><label for="v-3-3">3</label><input id="v-3-4" name="v_q3" type="radio" value="v-3-4"><label for="v-3-4">4</label><input id="v-3-5" name="v_q3" type="radio" value="v-3-5"><label for="v-3-5">5</label><input id="v-3-6" name="v_q3" type="radio" value="v-3-6"><label for="v-3-6">6</label><input id="v-3-7" name="v_q3" type="radio" value="v-3-7"><label for="v-3-7">7</label><input id="v-3-8" name="v_q3" type="radio" value="v-3-8"><label for="v-3-8">8</label><input id="v-3-9" name="v_q3" type="radio" value="v-3-9"><label for="v-3-9">9</label><input id="v-3-10" name="v_q3" type="radio" value="v-3-10"><label for="v-3-10">10</label></div></dd></dl><dl class="survey-qa"><dt><span class="num">4.</span><p>您会对您购买的饮品质量打几分?（如果您没有购买饮品请跳过此题）<br><label style="font-size: .2rem">How would you rate the quality of the drink you purchased?  （Please leave blank if you did not purchase a drink）</label></p></dt><dd><div class="score-bar"><span>差 <em>/ Poor</em></span><span>极好 <em>/ Excellent</em></span></div><div class="score-choose need radio"><input id="v-4-0" name="v_q4" type="radio" value="v-4-0"><label for="v-4-0">0</label><input id="v-4-1" name="v_q4" type="radio" value="v-4-1"><label for="v-4-1">1</label><input id="v-4-2" name="v_q4" type="radio" value="v-4-2"><label for="v-4-2">2</label><input id="v-4-3" name="v_q4" type="radio" value="v-4-3"><label for="v-4-3">3</label><input id="v-4-4" name="v_q4" type="radio" value="v-4-4"><label for="v-4-4">4</label><input id="v-4-5" name="v_q4" type="radio" value="v-4-5"><label for="v-4-5">5</label><input id="v-4-6" name="v_q4" type="radio" value="v-4-6"><label for="v-4-6">6</label><input id="v-4-7" name="v_q4" type="radio" value="v-4-7"><label for="v-4-7">7</label><input id="v-4-8" name="v_q4" type="radio" value="v-4-8"><label for="v-4-8">8</label><input id="v-4-9" name="v_q4" type="radio" value="v-4-9"><label for="v-4-9">9</label><input id="v-4-10" name="v_q4" type="radio" value="v-4-10"><label for="v-4-10">10</label></div></dd></dl><dl class="survey-qa"><dt><span class="num">5.</span><p>您会对您购买的食品质量打几分?  ( 如果您没有购买食品请跳过此题) <br><label style="font-size: .2rem">How  would you rate the quality of the food you purchased? ( Please leave blank  if you did not purchase any food) </label></p></dt><dd><div class="score-bar"><span>差 <em>/ Poor</em></span><span>极好 <em>/ Excellent</em></span></div><div class="score-choose need radio"><input id="v-5-0" name="v_q5" type="radio" value="v-5-0"><label for="v-5-0">0</label><input id="v-5-1" name="v_q5" type="radio" value="v-5-1"><label for="v-5-1">1</label><input id="v-5-2" name="v_q5" type="radio" value="v-5-2"><label for="v-5-2">2</label><input id="v-5-3" name="v_q5" type="radio" value="v-5-3"><label for="v-5-3">3</label><input id="v-5-4" name="v_q5" type="radio" value="v-5-4"><label for="v-5-4">4</label><input id="v-5-5" name="v_q5" type="radio" value="v-5-5"><label for="v-5-5">5</label><input id="v-5-6" name="v_q5" type="radio" value="v-5-6"><label for="v-5-6">6</label><input id="v-5-7" name="v_q5" type="radio" value="v-5-7"><label for="v-5-7">7</label><input id="v-5-8" name="v_q5" type="radio" value="v-5-8"><label for="v-5-8">8</label><input id="v-5-9" name="v_q5" type="radio" value="v-5-9"><label for="v-5-9">9</label><input id="v-5-10" name="v_q5" type="radio" value="v-5-10"><label for="v-5-10">10</label></div></dd></dl><dl class="survey-qa"><dt><span class="num">6.</span><p>请为门店的清洁程度打分<br><label style="font-size: .2rem">How  would you rate the cleanliness of the store? </label></p></dt><dd><div class="score-bar"><span>差 <em>/ Poor</em></span><span>极好 <em>/ Excellent</em></span></div><div class="score-choose need radio"><input id="v-6-0" name="v_q6" type="radio" value="v-6-0"><label for="v-6-0">0</label><input id="v-6-1" name="v_q6" type="radio" value="v-6-1"><label for="v-6-1">1</label><input id="v-6-2" name="v_q6" type="radio" value="v-6-2"><label for="v-6-2">2</label><input id="v-6-3" name="v_q6" type="radio" value="v-6-3"><label for="v-6-3">3</label><input id="v-6-4" name="v_q6" type="radio" value="v-6-4"><label for="v-6-4">4</label><input id="v-6-5" name="v_q6" type="radio" value="v-6-5"><label for="v-6-5">5</label><input id="v-6-6" name="v_q6" type="radio" value="v-6-6"><label for="v-6-6">6</label><input id="v-6-7" name="v_q6" type="radio" value="v-6-7"><label for="v-6-7">7</label><input id="v-6-8" name="v_q6" type="radio" value="v-6-8"><label for="v-6-8">8</label><input id="v-6-9" name="v_q6" type="radio" value="v-6-9"><label for="v-6-9">9</label><input id="v-6-10" name="v_q6" type="radio" value="v-6-10"><label for="v-6-10">10</label></div></dd></dl><dl class="survey-qa"><dt><span class="num">7.</span><p>为了更好地了解您的反馈，烦请告诉我们您给到门店这些评分的原因？ <br><label style="font-size: .2rem">To  enable us to better understand your feedback, could you please tell us the reasons why you rated the score as you did?</label></p></dt><dd class="textarea"><textarea name="v_q7"></textarea></dd></dl><dl class="survey-qa"><dt><span class="num">8.</span><p>您在门店消费期间，是否有店员给您提供了令您满意的服务，如果有请告诉我们他们的名字。<br><label style="font-size: .2rem">Is there a specific Staff member that gave you great service during your visit? If so, please let us know their name.</label></p></dt><dd class="textarea"><textarea name="v_q8"></textarea></dd></dl></form>
+
+				<a id="submit" class="s-submit">提交<em class="st-font-eg">/ Submit</em></a>
+			</div>
+		</div>
+		<footer>
+			<img src="images/logo.png" alt="costa">
+		</footer>
+	</section>
+
+
+	<div class="loading" style="transform-origin: 0px 0px 0px; opacity: 1; transform: scale(1, 1); display: none;">
+		<div class="loading-content">
+			<div class="spinner">
+				<p class="white">正在努力加载</p>
+				<div class="bounce1"></div>
+				<div class="bounce2"></div>
+				<div class="bounce3"></div>
+			</div>
+		</div>
+	</div>
+
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script src="js/main.min.js"></script>
+<script type="text/javascript">
+	arvato.getItems("paper/getQues?paperId=1");
+	var flag = 0;
+	$('#submit').on('click', function() {
+		if(flag == 0){
+			flag = 1;
+			if(checkData()){
+				var memberFlag;
+				if($("#yes_r").prop('checked')){
+					memberFlag = "Y";
+				}
+				if($("#no_r").prop('checked')){
+					memberFlag = "N";
+				}
+				var answer = [];
+				$(".survey-qa").each(function(){
+					if($(this).find(".score-choose").length>0){
+						var choosenPoint = $(this).find("input:checked").val();
+						if(choosenPoint==null || choosenPoint == undefined){
+							choosenPoint = "";
+						}
+						else{
+							choosenPoint = choosenPoint.split("-")[2];
+						}
+						answer.push(choosenPoint);
+					}
+					else if($(this).find(".textarea").length>0){
+						var content = $(this).find("textarea").val().trim().substring(0,2000);
+						answer.push(content);
+					}
+				});
+				console.log(answer);
+				console.log(answer.join(","));
+				var answer_json = JSON.stringify(answer);
+				console.log(answer_json);
+				$.post('paper/save',
+						{	'paperId':$("#paperId").val(),
+							'storeCode':$("#storeCode").val(),
+							'answer':answer_json,
+							'sourceType':'store',
+							'mobile':$("#mobile").val(),
+							'memberFlag':memberFlag,
+							'ufname':$("#ufname").val(),
+							'usname':$("#usname").val(),
+							'orderTime':$("#paytime").val(),
+							'timePeriod':$("#time").val()
+						},
+						function(data){
+							flag = 0;
+							if(data.code==0 || data.code==-9){
+								window.location.href="success.jsp";
+							}
+							else{
+								alert(data.msg);
+							}
+				});
+				
+			}
+		}
+		
+	});
+	
+	var checkData = function(){
+		if($("#ufname").val().trim()=="" || $("#usname").val().trim()==""){
+			alert("请填完姓名");
+			flag = 0;
+			return false;
+		}
+		if($("#mobile").val().trim()==""){
+			alert("请填写手机号码");
+			flag = 0;
+			return false;
+		}
+		reg = /^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|17[5|7]|18[0|1|2|3|5|6|7|8|9])\d{8}$/;
+		if(!reg.test($("#mobile").val().trim())){
+			alert("手机号码格式有误，请核查");
+			flag = 0;
+			return false;
+		}
+		if(!$("#yes_r").prop('checked') && !$("#no_r").prop('checked')){
+			alert("请确认是否为COSTA会员");
+			flag = 0;
+			return false;
+		}
+		return true;
+		
+	}
+	
+	//获取当前时间
+	Date.prototype.toDateInputValue = (function() {
+	    var local = new Date(this);
+	    local.setMinutes(this.getMinutes() - this.getTimezoneOffset());
+	    return local.toJSON().slice(0,10);
+	});
+	document.getElementById("paytime").value=new Date().toDateInputValue();
+	// 文本显示更多
+	$('.flex-more-box').on('click', '.btn-wrap', function() {
+		var _selector = $(this).parent().find('.input-wrap');
+		var _html = _selector.find('p').data('content');
+
+
+		if(!_selector.find('.tooltips').hasClass('active')){
+			$('.tooltips').removeClass('active');
+			_selector.find('.tooltips').addClass('active').html(_html);
+		}
+		else{
+			_selector.find('.tooltips').removeClass('active');
+		}
+	});
+</script>
+</body>
+</html>

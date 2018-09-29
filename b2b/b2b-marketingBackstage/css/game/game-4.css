@@ -1,0 +1,102 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+body{
+    /*background: #df412b;*/
+    position: relative;
+}
+.banner1{
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.ggl{
+    position: relative;
+    width: 85.6%;
+    height: 90px;
+    margin: -5px auto;
+    padding: 0 0 1% 2%;
+    background: url(../../images/game/ggl-2.png) no-repeat center center;
+    background-size: 100% 100%;
+}
+.canvas{
+    position:absolute;
+    top:2px;
+    left:3.5%;
+    width:95%;
+    height:82px;
+    line-height:82px;
+    text-align:center;
+    z-index: 2;
+
+}
+.info{
+    position:absolute;
+    top:2px;
+    left:2.5%;
+    width:95%;
+    height:82px;
+    text-align:center;
+}
+.info span{
+    display: block;
+    font-size: 18px;
+}
+#prompt{
+    line-height: 40px;
+}
+.btn-g{
+    position: relative;
+    width: 50%;
+    height: 35px;
+    line-height: 35px;
+    background: #df412b;
+    color: #fff;
+    border-radius: 5px;
+    margin: 0 auto;
+    z-index: 1;
+}
+.guize{
+    display: block;
+    width: 85.6%;
+    height: auto;
+    margin: 5% auto 10% auto;
+    border-radius: 5px;
+}
+.num{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size:14px;
+    margin-top: 5%;
+}
+#ok, #no{display: none;}
+.pop{
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: none;
+}
+.pop img{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin: 15% auto;
+}
+
+.logo-2-logo{
+    text-align: center;
+    padding: 20px 0 30px 0;
+}
+.logo-2-logo img{
+    height: 40px;
+    width: auto;
+}

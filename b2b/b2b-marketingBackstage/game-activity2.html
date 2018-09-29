@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--360浏览器优先以webkit内核解析-->
+    <title>活动管理详细</title>
+    <link rel="shortcut icon" href="hAdmin/favicon.ico">
+    <link href="hAdmin/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="hAdmin/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="frame/select2-4.0.3/css/select2.min.css?v=3.3.6" rel="stylesheet">
+    <link href="hAdmin/css/animate.css" rel="stylesheet">
+    <link href="css/base.css?v=3.1.0" rel="stylesheet">
+    <link href="hAdmin/css/style.css?v=4.1.0" rel="stylesheet">
+    <link href="css/iframe-page.css" rel="stylesheet">
+    <link href="css/page.css" rel="stylesheet">
+    <link href="css/game/game-1.css" rel="stylesheet">
+    <link href="css/game/component.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/game/game-activity.css">
+
+</head>
+<body class="light-grey-bg">
+<div class="wrapper wrapper-content">
+    <form name="form1" enctype="multipart/form-data" id="form">
+        <div class="ibox act">
+            <div class="top-title ibox-title">
+                <div class="row">
+                    <div class="col-sm-10">
+                        <div class="bs-callout bs-callout-info ibox-h4-color"><p class="f16">H5活动管理</p></div>
+                    </div>
+                    <div class="col-sm-2 pl0 tr">
+                        <a class="btn btn-default ">关闭</a>
+                    </div>
+                </div>
+            </div>
+            <div class="ibox-content">
+                <div class="row">
+                    <div class="col-sm-12 ">
+                        <a class="btn btn-green effect">活动效果</a>
+                        <a class="btn btn-green winning">中奖明细</a>
+                    </div>
+                    <div class="col-sm-12 pt20 act-line">
+                        <p>商户名称：镒钡通</p>
+                        <p>活动名称：镒钡通幸运大转盘</p>
+                        <p>活动状态：进行中</p>
+                        <p>创建时间：2017-09-18 12:11:13</p>
+                        <div class="clearfix">
+                            <div class="fl">活动描述：</div>
+                            <div class="fl">
+                                活动时间：2017.9.22-2016.10.31 <br/>
+                                活动奖品：通用积分，让天下没有被浪费的积分！<br/>
+                                发奖时间：中奖后，即时发放。
+                            </div>
+                        </div>
+                        <p>分享标题：幸运转起来~</p>
+                        <div class="clearfix">
+                            <div class="fl">分享文案：</div>
+                            <div class="fl">
+                                幸运大转盘，转出好运来~
+                                快来参加，一起赢壕礼！
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="top-title ibox-title">
+                <div class="row">
+                    <div class="col-sm-10">
+                        <div class="bs-callout bs-callout-info ibox-h4-color"><p class="f16">活动规则</p></div>
+                    </div>
+                </div>
+            </div>
+            <div class="ibox-content">
+                <div class="row">
+                    <div class="col-sm-12 act-line">
+                        <p>活动周期：2017/09/21 9:00:00  —   2017/10/21 9:00:00</p>
+                        <p>抽奖规则：每日可抽奖 1 次 or 仅限抽奖一次</p>
+                        <p>分享规则：无 or 分享送 1 次抽奖机会（活动周期内每天一次 or 活动周期内仅限一次）</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="top-title ibox-title">
+                <div class="row">
+                    <div class="col-sm-10">
+                        <div class="bs-callout bs-callout-info ibox-h4-color"><p class="f16">奖品信息</p></div>
+                    </div>
+                </div>
+            </div>
+            <div class="ibox-content">
+                <table class="table mt20">
+                    <thead>
+                        <tr class="active">
+                            <th>序号</th>
+                            <th>奖品名称</th>
+                            <th>数量</th>
+                            <th>小计</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>通用积分100 钡</td>
+                            <td>10个</td>
+                            <td>100钡</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>通用积分100 钡</td>
+                            <td>10个</td>
+                            <td>100钡</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>通用积分100 钡</td>
+                            <td>10个</td>
+                            <td>100钡</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>通用积分100 钡</td>
+                            <td>10个</td>
+                            <td>100钡</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="row">
+                    <div class="col-sm-11">
+                        <p class="tr">总计：<span class="orange f-blod f16">26000</span> 钡</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<!--中奖-->
+<script type="text/template" id="game-tab">
+    <div class="tabs-container">
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#tab-1" aria-expanded="true"> 剩余奖品</a>
+            </li>
+            <li class=""><a data-toggle="tab" href="#tab-2" aria-expanded="false">中奖明细</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div id="tab-1" class="tab-pane active">
+                <div class="panel-body">
+                    <table class="table">
+                        <tr class="active">
+                            <th>序号</th>
+                            <th>奖品名称</th>
+                            <th>数量</th>
+                            <th>已发放</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>通用积分100 钡</td>
+                            <td>10个</td>
+                            <td>5（剩余5）</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>通用积分100 钡</td>
+                            <td>10个</td>
+                            <td>5（剩余5）</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>通用积分100 钡</td>
+                            <td>10个</td>
+                            <td>5（剩余5）</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>通用积分100 钡</td>
+                            <td>10个</td>
+                            <td>5（剩余5）</td>
+                        </tr>
+
+                    </table>
+                </div>
+            </div>
+            <div id="tab-2" class="tab-pane">
+                <div class="panel-body">
+                    <div class="form-horizontal">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label class="control-label col-sm-2">企业名称</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" placeholder="请输入企业名称">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">创建时间</label>
+                                    <div class="col-sm-3">
+                                        <input type="text" id="start" class="form-control b2b-datetime hasDatepicker">
+                                    </div>
+                                    <label  class="col-sm-1 control-label tc">到</label>
+                                    <div class="col-sm-3">
+                                        <input type="text" id="end" class="form-control b2b-datetime hasDatepicker">
+                                    </div>
+                                    <div class="col-sm-3 pl0 tr">
+                                        <a href="javascript:void(0);" class="btn btn-green">查询</a>
+                                        <a id="export" class="btn btn-default btn-bg-gray">导出</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <table class="table">
+                        <tr class="active">
+                            <th>序号</th>
+                            <th>用户名</th>
+                            <th>领取时间</th>
+                            <th>奖品名称</th>
+                            <th>积分</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>138****6587</td>
+                            <td>2017/09/25 10:00:00</td>
+                            <td>通用积分100钡</td>
+                            <td>100</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>138****6587</td>
+                            <td>2017/09/25 10:00:00</td>
+                            <td>通用积分100钡</td>
+                            <td>16</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>138****6587</td>
+                            <td>2017/09/25 10:00:00</td>
+                            <td>通用积分100钡</td>
+                            <td>100</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>138****6587</td>
+                            <td>2017/09/25 10:00:00</td>
+                            <td>通用积分100钡</td>
+                            <td>100</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>138****6587</td>
+                            <td>2017/09/25 10:00:00</td>
+                            <td>通用积分100钡</td>
+                            <td>100</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>138****6587</td>
+                            <td>2017/09/25 10:00:00</td>
+                            <td>通用积分100钡</td>
+                            <td>100</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+<!--报表效果-->
+<script type="text/template" id="game-effect">
+    <div class="m20">
+        <ul class="game-effect-ul clearfix">
+            <li class="tc">
+                <p>浏览人数</p>
+                <p class="f20">1031</p>
+            </li>
+            <li class="tc">
+                <p>参与人数</p>
+                <p class="f20">563</p>
+            </li>
+            <li class="tc">
+                <p>中奖人数</p>
+                <p class="f20">563</p>
+            </li>
+            <li class="tc">
+                <p>分享数</p>
+                <p class="f20">563</p>
+            </li>
+        </ul>
+        <div class=" mt20 mb20 clearfix game-effect">
+            <div class="fl"><p class="f18">活动参与趋势</p></div>
+            <div class="fr gray">
+                <select class="fa-border game-select">
+                    <option>2017-09-22 —2017-09-22</option>
+                    <option>2017-09-22 —2017-09-22</option>
+                    <option>2017-09-22 —2017-09-22</option>
+                    <option>2017-09-22 —2017-09-22</option>
+                </select>
+                <a href="#" class="btn btn-orange ml10">今</a>
+                <a href="#" class="btn ">昨</a>
+                <a href="#" class="btn ">周</a>
+                <a href="#" class="btn ">月</a>
+            </div>
+        </div>
+
+        <div id="main" style="width: 600px;height:400px;"></div>
+
+        <div class="  clearfix game-effect">
+            <div class="fl"><p class="f18">活动参与明细</p></div>
+            <div class="fr"><a href="#" class="btn btn-orange">导出</a></div>
+        </div>
+        <table class="table">
+            <tr class="active">
+                <th>序号</th>
+                <th>浏览人数</th>
+                <th>参与人数</th>
+                <th>中奖人数</th>
+                <th>分享数</th>
+                <th>日期</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>1000</td>
+                <td>500</td>
+                <td>200</td>
+                <td>15</td>
+                <td>2017-08-30 00:00:00</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>1000</td>
+                <td>500</td>
+                <td>200</td>
+                <td>15</td>
+                <td>2017-08-30 00:00:00</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>1000</td>
+                <td>500</td>
+                <td>200</td>
+                <td>15</td>
+                <td>2017-08-30 00:00:00</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>1000</td>
+                <td>500</td>
+                <td>200</td>
+                <td>15</td>
+                <td>2017-08-30 00:00:00</td>
+            </tr>
+        </table>
+        <nav aria-label="Page navigation" class="tc">
+            <ul class="pagination m5">
+                <li>
+                    <a href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li>
+                    <a href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</script>
+
+
+
+
+<!-- 全局js -->
+<script src="hAdmin/js/jquery.min.js"></script>
+<script src="js/jquery-migrate-1.2.1.js"></script>
+<script src="js/ajaxform.js"></script>
+<script src="frame/formvalidator4.1.3/formValidatorRegex.js"></script>
+<script src="frame/formvalidator4.1.3/formValidator-4.1.3.js"></script>
+<script src="hAdmin/js/bootstrap.min.js?v=3.3.6"></script>
+<script src="hAdmin/js/plugins/layer/layer.min.js"></script>
+<script src="frame/select2-4.0.3/js/select2.min.js"></script>
+<!--<script src="frame/vue2.1.8/vue.min.js"></script>-->
+<!-- Flot -->
+<script src="hAdmin/js/plugins/flot/jquery.flot.js"></script>
+<script src="hAdmin/js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+<script src="hAdmin/js/plugins/flot/jquery.flot.resize.js"></script>
+<script src="hAdmin/js/plugins/flot/jquery.flot.pie.js"></script>
+<!-- 自定义js -->
+<script src="js/form-validator/game/echarts.min.js"></script>
+<script src="js/form-validator/game/game-activity2.js"></script>
+
+</body>
+</html>

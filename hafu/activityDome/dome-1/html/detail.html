@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title>COSTA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="stylesheet" href="summerii/css/weuix.min.css"/>
+    <link rel="stylesheet" href="summerii/css/style.css"/>
+
+    <script type="text/javascript" src="summerii/js/zepto.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="weui_article active-details">
+        <section>
+            <div class="bg-img" id="activeDetail">
+
+                <div class="bg-box-title"><img src="summerii/images/detils-top-title.png"></div>
+                <div class="bg-box">
+                    <div class="l-box"><img src="summerii/images/l-box-bg.png"></div>
+                    <div class="r-box"><img src="summerii/images/r-box-bg.png"></div>
+                    <img src="summerii/images/beizi--01.gif" style="width: 10rem;height: auto;">
+                </div>
+
+                <div class="weui_cells weui_cells-top">
+                    <div class="weui_cell">
+                        <div class="weui_cell_hd"><img class="user-img" src="${campaignSummerii.headimgurl!''}" alt="" style="width:50px;margin-right:5px;display:block"></div>
+                        <div class="weui_cell_bd weui_cell_primary">
+                            <p>${campaignSummerii.name!''},</p>
+                            <#if (campaignSummeriiDetails?size==0)>
+                            <p>赶紧邀请好友入会，领取买一赠一礼券</p>
+                            <#elseif (campaignSummerii.couponId)??>
+                            <p>恭喜您获赠买一赠一礼券</p>
+                            <#else>
+                            <p>再邀请${5-campaignSummeriiDetails?size}位好友入会，即可获赠买一赠一礼券</p>
+                            </#if>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="weui_cells-t1"><img src="summerii/images/weui_cells-t1.png"></div>
+
+                <div class="weui_cells weui_cells-head">
+
+                    <#if (campaignSummeriiDetails?size>0)>
+                        <#list campaignSummeriiDetails?sort_by("created") as campaignSummeriiDetail>
+                    <div class="weui_cell">
+                        <div class="weui_cell_hd"><img class="user-img" src="<#if (campaignSummeriiDetail.headimgurl)??>${campaignSummeriiDetail.headimgurl}<#else>summerii/images/logo-icon-1.png</#if>" alt="" style="width:50px;margin-right:5px;display:block"></div>
+                        <div class="weui_cell_bd weui_cell_primary">
+                            <p>${campaignSummeriiDetail.name!''}已入会并获赠COSTA好礼</p>
+                            <p>${(campaignSummeriiDetail.created?string('yyyy-MM-dd HH:mm'))!''}</p>
+                        </div>
+                        <div class="weui_cell_ft">${campaignSummeriiDetail.couponName!''}</div>
+                    </div>
+                        </#list>
+                    <#else>
+                        <div class="weui_cell">
+                            <div class="weui_cell_hd"><img src="summerii/images/logo-icon-1.png" alt="" style="width:50px;margin-right:5px;display:block"></div>
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <p>尚未有好友入会领取好礼</p>
+                            </div>
+                        </div>
+                    </#if>
+
+                </div>
+                <div class="weui_panel_bd">
+                    <div class="weui_media_box weui_media_text weui_media_text-show">
+                        <h4 class="weui_media_title">活动细则</h4>
+                        <p class="weui_media_desc">会员消费指定酷乐冰或冷萃系列新品，即可点击消费成功通知模板消息链接发起活动；</p>
+                        <p class="weui_media_desc">活动发起者邀请5位好友入会，即可获赠买一赠一礼券；</p>
+                        <p class="weui_media_desc">新用户接受邀请入会，可随机领取新人入会礼券，每个用户限领一张；</p>
+                        <p class="weui_media_desc">优惠券使用规则详见优惠券描述。</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <#if servicename=='wechat' && wechatJsapiConfig??>
+    <script type="text/javascript" src="default/js/jweixin-1.2.0.js"></script>
+    <script type="text/javascript">
+        wx.config(${wechatJsapiConfig});
+        wx.ready(function(){
+            wx.onMenuShareTimeline({
+                title: '【COSTA入会福利】炎炎夏日，快抢COSTA新人福利礼券！',
+                link: '${url}',
+                imgUrl: '${img}'
+            });
+            wx.onMenuShareAppMessage({
+                title: '【COSTA入会福利】炎炎夏日，快抢COSTA新人福利礼券！',
+                desc: '点击Pick你的入会专属福利！',
+                link: '${url}',
+                imgUrl: '${img}'
+            });
+            wx.onMenuShareQQ({
+                title: '【COSTA入会福利】炎炎夏日，快抢COSTA新人福利礼券！',
+                desc: '点击Pick你的入会专属福利！',
+                link: '${url}',
+                imgUrl: '${img}'
+            });
+            wx.onMenuShareWeibo({
+                title: '【COSTA入会福利】炎炎夏日，快抢COSTA新人福利礼券！',
+                desc: '点击Pick你的入会专属福利！',
+                link: '${url}',
+                imgUrl: '${img}'
+            });
+            wx.onMenuShareQZone({
+                title: '【COSTA入会福利】炎炎夏日，快抢COSTA新人福利礼券！',
+                desc: '点击Pick你的入会专属福利！',
+                link: '${url}',
+                imgUrl: '${img}'
+            });
+        });
+    </script>
+    </#if>
+
+</body>
+
+</html>

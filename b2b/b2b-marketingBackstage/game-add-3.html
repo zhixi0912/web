@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--360浏览器优先以webkit内核解析-->
+
+
+    <title>红包抽奖-活动创建</title>
+    <link rel="shortcut icon" href="hAdmin/favicon.ico">
+
+    <link href="hAdmin/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="hAdmin/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="frame/select2-4.0.3/css/select2.min.css?v=3.3.6" rel="stylesheet">
+    <link href="frame/datetimepicker/js/jquery-ui.css" rel="stylesheet">
+    <link href="frame/datetimepicker/jQuery-Timepicker-Addon/jquery-ui-timepicker-addon.css" rel="stylesheet">
+    <link href="hAdmin/css/animate.css" rel="stylesheet">
+    <link href="hAdmin/css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="css/base.css?v=3.1.0" rel="stylesheet">
+    <link href="hAdmin/css/style.css?v=4.1.0" rel="stylesheet">
+    <link href="css/iframe-page.css" rel="stylesheet">
+    <link href="css/page.css" rel="stylesheet">
+    <link href="css/game/game-1.css" rel="stylesheet">
+    <link href="css/game/component.css" rel="stylesheet">
+    <!--<link href="css/game/game-3.css" rel="stylesheet">-->
+    <link href="css/game/game-4.css" rel="stylesheet">
+    <link href="css/game/game-activity.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/game/game-add-bj.css">
+    <link rel="stylesheet" href="../b2b-mobile/css/h5-game-1/game-1.css">
+    <style>
+        .game-up-main-1{
+            padding: 20px;
+        }
+        .line-zhi{
+            position: relative;
+        }
+        .line-zhi .line-zhi-up{
+            position: absolute;
+            line-height: 30px;
+            top:0;
+            right: -8px;
+        }
+        .step-p .step-p-t{
+            display: inline-block;
+            margin-left: 20px;
+        }
+        .step-p .step-p-t2{
+            line-height: 50px;
+        }
+        .draw-list .shop-box .shop-name{
+            top:80px;
+        }
+    </style>
+
+</head>
+<body>
+<div class=" wrapper wrapper-content">
+    <div class="ibox act">
+        <div class="top-title ibox-title">
+            <div class="row">
+                <div class="col-sm-9 f16 game-index-a">
+                    <div class="form-group">
+                        <a class="" href="game-index.html">我的活动</a>
+                        <a class="game-active" href="game-index.html">模板库</a>
+                        <a class="f-gray" href="game-index.html">活动定制</a>
+                        <a class="" href="game-activity1.html">运营活动管理</a>
+                    </div>
+                </div>
+                <div class="col-sm-3 tr">
+                    <div class="form-group f-black f16">
+                        <p>账户余额：<span class="f-orange">30</span>万钡</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ibox-content">
+            <div class="row">
+                <div class="col-sm-12 clearfix text-center">
+                    <div class="my-activity clearfix">
+                        <div class="my-act-ul">
+                            <span class="my-act-radius">1</span>
+                            <p>活动创建</p>
+                        </div>
+                        <div class="my-act-ul2">
+                            <span class="my-act-span bg-gray"></span>
+                        </div>
+                        <div class="my-act-ul">
+                            <span class="my-act-radius bg-gray">2</span>
+                            <p>规则设置</p>
+                        </div>
+                        <div class="my-act-ul2">
+                            <span class="my-act-span bg-gray"></span>
+                        </div>
+                        <div class="my-act-ul">
+                            <span class="my-act-radius bg-gray">3</span>
+                            <p>奖项结算</p>
+                        </div>
+                        <div class="my-act-ul2">
+                            <span class="my-act-span bg-gray"></span>
+                        </div>
+                        <div class="my-act-ul">
+                            <span class="my-act-radius bg-gray">4</span>
+                            <p>完成</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-5 clearfix">
+                    <div class="game-mb-bg">
+                        <div class="draw-gift h5-bg">
+                            <div class="draw-img">
+                                <div class="draw-up hides"></div>
+                                <div class="draw-up-up" id="draw-up-up"></div>
+                                <div class="draw-mid draw-mid-move"></div>
+                                <div class="draw-down"></div>
+                                <div class="draw-down2 hides"></div>
+                                <div class="draw-list">
+                                    <div class="shop-box">
+                                        <img src="../b2b-mobile/images/h5-game-1/open-hagen.jpg">
+                                        <p class="shop-name">优惠券600倍</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- game end-->
+                </div>
+                <div class="col-sm-6">
+                    <div class="right-box">
+                        <form class="form-horizontal" id="form1">
+                            <!-- step 1 -->
+                            <div class="step-1 stop-box mt100">
+                                <div class="form-group">
+                                    <label for="" class="col-sm-2 control-label">活动名称</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="game-name" placeholder="好乐迪红包大抽奖" maxlength="12">
+                                        <span class="help-block" id="game-nameTip"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="" class="col-sm-2 control-label">活动描述</label>
+                                    <div class="col-sm-10">
+                                        <textarea class="form-control game-describe" rows="3" id="game-describe" maxlength="300">
+活动名称：好乐迪红包大抽奖
+活动时间：2017.9.22-2016.10.31 
+活动奖品：通用积分，让天下没有被浪费的积分！
+发奖时间：中奖后，即时发放。</textarea>
+                                        <span class="help-block" id="game-describeTip"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="" class="col-sm-2 control-label">分享设置</label>
+                                    <div class="col-sm-10 step-p">
+                                        <button type="button" class="btn btn-w-m btn-danger" id="step-up">选择</button><p class="step-p-t">好乐迪彩票<span class="ml20">5000张</span></p>
+                                        <p class="step-p-t2">请先创建领取码活动，创建完毕后再选择</p>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="form-group">
+                                    <div class="col-sm-offset-2 col-sm-10">
+                                        <button type="button" class="btn btn-w-m btn-success" id="step-1">下一步</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script type="text/template" id="up-main">
+<div class="game-up-main-1">
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label class="col-sm-3 control-label">结束日期：</label>
+
+            <div class="col-sm-4 line-zhi">
+                <input type="text" placeholder="结束日期" class="form-control">
+                <span class="help-block m-b-none">请输入结束日期</span>
+                <p class="line-zhi-up">至</p>
+            </div>
+            <div class="col-sm-4">
+                <input type="text" placeholder="结束日期" class="form-control">
+                <span class="help-block m-b-none">请输入结束日期</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">活动名称：</label>
+            <div class="col-sm-6">
+                <input type="text" placeholder="活动名称" class="form-control">
+            </div>
+            <div class="col-sm-2">
+                <button class="btn btn-sm btn-info" type="submit">查 询</button>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered table-hover">
+                <thead>
+                <tr>
+                    <th>选择</th>
+                    <th>创建时间</th>
+                    <th>活动名称</th>
+                    <th>奖品</th>
+                    <th>数量</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <input type="radio" checked="" value="option1" id="" name="optionsRadios">
+                        </td>
+                        <td>2014.11.11</td>
+                        <td>好乐迪领取码</td>
+                        <td>彩票
+                        </td>
+                        <td>500</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" checked="" value="option1" id="" name="optionsRadios">
+                        </td>
+                        <td>2014.11.11</td>
+                        <td>好乐迪领取码</td>
+                        <td>彩票
+                        </td>
+                        <td>500</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" checked="" value="option1" id="" name="optionsRadios">
+                        </td>
+                        <td>2014.11.11</td>
+                        <td>好乐迪领取码</td>
+                        <td>彩票
+                        </td>
+                        <td>500</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" checked="" value="option1" id="" name="optionsRadios">
+                        </td>
+                        <td>2014.11.11</td>
+                        <td>好乐迪领取码</td>
+                        <td>彩票
+                        </td>
+                        <td>500</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </form>
+</div>
+</script>
+<!-- 全局js -->
+<script src="hAdmin/js/jquery.min.js"></script>
+<script src="js/jquery-migrate-1.2.1.js"></script>
+<script src="js/ajaxform.js"></script>
+<script src="frame/formvalidator4.1.3/formValidatorRegex.js"></script>
+<script src="frame/formvalidator4.1.3/formValidator-4.1.3.js"></script>
+<script src="hAdmin/js/bootstrap.min.js?v=3.3.6"></script>
+<script src="hAdmin/js/plugins/layer/layer.min.js"></script>
+<script src="frame/select2-4.0.3/js/select2.min.js"></script>
+<!--<script src="frame/vue2.1.8/vue.min.js"></script>-->
+<!-- iCheck -->
+<script src="hAdmin/js/plugins/iCheck/icheck.min.js"></script>
+<!-- Flot -->
+<script src="hAdmin/js/plugins/flot/jquery.flot.js"></script>
+<script src="hAdmin/js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+<script src="hAdmin/js/plugins/flot/jquery.flot.resize.js"></script>
+<script src="hAdmin/js/plugins/flot/jquery.flot.pie.js"></script>
+<script src="frame/SuperSlide.2.1.1/jquery.SuperSlide.2.1.1.js"></script>
+<script src="frame/datetimepicker/js/jquery-ui.js"></script>
+<script src="frame/datetimepicker/jQuery-Timepicker-Addon/jquery-ui-timepicker-addon.js"></script>
+<script src="frame/datetimepicker/js/jquery-ui-timepicker-zh-CN.js"></script>
+<!-- 自定义js -->
+<script src="hAdmin/js/content.js"></script>
+<script src="../b2b-mobile/js/h5-game-1/game-1.js"></script>
+<script>
+    $(function () {
+        $('.i-checks').iCheck({
+            checkboxClass: 'icheckbox_square-green',
+            radioClass: 'iradio_square-green',
+        });
+        $("#step-up").click(function () {
+            var str = $("#up-main").html();
+            console.log("1")
+            layer.open({
+                type: 1,
+                title: '选择',
+                //shadeClose: true,
+                shade: 0.8,
+                area: ['580px', '480px'],
+                content: str, //iframe的url
+                btn: ['关闭', '确定'],
+                success: function (layero) {
+                    var btn = layero.find('.layui-layer-btn');
+                    btn.css('text-align', 'center');
+                }
+            });
+        })
+    })
+</script>
+</body>
+</html>

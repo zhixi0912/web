@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="wIDth=device-wIDth, initial-scale=1.0">
+    <!--360浏览器优先以webkit内核解析-->
+    <title>活动详细</title>
+    <link rel="shortcut icon" href="../../hAdmin/favicon.ico">
+    <link href="../../hAdmin/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="../../hAdmin/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="../../hAdmin/css/animate.css" rel="stylesheet">
+    <link href="../../hAdmin/css/style.css" rel="stylesheet">
+    <link href="../../css/base.css?v=3.1.0" rel="stylesheet">
+    <link href="../../css/points-come/pointsCome.css" rel="stylesheet">
+</head>
+<body class="light-grey-bg">
+<div class="main">
+    <div class="white-bg">
+        <div class="page-header">
+            <h3 class="cooperh3">活动详细</h3>
+            <button type="button"class="btn btn-bg-orange ml15 mt20" id="choice">商户选择</button>
+        </div>
+        <div class="page-body">
+            <form class="form-horizontal clearfix">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">状态</label>
+                            <div class="col-sm-8">
+                                <div class="switch pt7">
+                                    <div class="onoffswitch">
+                                        <input type="checkbox" checked="" class="onoffswitch-checkbox" id="example1">
+                                        <label class="onoffswitch-label" for="example1">
+                                            <span class="onoffswitch-inner"></span>
+                                            <span class="onoffswitch-switch"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">微信授权</label>
+                            <div class="col-sm-8">
+                                <p class="f14 pt5">未授权</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">商户名称</label>
+                            <div class="col-sm-8">
+                                <p class="f14 pt5">上海饿了么信息技术有限公司</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">客服热线</label>
+                            <div class="col-sm-8">
+                                <input type="email" class="form-control" placeholder="请输入商户名称">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">工作时间</label>
+                            <div class="col-sm-8">
+                                <input type="email" class="form-control" placeholder="请输入商户名称">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">投放链接</label>
+                            <div class="col-sm-8">
+                                <p class="f14 pt5">www.baidu.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tc">
+                    <button type="button"class="btn btn-bg-orange ml15 mt20">提交</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 全局js -->
+<script src="../../hAdmin/js/jquery.min.js?v=2.1.4"></script>
+<script src="../../hAdmin/js/bootstrap.min.js?v=3.3.6"></script>
+<script src="../../hAdmin/js/plugins/layer/layer.min.js"></script>
+<!-- Flot -->
+<script src="../../hAdmin/js/plugins/flot/jquery.flot.js"></script>
+<script src="../../hAdmin/js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+<script src="../../hAdmin/js/plugins/flot/jquery.flot.resize.js"></script>
+<script src="../../hAdmin/js/plugins/flot/jquery.flot.pie.js"></script>
+<!-- 自定义js -->
+<script>
+    $(function () {
+        $(".busimodify").click(function () {
+           window.location.href = "detailedactivity.html"
+        })
+        $("#choice").click(function () {
+            layer.open({
+                title: '在线调试'
+                ,content: '<div class="form-horizontal clearfix">\n' +
+                '    <div class="row">\n' +
+                '        <div class="col-sm-12">\n' +
+                '            <div class="form-group">\n' +
+                '                <label class="col-sm-3 control-label">商户名称</label>\n' +
+                '                <div class="col-sm-7">\n' +
+                '                    <input type="text" class="form-control" placeholder="平台活动">\n' +
+                '                </div>\n' +
+                '                <div class="col-sm-2">\n' +
+                '                    <button type="button"class="btn btn-bg-orange ">查询</button>\n' +
+                '                </div>\n' +
+                '            </div>\n' +
+                '        </div>\n' +
+                '    </div>\n' +
+                '</div>\n' +
+                '<table class="table table-hover text-center">\n' +
+                '    <colgroup>\n' +
+                '        <col class="col-xs-2">\n' +
+                '        <col class="col-xs-2">\n' +
+                '        <col class="col-xs-2">\n' +
+                '    </colgroup>\n' +
+                '    <thead>\n' +
+                '    <tr class="active">\n' +
+                '        <th class="text-center">成交时间</th>\n' +
+                '        <th class="text-center">活动名称</th>\n' +
+                '        <th class="text-center">-</th>\n' +
+                '    </tr>\n' +
+                '    </thead>\n' +
+                '    <tbody>\n' +
+                '    <tr>\n' +
+                '        <td>2017-06-13 21:03：03</td>\n' +
+                '        <td>上海来伊份回馈</td>\n' +
+                '        <td class="blue">选择</td>\n' +
+                '    </tr>\n' +
+                '    <tr>\n' +
+                '        <td>2017-06-13 21:03：03</td>\n' +
+                '        <td>上海来伊份回馈</td>\n' +
+                '        <td class="blue">选择</td>\n' +
+                '    </tr>\n' +
+                '    <tr>\n' +
+                '        <td>2017-06-13 21:03：03</td>\n' +
+                '        <td>上海来伊份回馈</td>\n' +
+                '        <td class="blue">选择</td>\n' +
+                '    </tr>\n' +
+                '    </tbody>\n' +
+                '</table>\n' +
+                '<div class="text-center">\n' +
+                '    <div class="btn-group">\n' +
+                '        <button type="button" class="btn btn-white"><i class="fa fa-chevron-left"></i>\n' +
+                '        </button>\n' +
+                '        <button class="btn btn-white">1</button>\n' +
+                '        <button class="btn btn-white  active">2</button>\n' +
+                '        <button class="btn btn-white">3</button>\n' +
+                '        <button class="btn btn-white">4</button>\n' +
+                '        <button type="button" class="btn btn-white"><i class="fa fa-chevron-right"></i>\n' +
+                '        </button>\n' +
+                '    </div>\n' +
+                '</div>'
+                ,area: ['500px', '500px']
+                ,btnAlign: 'c'
+            });
+        })
+    })
+</script>
+</body>
+</html>

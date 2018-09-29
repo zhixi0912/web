@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--360浏览器优先以webkit内核解析-->
+
+
+    <title>新增设备</title>
+
+    <link rel="shortcut icon" href="frame/hAdmin/favicon.ico">
+    <link href="frame/hAdmin/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="frame/hAdmin/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="frame/ludo-jquery-treetable-3.2.0/css/jquery.treetable.css" rel="stylesheet">
+    <link href="frame/ludo-jquery-treetable-3.2.0/css/jquery.treetable.theme.default.css" rel="stylesheet">
+    <link href="frame/hAdmin/css/animate.css" rel="stylesheet">
+    <link href="frame/hAdmin/css/style.css?v=4.1.0" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+</head>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content">
+        <div class="ibox">
+            <div class="top-title ibox-title">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="bs-callout bs-callout-info"><h4>新增设备</h4></div>
+                    </div>
+                    <div class="col-sm-6 text-right">
+                        <a class="btn btn-w-m btn-info" href="javascript:void(0);">确定</a>
+                        <a class="btn btn-w-m btn-default">返回</a>
+                    </div>
+                </div>
+            </div>
+            <div class="ibox-content hf-ibox-content">
+
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-sm-6">
+                            <label class="col-sm-3 control-label">站点名称：</label>
+                            <div class="col-sm-9">
+                                <input class="form-control" type="text" placeholder="输入设备ID" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-6">
+                            <label class="col-sm-3 control-label">详细地址：</label>
+                            <div class="col-sm-9 form-inline">
+                                <input class="form-control" type="text" placeholder="省" />
+                                <input class="form-control" type="text" placeholder="市" />
+                                <input class="form-control" type="text" placeholder="区/县" />
+                            </div>
+                            <span class="form-control-static col-sm-offset-3 col-sm-9">请选择城市</span>
+                            <div class="col-sm-offset-3 col-sm-9">
+                                <input class="form-control" placeholder="输入详细地址" type="text" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-6">
+                            <label class="col-sm-3 control-label">坐标参数：</label>
+                            <div class="col-sm-4">
+                                <input class="form-control" type="text" placeholder="输入经度坐标" />
+                            </div>
+                            <label class="col-sm-1 control-label">,</label>
+                            <div class="col-sm-4">
+                                <input class="form-control" type="text" placeholder="输入纬度坐标" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-6">
+                            <label class="col-sm-3 control-label">添加设备：</label>
+                            <div class="col-sm-4">
+                                <div class="add-icon-box text-center">
+                                    <i class="fa fa-close box-close"></i>
+                                    <i class="fa fa-instagram btn-large-dim text-center"></i>
+                                    <div class="form-control-static">YB2120</div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-sm-offset-1">
+                                <div class="add-icon-box text-center">
+                                    <div id="add-equipment" class="form-control-static add-line">+添加设备</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <!-- 全局js -->
+    <script src="frame/hAdmin/js/jquery.min.js?v=2.1.4"></script>
+    <script src="frame/hAdmin/js/bootstrap.min.js?v=3.3.6"></script>
+    <script src="frame/hAdmin/js/plugins/layer/layer.min.js"></script>
+    <!-- Flot -->
+    <script src="frame/hAdmin/js/plugins/flot/jquery.flot.js"></script>
+    <script src="frame/hAdmin/js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+    <script src="frame/hAdmin/js/plugins/flot/jquery.flot.resize.js"></script>
+    <script src="frame/hAdmin/js/plugins/flot/jquery.flot.pie.js"></script>
+    <!-- 自定义js -->
+    <script src="frame/hAdmin/js/content.js"></script>
+    <!--flotdemo-->
+
+    <script type="text/javascript">
+        $(function () {
+            $("#add-equipment").click(function () {
+                layer.open({
+                    type: 1 //Page层类型
+                    ,area: ['500px', '300px']
+                    ,title: '选择设备'
+                    ,anim: 0 //0-6的动画形式，-1不开启
+                    ,content: '<div class="p-lg"><select class="form-control"><option>输入或选择洗衣机编号</option></select></div>'
+                    ,btn: ['取消', '确定']
+                    ,yes: function(index){
+                        layer.close(index);
+                    },success: function (layero) {
+                        var btn = layero.find('.layui-layer-btn');
+                        btn.css('text-align', 'center');
+                    }
+                });
+            })
+        })
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+
+    <title>渠道结算</title>
+
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <!--[if lt IE 9]>
+    <meta http-equiv="refresh" content="0;ie.html" />
+    <![endif]-->
+
+    <link rel="shortcut icon" href="frame/hAdmin/favicon.ico"/>
+	<link href="frame/hAdmin/css/bootstrap.min.css?v=3.3.6" rel="stylesheet"/>
+    <link href="frame/hAdmin/css/font-awesome.min.css?v=4.4.0" rel="stylesheet"/>
+    <link href="frame/hAdmin/css/animate.css" rel="stylesheet"/>
+    <link href="frame/hAdmin/css/style.css?v=4.1.0" rel="stylesheet"/>
+    <link href="css/style.css?v=4.1.0" rel="stylesheet"/>
+</head>
+
+<body class="fixed-sidebar full-height-layout gray-bg" style="overflow:hidden">
+<div class="wrapper wrapper-content">
+    <div class="ibox">
+        <div class="top-title ibox-title">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="bs-callout bs-callout-info"><h4>新增设备</h4></div>
+                </div>
+                <div class="col-sm-6 text-right">
+                    <a class="btn btn-w-m btn-info" href="javascript:void(0);">确定</a>
+                    <a class="btn btn-w-m btn-default">返回</a>
+                </div>
+            </div>
+        </div>
+        <div class="ibox-content">
+            <div class="form-horizontal">
+                <div class="bs-callout bs-callout-info"><h4>站点信息</h4></div>
+                <div class="form-group">
+                    <div class="col-lg-6 col-md-6">
+                        <label class="col-sm-2 control-label">站点名称：</label>
+                        <div class="col-sm-10">
+                            <p class="form-control-static">站点名称站点名称</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <label class="col-sm-2 control-label">详细地址：</label>
+                        <div class="col-sm-10">
+                            <p class="form-control-static">站点的省市区及街道门牌楼层信息</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-6 col-md-6">
+                        <label class="col-sm-2 control-label">坐标参数：</label>
+                        <div class="col-sm-10">
+                            <p class="form-control-static">121.541333,31.278197</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="">
+            <div class="row ">
+                <div class="col-sm-12">
+                    <div class="m-b-sm ">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="bs-callout bs-callout-info"><h4>设备列表</h4></div>
+                            </div>
+                            <div class="col-sm-6 text-right">
+                                <a class="btn btn-w-m btn-info" id="add-equipment" href="javascript:void(0);">添加设备</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" float-e-margins">
+                        <table class="table table-center text-center">
+                            <thead>
+                                <tr>
+                                    <th>设备ID</th>
+                                    <th>创建时间</th>
+                                    <th>设备厂商</th>
+                                    <th>渠道</th>
+                                    <th>状态</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        100310019
+                                    </td>
+                                    <td>100</td>
+                                    <td>1</td>
+                                    <td>100</td>
+                                    <td>1</td>
+                                    <td>沪A55533</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        100310019
+                                    </td>
+                                    <td>100</td>
+                                    <td>1</td>
+                                    <td>100</td>
+                                    <td>1</td>
+                                    <td>沪A55533</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        100310019
+                                    </td>
+                                    <td>100</td>
+                                    <td>1</td>
+                                    <td>100</td>
+                                    <td>1</td>
+                                    <td>沪A55533</td>
+                                </tr>
+                            </tbody>
+                            <thead>
+                            <tr>
+                                <td>
+                                    <!--<div class="checkbox">-->
+                                        <!--<input  type="checkbox" value="" class=""><span>全选</span>-->
+                                        <!--<a class="order-foot-a" href="">下架</a>-->
+                                    <!--</div>-->
+                                </td>
+                                <td colspan="5">
+
+                                    <ul class="pagination pull-right table-page">
+                                        <li><a href="#">«</a></li>
+                                        <li><a href="#">‹</a></li>
+                                        <li class=" active"><a href="#">1</a></li>
+                                        <li><a href="#">›</a></li>
+                                        <li><a href="#">»</a></li>
+                                        <li><a href="#"><input class="order-foot-input" type="text"></a></li>
+                                        <li><a href="">go</a></li>
+                                    </ul>
+                                    <span class="order-foot-span">共有4条每页显示20条</span>
+                                </td>
+                            </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+    <!-- 全局js -->
+    <script src="frame/hAdmin/js/jquery.min.js?v=2.1.4"></script>
+    <script src="frame/hAdmin/js/bootstrap.min.js?v=3.3.6"></script>
+    <script src="frame/hAdmin/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="frame/hAdmin/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="frame/hAdmin/js/plugins/layer/layer.min.js"></script>
+
+    <!-- 自定义js -->
+    <script src="frame/hAdmin/js/hAdmin.js?v=4.1.0"></script>
+    <script src="frame/hAdmin/js/content.js"></script>
+    <!-- 第三方插件 -->
+
+<script type="text/javascript">
+    $(function () {
+        $("#add-equipment").click(function () {
+            layer.open({
+                type: 1 //Page层类型
+                ,area: ['500px', '300px']
+                ,title: '选择设备'
+                ,anim: 0 //0-6的动画形式，-1不开启
+                ,content: '<div class="p-lg"><select class="form-control"><option>输入或选择洗衣机编号</option></select></div>'
+                ,btn: ['取消', '确定']
+                ,yes: function(index){
+                    layer.close(index);
+                },success: function (layero) {
+                    var btn = layero.find('.layui-layer-btn');
+                    btn.css('text-align', 'center');
+                }
+            });
+        })
+    })
+</script>
+</body>
+
+</html>

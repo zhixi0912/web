@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--360浏览器优先以webkit内核解析-->
+
+
+    <title>添加角色管理</title>
+    <link rel="shortcut icon" href="hAdmin/favicon.ico">
+
+    <link href="hAdmin/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="hAdmin/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="frame/select2-4.0.3/css/select2.min.css?v=3.3.6" rel="stylesheet">
+    <link href="hAdmin/css/animate.css" rel="stylesheet">
+    <link href="css/base.css?v=3.1.0" rel="stylesheet">
+    <link href="hAdmin/css/style.css?v=4.1.0" rel="stylesheet">
+    <link href="css/iframe-page.css" rel="stylesheet">
+    <link href="css/page.css" rel="stylesheet">
+</head>
+
+<body class="light-grey-bg">
+<div class="main">
+    <div class="row wrapper border-bottom white-bg page-heading mlr0">
+        <div class="col-sm-4">
+            <h2>用户创建</h2>
+        </div>
+        <div class="col-sm-8">
+            <div class="text-right">
+                <a href="javascript:void(0)" class="btn btn-gray btb-btn-1 b2b-updata">提交</a>
+                <a href="javascript:void(0)" class="btn btn-gray btb-btn-1">关闭</a>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper wrapper-content white-bg">
+        <form class="form-horizontal form-horizontal-mb0" id="ajaxform">
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">角色名称：</label>
+
+                <div class="col-sm-3">
+                    <input type="text" placeholder="" class="form-control" id="user">
+                    <span class="help-block m-b-none" id="userTip"></span>
+                </div>
+                <div class="col-sm-1 b2b-control-star">*</div>
+                <label class="col-sm-2 control-label">角色描述：</label>
+
+                <div class="col-sm-3">
+                    <input type="text" placeholder="" class="form-control" id="username">
+                    <span class="help-block m-b-none" id="usernameTip"></span>
+                </div>
+                <div class="col-sm-1 b2b-control-star">*</div>
+            </div>
+
+
+        </form>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 全局js -->
+<script src="hAdmin/js/jquery.min.js"></script>
+<script src="js/jquery-migrate-1.2.1.js"></script>
+<script src="js/ajaxform.js"></script>
+<script src="frame/formvalidator4.1.3/formValidatorRegex.js"></script>
+<script src="frame/formvalidator4.1.3/formValidator-4.1.3.js"></script>
+<script src="hAdmin/js/bootstrap.min.js?v=3.3.6"></script>
+<script src="hAdmin/js/plugins/layer/layer.min.js"></script>
+<script src="frame/select2-4.0.3/js/select2.min.js"></script>
+<!--<script src="frame/vue2.1.8/vue.min.js"></script>-->
+<!-- Flot -->
+<script src="hAdmin/js/plugins/flot/jquery.flot.js"></script>
+<script src="hAdmin/js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+<script src="hAdmin/js/plugins/flot/jquery.flot.resize.js"></script>
+<script src="hAdmin/js/plugins/flot/jquery.flot.pie.js"></script>
+<!-- 自定义js -->
+<script src="hAdmin/js/content.js"></script>
+<script src="js/form-validator/role-add/index_v2_add.js"></script>
+<script src="js/form-validator/role-add/int-validator.js"></script>
+</body>
+</html>

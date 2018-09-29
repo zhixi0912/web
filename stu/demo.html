@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>列表</title>
+    <style>
+        .disabled-class .layui-layer-btn a{
+            background-color: #d0d0d0;
+            border: 1px solid #d0d0d0;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+<div style="padding: 250px; width: 300px; margin: 0 auto">
+    <button id="demo" value="">提交</button>
+</div>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script src="js/layer/layer.js"></script>
+<script>
+    $(function () {
+        $("#demo").click(function () {
+            layer.open({
+                type: 1
+                ,area: ['380px', '180px']
+                ,title: '温馨提示'
+                ,shade: 0.6
+                ,content: '<p style="text-align: center;height: 30px;line-height: 30px;">是否确认</p>'
+                ,btn: ['确定','取消']
+                ,yes:function(index, layero){
+                    layer.close(index);
+                    load();
+
+
+
+
+
+//                    $.ajax({url:"demo.html",success:function(){
+//                        layer.close(index);
+//                        layer.load(1, {
+//                            shade: [0.6,'#000'] //0.1透明度的白色背景
+//                        });
+//                        window.location.href=("http://www.baidu.com");
+//                    },error: function() {
+//                        layer.close(index);
+//                        layer.open({
+//                            type: 1
+//                            ,area: ['380px', '180px']
+//                            ,title: '温馨提示'
+//                            ,shade: 0.6
+//                            ,anim: -1
+//                            ,content: '提交失败'
+//                            ,btn: ['确定','取消']
+//                        })
+//                        }
+//                    });
+                }
+            });
+        })
+
+
+     function load() {
+         layer.open({
+            type: 1
+            ,skin: 'disabled-class'
+            ,area: ['380px', '180px']
+            ,title: '温馨提示'
+            ,shade: 0.6
+            ,anim: -1
+            ,btnAlign: 'c'
+            ,closeBtn: 0
+            ,time: 5000
+            ,content: '<p style="text-align: center;height: 30px;line-height: 30px;">正在提交请稍候。。。</p>'
+            ,btn: ['请稍候。。']
+             ,yes:function(index, layero){
+
+             }
+        })
+     }
+
+
+
+
+    });
+</script>
+
+</body>
+</html>

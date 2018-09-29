@@ -1,0 +1,37 @@
+<svg id="组_28" data-name="组 28" xmlns="http://www.w3.org/2000/svg" width="125" height="91" viewBox="0 0 125 91">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ccf5df;
+      }
+
+      .cls-2, .cls-3 {
+        fill: #f9f9f9;
+      }
+
+      .cls-3, .cls-4, .cls-5, .cls-6 {
+        fill-rule: evenodd;
+      }
+
+      .cls-4 {
+        fill: #00ce60;
+      }
+
+      .cls-5 {
+        fill: #aeeccb;
+      }
+
+      .cls-6 {
+        fill: #d4f3e2;
+      }
+    </style>
+  </defs>
+  <rect id="矩形_117" data-name="矩形 117" class="cls-1" x="16" y="14" width="93" height="64"/>
+  <rect id="矩形_118" data-name="矩形 118" class="cls-2" x="26" y="23" width="73" height="42"/>
+  <path id="圆角矩形_143" data-name="圆角矩形 143" class="cls-3" d="M616,1104v5a8,8,0,0,1-8,8H505a8,8,0,0,1-8-8v-5H616Z" transform="translate(-494 -1028)"/>
+  <path id="圆角矩形_130" data-name="圆角矩形 130" class="cls-4" d="M618.95,1108A11.994,11.994,0,0,1,607,1119H506a11.994,11.994,0,0,1-11.95-11H494v-4h14v-59a6,6,0,0,1,6-6h85a6,6,0,0,1,6,6v59h14v4h-0.05ZM601,1045a2,2,0,0,0-2-2H514a2,2,0,0,0-2,2v59h89v-59Zm4,63H498.069a7.992,7.992,0,0,0,7.931,7H607a7.992,7.992,0,0,0,7.931-7H605Zm-86-60h75a2,2,0,0,1,2,2v44a2,2,0,0,1-2,2H519a2,2,0,0,1-2-2v-44A2,2,0,0,1,519,1048Zm1,44a1,1,0,0,0,1,1h71a1,1,0,0,0,1-1v-40a1,1,0,0,0-1-1H521a1,1,0,0,0-1,1v40Zm33.5,7h7a1.5,1.5,0,0,1,0,3h-7A1.5,1.5,0,0,1,553.5,1099Z" transform="translate(-494 -1028)"/>
+  <rect id="矩形_116" data-name="矩形 116" class="cls-2" x="35" y="3" width="55" height="65"/>
+  <path id="圆角矩形_129" data-name="圆角矩形 129" class="cls-4" d="M583,1096H526v-62a6,6,0,0,1,6-6h49a6,6,0,0,1,6,6v62h-4Zm0-61a3,3,0,0,0-3-3H533a3,3,0,0,0-3,3v58h53v-58Z" transform="translate(-494 -1028)"/>
+  <path id="椭圆_96" data-name="椭圆 96" class="cls-5" d="M549,1061v-3h24v3H549Zm-8.5,5a4.5,4.5,0,1,1,4.5-4.5A4.5,4.5,0,0,1,540.5,1066Zm21.5-1H549v-2h13v2Z" transform="translate(-494 -1028)"/>
+  <path id="椭圆_96_拷贝_2" data-name="椭圆 96 拷贝 2" class="cls-6" d="M549,1081v-3h24v3H549Zm0-43h24v3H549v-3Zm-8.5,48a4.5,4.5,0,1,1,4.5-4.5A4.5,4.5,0,0,1,540.5,1086Zm0-40a4.5,4.5,0,1,1,4.5-4.5A4.5,4.5,0,0,1,540.5,1046Zm21.5-1H549v-2h13v2Zm0,40H549v-2h13v2Z" transform="translate(-494 -1028)"/>
+</svg>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>粘贴功能</title>
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="css/style-font/style.css">
+    <style>
+        .numb-box{
+            padding: 60px 0;
+        }
+    </style>
+</head>
+<body>
+<div class="numb-box">
+    <div class="container">
+        <form class="form-horizontal">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search for..." id="text-1" value="">
+                            <span class="input-group-btn">
+                            <button class="btn btn-default" type="button" id="copy-1" data-clipboard-target="#text-1" aria-label="已成功复制粘贴板">复制到剪切板</button>
+                          </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search for..." id="text-2">
+                            <span class="input-group-btn">
+                            <button class="btn btn-default" type="button" id="copy-2">复制到剪切板!</button>
+                          </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="text-3" value="" style="opacity: 0;">
+                        <button class="btn btn-danger" id="copy-3" data-clipboard-target="#text-3" aria-label="已成功复制粘贴板">复制地址栏到剪切板</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <textarea class="form-control"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <select class="form-control" id="sel-1">
+                            <option data-id="0">请选择</option>
+                            <option data-id="1">金</option>
+                            <option data-id="2">木</option>
+                            <option data-id="3">水</option>
+                            <option data-id="4">火</option>
+                            <option data-id="5">土</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <p class="form-control-static text-center" id="sel-sta"></p>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script src="js/layer/layer.js"></script>
+<!--<script src="js/clipboard   .min.js"></script>-->
+<script>
+$(function () {
+
+    $("#sel-1").change(function(){
+        var checkId = $(this).find("option:selected").attr("data-id");
+        var checkText = $(this).find("option:selected").text();
+        $(this).attr("data-id",checkId);
+        $(this).attr("data-val",checkText);
+        console.log(checkId,checkText);
+        $("#sel-sta").html(checkId+":"+checkText)
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//    var url = window.location.href;
+//    console.log(url);
+//    $("#text-2").val(url);
+//    $("#text-3").val(url);
+    /*$("#copy-1").click(function () {
+        var text1 = $("#text-1").val();
+        var text2 = "#text-1";
+        var text3 = "已成功复制粘贴板!";
+        $(this).attr("data-clipboard-target",text2);
+        $(this).attr("aria-label",text3);
+        if(text1==""){
+            layer.open({
+                type: 1
+                ,area: ['620px', '380px']
+                ,title: '温馨提示'
+                ,shade: 0.6
+                ,content: "<p class='text-center'>请输入内容！</p>"
+                ,btn: ['确定','取消']
+                ,yes:function(index, layero){
+                    layer.close(index);
+                },success: function(layero){
+                    layero.find('.layui-layer-btn').css('text-align', 'center')
+                }
+
+            });
+        }else {
+            copy1(text2);
+        }
+    })
+    $("#copy-3").click(function () {
+        var url = window.location.href;
+        var text1 = "#text-3";
+        var text2 = "已成功复制粘贴板!";
+        $("#text-3").val(url);
+        $(this).attr("data-clipboard-target",text1);
+        $(this).attr("aria-label",text2);
+        copy3();
+    })*/
+})
+
+//function copy1() {
+
+    //var clipboard = new Clipboard('#copy-1');
+//    clipboard.on('success', function(e) {
+//        var msg = e.trigger.getAttribute('aria-label');
+//        console.log("11");
+//        alert(msg);
+//        console.info('Action:', e.action);
+//        console.info('Text:', e.text);
+//        console.info('Trigger:', e.trigger);
+//        layerUp(msg);
+//        e.clearSelection();
+//    });
+//}
+
+//function copy3() {
+//    var clipboard = new Clipboard('#copy-3');
+//    clipboard.on('success', function(e) {
+//        var msg = e.trigger.getAttribute('aria-label');
+//        alert(msg);
+//        console.info('Action:', e.action);
+//        console.info('Text:', e.text);
+//        console.info('Trigger:', e.trigger);
+//        layerUp(msg);
+//        e.clearSelection();
+//    });
+//}
+
+function layerUp(msg) {
+    //debugger;
+    layer.open({
+        type: 1
+        ,area: ['620px', '380px']
+        ,title: '温馨提示'
+        ,shade: 0.6
+        ,content: msg
+        ,btn: ['确定','取消']
+        ,yes:function(index, layero){
+            layer.close(index);
+        },success: function(layero){
+            layero.find('.layui-layer-btn').css('text-align', 'center')
+        }
+
+    });
+}
+</script>
+
+
+
+</body>
+</html>

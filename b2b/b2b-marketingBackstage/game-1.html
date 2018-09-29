@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--360浏览器优先以webkit内核解析-->
+
+
+    <title>辛运大转盘</title>
+    <link rel="shortcut icon" href="hAdmin/favicon.ico">
+
+    <link href="hAdmin/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="hAdmin/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="frame/select2-4.0.3/css/select2.min.css?v=3.3.6" rel="stylesheet">
+    <link href="hAdmin/css/animate.css" rel="stylesheet">
+    <link href="css/base.css?v=3.1.0" rel="stylesheet">
+    <link href="hAdmin/css/style.css?v=4.1.0" rel="stylesheet">
+    <link href="css/iframe-page.css" rel="stylesheet">
+    <link href="css/page.css" rel="stylesheet">
+    <link href="css/game/game-1.css" rel="stylesheet">
+    <link href="css/game/game-3.css" rel="stylesheet">
+    <link href="css/game/component.css" rel="stylesheet">
+
+    <link href="css/game/game-activity.css" rel="stylesheet">
+    <style>
+        body{
+            position: relative;
+        }
+        #zj-main, #xxcy-main, #tjcg-main{
+            width: 100%;
+            height: 100%;
+        }
+        .game-bg .logo-1{
+            width: 100%;
+        }
+        .game-bg .logo-1 img{
+            width: 60%;
+            height: auto;
+        }
+    </style>
+</head>
+<div class="game-bg game-1-bg">
+
+
+    <!-------------抽奖页面-------------->
+    <div class="ml-main" id="ml-main">
+        <div class="logo-1"><img src="images/game/logo.png"> </div>
+            <div class="tab-position">
+                <button class=" btn-red btn-red-bg btn-rule">规则</button>
+            </div>
+        <div class="game-frequency">
+            <div class="game-share"><a class="btn-share-a" href="#"><img src="images/game/button_share1.png"> </a> </div>
+            <div class="game-frequency-numb">可抽奖次数：1</div>
+        </div>
+
+        <div class="kePublic">
+            <!--转盘效果开始-->
+            <div class="game-round">
+                <div class="banner">
+                    <div class="turnplate" id="turnplate">
+                        <canvas class="item" id="wheelcanvas" width="516" height="516"></canvas>
+                        <img id="tupBtn" class="pointer" src="images/game/turnplate-pointer_3.png"/>
+                        <!--<button id="tupBtn"><img src="images/turnplate-pointer_2.png"/></button>-->
+                    </div>
+                </div>
+            </div>
+            <!--转盘效果结束-->
+            <div class="clear"></div>
+        </div>
+    </div>
+
+    <!-------------中奖弹窗页面1111-------------->
+    <div class="zj-main" id="pp" style="display: none;">
+        <div class="txzl">
+            <h3>pppppp</h3>
+        </div>
+        <div class="close_zj"><img src="images/game/close_1.png" /></div>
+    </div>
+
+
+    <!-------------中奖弹窗页面-------------->
+    <div class="zj-main" id="zj" style="display: none;">
+        <div class="txzl">
+            <h3>默认信息</h3>
+        </div>
+        <div class="close_zj"><img src="images/game/close_1.png" /></div>
+    </div>
+
+
+    <!-------------中奖弹窗页面-------------->
+    <div class="zj-main" id="zj-main">
+        <div class="txzl">
+            .<h3>HI 亲！人品爆发！</h3>
+            <h2>恭喜抽中<br /><span id="jiangpin"></span></h2>
+            <p>请填写资料领取奖品：</p>
+            <label>姓名：<input type="text" name="username" /></label>
+            <label>电话：<input type="text" name="userphone" /></label>
+            <h4><sub>*</sub>未提交个人资料将视为放弃领取此次奖品</h4>
+            <div class="info_tj">提交领奖</div>
+        </div>
+        <div class="close_zj"><img src="images/game/close_1.png" /></div>
+    </div>
+
+    <!-------------谢谢参与弹窗-------------->
+    <div class="xxcy-main" id="xxcy-main">
+        <div class="xxcy">
+            <h3>谢谢参与！</h3>
+            <p>不要气馁，明天继续投票还可以抽奖哦。</p>
+
+        </div>
+        <div class="close_xxcy"><img src="images/game/close_1.png" /></div>
+    </div>
+
+    <!-------------提交成功弹窗-------------->
+    <div class="tjcg-main" id="tjcg-main">
+        <div class="tjcg">
+            <h3>恭喜您提交成功</h3>
+            <p>请于2016年5月31日<br />前到院领取奖品</p>
+
+        </div>
+        <div class="close_tjcg"><img src="images/game/close_1.png" /></div>
+    </div>
+
+    </div>
+
+<!--规则遮罩层-->
+<div class="szmmask">
+    <div class="p5">
+        <ul class="nav nav-tabs szmmask-ul">
+            <li class="active"><a data-toggle="tab" href="#tab-1" aria-expanded="true"> 规则描述</a>
+            </li>
+            <li class=""><a data-toggle="tab" href="#tab-2" aria-expanded="false">中奖记录</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div id="tab-1" class="tab-pane active">
+                <div class="panel-body">
+                    <div class="pt10">
+                        <p>规则描述：</p>
+                        <p class="f-black">感恩回馈大转盘</p>
+                    </div>
+                    <div class="pt10">
+                        <p>活动时间：</p>
+                        <p class="f-black">2017.9.22-2016.10.31</p>
+                    </div>
+                    <div class="pt10">
+                        <p>活动奖品：</p>
+                        <p class="f-black">通用积分，让天下没有被浪费的积分！</p>
+                    </div>
+                    <div class="pt10">
+                        <p>发奖时间：</p>
+                        <p class="f-black">中奖后，即时发放。</p>
+                    </div>
+                </div>
+            </div>
+            <div id="tab-2" class="tab-pane">
+                <div class="panel-body">
+                    <ul class="szmmaskUlli">
+                        <li>
+                            <p class="f14 f-black">食之秘老客户感恩大回馈</p>
+                            <div class="clearfix">
+                                <p class="fl">彩票一注</p>
+                                <p class="fr">2017-05-23  11:08</p>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="f14 f-black">食之秘大转盘</p>
+                            <div class="clearfix">
+                                <p class="fl">镒钡积分500分</p>
+                                <p class="fr">2017-05-23  11:08</p>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="f14 f-black">食之秘刮刮乐</p>
+                            <div class="clearfix">
+                                <p class="fl">流量500M</p>
+                                <p class="fr">2017-05-23  11:08</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="p10 text-center">
+        <button class="btn btn-w-m btn-red btn-back">返回</button>
+    </div>
+</div>
+<div class="szmPopupfather"></div>
+<div class="szmPopup">
+    <p class="text-center f20 szmCenter">活动效果仅供参考</p>
+</div>
+    <!-- game end-->
+</div>
+<div class="sharelayer">
+    <img src="images/game/gametemplate/btn-share-a.png"/>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- 全局js -->
+<script src="hAdmin/js/jquery.min.js"></script>
+<script src="hAdmin/js/bootstrap.min.js?v=3.3.6"></script>
+<!-- 自定义js -->
+<script src="js/form-validator/game/game-1.js"></script>
+<script src="js/form-validator/game/awardRotate.js"></script>
+<script src="js/form-validator/game/game-szmmrsk.js"></script>
+<script>
+    $(function () {
+        $(".btn-share-a").click(function () {
+            $(".sharelayer").fadeIn();
+        })
+        $(".sharelayer").click(function () {
+            $(".sharelayer").fadeOut();
+        })
+    })
+</script>
+</body>
+</html>

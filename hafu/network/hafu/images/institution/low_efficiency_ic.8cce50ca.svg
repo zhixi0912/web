@@ -1,0 +1,25 @@
+<svg id="组_33_拷贝" data-name="组 33 拷贝" xmlns="http://www.w3.org/2000/svg" width="106" height="95" viewBox="0 0 106 95">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #00ce60;
+      }
+
+      .cls-1, .cls-3 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #ccf5df;
+      }
+
+      .cls-3 {
+        fill: #f9f9f9;
+      }
+    </style>
+  </defs>
+  <path id="矩形_108_拷贝" data-name="矩形 108 拷贝" class="cls-1" d="M1437,1364l6.42-6.43-36.35-34.61-16.03,16.03-0.04-.04-0.04.04-26.97-26.97,3.03-3.03,23.98,23.98,15.98-15.98,0.02,0.02,0.02-.02,39.44,37.55L1452,1349l3,18Z" transform="translate(-1349 -1309)"/>
+  <rect id="矩形_127" data-name="矩形 127" class="cls-2" x="15" y="39" width="15" height="52"/>
+  <path id="矩形_132" data-name="矩形 132" class="cls-3" d="M1422,1401v-24h19v24h-19Zm-30-35h18v34h-18v-34Z" transform="translate(-1349 -1309)"/>
+  <path id="矩形_126" data-name="矩形 126" class="cls-1" d="M1453,1404H1351a2,2,0,0,1,0-4h9v-56h23v56h7v-37h23v37h7v-25h23v25h10A2,2,0,0,1,1453,1404Zm-74-56h-15v52h15v-52Zm30,19h-15v33h15v-33Zm30,12h-15v21h15v-21Z" transform="translate(-1349 -1309)"/>
+</svg>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html lang="zh-cn" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>登录</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<link type="text/css" rel="stylesheet" href="css/base.css" />
+<link type="text/css" rel="stylesheet" href="css/style.css" />
+<link type="text/css" rel="stylesheet" href="css/page.css" />
+</head>
+<body class="body">
+	<div class="login-main">
+		<section class="login-sec">
+			<header class="login-header">
+				<div class="login-logo">
+					<img src="images/login.png" />
+				</div>
+			</header>
+			<div class="login-box">
+				<h2>登录</h2>
+				<div class="middle-box">
+				<p id="tdd" style="color:red;"></p>
+					<form role="form" action="#" method="post" id="ajaxform">
+						<div class="form-group clearfix">
+							<input type="text" class="login-form" placeholder="请输入用户名" id="username" name="username" /> 
+								<span class="help-block" id="usernameTip">输入错误</span>
+						</div>
+						<div class="form-group clearfix">
+							<input type="password" class="login-form login-top" placeholder="请输入密码" id="password" name="password" /> 
+							<span class="help-block" id="passwordTip">输入错误</span>
+						</div>
+						<div class="form-group clearfix">
+							<input type="text" class="login-form login-left" placeholder="请输入验证码" id="codeValidate" /> 
+							<img id="codeValidateImg" onClick="flushValidateCode()" title="点击刷新验证码" />
+							<span class="help-block" id="codeValidateTip">输入错误</span>
+						</div>
+						<button type="button" id="l_submit">登 录</button>
+					</form>
+				</div>
+	
+			</div>
+		</section>
+		</div>
+	<footer class="login-footer">
+		<p>Copyright ©2016-2020 51points.All Rights Reserved. 沪ICP备 16006092号-1 </p>
+	</footer>
+
+
+	<script src="hAdmin/js/jquery.min.js"></script>
+	<script src="js/jquery-migrate-1.2.1.js"></script>
+	<script src="hAdmin/js/bootstrap.min.js"></script>
+	<script src="js/ajaxform.js"></script>
+	<script src="frame/formvalidator4.1.3/formValidatorRegex.js"></script>
+	<script src="frame/formvalidator4.1.3/formValidator-4.1.3.js"></script>
+	<script src="js/form-validator/login/login.js"></script>
+	<script src="js/form-validator/login/int-validator.js"></script>
+	<script>
+		//<![CDATA[
+		$(document).ready(function(){ 
+			if (window != top) 
+				top.location.href = location.href; 
+			flushValidateCode();
+			if(document.getElementById("tdd")) {
+				
+				 var timer = setTimeout(function(){
+					 document.getElementById("tdd").innerHTML = "";
+					},2000);
+					//clearTimeout(timer);
+				
+			}
+		})
+
+		function flushValidateCode(){
+			/* 刷新生成验证码 */
+			var validateImgObject = document.getElementById("codeValidateImg");
+			validateImgObject.src = encodeURI("image/getSysManageLoginCode?time="
+					+ new Date());
+		}
+		
+		function checkCode(code){
+			/*校验验证码输入是否正确*/
+			var msg;
+			var url = "image/checkimagecode";
+			$.ajax({
+				type : "GET",
+				url : url,				
+				dataType : "json",
+				data:{"code":code},
+				cache : false, //禁用缓存
+				async : false,
+				success : function(data) {
+					msg= data.msg;
+				}
+			});
+			return msg;
+		}
+		$("#codeValidate").keydown(function(e) {
+			var code = e.charCode || e.keyCode;
+			if (code == 13) {
+				$("#l_submit").click();
+			}
+		});
+		
+		window.localStorage.clear();
+		//]]>
+	</script>
+</body>
+</html>

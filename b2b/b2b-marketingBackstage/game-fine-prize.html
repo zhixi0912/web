@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--360浏览器优先以webkit内核解析-->
+    <title>中奖明细</title>
+    <link rel="shortcut icon" href="hAdmin/favicon.ico">
+    <link href="hAdmin/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="hAdmin/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="frame/select2-4.0.3/css/select2.min.css?v=3.3.6" rel="stylesheet">
+    <link href="frame/datetimepicker/js/jquery-ui.css" rel="stylesheet">
+    <link href="frame/datetimepicker/jQuery-Timepicker-Addon/jquery-ui-timepicker-addon.css" rel="stylesheet">
+    <link href="hAdmin/css/animate.css" rel="stylesheet">
+    <link href="css/base.css?v=3.1.0" rel="stylesheet">
+    <link href="hAdmin/css/style.css?v=4.1.0" rel="stylesheet">
+    <link href="css/iframe-page.css" rel="stylesheet">
+    <link href="css/page.css" rel="stylesheet">
+    <link href="css/game/game-1.css" rel="stylesheet">
+    <link href="css/game/component.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/game/game-add-bj.css">
+    <link href="css/game/game-activity.css" rel="stylesheet">
+
+</head>
+<body>
+<div class=" wrapper wrapper-content">
+    <div class="ibox act">
+        <div class="top-title ibox-title">
+            <div class="row">
+                <div class="col-sm-9 f16 game-index-a">
+                    <div class="form-group">
+                        <a class="" href="game-index.html">我的活动</a>
+                        <a class="game-active" href="game-index.html">模板库</a>
+                        <a class="f-gray" href="game-index.html">活动定制</a>
+                        <a class="" href="game-activity1.html">运营活动管理</a>
+                    </div>
+                </div>
+                <div class="col-sm-3 tr">
+                    <div class="form-group f-black f16">
+                        <p>账户余额：<span class="f-orange">30</span>万钡</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ibox-content">
+            <div class="row">
+                <div class="tabs-container">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#tab-1" aria-expanded="true"> 剩余奖品</a></li>
+                        <li class=""><a data-toggle="tab" href="#tab-2" aria-expanded="false">中奖明细</a></li>
+                        <li class=""><a data-toggle="tab" href="#tab-3" aria-expanded="false">领取码</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="tab-1" class="tab-pane active">
+                            <div class="panel-body">
+                                <table class="table">
+                                    <tr class="active">
+                                        <th>序号</th>
+                                        <th>奖品名称</th>
+                                        <th>数量</th>
+                                        <th>已发放</th>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>通用积分100 钡</td>
+                                        <td>10个<button type="button" class="btn btn-info ml10">增加</button></td>
+                                        <td>5（剩余5）</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>通用积分100 钡</td>
+                                        <td>10个<button type="button" class="btn btn-info ml10">增加</button></td>
+                                        <td>5（剩余5）</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>通用积分100 钡</td>
+                                        <td>10个<button type="button" class="btn btn-info ml10">增加</button></td>
+                                        <td>5（剩余5）</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>通用积分100 钡</td>
+                                        <td>10个<button type="button" class="btn btn-info ml10">增加</button></td>
+                                        <td>5（剩余5）</td>
+                                    </tr>
+
+                                </table>
+                            </div>
+                        </div>
+                        <div id="tab-2" class="tab-pane">
+                            <div class="panel-body">
+                                <div class="form-horizontal">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-2">企业名称</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" placeholder="请输入企业名称">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-2 control-label">创建时间</label>
+                                                <div class="col-sm-3">
+                                                    <input type="text" id="start" class="form-control b2b-datetime hasDatepicker">
+                                                </div>
+                                                <label  class="col-sm-1 control-label tc">到</label>
+                                                <div class="col-sm-3">
+                                                    <input type="text" id="end" class="form-control b2b-datetime hasDatepicker">
+                                                </div>
+                                                <div class="col-sm-3 pl0 tr">
+                                                    <a href="javascript:void(0);" class="btn btn-green">查询</a>
+                                                    <a id="export" class="btn btn-default btn-bg-gray">导出</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <table class="table">
+                                    <tr class="active">
+                                        <th>序号</th>
+                                        <th>用户名</th>
+                                        <th>领取时间</th>
+                                        <th>奖品名称</th>
+                                        <th>积分</th>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>138****6587</td>
+                                        <td>2017/09/25 10:00:00</td>
+                                        <td>通用积分100钡</td>
+                                        <td>100</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>138****6587</td>
+                                        <td>2017/09/25 10:00:00</td>
+                                        <td>通用积分100钡</td>
+                                        <td>16</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>138****6587</td>
+                                        <td>2017/09/25 10:00:00</td>
+                                        <td>通用积分100钡</td>
+                                        <td>100</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>138****6587</td>
+                                        <td>2017/09/25 10:00:00</td>
+                                        <td>通用积分100钡</td>
+                                        <td>100</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>138****6587</td>
+                                        <td>2017/09/25 10:00:00</td>
+                                        <td>通用积分100钡</td>
+                                        <td>100</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>138****6587</td>
+                                        <td>2017/09/25 10:00:00</td>
+                                        <td>通用积分100钡</td>
+                                        <td>100</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div id="tab-3" class="tab-pane">
+                            <div class="panel-body">
+                                <div class="form-horizontal">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="form-group">
+                                                <label class="col-sm-2 control-label">领取码</label>
+                                                <div class="col-sm-4">
+                                                    <input type="text"  class="form-control">
+                                                </div>
+                                                <div class="col-sm-3"></div>
+                                                <div class="col-sm-3 pl0 tr">
+                                                    <button type="button" class="btn btn-green">查询</button>
+                                                    <button type="button" class="btn btn-default btn-bg-gray">导出</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <table class="table">
+                                    <tr class="active">
+                                        <th>序号</th>
+                                        <th>奖品名称</th>
+                                        <th>数量</th>
+                                        <th>已发放</th>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>通用积分100 钡</td>
+                                        <td>10个</td>
+                                        <td>5（剩余5）</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>通用积分100 钡</td>
+                                        <td>10个</td>
+                                        <td>5（剩余5）</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>通用积分100 钡</td>
+                                        <td>10个</td>
+                                        <td>5（剩余5）</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>通用积分100 钡</td>
+                                        <td>10个</td>
+                                        <td>5（剩余5）</td>
+                                    </tr>
+
+                                </table>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <p class="tr">已核销：<span class="f-orange f16 f-blod">31000</span> 个</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<input id="prizehide" type="hidden" value="1000">
+<!--<div class="fineprize p20">-->
+    <!--<div><p class="width80px">奖品名称：</p><span class="ml10">通用积分100钡</span></div>-->
+    <!--<div><p class="width80px">现有数量：</p><span class="ml10">10（剩余5）</span></div>-->
+    <!--<div class="clearfix"><p class="fl width80px">增加数量：</p><input type="text" class="form-control fl ml10" placeholder="10" /></div>-->
+    <!--<div><p class="width80px block">需支付：</p><span class="ml10">100</span>钡 <span class="mlr5">x</span><span>10</span>个&nbsp;=&nbsp;<span class="f-red f-blod">1000</span>钡</div>-->
+<!--</div>-->
+<!-- 全局js -->
+<script src="hAdmin/js/jquery.min.js"></script>
+<script src="hAdmin/js/bootstrap.min.js?v=3.3.6"></script>
+<script src="layer/layer.js"></script>
+<script>
+    $(function () {
+        $("#tab-1 button").click(function () {
+
+            layer.open({
+                title: '奖品数量增加'
+                ,area:['350px']
+                ,btnAlign: 'c'
+                ,btn:['直接支付','取消']
+                ,content: '<div class="fineprize">\n' +
+                '    <div><p class="width80px">奖品名称：</p><span class="ml10">通用积分100钡</span></div>\n' +
+                '    <div><p class="width80px">现有数量：</p><span class="ml10 "><span>10</span>（剩余5）</span></div>\n' +
+                '    <div class="clearfix"><p class="fl width80px">增加数量：</p><input type="text" class="form-control fl ml10 changenum" value="10" maxlength="5" /></div>\n' +
+                '    <div class="f-blod"><p class="width80px block">需支付：</p><span class="ml10 num100">100</span>钡 <span class="mlr5">x</span><span class="numlast10">10</span>个&nbsp;=&nbsp;<span class="f-red f-blod numspan mlr5">1000</span>钡</div>\n' +
+                '</div>'
+                ,success: function(){
+                    $(function () {
+                        $('.changenum').bind('input propertychange', function() {
+                            $('.numlast10').html($(this).val());
+                            $('.numspan').html($(this).val()*100);
+                            var a = $('.numspan').html();
+                            $("#prizehide").attr("value",a)
+                        });
+                    })
+                },yes:function () {
+                    var b = $("#prizehide").attr("value")
+                    layer.open({
+                        title: '支付完成'
+                        ,content: '<p class="f16 f-blod tc">本次活动共消耗<span class="f-red mlr5">'+b+'</span>钡</p>' +
+                        '<p class="f-gray f14 tc mt10">奖品数量更新可能会存在延迟，请稍后查看</p>'
+                        ,area:['350px']
+                        ,btn:['导出领取码','关闭']
+                        ,btnAlign: 'c'
+                    });
+                }
+            });
+        })
+    })
+</script>
+</body>
+</html>
+

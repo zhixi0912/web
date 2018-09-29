@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--360浏览器优先以webkit内核解析-->
+    <title>购彩查询</title>
+    <link rel="shortcut icon" href="hAdmin/favicon.ico">
+    <link href="hAdmin/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="hAdmin/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="frame/select2-4.0.3/css/select2.min.css?v=3.3.6" rel="stylesheet">
+    <link href="hAdmin/css/animate.css" rel="stylesheet">
+    <link href="css/base.css?v=3.1.0" rel="stylesheet">
+    <link href="hAdmin/css/style.css?v=4.1.0" rel="stylesheet">
+    <link href="css/iframe-page.css" rel="stylesheet">
+    <link href="css/page.css" rel="stylesheet">
+    <link href="css/game/game-1.css" rel="stylesheet">
+    <link href="css/game/component.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/game/game-activity.css">
+</head>
+<body class="light-grey-bg">
+<div class="wrapper wrapper-content">
+    <form name="form1" enctype="multipart/form-data" id="form">
+        <div class="ibox act">
+            <div class="top-title ibox-title">
+                <div class="row">
+                    <div class="col-sm-10">
+                        <div class="bs-callout bs-callout-info ibox-h4-color"><p class="f16">购彩查询</p></div>
+                    </div>
+                </div>
+            </div>
+            <div class="ibox-content">
+                <div class="form-horizontal">
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <div class="form-group">
+                                <label class="control-label col-sm-1 pl0 pr0">彩票种类</label>
+                                <div class="col-sm-5">
+                                    <select  class="form-control col-lg-1">
+                                        <option value="0" class="form-control">七乐彩</option>
+                                        <option value="1" class="form-control">双色球</option>
+                                    </select>
+                                </div>
+                                <label class="control-label col-sm-1 pl0 pr0">开奖期号</label>
+                                <div class="col-sm-5">
+                                    <select  class="form-control col-lg-1">
+                                        <option value="0" class="form-control">全部</option>
+                                        <option value="0" class="form-control">20171116</option>
+                                        <option value="0" class="form-control">20171117</option>
+                                        <option value="0" class="form-control">20171118</option>
+                                        <option value="0" class="form-control">20171119</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-1 pl0 pr0">手机号</label>
+                                <div class="col-sm-5">
+                                    <input  type="text" class="form-control" placeholder="请输入手机号">
+                                </div>
+                                <label class="control-label col-sm-1 pl0 pr0">处理状态</label>
+                                <div class="col-sm-5">
+                                    <select  class="form-control col-lg-1">
+                                        <option value="0" class="form-control">全部</option>
+                                        <option value="0" class="form-control">系统发放</option>
+                                        <option value="0" class="form-control">未处理</option>
+                                        <option value="0" class="form-control">手工发放</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-1 pl0 pr0 control-label">订单号</label>
+                                <div class="col-sm-11">
+                                    <input  type="text" class="form-control" placeholder="请输入订单号">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 pr0"><div class="form-group" style="height: 30px;"></div></div>
+                        <div class="col-sm-2 pr0"><div class="form-group" style="height: 30px;"></div></div>
+                        <div class="col-sm-3 pl0 tr">
+                            <button type="button"  class="btn btn-green">查询</button>
+                            <button type="button"  class="btn btn-default btn-bg-gray">导出</button>
+                            <button type="button"  class="btn btn-default btn-bg-gray">异常导出</button>
+                        </div>
+                    </div>
+                </div>
+                <table class="table mt20">
+                    <thead>
+                        <tr class="active">
+                            <th>商户</th>
+                            <th>订单号</th>
+                            <th>手机号</th>
+                            <th>种类</th>
+                            <th>期号</th>
+                            <th>彩票号</th>
+                            <th>处理状态</th>
+                            <th>中奖金额</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>食之秘</td>
+                            <td>2017132181324654XX</td>
+                            <td>13885687530</td>
+                            <td>七乐彩</td>
+                            <td>2017132</td>
+                            <td><p class="f-red">05 06 07 09 12 17 19</p></td>
+                            <td>系统发放</td>
+                            <td>未中奖</td>
+                        </tr>
+                        <tr>
+                            <td>食之秘</td>
+                            <td>2017132181324654XX</td>
+                            <td>13885687530</td>
+                            <td>双色球</td>
+                            <td>2017132</td>
+                            <td><p class="f-red">05 06 07 09 12 17 <span class="f-blue">19</span></p></td>
+                            <td>系统发放</td>
+                            <td>未中奖</td>
+                        </tr>
+                        <tr>
+                            <td>永和大王</td>
+                            <td>2017132181324654XX</td>
+                            <td>13885687530</td>
+                            <td>双色球</td>
+                            <td>2017132</td>
+                            <td><p class="f-red">05 06 07 09 12 17 <span class="f-blue">30</span></p></td>
+                            <td>手工发放</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>永和大王</td>
+                            <td>2017132181324654XX</td>
+                            <td>13885687530</td>
+                            <td>双色球</td>
+                            <td>2017132</td>
+                            <td><p class="f-red">05 06 07 09 12 17 <span class="f-blue">30</span></p></td>
+                            <td>系统发放</td>
+                            <td>100</td>
+                        </tr>
+                        <tr>
+                            <td>永和大王</td>
+                            <td>2017132181324654XX</td>
+                            <td>13885687530</td>
+                            <td>双色球</td>
+                            <td>2017132</td>
+                            <td><p class="f-red">05 06 07 09 12 17 <span class="f-blue">30</span></p></td>
+                            <td>未处理</td>
+                            <td>未中奖</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+
+
+
+<!-- 全局js -->
+<script src="hAdmin/js/jquery.min.js"></script>
+<script src="js/jquery-migrate-1.2.1.js"></script>
+<script src="js/ajaxform.js"></script>
+<script src="frame/formvalidator4.1.3/formValidatorRegex.js"></script>
+<script src="frame/formvalidator4.1.3/formValidator-4.1.3.js"></script>
+<script src="hAdmin/js/bootstrap.min.js?v=3.3.6"></script>
+<script src="hAdmin/js/plugins/layer/layer.min.js"></script>
+<script src="frame/select2-4.0.3/js/select2.min.js"></script>
+<!--<script src="frame/vue2.1.8/vue.min.js"></script>-->
+<!-- Flot -->
+<script src="hAdmin/js/plugins/flot/jquery.flot.js"></script>
+<script src="hAdmin/js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+<script src="hAdmin/js/plugins/flot/jquery.flot.resize.js"></script>
+<script src="hAdmin/js/plugins/flot/jquery.flot.pie.js"></script>
+<!-- 自定义js -->
+
+</body>
+</html>

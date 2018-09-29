@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>转产工艺单</title>
+    <link type="text/css" href="css/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" href="css/xinjin.css" rel="stylesheet"/>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="js/datapicker/jquery-ui.css">
+    <link rel="stylesheet" href="js/datapicker/style.css">
+    <link rel="stylesheet" href="js/select2/css/select2.css">
+    <link rel="stylesheet" href="js/swiper/swiper.min.css">
+    <link rel="stylesheet" href="css/xinjin-alert.css">
+    <style>
+        .tab-pane{
+            border: 1px solid #ddd ;
+            border-top: none;
+            padding: 10px;
+        }
+        .tab-pane .newBg{
+            background: none;
+            border: none;
+        }
+    </style>
+</head>
+<body id="iframe">
+<div id="wrapper">
+    <!--右侧内容-->
+    <div id="page-wrapper" class="newFix">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title xj-panel-title"><strong>新建转产工艺单</strong></h3>
+                        </div>
+                        <div class="newBtnLine clearfix">
+                            <input type="hidden" name="draft" id="draft">
+                            <button type="button" class="btn xj-btn-ft14 xj-btn-blue fa fa-check mgr20" onclick="draft.vaule=1;updata(1);">保存</button>
+                            <button type="button" class="btn xj-btn-ft14 xj-btn-blue fa fa-floppy-o mgr20" onclick="draft.vaule=2;updata(2);">提交</button>
+                        </div>
+                        <div class="panel-body">
+                            <form role="form" class="form-horizontal" action="btn.html" id="ajaxform">
+                                <h6 class="xj-border-bottom-gray xj-sup-title clearfix"><strong>产品信息</strong></h6>
+                                <div class="newBg">
+                                    <!--行-->
+                                    <div class="newRow clearfix">
+
+                                        <div class="newBiaoTi newWidth8">
+                                            <div class="tabCell">转产单号：</div>
+                                        </div>
+                                        <div class="newShuRu newWidth14 clearfix">
+                                            <input type="text" id="listId" class="form-control xj-form-control  xj-paddingRight30" name="listId" value="DC212556" disabled>
+                                            <span id="listIdTip" class="onShow help-block"></span>
+                                        </div>
+                                        <div class="xj-text-danger xj-control-star newWidth3"></div>
+
+
+                                        <div class="newBiaoTi newWidth8">产品系列：</div>
+                                        <div class="newShuRu newWidth14 clearfix">
+                                            <select id="shopList" class="intsel form-control xj-form-control form-maps xj-sel" insert=0>
+                                                <option value="">请选择</option>
+                                                <option value="2">是</option>
+                                                <option value="3">否</option>
+                                            </select>
+                                            <span id="shopListTip" class="onShow help-block"></span>
+                                        </div>
+                                        <div class="xj-text-danger xj-control-star newWidth3">*</div>
+
+                                        <div class="newBiaoTi newWidth8">下单日期：</div>
+                                        <div class="newShuRu newWidth14 clearfix">
+                                            <input type="text" id="startTime" class="datepicker form-control xj-form-control  xj-paddingRight30" name="beginDay">
+                                            <span id="startTimeTip" class="onShow help-block"></span>
+                                        </div>
+                                        <div class="xj-text-danger xj-control-star newWidth3">*</div>
+
+                                        <div class="newBiaoTi newWidth8">单据状态：</div>
+                                        <div class="newShuRu newWidth14 clearfix">
+                                            <select id="state" class="intsel form-control xj-form-control form-maps xj-sel" insert=0>
+                                                <option value="">请选择</option>
+                                                <option value="2">是</option>
+                                                <option value="3">否</option>
+                                            </select>
+                                            <span id="stateTip" class="onShow help-block"></span>
+                                        </div>
+                                        <div class="xj-text-danger xj-control-star newWidth3"></div>
+
+                                    </div>
+
+
+
+
+                                    <div class="newRow clearfix">
+
+
+
+                                        <div class="newBiaoTi newWidth8">产品名称：</div>
+                                        <div class="newShuRu newWidth39 clearfix">
+                                            <select id="shopName" class="intsel form-control xj-form-control form-maps xj-sel">
+                                                <option value="">请选择</option>
+                                                <option value="2">是</option>
+                                                <option value="3">否</option>
+                                            </select>
+                                            <span id="shopNameTip" class="onShow help-block"></span>
+                                        </div>
+                                        <div class="xj-text-danger xj-control-star newWidth3">*</div>
+
+
+                                        <div class="newBiaoTi newWidth8">规格：</div>
+                                        <div class="newShuRu newWidth14 clearfix">
+                                            <select id="specifications" class="intsel form-control xj-form-control form-maps xj-sel" insert=0>
+                                                <option value="">请选择</option>
+                                                <option value="2">是</option>
+                                                <option value="3">否</option>
+                                            </select>
+                                            <span id="specificationsTip" class="onShow help-block"></span>
+                                        </div>
+                                        <div class="xj-text-danger xj-control-star newWidth3">*</div>
+
+                                        <div class="newBiaoTi newWidth8">生产釉线：</div>
+                                        <div class="newShuRu newWidth14 clearfix">
+                                            <select id="productionLine" class="intsel form-control xj-form-control form-maps xj-sel" insert=0>
+                                                <option value="">请选择</option>
+                                                <option value="2">是</option>
+                                                <option value="3">否</option>
+                                            </select>
+                                            <span id="productionLineTip" class="onShow help-block"></span>
+                                        </div>
+                                        <div class="xj-text-danger xj-control-star newWidth3">*</div>
+
+                                    </div>
+
+
+
+                                    <div class="newRow clearfix">
+
+                                        <div class="newBiaoTi newWidth8">生产窑号：</div>
+                                        <div class="newShuRu newWidth14 clearfix">
+                                            <select id="productionHouse" class="intsel form-control xj-form-control form-maps xj-sel" insert=0>
+                                                <option value="">请选择</option>
+                                                <option value="2">是</option>
+                                                <option value="3">否</option>
+                                            </select>
+                                            <span id="productionHouseTip" class="onShow help-block"></span>
+                                        </div>
+                                        <div class="xj-text-danger xj-control-star newWidth3">*</div>
+
+                                        <div class="newBiaoTi newWidth8">底标：</div>
+                                        <div class="newShuRu newWidth14 clearfix">
+                                            <select id="bottomMark" class="intsel form-control xj-form-control form-maps xj-sel" insert=0>
+                                                <option value="">请选择</option>
+                                                <option value="2">是</option>
+                                                <option value="3">否</option>
+                                            </select>
+                                            <span id="bottomMarkTip" class="onShow help-block"></span>
+                                        </div>
+                                        <div class="xj-text-danger xj-control-star newWidth3">*</div>
+
+                                        <div class="newBiaoTi newWidth8">生产数量：</div>
+                                        <div class="newShuRu newWidth14 clearfix">
+                                            <input id="productionNum" type="text" class="form-control xj-form-control " maxlength="10" name="">
+                                            <span id="productionNumTip" class="onShow help-block"></span>
+                                        </div>
+                                        <div class="xj-text-danger xj-control-star newWidth3">*</div>
+
+                                        <div class="newBiaoTi newWidth8">单位：</div>
+                                        <div class="newShuRu newWidth14 clearfix">
+                                            <select id="company" class="intsel form-control xj-form-control form-maps xj-sel" insert=0>
+                                                <option value="">请选择</option>
+                                                <option value="2">是</option>
+                                                <option value="3">否</option>
+                                            </select>
+                                            <span id="companyTip" class="onShow help-block"></span>
+                                        </div>
+                                        <div class="xj-text-danger xj-control-star newWidth3">*</div>
+
+
+
+                                    </div>
+                                    <div class="newRow clearfix">
+                                        <div class="newBiaoTi newWidth8">注意事项：</div>
+                                        <div class="newShuRu newWidth89 clearfix">
+                                            <textarea class="form-control xj-form-control desc form-maps g-ipt g-ipt-active" maxlength="50" style="color: rgb(153, 153, 153);"></textarea>
+                                            <span class="onFocus help-block onCorrect"></span>
+                                        </div>
+                                        <div class="xj-text-danger xj-control-star newWidth3"></div>
+                                    </div>
+                                </div>
+
+                                <div class="newBg">
+                                    <div class="newRow clearfix">
+                                        <div class="newBiaoTi newWidth8">创建人：</div>
+                                        <div class="newShuRu newWidth14 clearfix">
+                                            <input id="" type="text" class="form-control xj-form-control " name="" value="张三" maxlength="10" disabled>
+                                            <span id="" class="help-block"></span>
+                                        </div>
+                                        <div class="xj-text-danger xj-control-star newWidth3"></div>
+
+                                        <div class="newBiaoTi newWidth8">创建时间：</div>
+                                        <div class="newShuRu newWidth14 clearfix">
+                                            <input title="" type="text"  name="birthday" class="datepicker-times form-control xj-form-control form-maps datepicker-today" value="2017-02-15">
+                                            <span  class="help-block"></span>
+                                        </div>
+                                        <div class="xj-text-danger xj-control-star newWidth3"></div>
+
+                                        <div class="newBiaoTi newWidth8">修改人：</div>
+                                        <div class="newShuRu newWidth14 clearfix">
+                                            <select id="" class="intsel form-control xj-form-control form-maps xj-sel" insert=0>
+                                                <option value="">请选择</option>
+                                                <option value="2">张三</option>
+                                                <option value="3">李四</option>
+                                            </select>
+                                            <span id="" class="help-block"></span>
+                                        </div>
+                                        <div class="xj-text-danger xj-control-star newWidth3"></div>
+
+                                        <div class="newBiaoTi newWidth8">修改时间：</div>
+                                        <div class="newShuRu newWidth14 clearfix">
+                                            <input title="" type="text" id="" name="birthday" class="datepicker-times form-control xj-form-control form-maps" >
+                                            <span id="" class="help-block"></span>
+                                        </div>
+                                        <div class="xj-text-danger xj-control-star newWidth3"></div>
+                                    </div>
+                                </div>
+                                <div class="bs-example bs-example-tabs">
+                                    <ul id="myTab" class="nav nav-tabs">
+
+                                    </ul>
+                                    <div id="myTabContent" class="tab-content">
+                                        <div class="swiper-container">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide" group="0">
+                                                    <div role="tabpanel" class="tab-pane" id="profile-1" aria-labelledby="home-tab">
+                                                        <div class="newBg">
+                                                            <div class="newRow clearfix ">
+
+                                                                <div class="newBiaoTi newWidth14">干燥出口温度：</div>
+                                                                <div class="newShuRu newWidth33 clearfix">
+                                                                    <div class="newShuRu newWidth40 clearfix">
+                                                                        <input id="temperature_1" type="text" class="form-control xj-form-control tax_price form-maps g-ipt">
+                                                                        <span id="temperature_1Tip" class="help-block"></span>
+                                                                    </div>
+                                                                    <div class="xj-control-solid newWidth20">~</div>
+                                                                    <div class="newShuRu newWidth40 clearfix">
+                                                                        <input id="temperature_2" type="text" class="form-control xj-form-control tax_price form-maps g-ipt">
+                                                                        <span  id="temperature_2Tip" class="help-block"></span>
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="xj-text-danger xj-control-star newWidth3">*</div>
+
+
+                                                                <div class="newBiaoTi newWidth14">喷水量：</div>
+                                                                <div class="newShuRu newWidth33 clearfix">
+                                                                    <div class="newShuRu newWidth40 clearfix">
+                                                                        <input id="water_1" type="text" class="form-control xj-form-control tax_price form-maps g-ipt">
+                                                                        <span  id="water_1Tip" class="help-block"></span>
+                                                                    </div>
+                                                                    <div class="xj-control-solid newWidth20">~</div>
+                                                                    <div class="newShuRu newWidth40 clearfix">
+                                                                        <input id="water_2" type="text" class="form-control xj-form-control tax_price form-maps g-ipt">
+                                                                        <span  id="water_2Tip" class="help-block"></span>
+                                                                    </div>
+                                                                    <span class="onShow help-block">*</span>
+                                                                </div>
+                                                                <div  class="xj-text-danger xj-control-star newWidth3">*</div>
+
+                                                            </div>
+
+
+                                                            <div class="newRow clearfix">
+
+                                                                <div class="newBiaoTi newWidth14">喷墨文件编号：</div>
+                                                                <div class="newShuRu newWidth33 clearfix">
+                                                                    <input id="workId" type="text" class="form-control xj-form-control tax_price form-maps g-ipt">
+                                                                    <span id="workIdTip" class="onShow help-block"></span>
+                                                                </div>
+                                                                <div class="xj-text-danger xj-control-star newWidth3">*</div>
+
+
+
+
+
+                                                                <div class="newBiaoTi newWidth14">打印要求：</div>
+                                                                <div class="newShuRu newWidth33 clearfix">
+                                                                    <select id="print" class="intsel form-control xj-form-control form-maps xj-sel" insert="0">
+                                                                        <option value="">请选择</option>
+                                                                        <option value="2">是</option>
+                                                                        <option value="3">否</option>
+                                                                    </select>
+                                                                    <span id="printTip" class="help-block"></span>
+                                                                </div>
+                                                                <div class="xj-text-danger xj-control-star newWidth3">*</div>
+
+
+
+                                                            </div>
+
+                                                            <div class="newRow clearfix">
+
+                                                                <div class="newBiaoTi newWidth14">抛光要求：</div>
+                                                                <div class="newShuRu newWidth33 clearfix">
+                                                                    <select id="requirement" class="intsel form-control xj-form-control form-maps xj-sel" insert="0">
+                                                                        <option value="">请选择</option>
+                                                                        <option value="2">是</option>
+                                                                        <option value="3">否</option>
+                                                                    </select>
+                                                                    <span id="requirementTip" class="help-block"></span>
+                                                                </div>
+                                                                <div class="xj-text-danger xj-control-star newWidth3">*</div>
+
+
+
+                                                            </div>
+
+                                                        </div>
+
+
+
+
+
+
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide" group="1">
+                                                    <div role="tabpanel" class="tab-pane" id="profile-2" aria-labelledby="profile-tab">
+                                                        <form class="form-horizontal">
+                                                            <table class="table table-striped table-bordered table-hover xj-table">
+                                                                <colgroup>
+                                                                    <col class="col-xs-1">
+                                                                    <col class="col-xs-2">
+                                                                    <col class="col-xs-1">
+                                                                    <col class="col-xs-2">
+                                                                    <col class="col-xs-2">
+                                                                    <col class="col-xs-2">
+                                                                </colgroup>
+                                                                <thead>
+                                                                <tr>
+                                                                    <th class="text-center">操作</th>
+                                                                    <th class="text-center">釉料类型<span class="xj-text-danger">*</span></th>
+                                                                    <th class="text-center">釉浆编号<span class="xj-text-danger">*</span></th>
+                                                                    <th class="text-center">釉缸号<span class="xj-text-danger">*</span></th>
+                                                                    <th class="text-center">比重（g）<span class="xj-text-danger">*</span></th>
+                                                                    <th class="text-center">流速（s）<span class="xj-text-danger">*</span></th>
+                                                                    <th class="text-center">重量（g）<span class="xj-text-danger">*</span></th>
+                                                                </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                <tr>
+                                                                    <td></td>
+                                                                    <td>
+                                                                        <div class="newShuRu">
+                                                                            <select class="glazeType intsel form-control xj-form-control form-maps xj-sel" insert="0" style="width: 100%">
+                                                                                <option value="0">请选择</option>
+                                                                                <option value="2">是</option>
+                                                                                <option value="3">否</option>
+                                                                            </select>
+
+                                                                        </div>
+
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="newShuRu">
+                                                                            <div class="newShuRu">
+                                                                                <select class="glazeNub intsel form-control xj-form-control form-maps xj-sel" insert="0" style="width: 100%">
+                                                                                    <option value="0">请选择</option>
+                                                                                    <option value="2">是</option>
+                                                                                    <option value="3">否</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="newShuRu">
+                                                                            <select class="glazeBox intsel form-control xj-form-control form-maps xj-sel" insert="0" style="width: 100%">
+                                                                                <option value="0">请选择</option>
+                                                                                <option value="2">是</option>
+                                                                                <option value="3">否</option>
+                                                                            </select>
+
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="row">
+                                                                            <div class="col-lg-5 xj-paddingRight0">
+                                                                                <div class="newShuRu">
+                                                                                    <input class="bizhongLeft form-control xj-form-control"  type="text">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-lg-2 xj-paddingLeft0 xj-paddingRight0 xj-label-height text-center">±
+                                                                            </div>
+                                                                            <div class="col-lg-5 xj-paddingLeft0">
+                                                                                <div class="newShuRu">
+                                                                                    <input class="bizhongRight form-control xj-form-control"  type="text">
+                                                                                    <span class=" help-block"></span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="row">
+                                                                            <div class="col-lg-5 xj-paddingRight0">
+                                                                                <div class="newShuRu">
+                                                                                    <input  class="liusuLeft form-control xj-form-control"  type="text">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-lg-2 xj-paddingLeft0 xj-paddingRight0 xj-label-height text-center">±
+                                                                            </div>
+                                                                            <div class="col-lg-5 xj-paddingLeft0">
+                                                                                <div class="newShuRu">
+                                                                                    <input  class="liusuRight form-control xj-form-control"  type="text">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="row">
+                                                                            <div class="col-lg-5 xj-paddingRight0">
+                                                                                <div class="newShuRu">
+                                                                                    <input class="zhongliangLeft form-control xj-form-control"  type="text">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-lg-2 xj-paddingLeft0 xj-paddingRight0 xj-label-height text-center">±
+                                                                            </div>
+                                                                            <div class="col-lg-5 xj-paddingLeft0">
+                                                                                <div class="newShuRu">
+                                                                                    <input class="zhongliangRight form-control xj-form-control"  type="text">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td></td>
+                                                                    <td>
+                                                                        <div class="newShuRu">
+                                                                            <select class="glazeType intsel form-control xj-form-control form-maps xj-sel" insert="0" style="width: 100%">
+                                                                                <option value="0">请选择</option>
+                                                                                <option value="2">是</option>
+                                                                                <option value="3">否</option>
+                                                                            </select>
+
+                                                                        </div>
+
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="newShuRu">
+                                                                            <div class="newShuRu">
+                                                                                <select class="glazeNub intsel form-control xj-form-control form-maps xj-sel" insert="0" style="width: 100%">
+                                                                                    <option value="0">请选择</option>
+                                                                                    <option value="2">是</option>
+                                                                                    <option value="3">否</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="newShuRu">
+                                                                            <select class="glazeBox intsel form-control xj-form-control form-maps xj-sel" insert="0" style="width: 100%">
+                                                                                <option value="0">请选择</option>
+                                                                                <option value="2">是</option>
+                                                                                <option value="3">否</option>
+                                                                            </select>
+
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="row">
+                                                                            <div class="col-lg-5 xj-paddingRight0">
+                                                                                <div class="newShuRu">
+                                                                                    <input class="bizhongLeft form-control xj-form-control"  type="text">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-lg-2 xj-paddingLeft0 xj-paddingRight0 xj-label-height text-center">±
+                                                                            </div>
+                                                                            <div class="col-lg-5 xj-paddingLeft0">
+                                                                                <div class="newShuRu">
+                                                                                    <input class="bizhongRight form-control xj-form-control"  type="text">
+
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="row">
+                                                                            <div class="col-lg-5 xj-paddingRight0">
+                                                                                <div class="newShuRu">
+                                                                                    <input  class="liusuLeft form-control xj-form-control"  type="text">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-lg-2 xj-paddingLeft0 xj-paddingRight0 xj-label-height text-center">±
+                                                                            </div>
+                                                                            <div class="col-lg-5 xj-paddingLeft0">
+                                                                                <div class="newShuRu">
+                                                                                    <input  class="liusuRight form-control xj-form-control"  type="text">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="row">
+                                                                            <div class="col-lg-5 xj-paddingRight0">
+                                                                                <div class="newShuRu">
+                                                                                    <input class="zhongliangLeft form-control xj-form-control"  type="text">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-lg-2 xj-paddingLeft0 xj-paddingRight0 xj-label-height text-center">±
+                                                                            </div>
+                                                                            <div class="col-lg-5 xj-paddingLeft0">
+                                                                                <div class="newShuRu">
+                                                                                    <input class="zhongliangRight form-control xj-form-control"  type="text">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </td>
+                                                                </tr>
+                                                                </tbody>
+                                                                <tbody>
+                                                                <tr>
+                                                                    <td colspan="7">
+                                                                        <a id="add-line-1" class="btn xj-btn" href="javascript:void(0);">添加</a>
+                                                                    </td>
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide" group="2">
+                                                    <div role="tabpanel" class="tab-pane" id="profile-3" aria-labelledby="profile-tab">
+                                                        <form class="form-horizontal">
+                                                            <table class="table table-striped table-bordered table-hover xj-table">
+                                                                <colgroup>
+                                                                    <col class="col-xs-2">
+                                                                    <col class="col-xs-2">
+                                                                    <col class="col-xs-2">
+                                                                    <col class="col-xs-2">
+                                                                    <col class="col-xs-2">
+                                                                </colgroup>
+                                                                <thead>
+                                                                <tr>
+                                                                    <th class="text-center">操作</th>
+                                                                    <th class="text-center">网版编号<span class="xj-text-danger">*</span></th>
+                                                                    <th class="text-center">花釉编号<span class="xj-text-danger">*</span></th>
+                                                                    <th class="text-center">比重（g）<span class="xj-text-danger">*</span></th>
+                                                                    <th class="text-center">丝网孔径<span class="xj-text-danger">*</span></th>
+                                                                </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                    <td>
+
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="newShuRu">
+                                                                            <input class="netNub form-control xj-form-control"  type="text">
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="newShuRu">
+                                                                            <input class="floralNub form-control xj-form-control"  type="text">
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="row">
+                                                                            <div class="col-lg-5 xj-paddingRight0">
+                                                                                <div class="newShuRu">
+                                                                                    <input class="floral_bizhongLeft form-control xj-form-control"  type="text">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-lg-2 xj-paddingLeft0 xj-paddingRight0 xj-label-height text-center">±
+                                                                            </div>
+                                                                            <div class="col-lg-5 xj-paddingLeft0">
+                                                                                <div class="newShuRu">
+                                                                                    <input class="floral_bizhongRight form-control xj-form-control"  type="text">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </td>
+
+                                                                    <td>
+                                                                        <div class="newShuRu">
+                                                                            <select class="floralRadius intsel form-control xj-form-control form-maps xj-sel" insert="0" style="width: 100%">
+                                                                                <option value="">请选择</option>
+                                                                                <option value="2">是</option>
+                                                                                <option value="3">否</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                    <tr>
+                                                                        <td>
+
+                                                                        </td>
+                                                                        <td>
+                                                                            <div class="newShuRu">
+                                                                                <input class="netNub form-control xj-form-control"  type="text">
+                                                                            </div>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div class="newShuRu">
+                                                                                <input class="floralNub form-control xj-form-control"  type="text">
+                                                                            </div>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div class="row">
+                                                                                <div class="col-lg-5 xj-paddingRight0">
+                                                                                    <div class="newShuRu">
+                                                                                        <input class="floral_bizhongLeft form-control xj-form-control"  type="text">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-lg-2 xj-paddingLeft0 xj-paddingRight0 xj-label-height text-center">±
+                                                                                </div>
+                                                                                <div class="col-lg-5 xj-paddingLeft0">
+                                                                                    <div class="newShuRu">
+                                                                                        <input class="floral_bizhongRight form-control xj-form-control"  type="text">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </td>
+
+                                                                        <td>
+                                                                            <div class="newShuRu">
+                                                                                <select class="floralRadius intsel form-control xj-form-control form-maps xj-sel" insert="0" style="width: 100%">
+                                                                                    <option value="">请选择</option>
+                                                                                    <option value="2">是</option>
+                                                                                    <option value="3">否</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                                <tbody>
+                                                                <tr>
+                                                                    <td colspan="7">
+                                                                        <a id="add-line-2" class="btn xj-btn" href="javascript:void(0);">添加</a>
+                                                                    </td>
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide" group="3">
+                                                    <div role="tabpanel" class="tab-pane" id="profile-4" aria-labelledby="profile-tab">
+                                                        <form class="form-horizontal">
+                                                            <table class="table table-striped table-bordered table-hover xj-table">
+                                                                <colgroup>
+                                                                    <col class="col-xs-3">
+                                                                    <col class="col-xs-3">
+                                                                    <col class="col-xs-3">
+                                                                    <col class="col-xs-3">
+                                                                </colgroup>
+                                                                <thead>
+                                                                <tr>
+                                                                    <th class="text-center">操作</th>
+                                                                    <th class="text-center">品牌</th>
+                                                                    <th class="text-center">等级</th>
+                                                                    <th class="text-center">喷码要求</th>
+                                                                </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                <tr>
+                                                                    <td></td>
+                                                                    <td>
+                                                                        <div class="newShuRu">
+                                                                            <select class="wrapBrand intsel form-control xj-form-control form-maps xj-sel" style="width: 100%">
+                                                                                <option value="">请选择</option>
+                                                                                <option value="2">是</option>
+                                                                                <option value="3">否</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </td>
+
+                                                                    <td>
+                                                                        <div class="newShuRu">
+                                                                            <select class="wrapLevels  intsel form-control xj-form-control form-maps xj-sel" insert="0" style="width: 100%">
+                                                                                <option value="">请选择</option>
+                                                                                <option value="2">是</option>
+                                                                                <option value="3">否</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="newShuRu">
+                                                                            <input class="wrapMarking form-control xj-form-control" type="text">
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td></td>
+                                                                    <td>
+                                                                        <div class="newShuRu">
+                                                                            <select class="wrapBrand intsel form-control xj-form-control form-maps xj-sel" style="width: 100%">
+                                                                                <option value="">请选择</option>
+                                                                                <option value="2">是</option>
+                                                                                <option value="3">否</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </td>
+
+                                                                    <td>
+                                                                        <div class="newShuRu">
+                                                                            <select class="wrapLevels  intsel form-control xj-form-control form-maps xj-sel" insert="0" style="width: 100%">
+                                                                                <option value="">请选择</option>
+                                                                                <option value="2">是</option>
+                                                                                <option value="3">否</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="newShuRu">
+                                                                            <input class="wrapMarking form-control xj-form-control" type="text">
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                </tbody>
+                                                                <tbody>
+                                                                <tr>
+                                                                    <td colspan="7">
+                                                                        <a id="add-line-3" class="btn xj-btn" href="javascript:void(0);">添加</a>
+                                                                    </td>
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script id="tab-line-1" type="text/template">
+    <tr>
+        <td>
+            <a class="btn xj-btn" onclick="delLine($(this));" href="javascript:void(0);">删除</a>
+        </td>
+        <td>
+            <div class="newShuRu">
+                <select class="glazeType intsel form-control xj-form-control form-maps xj-sel" insert="0" style="width: 100%">
+                    <option value="0">请选择</option>
+                    <option value="2">是</option>
+                    <option value="3">否</option>
+                </select>
+
+            </div>
+
+        </td>
+        <td>
+            <div class="newShuRu">
+                <div class="newShuRu">
+                    <select class="glazeNub intsel form-control xj-form-control form-maps xj-sel" insert="0" style="width: 100%">
+                        <option value="0">请选择</option>
+                        <option value="2">是</option>
+                        <option value="3">否</option>
+                    </select>
+                </div>
+            </div>
+        </td>
+        <td>
+            <div class="newShuRu">
+                <select class="glazeBox intsel form-control xj-form-control form-maps xj-sel" insert="0" style="width: 100%">
+                    <option value="0">请选择</option>
+                    <option value="2">是</option>
+                    <option value="3">否</option>
+                </select>
+
+            </div>
+        </td>
+        <td>
+            <div class="row">
+                <div class="col-lg-5 xj-paddingRight0">
+                    <div class="newShuRu">
+                        <input class="bizhongLeft form-control xj-form-control"  type="text">
+                    </div>
+                </div>
+                <div class="col-lg-2 xj-paddingLeft0 xj-paddingRight0 xj-label-height text-center">±
+                </div>
+                <div class="col-lg-5 xj-paddingLeft0">
+                    <div class="newShuRu">
+                        <input class="bizhongRight form-control xj-form-control"  type="text">
+                        <span class=" help-block"></span>
+                    </div>
+                </div>
+            </div>
+
+        </td>
+        <td>
+            <div class="row">
+                <div class="col-lg-5 xj-paddingRight0">
+                    <div class="newShuRu">
+                        <input  class="liusuLeft form-control xj-form-control"  type="text">
+                    </div>
+                </div>
+                <div class="col-lg-2 xj-paddingLeft0 xj-paddingRight0 xj-label-height text-center">±
+                </div>
+                <div class="col-lg-5 xj-paddingLeft0">
+                    <div class="newShuRu">
+                        <input  class="liusuRight form-control xj-form-control"  type="text">
+                    </div>
+                </div>
+            </div>
+
+        </td>
+        <td>
+            <div class="row">
+                <div class="col-lg-5 xj-paddingRight0">
+                    <div class="newShuRu">
+                        <input class="zhongliangLeft form-control xj-form-control"  type="text">
+                    </div>
+                </div>
+                <div class="col-lg-2 xj-paddingLeft0 xj-paddingRight0 xj-label-height text-center">±
+                </div>
+                <div class="col-lg-5 xj-paddingLeft0">
+                    <div class="newShuRu">
+                        <input class="zhongliangRight form-control xj-form-control"  type="text">
+                    </div>
+                </div>
+            </div>
+
+        </td>
+    </tr>
+</script>
+<script id="tab-line-2" type="text/template">
+    <tr>
+        <td>
+            <a class="btn xj-btn" onclick="delLine($(this));" href="javascript:void(0);">删除</a>
+        </td>
+        <td>
+            <div class="newShuRu">
+                <input class="netNub form-control xj-form-control"  type="text">
+            </div>
+        </td>
+        <td>
+            <div class="newShuRu">
+                <input class="floralNub form-control xj-form-control"  type="text">
+            </div>
+        </td>
+        <td>
+            <div class="row">
+                <div class="col-lg-5 xj-paddingRight0">
+                    <div class="newShuRu">
+                        <input class="floral_bizhongLeft form-control xj-form-control"  type="text">
+                    </div>
+                </div>
+                <div class="col-lg-2 xj-paddingLeft0 xj-paddingRight0 xj-label-height text-center">±
+                </div>
+                <div class="col-lg-5 xj-paddingLeft0">
+                    <div class="newShuRu">
+                        <input class="floral_bizhongRight form-control xj-form-control"  type="text">
+                    </div>
+                </div>
+            </div>
+
+        </td>
+
+        <td>
+            <div class="newShuRu">
+                <select class="floralRadius intsel form-control xj-form-control form-maps xj-sel" insert="0" style="width: 100%">
+                    <option value="">请选择</option>
+                    <option value="2">是</option>
+                    <option value="3">否</option>
+                </select>
+            </div>
+        </td>
+    </tr>
+</script>
+<script id="tab-line-3" type="text/template">
+    <tr>
+        <td>
+            <a class="btn xj-btn" onclick="delLine($(this));" href="javascript:void(0);">删除</a>
+        </td>
+        <td>
+            <div class="newShuRu">
+                <select class="wrapBrand intsel form-control xj-form-control form-maps xj-sel" style="width: 100%">
+                    <option value="">请选择</option>
+                    <option value="2">是</option>
+                    <option value="3">否</option>
+                </select>
+            </div>
+        </td>
+        <td>
+            <div class="newShuRu">
+                <select class="wrapLevels  intsel form-control xj-form-control form-maps xj-sel" insert="0" style="width: 100%">
+                    <option value="">请选择</option>
+                    <option value="2">是</option>
+                    <option value="3">否</option>
+                </select>
+            </div>
+        </td>
+        <td>
+            <div class="newShuRu">
+                <input class="wrapMarking form-control xj-form-control" type="text">
+            </div>
+        </td>
+    </tr>
+</script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/select2/js/select2.js"></script>
+<script type="text/javascript" src="js/datapicker/jquery-ui.js"></script>
+<!--<script type="text/javascript" src="http://code.jquery.com/ui/1.9.1/jquery-ui.min.js"></script>-->
+<script src="js/datetimepicker/jQuery-Timepicker-Addon/jquery-ui-timepicker-addon.js" type="text/javascript"></script>
+<script src="js/datetimepicker/js/jquery.ui.datepicker-zh-CN.js.js" type="text/javascript"></script>
+<script src="js/datetimepicker/js/jquery-ui-timepicker-zh-CN.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/swiper/swiper.js"></script>
+<script type="text/javascript" src="js/xinjin-alert.js"></script>
+<script type="text/javascript" src="js/formData/draw.js"></script>
+<script type="text/javascript" src="js/ajaxform.js"></script>
+<script type="text/javascript" src="js/productionProcessAdd/formValidatorRegex.js"></script>
+<script type="text/javascript" src="js/productionProcessAdd/formValidator-4.1.3.js"></script>
+<script type="text/javascript" src="js/productionProcessAdd/int-validator.js"></script>
+<script type="text/javascript" src="js/productionProcessAdd/ctrol-validator.js"></script>
+<script type="text/javascript" src="js/productionProcessAdd/productionProcessAdd.js"></script>
+
+
+</body>
+</html>

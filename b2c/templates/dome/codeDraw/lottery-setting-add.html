@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--360浏览器优先以webkit内核解析-->
+
+
+    <title>创建活动</title>
+
+    <link rel="shortcut icon" href="../../../static/b2c-reception/frame/hAdmin/favicon.ico">
+    <link href="../../../static/b2c-reception/frame/hAdmin/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="../../../static/b2c-reception/frame/hAdmin/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="../../../static/b2c-reception/frame/ludo-jquery-treetable-3.2.0/css/jquery.treetable.css" rel="stylesheet">
+    <link href="../../../static/b2c-reception/frame/ludo-jquery-treetable-3.2.0/css/jquery.treetable.theme.default.css" rel="stylesheet">
+    <link href="../../../static/b2c-reception/frame/select2/css/select2.css" rel="stylesheet">
+    <link href="../../../static/b2c-reception/frame/hAdmin/css/animate.css" rel="stylesheet">
+    <link href="../../../static/b2c-reception/frame/hAdmin/css/style.css?v=4.1.0" rel="stylesheet">
+    <link href="../../../static/b2c-reception/css/lottery-setting.css" rel="stylesheet">
+    <link href="../../../static/b2c-reception/css/style.css?v=4.1.0" rel="stylesheet">
+</head>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content">
+        <div class="ibox">
+            <div class="top-title ibox-title">
+                <div class="row">
+                    <div class="col-sm-10">
+                        <div class="bs-callout bs-callout-info"><h4>商户详情</h4></div>
+                    </div>
+                    <div class="col-sm-2">
+                        <a class="btn btn-w-m btn-info" href="javascript:void(0);">返回</a>
+                    </div>
+                </div>
+            </div>
+            <div class="ibox-content">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="newRow clearfix">
+                            <div class="newBiaoTi newWidth8">
+                                <div class="tabCell">活动类型：</div>
+                            </div>
+                            <div class="newShuRu newWidth39 clearfix">
+                                <select class="form-control">
+                                    <option>拉新活动</option>
+                                </select>
+                            </div>
+                            <div class="b2c-text-danger b2c-control-star newWidth3"></div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>活动信息</h5>
+                    </div>
+                    <div class="ibox-content no-padding">
+                        <div class="list-group-item ">
+                            <div class="newRow clearfix">
+                                <div class="newBiaoTi newWidth8">
+                                    <div class="tabCell">活动名称：</div>
+                                </div>
+                                <div class="newShuRu newWidth39 clearfix">
+                                    <input type="text" placeholder="请输活动名称" id="" class="form-control">
+                                </div>
+                                <div class="b2c-text-danger b2c-control-star newWidth3"></div>
+
+                                <div class="newBiaoTi newWidth8">
+                                    <div class="tabCell">所属商户：</div>
+                                </div>
+                                <div class="newShuRu newWidth39 clearfix">
+                                    <select class="form-control sel-shop">
+                                        <option>选择或输入</option>
+                                        <option>商户1</option>
+                                        <option>商户2</option>
+                                        <option>商户3</option>
+
+                                    </select>
+                                </div>
+                                <div class="b2c-text-danger b2c-control-star newWidth3"></div>
+
+                            </div>
+                            <div class="newRow clearfix">
+                                <div class="newBiaoTi newWidth8">
+                                    <div class="tabCell">活动开始日期：</div>
+                                </div>
+                                <div class="newShuRu newWidth39 clearfix">
+                                    <input type="text" placeholder="请输活动日期开始时间" id="" class="form-control data-pk">
+                                </div>
+                                <div class="b2c-text-danger b2c-control-star newWidth3"></div>
+
+                                <div class="newBiaoTi newWidth8">
+                                    <div class="tabCell">活动结束日期：</div>
+                                </div>
+                                <div class="newShuRu newWidth39 clearfix">
+                                    <input type="text" placeholder="请输活动日期结束时间" id="" class="form-control data-pk">
+                                </div>
+                                <div class="b2c-text-danger b2c-control-star newWidth3"></div>
+
+                            </div>
+                            <div class="time-bg">
+                                <div class="newRow clearfix">
+                                    <div class="newBiaoTi newWidth8">
+                                        <div class="tabCell">每天开始时间：</div>
+                                    </div>
+                                    <div class="newShuRu newWidth39 clearfix">
+                                        <input type="text" placeholder="请输每天开始时间" id="" class="form-control time-pk">
+                                    </div>
+                                    <div class="b2c-text-danger b2c-control-star newWidth3"></div>
+
+                                    <div class="newBiaoTi newWidth8">
+                                        <div class="tabCell">每天结束时间：</div>
+                                    </div>
+                                    <div class="newShuRu newWidth39 clearfix">
+                                        <input type="text" placeholder="请输每天结束时间" id="" class="form-control time-pk">
+                                    </div>
+                                    <div class="b2c-text-danger b2c-control-star newWidth3"></div>
+
+                                </div>
+                                <div class="newRow clearfix">
+                                    <div class="newBiaoTi newWidth8">
+                                        <a class=" " id="add-time-list" href="javascript:void(0);">添加更多时间段</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="newRow clearfix">
+                                <div class="newBiaoTi newWidth8">
+                                    <div class="tabCell">活动预算：</div>
+                                </div>
+                                <div class="newShuRu newWidth39 input-group clearfix">
+                                    <input type="text" placeholder="请输活动预算" id="" class="form-control">
+                                    <span class="input-group-addon">元</span>
+                                </div>
+                                <div class="b2c-text-danger b2c-control-star newWidth3"></div>
+                            </div>
+                            <div class="newRow clearfix">
+                                <div class="newBiaoTi newWidth8">
+                                    <div class="tabCell">背景图：</div>
+                                </div>
+                                <div class="newShuRu newWidth39 clearfix">
+                                    <div class="add-img">
+                                        <input type="file" id="" class="form-control add-img-file">
+                                    </div>
+                                </div>
+                                <div class="b2c-text-danger b2c-control-star newWidth3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>活动规则</h5>
+                    </div>
+                    <div class="ibox-content no-padding">
+
+                        <div class="list-group-item ">
+                            <div class="newRow clearfix">
+                                <div class="newBiaoTi newWidth8">
+                                    <div class="tabCell">用户每日可领取：</div>
+                                </div>
+                                <div class="newShuRu newWidth14 input-group clearfix">
+                                    <input type="text" placeholder="0" id="" class="form-control">
+                                    <span class="input-group-addon">次奖品</span>
+                                </div>
+                                <div class="b2c-text-danger b2c-control-star newWidth3"></div>
+                            </div>
+                            <h5 class="lottery-h5"><strong>奖品设置</strong></h5>
+                            <div class="game-list" id="game-list">
+                                <div class="newRow clearfix">
+                                    <div class="newBiaoTi newWidth8">
+                                        <div class="tabCell">奖励：</div>
+                                    </div>
+                                    <div class="newShuRu newWidth14 input-group clearfix">
+                                        <input type="text" placeholder="0" id="" class="form-control">
+                                        <span class="input-group-addon">钡</span>
+                                    </div>
+                                    <div class="b2c-text-danger b2c-control-star newWidth3"></div>
+                                    <div class="newBiaoTi newWidth8">
+                                        <div class="tabCell">新用户中奖概率：</div>
+                                    </div>
+                                    <div class="newShuRu newWidth14 input-group clearfix">
+                                        <input type="text" placeholder="0" id="" class="form-control">
+                                        <span class="input-group-addon">%</span>
+                                    </div>
+                                    <div class="b2c-text-danger b2c-control-star newWidth3"></div>
+                                    <div class="newBiaoTi newWidth8">
+                                        <div class="tabCell">每日奖品数量：</div>
+                                    </div>
+                                    <div class="newShuRu newWidth14 input-group clearfix">
+                                        <input type="text" placeholder="0" id="" class="form-control">
+                                        <span class="input-group-addon">次</span>
+                                    </div>
+                                    <div class="b2c-text-danger b2c-control-star newWidth3"></div>
+                                </div>
+                                <div class="newRow clearfix">
+                                    <div class="newBiaoTi newWidth8">
+                                        <div class="tabCell"></div>
+                                    </div>
+                                    <div class="newShuRu newWidth14 clearfix">
+                                    </div>
+                                    <div class="b2c-text-danger b2c-control-star newWidth3"></div>
+                                    <div class="newBiaoTi newWidth8">
+                                        <div class="tabCell">老用户中奖概率：</div>
+                                    </div>
+                                    <div class="newShuRu newWidth14 input-group clearfix">
+                                        <input type="text" placeholder="0" id="" class="form-control">
+                                        <span class="input-group-addon">%</span>
+                                    </div>
+                                    <div class="b2c-text-danger b2c-control-star newWidth3"></div>
+                                    <div class="newBiaoTi newWidth8">
+                                        <div class="tabCell">每日奖品数量：</div>
+                                    </div>
+                                    <div class="newShuRu newWidth14 input-group clearfix">
+                                        <input type="text" placeholder="0" id="" class="form-control">
+                                        <span class="input-group-addon">次</span>
+                                    </div>
+                                    <div class="b2c-text-danger b2c-control-star newWidth3"></div>
+                                </div>
+                            </div>
+                            <div class="add-list">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <a class=" " id="add-game-list" href="javascript:void(0);">添加更多奖项</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <button class="btn btn-w-m btn-info">确定创建</button>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+    <!-- 全局js -->
+    <script src="../../../static/b2c-reception/frame/hAdmin/js/jquery.min.js?v=2.1.4"></script>
+    <script src="../../../static/b2c-reception/frame/hAdmin/js/bootstrap.min.js?v=3.3.6"></script>
+    <script src="../../../static/b2c-reception/frame/hAdmin/js/plugins/layer/layer.min.js"></script>
+    <script src="../../../static/b2c-reception/frame/select2/js/select2.js"></script>
+    <!-- Flot -->
+    <script src="../../../static/b2c-reception/frame/hAdmin/js/plugins/flot/jquery.flot.js"></script>
+    <script src="../../../static/b2c-reception/frame/hAdmin/js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+    <script src="../../../static/b2c-reception/frame/hAdmin/js/plugins/flot/jquery.flot.resize.js"></script>
+    <script src="../../../static/b2c-reception/frame/hAdmin/js/plugins/flot/jquery.flot.pie.js"></script>
+    <!-- 自定义js -->
+    <!--<script src="../../../static/b2c-reception/frame/hAdmin/js/content.js"></script>-->
+    <!--flotdemo-->
+
+
+    <link type="text/css" href="../../../static/b2c-reception/frame/datetimepicker/js/jquery-ui.css" rel="stylesheet" />
+    <link href="../../../static/b2c-reception/frame/datetimepicker/jQuery-Timepicker-Addon/jquery-ui-timepicker-addon.css" type="text/css" />
+
+    <script type="text/javascript" src="../../../static/b2c-reception/frame/datetimepicker/js/jquery-ui.js"></script>
+    <!--<script type="text/javascript" src="../../../static/b2c-reception/frame/datetimepicker/js/timepicker.js"></script>-->
+    <script src="../../../static/b2c-reception/frame/datetimepicker/jQuery-Timepicker-Addon/jquery-ui-timepicker-addon.js" type="text/javascript"></script>
+
+    <!--中文-->
+    <script src="../../../static/b2c-reception/frame/datetimepicker/js/jquery.ui.datepicker-zh-CN.js.js" type="text/javascript" charset="gb2312"></script>
+    <script src="../../../static/b2c-reception/frame/datetimepicker/js/jquery-ui-timepicker-zh-CN.js" type="text/javascript"></script>
+
+
+
+
+    <script id="game-list-1" type="text/template">
+        <div class="game-list">
+            <div class="newRow clearfix">
+                <div class="newBiaoTi newWidth8">
+                    <div class="tabCell">奖励：</div>
+                </div>
+                <div class="newShuRu newWidth14 input-group clearfix">
+                    <input type="text" placeholder="0" id="" class="form-control">
+                    <span class="input-group-addon">钡</span>
+                </div>
+                <div class="b2c-text-danger b2c-control-star newWidth3"></div>
+                <div class="newBiaoTi newWidth8">
+                    <div class="tabCell">新用户中奖概率：</div>
+                </div>
+                <div class="newShuRu newWidth14 input-group clearfix">
+                    <input type="text" placeholder="0" id="" class="form-control">
+                    <span class="input-group-addon">%</span>
+                </div>
+                <div class="b2c-text-danger b2c-control-star newWidth3"></div>
+                <div class="newBiaoTi newWidth8">
+                    <div class="tabCell">每日奖品数量：</div>
+                </div>
+                <div class="newShuRu newWidth14 input-group clearfix">
+                    <input type="text" placeholder="0" id="" class="form-control">
+                    <span class="input-group-addon">次</span>
+                </div>
+                <div class="b2c-text-danger b2c-control-star newWidth3"></div>
+            </div>
+            <div class="newRow clearfix">
+                <div class="newBiaoTi newWidth8">
+                    <div class="tabCell"></div>
+                </div>
+                <div class="newShuRu newWidth14 clearfix">
+                </div>
+                <div class="b2c-text-danger b2c-control-star newWidth3"></div>
+                <div class="newBiaoTi newWidth8">
+                    <div class="tabCell">老用户中奖概率：</div>
+                </div>
+                <div class="newShuRu newWidth14 input-group clearfix">
+                    <input type="text" placeholder="0" id="" class="form-control">
+                    <span class="input-group-addon">%</span>
+                </div>
+                <div class="b2c-text-danger b2c-control-star newWidth3"></div>
+                <div class="newBiaoTi newWidth8">
+                    <div class="tabCell">每日奖品数量：</div>
+                </div>
+                <div class="newShuRu newWidth14 input-group clearfix">
+                    <input type="text" placeholder="0" id="" class="form-control">
+                    <span class="input-group-addon">次</span>
+                </div>
+                <div class="b2c-text-danger b2c-control-star newWidth3"></div>
+            </div>
+        </div>
+    </script>
+    <script id="game-time-list-1" type="text/template">
+        <div class="newRow clearfix">
+            <div class="newBiaoTi newWidth8">
+            <div class="tabCell">每天开始时间：</div>
+        </div>
+        <div class="newShuRu newWidth39 clearfix">
+            <input type="text" placeholder="请输每天开始时间" id="" class="form-control time-pk">
+            </div>
+            <div class="b2c-text-danger b2c-control-star newWidth3"></div>
+
+            <div class="newBiaoTi newWidth8">
+            <div class="tabCell">每天结束时间：</div>
+        </div>
+        <div class="newShuRu newWidth39 clearfix">
+            <input type="text" placeholder="请输每天结束时间" id="" class="form-control time-pk">
+            </div>
+            <div class="b2c-text-danger b2c-control-star newWidth3"></div>
+
+            </div>
+    </script>
+<script>
+    $(function () {
+        $(".sel-shop").select2({});
+        $('.data-pk').datepicker({
+            needDay:true,
+            changeMonth: true, //显示月份
+            changeYear: true, //显示年份
+            showButtonPanel: true, //显示按钮
+            timeFormat: "HH:mm:ss",
+            dateFormat: "yy-mm-dd"
+        });
+        $('.time-pk').timepicker({
+            needDay:true,
+            //changeMonth: true, //显示月份
+            //changeYear: true, //显示年份
+            showButtonPanel: true, //显示按钮
+            timeFormat: "HH:mm:ss",
+            dateFormat: "yy-mm-dd"
+        });
+        /*以下代码将英文改成了中文*/
+        jQuery(function($) {
+            $.datepicker.regional['zh-CN'] = {
+                closeText : '关闭',
+                prevText : '<上月',
+                nextText: '下月>',
+                currentText : '今天',
+                monthNames : [ '一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月',
+                    '九月', '十月', '十一月', '十二月' ],
+                monthNamesShort : [ '一', '二', '三', '四', '五', '六', '七', '八',
+                    '九', '十', '十一', '十二' ],
+                dayNames : [ '星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六' ],
+                dayNamesShort : [ '周日', '周一', '周二', '周三', '周四', '周五', '周六' ],
+                dayNamesMin : [ '日', '一', '二', '三', '四', '五', '六' ],
+                dateFormat : 'yy-mm-dd',
+                weekHeader : '周',
+                firstDay : 1,
+                isRTL : false,
+                showMonthAfterYear : true,
+                yearSuffix : '年'
+            };
+            $.datepicker.setDefaults($.datepicker.regional['zh-CN']);
+        });
+        $("#add-game-list").click(function () {
+            var str = $("#game-list-1").html();
+            $("#game-list").before(str);
+        });
+        $("#add-time-list").click(function () {
+            var str = $("#game-time-list-1").html();
+            console.log(str);
+            $(this).parents(".newRow").before(str);
+        });
+    })
+</script>
+</body>
+
+</html>

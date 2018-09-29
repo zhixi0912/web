@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>列表</title>
+    <link type="text/css" rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.css">
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+
+    <style>
+        .up-box{
+            padding: 20px;
+        }
+        .up-box .box-bor{
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+        .up-box .badge:empty{
+            display: inline-block;
+            background-color: #ffffff;
+            color: #666666;
+            cursor: pointer;
+        }
+
+        .up-box .list-group .list-group-item p{
+            margin: 0;
+            cursor: pointer;
+        }
+        .up-box .list-group{
+            height: 336px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+
+
+<div style=" width: 600px; margin: 200px auto">
+    <button id="demo" value="" class="btn btn-danger">新建资源</button>
+</div>
+<script id="up-main" type="text/template">
+    <div class="up-box">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="box-bor">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="mon" placeholder="请输入金额" maxlength="10">
+                    </div>
+                    <ul class="list-group" id="box-l">
+                        <li class="list-group-item" data-id="0">
+                            <span class="badge fa"></span>
+                            <p onclick="addLi(this);">链接1</p>
+                        </li>
+                        <li class="list-group-item" data-id="1">
+                            <span class="badge fa"></span>
+                            <p onclick="addLi(this);">链接1111</p>
+                        </li>
+                        <li class="list-group-item" data-id="2">
+                            <span class="badge fa"></span>
+                            <p onclick="addLi(this);">链接2222</p>
+                        </li>
+                        <li class="list-group-item" data-id="3">
+                            <span class="badge fa"></span>
+                            <p onclick="addLi(this);">链接3333</p>
+                        </li>
+                        <li class="list-group-item" data-id="4">
+                            <span class="badge fa"></span>
+                            <p onclick="addLi(this);">链接4444</p>
+                        </li>
+                        <li class="list-group-item" data-id="5">
+                            <span class="badge fa"></span>
+                            <p onclick="addLi(this);">链接5555</p>
+                        </li>
+                        <li class="list-group-item" data-id="6">
+                            <span class="badge fa"></span>
+                            <p onclick="addLi(this);">链接6666</p>
+                        </li>
+                        <li class="list-group-item" data-id="7">
+                            <span class="badge fa"></span>
+                            <p onclick="addLi(this);">链接7777</p>
+                        </li>
+                        <li class="list-group-item" data-id="8">
+                            <span class="badge fa"></span>
+                            <p onclick="addLi(this);">链接8888</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="box-bor">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="" placeholder="请输入金额" maxlength="10">
+                    </div>
+                    <ul class="list-group" id="box-r">
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script src="js/layer/layer.js"></script>
+<script>
+    $(function () {
+        $("#demo").click(function () {
+            var upMain = $("#up-main").html();
+            layer.open({
+                type: 1
+                ,area: ['680px', '600px']
+                ,title: '温馨提示'
+                ,shade: 0.6
+                ,content: upMain
+                ,btn: ['确定','取消']
+                ,yes:function(index, layero){
+
+                },success: function(layero){
+                    layero.find('.layui-layer-btn').css('text-align', 'center')
+                    layero.find('#mon').val("111");
+                }
+
+            });
+        });
+
+    })
+function addLi(li) {
+    if(!$(li).parents(".list-group-item").attr("data-on")){
+        $(li).removeAttr("onclick");
+        $(li).prev(".badge").addClass("fa-check");
+        var thisLi = $(li).parents(".list-group-item").clone();
+        $(li).parents(".list-group-item").attr("data-on","on");
+
+        thisLi.find(".badge").removeClass("fa-check").addClass("fa-close").attr("onclick","thisDel(this)");
+        $("#box-r").append(thisLi);
+    }
+
+}
+function thisDel(badge) {
+    var dataId = $(badge).parents(".list-group-item").attr("data-id");
+    $(badge).parents(".list-group-item").remove();
+    $("#box-l li").each(function () {
+        if($(this).attr("data-id")==dataId){
+            $(this).removeAttr("data-on");
+            $(this).find(".badge").removeAttr("onclick").removeClass("fa-check");
+            $(this).find("p").attr("onclick","addLi(this)");
+        }
+    })
+
+}
+</script>
+
+</body>
+</html>

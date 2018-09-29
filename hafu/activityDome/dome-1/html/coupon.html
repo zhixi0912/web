@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title>COSTA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="stylesheet" href="summerii/css/weuix.min.css"/>
+    <link rel="stylesheet" href="summerii/css/style.css"/>
+
+    <script src="summerii/js/zepto.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="weui_article invitation invitation-2">
+        <section>
+            <div class="bg-img" id="invitation2">
+                <div class="weui_panel_bd">
+                    <div class="weui_media_box weui_media_text weui_media_text-show weui_media_text-show-2">
+                        <h4 class="weui_media_title weui_media_title-2"><img src="summerii/images/logo-icon-2.png"></h4>
+                        <p class="weui_media_desc weui_media_desc-h1">恭喜您，成功领取</p>
+                        <p class="weui_media_desc weui_media_desc-h2">${campaignSummeriiDetail.couponName!'&nbsp;'}</p>
+                        <p class="weui_media_desc">进入COSTA会员卡-我的礼券</p>
+                        <p class="weui_media_desc weui_media_desc-2">查收属于你的夏日福利！</p>
+                    </div>
+                </div>
+                <div class="bg-box">
+                    <img src="summerii/images/iocn-top.png">
+                </div>
+                <div class="weui_btn_area weui_btn_area-2">
+                    <a href="javascript:" class="weui_btn weui_btn_primary ex-btn"><img src="summerii/images/btn-icon-3.png"></a>
+                    <div class="btn-h2">
+                        <div class="btn-h2-text">点击右上角&nbsp;&nbsp;&nbsp;送出好礼</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script type="text/javascript">
+        $(function () {
+            var h = $(window).height();
+            var w = $(window).width();
+            $(".bg-img").height(h);
+            $(".ex-btn").click(function () {
+                $(".bg-box").show("normal");
+                $(".btn-h2").show("normal");
+                $(".ex-btn").css({background:"#ffffff"});
+            })
+            $(".bg-box").click(function () {
+                $(this).hide();
+                $(".btn-h2").hide();
+                $(".ex-btn").css({background:"inherit"});
+            })
+        });
+    </script>
+
+    <#if servicename=='wechat' && wechatJsapiConfig??>
+    <script type="text/javascript" src="default/js/jweixin-1.2.0.js"></script>
+    <script type="text/javascript">
+        wx.config(${wechatJsapiConfig});
+        wx.ready(function(){
+            wx.onMenuShareTimeline({
+                title: '【COSTA入会福利】炎炎夏日，快抢COSTA新人福利礼券！',
+                link: '${url}',
+                imgUrl: '${img}'
+            });
+            wx.onMenuShareAppMessage({
+                title: '【COSTA入会福利】炎炎夏日，快抢COSTA新人福利礼券！',
+                desc: '点击Pick你的入会专属福利！',
+                link: '${url}',
+                imgUrl: '${img}'
+            });
+            wx.onMenuShareQQ({
+                title: '【COSTA入会福利】炎炎夏日，快抢COSTA新人福利礼券！',
+                desc: '点击Pick你的入会专属福利！',
+                link: '${url}',
+                imgUrl: '${img}'
+            });
+            wx.onMenuShareWeibo({
+                title: '【COSTA入会福利】炎炎夏日，快抢COSTA新人福利礼券！',
+                desc: '点击Pick你的入会专属福利！',
+                link: '${url}',
+                imgUrl: '${img}'
+            });
+            wx.onMenuShareQZone({
+                title: '【COSTA入会福利】炎炎夏日，快抢COSTA新人福利礼券！',
+                desc: '点击Pick你的入会专属福利！',
+                link: '${url}',
+                imgUrl: '${img}'
+            });
+        });
+    </script>
+    </#if>
+
+</body>
+
+</html>

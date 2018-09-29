@@ -1,0 +1,74 @@
+.alertList{
+    min-width: 200px; 
+	position: fixed; 
+	top:100px; 
+	left:420px; 
+	z-index: 9900;
+	border-radius:5px;
+	border: 1px solid #f5856b;
+    box-shadow:0 0 10px #c9898e;
+    background-color: #fff;
+}
+.alertList-title{ min-height: 30px; padding: 0 30px; line-height: 30px; font-size: 14px; color: #0B61A4;cursor:move; }
+.alertList-title h3.h3{
+	margin:0;
+	padding-top:25px;
+	padding-bottom:5px;
+	font-size:14px;
+	color:#f5856b;
+	font-weight:bold;
+}
+.alertList-title .close-mod{
+	padding:7px;
+	outline:none;
+	cursor:pointer;
+	float:right;
+	vertical-align:middle;
+	margin-top:8px;
+	margin-right:-20px;
+    /*background: url("../images/close.gif") center center no-repeat;*/}
+.alertList-title .close-mod:hover{
+	background: url("../images/close-hover.gif") center center no-repeat;
+}
+.alertList-content{
+    padding:0 30px 20px 30px; max-height: 400px; overflow: auto;
+}
+.alertList .err-list{ 
+	color: #c9898e; 
+	line-height: 20px;
+	margin:0;
+	padding:0;
+	padding-left:14px;
+}
+.alertList .err-list li{ 
+	cursor: pointer;
+	color:#f5856b;
+	margin:2px 0;
+	list-style-type:decimal;
+}
+.alertList .err-list li:hover{ text-decoration: underline; color: #0B61A4;}
+.alertList .alertList-foot{ padding: 0 0 20px 30px;}
+.alertList .alertList-foot-btn{
+	background:#f5856b;
+	color:#ffffff;
+	padding:2px 10px;
+	border:none;
+	outline:none;
+   /* width: 80px; height: 30px; color:#fff; text-align: center; border-radius: 3px; background-color: #0B61A4; border: none;*/
+}
+.PP-Tips{
+    position: absolute; display: inline-block; height: 30px; line-height: 30px; padding: 0 10px; border-radius: 5px;
+    background: rgba(0,0,0,0.8); z-index: 8000; color: #fff; z-index: 8000;
+}
+.xj-modal-350 {
+	width: 350px;
+}
+.xj-modal-main{
+	text-align: center;
+}
+.modal div.xj-modal-400 {
+    width: 400px;
+}
+.xj-alert-con .xj-modal-header-no-bg{
+	background:none;
+}

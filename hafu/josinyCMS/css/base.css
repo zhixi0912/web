@@ -1,0 +1,67 @@
+.layui-layout-admin .layui-header {
+    background-color: #fc9bab;
+}
+.layui-bg-black {
+    background-color: #fff!important;
+    color: #393D49!important;
+    border:1px solid #ebebeb;
+}
+.layui-nav {
+    background-color: #fff;
+    color: #393D49;
+}
+.layui-nav-tree .layui-nav-item a{
+    color: #393D49;
+    padding: 0 20px 0 10px;
+}
+.layui-nav-tree .layui-nav-more {
+    right: 20px;
+}
+.layui-nav-tree .layui-nav-item a i{
+    margin-right: 3px;
+}
+.layui-nav-tree .layui-nav-child a:hover, .layui-nav-tree .layui-nav-child {
+    background: none;
+    color: #393D49;
+}
+.layui-nav-itemed>.layui-nav-child {
+    display: block;
+    padding: 0;
+    background-color: #fff !important;
+}
+.layui-nav-tree .layui-nav-item a:hover {
+    background-color: #e6f7ff;
+    color: #1890ff;
+}
+.layui-nav-tree .layui-nav-title a, .layui-nav-tree .layui-nav-title a:hover{
+    color: #1890ff !important;
+}
+.layui-nav-itemed>a {
+    color: #393D49!important;
+    font-weight: bold;
+}
+
+.layui-layout-admin .layui-logo{
+    color: #ffffff;
+}
+.layui-nav .layui-nav-item .layui-nav-child a{
+    padding: 0 20px 0 36px;
+}
+.layui-nav-itemed >a span.layui-nav-more{
+    border-bottom-color: #393D49;
+}
+.layui-side .layui-nav-more{
+    border-top-color: #393D49;
+}
+.layui-nav-tree .layui-nav-bar {
+    background-color: #1890ff;
+    width: 3px;
+}
+.layui-header .layui-nav-bar{
+    background-color: #1890ff;
+    height: 2px;
+}
+.layui-nav-bar{
+    left: auto;
+    right: 0;
+}

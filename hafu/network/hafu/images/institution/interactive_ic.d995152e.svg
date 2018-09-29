@@ -1,0 +1,36 @@
+<svg id="组_39" data-name="组 39" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="172" height="172" viewBox="0 0 172 172">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #62a1ff;
+        stroke: #e5e5e5;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+        filter: url(#filter);
+      }
+
+      .cls-2 {
+        fill: #4c4c4c;
+      }
+
+      .cls-2, .cls-3 {
+        fill-rule: evenodd;
+      }
+
+      .cls-3 {
+        fill: #00ce60;
+      }
+    </style>
+    <filter id="filter" x="1" y="1" width="170" height="170" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#fff"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g style="fill: #62a1ff; filter: url(#filter)">
+    <circle id="椭圆_88_拷贝_2" data-name="椭圆 88 拷贝 2" class="cls-1" cx="86" cy="86" r="85" style="stroke: inherit; filter: none; fill: inherit"/>
+  </g>
+  <use xlink:href="#椭圆_88_拷贝_2" style="stroke: #e5e5e5; filter: none; fill: none"/>
+  <path id="椭圆_8_拷贝_7" data-name="椭圆 8 拷贝 7" class="cls-2" d="M1084.64,2560.23L1088,2573l-13.59-2.86A29.124,29.124,0,1,1,1084.64,2560.23ZM1060,2519a26,26,0,1,0,13.99,47.89L1084,2569l-2.48-9.42A25.992,25.992,0,0,0,1060,2519Z" transform="translate(-974 -2459)"/>
+  <path id="椭圆_73" data-name="椭圆 73" class="cls-3" d="M1071.5,2544a2.5,2.5,0,1,1,2.5-2.5A2.5,2.5,0,0,1,1071.5,2544Zm-23,0a2.5,2.5,0,1,1,2.5-2.5A2.5,2.5,0,0,1,1048.5,2544Zm21.5,3v0.01h0a10,10,0,0,1-20,0h0V2547h20Zm-10,8a7.994,7.994,0,0,0,7.74-6h-15.48A7.994,7.994,0,0,0,1060,2555Z" transform="translate(-974 -2459)"/>
+</svg>

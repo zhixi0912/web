@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--360浏览器优先以webkit内核解析-->
+    <title>活动创建</title>
+    <link rel="shortcut icon" href="hAdmin/favicon.ico">
+    <link href="hAdmin/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="hAdmin/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="frame/select2-4.0.3/css/select2.min.css?v=3.3.6" rel="stylesheet">
+    <link href="frame/datetimepicker/js/jquery-ui.css" rel="stylesheet">
+    <link href="frame/datetimepicker/jQuery-Timepicker-Addon/jquery-ui-timepicker-addon.css" rel="stylesheet">
+    <link href="hAdmin/css/animate.css" rel="stylesheet">
+    <link href="css/base.css?v=3.1.0" rel="stylesheet">
+    <link href="hAdmin/css/style.css?v=4.1.0" rel="stylesheet">
+    <link href="css/iframe-page.css" rel="stylesheet">
+    <link href="css/page.css" rel="stylesheet">
+    <link href="css/game/game-1.css" rel="stylesheet">
+    <link href="css/game/component.css" rel="stylesheet">
+    <!--<link href="css/game/game-3.css" rel="stylesheet">-->
+    <link href="css/game/game-activity.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/game/game-add-bj.css">
+</head>
+<body>
+<div class=" wrapper wrapper-content">
+    <div class="ibox act">
+        <div class="top-title ibox-title">
+            <div class="row">
+                <div class="col-sm-9 f16 game-index-a">
+                    <div class="form-group">
+                        <a class="" href="game-index.html">我的活动</a>
+                        <a class="game-active" href="game-index.html">模板库</a>
+                        <a class="f-gray" href="game-index.html">活动定制</a>
+                        <a class="" href="game-activity1.html">运营活动管理</a>
+                    </div>
+                </div>
+                <div class="col-sm-3 tr">
+                    <div class="form-group f-black f16">
+                        <p>账户余额：<span class="f-orange">30</span>万钡</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ibox-content">
+            <div class="row">
+                <div class="col-sm-12 clearfix text-center">
+                    <div class="my-activity clearfix">
+                        <div class="my-act-ul">
+                            <span class="my-act-radius">1</span>
+                            <p>活动创建</p>
+                        </div>
+                        <div class="my-act-ul2">
+                            <span class="my-act-span bg-gray"></span>
+                        </div>
+                        <div class="my-act-ul">
+                            <span class="my-act-radius bg-gray">2</span>
+                            <p>规则设置</p>
+                        </div>
+                        <div class="my-act-ul2">
+                            <span class="my-act-span bg-gray"></span>
+                        </div>
+                        <div class="my-act-ul">
+                            <span class="my-act-radius bg-gray">3</span>
+                            <p>奖项结算</p>
+                        </div>
+                        <div class="my-act-ul2">
+                            <span class="my-act-span bg-gray"></span>
+                        </div>
+                        <div class="my-act-ul">
+                            <span class="my-act-radius bg-gray">4</span>
+                            <p>完成</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-5 clearfix">
+                    <div class="game-mb-bg">
+                        <!-- game start -->
+                        <div class="game-mb-bg-2">
+                            <div class="btn-bg"><a class="btn btn-w-m btn-success" href="#">替换背景</a></div>
+                        </div>
+                        <!--<iframe class="game-iframe" style="margin-top: 30px;" id="childframe-1" src="game-1.html"></iframe>-->
+                        <div class="game-bg game-1-bg">
+
+                        <!-- -----------抽奖页面------------ !-->
+                        <div class="ml-main" id="ml-main">
+                        <div class="logo-1"><img src="images/game/logo.png"> </div>
+                        <div class="game-rule"><img src="images/game/button_rule_press.png"> </div>
+                        <div class="game-frequency ">
+                        <div class="game-share"><a class="btn btn-w-m" href="#"><img src="images/game/button_share1.png"> </a> </div>
+                        <div class="game-frequency-numb">可抽奖次数：1</div>
+                        </div>
+                        <div class="kePublic">
+                        <!--转盘效果开始-->
+                        <div class="game-round">
+                        <div class="banner">
+                        <div class="turnplate" id="turnplate">
+                        <canvas class="item" id="wheelcanvas" width="516" height="516"></canvas>
+                        <img id="tupBtn" class="pointer" src="images/game/turnplate-pointer_3.png"/>
+                        <!--<button id="tupBtn"><img src="images/turnplate-pointer_2.png"/></button>-->
+                        </div>
+                        </div>
+                        </div>
+                        <!--转盘效果结束-->
+                        <div class="clear"></div>
+                        </div>
+                        </div>
+
+                            <!-------------中奖弹窗页面-------------->
+                            <div class="zj-main" id="zj-main">
+                                <div class="txzl">
+                                    <h3>HI 亲！人品爆发！</h3>
+                                    <h2>恭喜抽中<br /><span id="jiangpin"></span></h2>
+                                    <p>请填写资料领取奖品：</p>
+                                    <label>姓名：<input type="text" name="username" /></label>
+                                    <label>电话：<input type="text" name="userphone" /></label>
+                                    <h4><sub>*</sub>未提交个人资料将视为放弃领取此次奖品</h4>
+                                    <div class="info_tj">提交领奖</div>
+                                </div>
+                                <div class="close_zj"><img src="images/game/close_1.png" /></div>
+                            </div>
+
+                            <!-------------谢谢参与弹窗-------------->
+                            <div class="xxcy-main" id="xxcy-main">
+                                <div class="xxcy">
+                                    <h3>谢谢参与！</h3>
+                                    <p>不要气馁，明天继续投票还可以抽奖哦。</p>
+
+                                </div>
+                                <div class="close_xxcy"><img src="images/game/close_1.png" /></div>
+                            </div>
+
+                            <!-------------提交成功弹窗-------------->
+                            <div class="tjcg-main" id="tjcg-main">
+                                <div class="tjcg">
+                                    <h3>恭喜您提交成功</h3>
+                                    <p>请于2016年5月31日<br />前到院领取奖品</p>
+
+                                </div>
+                                <div class="close_tjcg"><img src="images/game/close_1.png" /></div>
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- game end-->
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="right-box mt100">
+                        <form class="form-horizontal" id="form1">
+                            <!-- step 1 -->
+                            <div class="step-1 stop-box">
+                                <div class="form-group">
+                                    <label for="" class="col-sm-2 control-label">活动名称</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="game-name" placeholder="幸运大转盘，转出好运来" maxlength="12">
+                                        <span class="help-block" id="game-nameTip"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="" class="col-sm-2 control-label">活动描述</label>
+                                    <div class="col-sm-10">
+                                <textarea class="form-control game-describe" rows="3" id="game-describe" maxlength="300">
+活动名称：感恩回馈大转盘
+活动时间：2017.9.22-2016.10.31 
+活动奖品：通用积分，让天下没有被浪费的积分！
+发奖时间：中奖后，即时发放。
+                                </textarea>
+                                        <span class="help-block" id="game-describeTip"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="" class="col-sm-2 control-label">分享设置</label>
+                                    <div class="col-sm-10">
+                                        <div class="form-control-static dropdown dropdown-example pt5">
+                                            <a id="dLabel-1" class="f-blue " data-target="#" href="http://example.com" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                                示例
+                                            </a>
+                                            <ul class="dropdown-menu" aria-labelledby="dLabel-1">
+                                                <li><img src="images/game/example-1.png"></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="" class="col-sm-2 control-label">分享标题</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="game-title" placeholder="幸运大转盘，转出好运来" maxlength="20">
+                                        <span class="help-block" id="game-titleTip"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="" class="col-sm-2 control-label">分享文案</label>
+                                    <div class="col-sm-10">
+                                <textarea class="form-control" rows="3" id="game-text" maxlength="100">
+幸运大转盘，转出好运来~
+快来参加，一起赢壕礼！
+                                </textarea>
+                                        <span class="help-block" id="game-textTip"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-sm-offset-2 col-sm-10">
+                                        <button type="button" class="btn btn-w-m btn-success" id="step-1">下一步</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+<script type="text/template" id="game-card">
+    <div>
+        <p class="text-center p20 game-card-title">选择电子券</p>
+        <div class="">
+            <ul class="game-card-ul clearfix">
+                <li>
+                    <img src="images/game/game-card1.png"/>
+                    <div class="clearfix width80">
+                        <p class="fl">E票网10元电影券</p>
+                        <p class="fr"><span class="f29600">1081</span>钡</p>
+                    </div>
+                    <div class="text-center mt5">
+                        <a class="btn btn-w-m btn-success">选择</a>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/game/game-card2.png"/>
+                    <div class="clearfix width80">
+                        <p class="fl">E票网10元电影券</p>
+                        <p class="fr"><span class="f29600">1081</span>钡</p>
+                    </div>
+                    <div class="text-center mt5">
+                        <a class="btn btn-w-m btn-success">选择</a>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/game/game-card3.png"/>
+                    <div class="clearfix width80">
+                        <p class="fl">E票网10元电影券</p>
+                        <p class="fr"><span class="f29600">1081</span>钡</p>
+                    </div>
+                    <div class="text-center mt5">
+                        <a class="btn btn-w-m btn-success">选择</a>
+                    </div>
+                </li>
+            </ul>
+            <ul class="game-card-ul clearfix">
+                <li>
+                    <img src="images/game/game-card1.png"/>
+                    <div class="clearfix width80">
+                        <p class="fl">E票网10元电影券</p>
+                        <p class="fr"><span class="f29600">1081</span>钡</p>
+                    </div>
+                    <div class="text-center mt5">
+                        <a class="btn btn-w-m btn-success">选择</a>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/game/game-card2.png"/>
+                    <div class="clearfix width80">
+                        <p class="fl">E票网10元电影券</p>
+                        <p class="fr"><span class="f29600">1081</span>钡</p>
+                    </div>
+                    <div class="text-center mt5">
+                        <a class="btn btn-w-m btn-success">选择</a>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/game/game-card3.png"/>
+                    <div class="clearfix width80">
+                        <p class="fl">E票网10元电影券</p>
+                        <p class="fr"><span class="f29600">1081</span>钡</p>
+                    </div>
+                    <div class="text-center mt5">
+                        <a class="btn btn-w-m btn-success">选择</a>
+                    </div>
+                </li>
+            </ul>
+            <nav aria-label="Page navigation" class="tc mt20">
+                <ul class="pagination m5">
+                    <li>
+                        <a href="#" aria-label="Previous">
+                            <span aria-hidden="true">«</span>
+                        </a>
+                    </li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li>
+                        <a href="#" aria-label="Next">
+                            <span aria-hidden="true">»</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</script>
+
+
+
+
+
+
+
+
+<!-- 全局js -->
+<script src="hAdmin/js/jquery.min.js"></script>
+<script src="js/jquery-migrate-1.2.1.js"></script>
+<script src="js/ajaxform.js"></script>
+<script src="frame/formvalidator4.1.3/formValidatorRegex.js"></script>
+<script src="frame/formvalidator4.1.3/formValidator-4.1.3.js"></script>
+<script src="hAdmin/js/bootstrap.min.js?v=3.3.6"></script>
+<script src="hAdmin/js/plugins/layer/layer.min.js"></script>
+<script src="frame/select2-4.0.3/js/select2.min.js"></script>
+<!--<script src="frame/vue2.1.8/vue.min.js"></script>-->
+<!-- Flot -->
+<script src="hAdmin/js/plugins/flot/jquery.flot.js"></script>
+<script src="hAdmin/js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+<script src="hAdmin/js/plugins/flot/jquery.flot.resize.js"></script>
+<script src="hAdmin/js/plugins/flot/jquery.flot.pie.js"></script>
+<script src="frame/SuperSlide.2.1.1/jquery.SuperSlide.2.1.1.js"></script>
+<script src="frame/datetimepicker/js/jquery-ui.js"></script>
+<script src="frame/datetimepicker/jQuery-Timepicker-Addon/jquery-ui-timepicker-addon.js"></script>
+<script src="frame/datetimepicker/js/jquery-ui-timepicker-zh-CN.js"></script>
+<!-- 自定义js -->
+<script src="hAdmin/js/content.js"></script>
+<script src="js/form-validator/game/game-1.js"></script>
+<script src="js/form-validator/game/awardRotate.js"></script>
+<script src="js/form-validator/game/game-add.js"></script>
+<script src="js/form-validator/game/game-add-int-validator.js"></script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+body.h5-bg,.h5-bg {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url(../../images/h5-game-1/game-bg-1.jpg);
+}
+
+.hides {
+    /*display: none;*/
+    opacity: 0;
+}
+
+.draw-gift {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.draw-gift .draw-img {
+    width: 100%;
+    position: relative;
+    margin-top: 60%;
+}
+
+.draw-gift .draw-img .draw-down {
+    position: absolute;
+    width: 20rem;
+    height: 26rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url(../../images/h5-game-1/open-no.png);
+    left: 50%;
+    margin-left: -10rem;
+    z-index: 10;
+    /*-webkit-animation:draw-down 0.5s ease 1.2s 1 alternate;*/
+    /*-webkit-animation-timing-function:cubic-bezier(0.25,0.1,0.25,1);*/
+}
+
+@-webkit-keyframes draw-down {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.draw-gift .draw-img .draw-down2 {
+    position: absolute;
+    width: 20rem;
+    height: 26rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url(../../images/h5-game-1/open-before.png);
+    left: 50%;
+    margin-left: -10rem;
+    z-index: 10;
+    /*-webkit-animation:draw-down2 0.5s ease 1.4s 1 alternate;*/
+    /*-webkit-animation-timing-function:cubic-bezier(0.25,0.1,0.25,1);*/
+}
+
+@-webkit-keyframes draw-down2 {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.draw-gift .draw-img .draw-mid {
+    position: absolute;
+    width: 6rem;
+    height: 6rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url(../../images/h5-game-1/open.png);
+    left: 50%;
+    margin-left: -3rem;
+    z-index: 100;
+    top: 7rem;
+    /*animation:open 0.3s linear 1s 3 alternate;*/
+}
+
+.draw-gift .draw-img .draw-mid-move {
+    -webkit-animation: open 0.2s linear 0.5s infinite alternate;
+    -webkit-animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    animation: open 0.2s linear 0.5s infinite alternate;
+    animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+@keyframes open {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+}
+
+@-webkit-keyframes open {
+    0% {
+        -webkit-transform: scale(1);
+    }
+    100% {
+        -webkit-transform: scale(0.9);
+    }
+}
+
+.draw-gift .draw-img .draw-up {
+    position: absolute;
+    width: 20rem;
+    height: 10rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url(../../images/h5-game-1/open-back-1.png);
+    left: 50%;
+    margin-left: -10rem;
+    top: 5rem;
+    z-index: 8;
+    opacity: 0;
+}
+
+.draw-gift .draw-img .draw-up-up {
+    position: absolute;
+    width: 20rem;
+    height: 6rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url(../../images/h5-game-1/open-back-2.png);
+    left: 50%;
+    margin-left: -10rem;
+    top: 5rem;
+    /*-webkit-transform: rotateX(180deg);*/
+    /*-webkit-transform-style: flat;*/
+    /*-webkit-transform-origin: bottom;*/
+    /*-webkit-animation: draw-up-up 1s linear 0s 0.5 normal;*/
+    /*backface-visibility: visible;*/
+    /*-webkit-animation-timing-function:cubic-bezier(0.25,0.1,0.25,1);*/
+    opacity: 0;
+    z-index: 3;
+}
+
+.draw-gift .draw-img .draw-list {
+    position: absolute;
+    width: 12rem;
+    height: 12rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    /*background-image: url(../../images/h5-game-1/game-bg-1.jpg);*/
+    left: 50%;
+    margin-left: -6rem;
+    top: 6.5rem;
+    opacity: 0;
+    z-index: 8;
+}
+
+.draw-gift .draw-img .draw-list img {
+    vertical-align: middle;
+    position: absolute;
+    width: 70%;
+    top: 1.8rem;
+    left: 15%;
+}
+
+#draw-btn {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 0.65rem;
+    color: #333;
+    top: 17rem;
+}
+.draw-list .shop-box{
+    position: relative;
+}
+.draw-list .shop-box .shop-name{
+    text-align: center;
+    position: absolute;
+    width: 70%;
+    top: 115px;
+    left: 50%;
+    margin-left: -35%;
+ }

@@ -1,0 +1,48 @@
+
+img{border:none;}
+a{
+    text-decoration: none;
+}
+#login {
+    display:none;
+    height:400px;
+    width: 500px;
+    position:absolute;/*让节点脱离文档流,我的理解就是,从页面上浮出来,不再按照文档其它内容布局*/
+    top:20%;/*节点脱离了文档流,如果设置位置需要用top和left,right,bottom定位*/
+    left:50%;
+    margin-left: -250px;
+    z-index:2;/*个人理解为层级关系,由于这个节点要在顶部显示,所以这个值比其余节点的都大*/
+    background: white;
+}
+#over{
+    width: 100%;
+    height: 100%;
+    opacity:0.5;/*设置背景色透明度,1为完全不透明,IE需要使用filter:alpha(opacity=80);*/
+    filter:alpha(opacity=50);
+    display: none;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:1;
+    background: #000;
+}
+.limit-top{
+    padding: 50px 95px;
+}
+.limit-top img{
+    display: inline-block;
+    float: left;
+}
+.limit-top p{
+    margin:0 0 0 10px;
+    width:250px ;
+    float: left;
+    display: inline-block;
+    line-height: 25px;
+}
+.limit-bottom{
+    padding: 50px 95px;
+}
+.limit-bottom img{
+    margin: 0 15px;
+}

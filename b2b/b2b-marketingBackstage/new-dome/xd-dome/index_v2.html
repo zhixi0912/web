@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--360浏览器优先以webkit内核解析-->
+    <title>活动详情</title>
+    <link rel="shortcut icon" href="../../hAdmin/favicon.ico">
+    <link href="../../hAdmin/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="../../hAdmin/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="../../frame/select2-4.0.3/css/select2.css" rel="stylesheet">
+    <link href="../../hAdmin/css/animate.css" rel="stylesheet">
+    <link href="../../hAdmin/css/style.css" rel="stylesheet">
+    <link href="../../hAdmin/css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="../../css/base.css?v=3.1.0" rel="stylesheet">
+    <link href="../../css/points-come/pointsCome.css" rel="stylesheet">
+    <style>
+        #editable_wrapper #editable_length,#editable_wrapper #editable_filter{
+            display: none;
+        }
+    </style>
+</head>
+
+</head>
+<body class="light-grey-bg">
+<div class="main">
+
+    <div class="white-bg">
+        <div class="page-header page-header-no-br">
+            <h3 class="come-h3">活动详情</h3>
+
+        <div class="page-body">
+            <div class="activ-t1 row mlr0">
+                <div class="col-sm-6">
+                    <h3 class="come-h4">免费活动列表广告位管理</h3>
+                </div>
+                <div class="col-sm-6 text-right">
+                                                <span>
+                                                    广告图尺寸：750x338px
+                                                </span>
+                    <button onclick="fnClickAddRow();" type="button" class="btn btn-primary btn-orange">增加</button>
+                    <button type="button" class="btn btn-primary btn-default">重置</button>
+                </div>
+
+            </div>
+            <table class="table table-bordered table-hover table-striped come-table center" style="margin-top:0px !important" id="editable">
+                <thead>
+                <tr>
+                    <th>状态</th>
+                    <th>排序</th>
+                    <th>文件名（鼠标移入文件可预览）</th>
+                    <th>大小(K)</th>
+                    <th>-</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="gradeX">
+                    <td>有效</td>
+                    <td class="edt-td">1
+                    </td>
+                    <td><div class="img-box"><span>http://img.ivsky.com/img/tupian/pre/201710/25/pubu-001.jpg</span></div></td>
+                    <td>4，212</td>
+                    <td><a class="btn-link-btn">修改</a></td>
+                </tr>
+                <tr class="gradeC">
+                    <td>有效</td>
+                    <td class="edt-td">2
+                    </td>
+                    <td><div class="img-box"><span>http://img.ivsky.com/img/tupian/pre/201710/25/pubu-001.jpg</span></div></td>
+                    <td>6，231</td>
+                    <td><a class="btn-link-btn">修改</a></td>
+                </tr>
+                <tr class="gradeA">
+                    <td>有效</td>
+                    <td class="edt-td">3
+                    </td>
+                    <td><div class="img-box"><span>http://img.ivsky.com/img/tupian/pre/201710/25/pubu-001.jpg</span></div></td>
+                    <td>8，212</td>
+                    <td><a class="btn-link-btn">修改</a></td>
+                </tr>
+                </tbody>
+            </table>
+
+
+
+
+            <div class="activ-t1 row mlr0">
+                <div class="col-sm-6">
+                    <h3 class="come-h4">个人中心广告位管理</h3>
+                </div>
+                <div class="col-sm-6 text-right">
+                                                <span>
+                                                    广告图尺寸：750x338px
+                                                </span>
+                    <button onclick="fnClickAddRow();" type="button" class="btn btn-primary btn-orange">增加</button>
+                    <button type="button" class="btn btn-primary btn-default">重置</button>
+                </div>
+
+            </div>
+            <table class="table table-bordered table-hover table-striped come-table center" style="margin-top:0px !important" id="editable">
+                <thead>
+                <tr>
+                    <th>状态</th>
+                    <th>排序</th>
+                    <th>文件名（鼠标移入文件可预览）</th>
+                    <th>大小(K)</th>
+                    <th>-</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="gradeX">
+                    <td>有效</td>
+                    <td class="edt-td">1
+                    </td>
+                    <td><div class="img-box"><span>http://img.ivsky.com/img/tupian/pre/201710/25/pubu-001.jpg</span></div></td>
+                    <td>4，212</td>
+                    <td><a class="btn-link-btn">修改</a></td>
+                </tr>
+                <tr class="gradeC">
+                    <td>有效</td>
+                    <td class="edt-td">2
+                    </td>
+                    <td><div class="img-box"><span>http://img.ivsky.com/img/tupian/pre/201710/25/pubu-001.jpg</span></div></td>
+                    <td>6，231</td>
+                    <td><a class="btn-link-btn">修改</a></td>
+                </tr>
+                <tr class="gradeA">
+                    <td>有效</td>
+                    <td class="edt-td">3
+                    </td>
+                    <td><div class="img-box"><span>http://img.ivsky.com/img/tupian/pre/201710/25/pubu-001.jpg</span></div></td>
+                    <td>8，212</td>
+                    <td><a class="btn-link-btn">修改</a></td>
+                </tr>
+                </tbody>
+            </table>
+
+
+
+            <div class="activ-t1 row mlr0">
+                <div class="col-sm-6">
+                    <h3 class="come-h4">已参加活动广告位管理</h3>
+                </div>
+                <div class="col-sm-6 text-right">
+                                                <span>
+                                                    广告图尺寸：750x338px
+                                                </span>
+                    <button onclick="fnClickAddRow();" type="button" class="btn btn-primary btn-orange">增加</button>
+                    <button type="button" class="btn btn-primary btn-default">重置</button>
+                </div>
+
+            </div>
+            <table class="table table-bordered table-hover table-striped come-table center" style="margin-top:0px !important" id="editable">
+                <thead>
+                <tr>
+                    <th>状态</th>
+                    <th>排序</th>
+                    <th>文件名（鼠标移入文件可预览）</th>
+                    <th>大小(K)</th>
+                    <th>-</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="gradeX">
+                    <td>有效</td>
+                    <td class="edt-td">1
+                    </td>
+                    <td><div class="img-box"><span>http://img.ivsky.com/img/tupian/pre/201710/25/pubu-001.jpg</span></div></td>
+                    <td>4，212</td>
+                    <td><a class="btn-link-btn">修改</a></td>
+                </tr>
+                <tr class="gradeC">
+                    <td>有效</td>
+                    <td class="edt-td">2
+                    </td>
+                    <td><div class="img-box"><span>http://img.ivsky.com/img/tupian/pre/201710/25/pubu-001.jpg</span></div></td>
+                    <td>6，231</td>
+                    <td><a class="btn-link-btn">修改</a></td>
+                </tr>
+                <tr class="gradeA">
+                    <td>有效</td>
+                    <td class="edt-td">3
+                    </td>
+                    <td><div class="img-box"><span>http://img.ivsky.com/img/tupian/pre/201710/25/pubu-001.jpg</span></div></td>
+                    <td>8，212</td>
+                    <td><a class="btn-link-btn">修改</a></td>
+                </tr>
+                </tbody>
+            </table>
+
+
+
+
+            <div class="activ-t1 row mlr0">
+                <div class="col-sm-6">
+                    <h3 class="come-h4">联系我们顶部广告位管理</h3>
+                </div>
+                <div class="col-sm-6 text-right">
+                                                <span>
+                                                    广告图尺寸：750x338px
+                                                </span>
+                    <button onclick="fnClickAddRow();" type="button" class="btn btn-primary btn-orange">增加</button>
+                    <button type="button" class="btn btn-primary btn-default">重置</button>
+                </div>
+
+            </div>
+            <table class="table table-bordered table-hover table-striped come-table center" style="margin-top:0px !important" id="editable">
+                <thead>
+                <tr>
+                    <th>状态</th>
+                    <th>排序</th>
+                    <th>文件名（鼠标移入文件可预览）</th>
+                    <th>大小(K)</th>
+                    <th>-</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="gradeX">
+                    <td>有效</td>
+                    <td class="edt-td">1
+                    </td>
+                    <td><div class="img-box"><span>http://img.ivsky.com/img/tupian/pre/201710/25/pubu-001.jpg</span></div></td>
+                    <td>4，212</td>
+                    <td><a class="btn-link-btn">修改</a></td>
+                </tr>
+                <tr class="gradeC">
+                    <td>有效</td>
+                    <td class="edt-td">2
+                    </td>
+                    <td><div class="img-box"><span>http://img.ivsky.com/img/tupian/pre/201710/25/pubu-001.jpg</span></div></td>
+                    <td>6，231</td>
+                    <td><a class="btn-link-btn">修改</a></td>
+                </tr>
+                <tr class="gradeA">
+                    <td>有效</td>
+                    <td class="edt-td">3
+                    </td>
+                    <td><div class="img-box"><span>http://img.ivsky.com/img/tupian/pre/201710/25/pubu-001.jpg</span></div></td>
+                    <td>8，212</td>
+                    <td><a class="btn-link-btn">修改</a></td>
+                </tr>
+                </tbody>
+            </table>
+
+
+
+
+
+
+
+
+
+            <div class="activ-t1 row mlr0">
+                <div class="col-sm-6">
+                    <h3 class="come-h4">联系我们底部广告位管理</h3>
+                </div>
+                <div class="col-sm-6 text-right">
+                                                <span>
+                                                    广告图尺寸：750x338px
+                                                </span>
+                    <button onclick="fnClickAddRow();" type="button" class="btn btn-primary btn-orange">增加</button>
+                    <button type="button" class="btn btn-primary btn-default">重置</button>
+                </div>
+
+            </div>
+            <table class="table table-bordered table-hover table-striped come-table center" style="margin-top:0px !important" id="editable">
+                <thead>
+                <tr>
+                    <th>状态</th>
+                    <th>排序</th>
+                    <th>文件名（鼠标移入文件可预览）</th>
+                    <th>大小(K)</th>
+                    <th>-</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="gradeX">
+                    <td>有效</td>
+                    <td class="edt-td">1
+                    </td>
+                    <td><div class="img-box"><span>http://img.ivsky.com/img/tupian/pre/201710/25/pubu-001.jpg</span></div></td>
+                    <td>4，212</td>
+                    <td><a class="btn-link-btn">修改</a></td>
+                </tr>
+                <tr class="gradeC">
+                    <td>有效</td>
+                    <td class="edt-td">2
+                    </td>
+                    <td><div class="img-box"><span>http://img.ivsky.com/img/tupian/pre/201710/25/pubu-001.jpg</span></div></td>
+                    <td>6，231</td>
+                    <td><a class="btn-link-btn">修改</a></td>
+                </tr>
+                <tr class="gradeA">
+                    <td>有效</td>
+                    <td class="edt-td">3
+                    </td>
+                    <td><div class="img-box"><span>http://img.ivsky.com/img/tupian/pre/201710/25/pubu-001.jpg</span></div></td>
+                    <td>8，212</td>
+                    <td><a class="btn-link-btn">修改</a></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 全局js -->
+<script src="../../hAdmin/js/jquery.min.js?v=2.1.4"></script>
+<script src="../../hAdmin/js/bootstrap.min.js?v=3.3.6"></script>
+<script src="../../hAdmin/js/plugins/layer/layer.min.js"></script>
+<!-- Flot -->
+<script src="../../hAdmin/js/plugins/flot/jquery.flot.js"></script>
+<script src="../../hAdmin/js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+<script src="../../hAdmin/js/plugins/flot/jquery.flot.resize.js"></script>
+<script src="../../hAdmin/js/plugins/flot/jquery.flot.pie.js"></script>
+<!-- Data Tables -->
+<script src="../../hAdmin/js/plugins/jeditable/jquery.jeditable.js"></script>
+<script src="../../hAdmin/js/plugins/dataTables/jquery.dataTables.js"></script>
+<script src="../../hAdmin/js/plugins/dataTables/dataTables.bootstrap.js"></script>
+<!-- select2-4.0.3 -->
+<script src="../../frame/select2-4.0.3/js/select2.js"></script>
+<!-- 自定义js -->
+<script src="../../js/form-validator/points-come/pointsCome.js"></script>
+
+
+
+
+
+<script>
+    $(document).ready(function () {
+        /* Init DataTables */
+        var oTable = $('#editable').dataTable();
+
+        /* Apply the jEditable handlers to the table */
+        oTable.$('.edt-td').editable('../example_ajax.php', {
+            "callback": function (sValue, y) {
+                var aPos = oTable.fnGetPosition(this);
+                oTable.fnUpdate(sValue, aPos[0], aPos[1]);
+            },
+            "submitdata": function (value, settings) {
+                return {
+                    "row_id": this.parentNode.getAttribute('id'),
+                    "column": oTable.fnGetPosition(this)[2]
+                };
+            },
+
+            "width": "90%",
+            "height": "100%"
+        });
+        //图标预览
+        $(".img-box").mouseover(function () {
+            var src = $(this).find("span").text();
+            var str = "<div class='img-up'><img class='up-img' src='"+src+"/>'</div>";
+            var boxW = $(".img-up").width();
+            var boxH = $(".img-up").height();
+            $(this).find("span").after(str);
+            $(".img-up").css({top:-boxH,right:-boxW});
+        })
+        $(".img-box").mouseout(function () {
+            $(this).find(".img-up").remove();
+        })
+
+    });
+
+    function fnClickAddRow() {
+        $('#editable').dataTable().fnAddData([
+            "Custom row",
+            "New row",
+            "New row",
+            "New row",
+            "New row"]);
+
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,1785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="keywords" content="admin, dashboard, bootstrap, template, flat, modern, theme, responsive, fluid, retina, backend, html5, css, css3">
+  <meta name="description" content="">
+  <meta name="author" content="ThemeBucket">
+  <link rel="shortcut icon" href="#" type="image/png">
+
+  <title>会员详情</title>
+
+  <!--icheck-->
+  <link href="frame/AdminEx/js//iCheck/skins/minimal/minimal.css" rel="stylesheet">
+  <link href="frame/AdminEx/js//iCheck/skins/square/square.css" rel="stylesheet">
+  <link href="frame/AdminEx/js//iCheck/skins/square/red.css" rel="stylesheet">
+  <link href="frame/AdminEx/js//iCheck/skins/square/blue.css" rel="stylesheet">
+    <!--pickers css-->
+    <link rel="stylesheet" type="text/css" href="frame/AdminEx/js/bootstrap-datepicker/css/datepicker-custom.css" />
+    <link rel="stylesheet" type="text/css" href="frame/AdminEx/js/bootstrap-timepicker/css/timepicker.css" />
+    <link rel="stylesheet" type="text/css" href="frame/AdminEx/js/bootstrap-colorpicker/css/colorpicker.css" />
+    <link rel="stylesheet" type="text/css" href="frame/AdminEx/js/bootstrap-daterangepicker/daterangepicker-bs3.css" />
+    <link rel="stylesheet" type="text/css" href="frame/AdminEx/js/bootstrap-datetimepicker/css/datetimepicker-custom.css" />
+
+
+    <!--external css-->
+    <link rel="stylesheet" type="text/css" href="frame/AdminEx/js/fuelux/css/tree-style.css" />
+
+
+  <!--dashboard calendar-->
+  <link href="frame/AdminEx/css/clndr.css" rel="stylesheet">
+
+  <!--Morris Chart CSS -->
+  <link rel="stylesheet" href="frame/AdminEx/js/morris-chart/morris.css">
+
+  <!--common-->
+  <link href="frame/AdminEx/css/style.css" rel="stylesheet">
+  <link href="frame/AdminEx/css/style-responsive.css" rel="stylesheet">
+  <link href="css/josiny-style.css" rel="stylesheet">
+
+
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="frame/AdminEx/js//html5shiv.js"></script>
+  <script src="frame/AdminEx/js//respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body class="sticky-header">
+
+<section>
+    <!-- left side start-->
+    <div class="left-side sticky-left-side">
+
+        <!--logo and iconic logo start-->
+        <div class="logo">
+            <a href="index.html"><img src="frame/AdminEx/images/logo.png" alt=""></a>
+        </div>
+
+        <div class="logo-icon text-center">
+            <a href="index.html"><img src="frame/AdminEx/images/logo_icon.png" alt=""></a>
+        </div>
+        <!--logo and iconic logo end-->
+
+        <div class="left-side-inner">
+
+            <!-- visible to small devices only -->
+            <div class="visible-xs hidden-sm hidden-md hidden-lg">
+                <div class="media logged-user">
+                    <img alt="" src="frame/AdminEx/images/photos/user-avatar.png" class="media-object">
+                    <div class="media-body">
+                        <h4><a href="#">John Doe</a></h4>
+                        <span>"Hello There..."</span>
+                    </div>
+                </div>
+
+                <h5 class="left-nav-title">Account Information</h5>
+                <ul class="nav nav-pills nav-stacked custom-nav">
+                  <li><a href="#"><i class="fa fa-user"></i> <span>Profile</span></a></li>
+                  <li><a href="#"><i class="fa fa-cog"></i> <span>Settings</span></a></li>
+                  <li><a href="#"><i class="fa fa-sign-out"></i> <span>Sign Out</span></a></li>
+                </ul>
+            </div>
+
+            <!--sidebar nav start-->
+            <ul class="nav nav-pills nav-stacked custom-nav">
+                <li class=""><a href="index.html"><i class="fa fa-home"></i> <span>首页</span></a></li>
+
+                <li class="menu-list nav-active"><a href=""><i class="fa fa-book"></i> <span>会员中心</span></a>
+                    <ul class="sub-menu-list">
+                        <li class="active"><a href="memberManagement.html"> 会员管理</a></li>
+                        <li><a href="#"> Buttons</a></li>
+                        <li><a href="#"> Tabs & Accordions</a></li>
+                        <li><a href="#"> Typography</a></li>
+                        <li><a href="#"> Slider</a></li>
+                        <li><a href="#"> Panels</a></li>
+                        <li><a href="#"> Slider</a></li>
+                        <li><a href="#"> Panels</a></li>
+                        <li><a href="#"> Slider</a></li>
+                        <li><a href="#"> Panels</a></li>
+                    </ul>
+                </li>
+
+
+
+
+
+            </ul>
+            <!--sidebar nav end-->
+
+        </div>
+    </div>
+    <!-- left side end-->
+    
+    <!-- main content start-->
+    <div class="main-content" >
+
+        <!-- header section start-->
+        <div class="header-section">
+
+            <!--toggle button start-->
+            <a class="toggle-btn"><i class="fa fa-bars"></i></a>
+            <!--toggle button end-->
+
+            <!--search start-->
+            <form class="searchform" action="index.html" method="post">
+                <input type="text" class="form-control" name="keyword" placeholder="Search here..." />
+            </form>
+            <!--search end-->
+
+            <!--notification menu start -->
+            <div class="menu-right">
+                <ul class="notification-menu clearfix">
+                    <li>
+                        <a href="#" class="btn btn-default dropdown-toggle info-number" data-toggle="dropdown">
+                            <i class="fa fa-tasks"></i>
+                            <span class="badge">8</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-head pull-right">
+                            <h5 class="title">You have 8 pending task</h5>
+                            <ul class="dropdown-list user-list">
+                                <li class="new">
+                                    <a href="#">
+                                        <div class="task-info">
+                                            <div>Database update</div>
+                                        </div>
+                                        <div class="progress progress-striped">
+                                            <div style="width: 40%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" class="progress-bar progress-bar-warning">
+                                                <span class="">40%</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="new">
+                                    <a href="#">
+                                        <div class="task-info">
+                                            <div>Dashboard done</div>
+                                        </div>
+                                        <div class="progress progress-striped">
+                                            <div style="width: 90%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="90" role="progressbar" class="progress-bar progress-bar-success">
+                                                <span class="">90%</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="task-info">
+                                            <div>Web Development</div>
+                                        </div>
+                                        <div class="progress progress-striped">
+                                            <div style="width: 66%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="66" role="progressbar" class="progress-bar progress-bar-info">
+                                                <span class="">66% </span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="task-info">
+                                            <div>Mobile App</div>
+                                        </div>
+                                        <div class="progress progress-striped">
+                                            <div style="width: 33%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="33" role="progressbar" class="progress-bar progress-bar-danger">
+                                                <span class="">33% </span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="task-info">
+                                            <div>Issues fixed</div>
+                                        </div>
+                                        <div class="progress progress-striped">
+                                            <div style="width: 80%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="80" role="progressbar" class="progress-bar">
+                                                <span class="">80% </span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="new"><a href="">See All Pending Task</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="btn btn-default dropdown-toggle info-number" data-toggle="dropdown">
+                            <i class="fa fa-envelope-o"></i>
+                            <span class="badge">5</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-head pull-right">
+                            <h5 class="title">You have 5 Mails </h5>
+                            <ul class="dropdown-list normal-list">
+                                <li class="new">
+                                    <a href="">
+                                        <span class="thumb"><img src="frame/AdminEx/images/photos/user1.png" alt="" /></span>
+                                        <span class="desc">
+                                          <span class="name">John Doe <span class="badge badge-success">new</span></span>
+                                          <span class="msg">Lorem ipsum dolor sit amet...</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <span class="thumb"><img src="frame/AdminEx/images/photos/user2.png" alt="" /></span>
+                                        <span class="desc">
+                                          <span class="name">Jonathan Smith</span>
+                                          <span class="msg">Lorem ipsum dolor sit amet...</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <span class="thumb"><img src="frame/AdminEx/images/photos/user3.png" alt="" /></span>
+                                        <span class="desc">
+                                          <span class="name">Jane Doe</span>
+                                          <span class="msg">Lorem ipsum dolor sit amet...</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <span class="thumb"><img src="frame/AdminEx/images/photos/user4.png" alt="" /></span>
+                                        <span class="desc">
+                                          <span class="name">Mark Henry</span>
+                                          <span class="msg">Lorem ipsum dolor sit amet...</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <span class="thumb"><img src="frame/AdminEx/images/photos/user5.png" alt="" /></span>
+                                        <span class="desc">
+                                          <span class="name">Jim Doe</span>
+                                          <span class="msg">Lorem ipsum dolor sit amet...</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="new"><a href="">Read All Mails</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="btn btn-default dropdown-toggle info-number" data-toggle="dropdown">
+                            <i class="fa fa-bell-o"></i>
+                            <span class="badge">4</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-head pull-right">
+                            <h5 class="title">Notifications</h5>
+                            <ul class="dropdown-list normal-list">
+                                <li class="new">
+                                    <a href="">
+                                        <span class="label label-danger"><i class="fa fa-bolt"></i></span>
+                                        <span class="name">Server #1 overloaded.  </span>
+                                        <em class="small">34 mins</em>
+                                    </a>
+                                </li>
+                                <li class="new">
+                                    <a href="">
+                                        <span class="label label-danger"><i class="fa fa-bolt"></i></span>
+                                        <span class="name">Server #3 overloaded.  </span>
+                                        <em class="small">1 hrs</em>
+                                    </a>
+                                </li>
+                                <li class="new">
+                                    <a href="">
+                                        <span class="label label-danger"><i class="fa fa-bolt"></i></span>
+                                        <span class="name">Server #5 overloaded.  </span>
+                                        <em class="small">4 hrs</em>
+                                    </a>
+                                </li>
+                                <li class="new">
+                                    <a href="">
+                                        <span class="label label-danger"><i class="fa fa-bolt"></i></span>
+                                        <span class="name">Server #31 overloaded.  </span>
+                                        <em class="small">4 hrs</em>
+                                    </a>
+                                </li>
+                                <li class="new"><a href="">See All Notifications</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            <img src="frame/AdminEx/images/photos/user-avatar.png" alt="" />
+                            John Doe
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-usermenu pull-right">
+                            <li><a href="#"><i class="fa fa-user"></i>  Profile</a></li>
+                            <li><a href="#"><i class="fa fa-cog"></i>  Settings</a></li>
+                            <li><a href="#"><i class="fa fa-sign-out"></i> Log Out</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+            <!--notification menu end -->
+
+        </div>
+        <!-- header section end-->
+
+        <!-- page heading start-->
+        <div class="page-heading">
+            <h3>
+                会员管理
+            </h3>
+            <ul class="breadcrumb">
+                <li>
+                    <a href="memberManagement.html">会员管理</a>
+                </li>
+                <li>
+                    <a href="memberManagement.html">会员列表</a>
+                </li>
+                <li class="active"> 会员详情</li>
+            </ul>
+            <div class="state-info state-info-box clearfix">
+                <section class="panel" style="">
+                    <div class="panel-body">
+                        <a class="btn btn-info" href="#myModal-code" data-toggle="modal">卡号合并</a>
+                        <a class="btn btn-info" href="#myModal" data-toggle="modal">新增通话记录</a>
+                        <a class="btn btn-info" href="#myModal-add" data-toggle="modal">申请异动</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <!-- page heading end-->
+
+        <!--body wrapper start-->
+        <div class="wrapper">
+            <div class="row">
+                <div class="col-sm-12">
+                    <section class="panel">
+                        <header class="panel-heading custom-tab blue-tab">
+                            <ul class="nav nav-tabs">
+                                <li class="active">
+                                    <a data-toggle="tab" href="#home4">
+                                        <i class="fa fa-home"></i>
+                                        <span class="nav-tabs-name">基本资料</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a data-toggle="tab" href="#about4">
+                                        <i class="fa fa-user"></i>
+                                        <span class="nav-tabs-name">历史会籍</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a data-toggle="tab" href="#contact4">
+                                        <i class="fa fa-envelope-o"></i>
+                                        <span class="nav-tabs-name">交易记录</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a data-toggle="tab" href="#contact5">
+                                        <i class="fa fa-envelope-o"></i>
+                                        <span class="nav-tabs-name">积分记录</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a data-toggle="tab" href="#contact6">
+                                        <i class="fa fa-envelope-o"></i>
+                                        <span class="nav-tabs-name">礼品记录</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a data-toggle="tab" href="#contact7">
+                                        <i class="fa fa-envelope-o"></i>
+                                        <span class="nav-tabs-name">权益记录</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </header>
+                        <div class="panel-body">
+                            <div class="tab-content">
+                                <div id="home4" class="tab-pane active">
+                                    <div class="form-horizontal">
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="form-group">
+                                                    <label for="" class="col-lg-2 col-sm-2 control-label">会员卡号：</label>
+                                                    <div class="col-lg-10">
+                                                        <input type="text" class="form-control" id="" placeholder="Email">
+                                                        <p class="help-block">Example block-level help text here.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="" class="col-lg-2 col-sm-2 control-label">当前会籍：</label>
+                                                    <div class="col-lg-10">
+                                                        <input type="text" class="form-control" id="" placeholder="Password">
+                                                        <p class="help-block">Example block-level help text here.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="" class="col-lg-2 col-sm-2 control-label">会员姓名：</label>
+                                                    <div class="col-lg-10">
+                                                        <input type="text" class="form-control" id="" placeholder="Password">
+                                                        <p class="help-block">Example block-level help text here.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="" class="col-lg-2 col-sm-2 control-label">会员生日：</label>
+                                                    <div class="col-lg-10">
+                                                        <input class="form-control form-control-inline input-medium default-date-picker"  size="16" type="text" value="" />
+                                                        <p class="help-block">Example block-level help text here.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="" class="col-lg-2 col-sm-2 control-label">入会时间：</label>
+                                                    <div class="col-lg-10">
+                                                        <input type="text" class="form-control timepicker-24">
+                                                        <p class="help-block">Example block-level help text here.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="" class="col-lg-2 col-sm-2 control-label">微信绑定：</label>
+                                                    <div class="col-lg-10">
+                                                        <input type="text" class="form-control" id="" placeholder="Password">
+                                                        <p class="help-block">Example block-level help text here.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="form-group">
+                                                    <label for="" class="col-lg-2 col-sm-2 control-label">手机号码：</label>
+                                                    <div class="col-lg-10">
+                                                        <input type="text" class="form-control" id="" placeholder="Email">
+                                                        <p class="help-block">Example block-level help text here.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="" class="col-lg-2 col-sm-2 control-label">会员性别：</label>
+                                                    <div class="col-lg-10">
+                                                        <input type="text" class="form-control" id="" placeholder="Password">
+                                                        <p class="help-block">Example block-level help text here.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="" class="col-lg-2 col-sm-2 control-label">服务门店：</label>
+                                                    <div class="col-lg-10">
+                                                        <input type="text" class="form-control" id="" placeholder="Password">
+                                                        <p class="help-block">Example block-level help text here.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="" class="col-lg-2 col-sm-2 control-label">穿鞋尺码：</label>
+                                                    <div class="col-lg-10">
+                                                        <input type="text" class="form-control" id="" placeholder="Password">
+                                                        <p class="help-block">Example block-level help text here.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="" class="col-lg-2 col-sm-2 control-label">到期时间：</label>
+                                                    <div class="col-lg-10">
+                                                        <input type="text" class="form-control" id="" placeholder="Password">
+                                                        <p class="help-block">Example block-level help text here.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="" class="col-lg-2 col-sm-2 control-label">当前状态：</label>
+                                                    <div class="col-lg-10">
+                                                        <input type="text" class="form-control" id="" placeholder="Password">
+                                                        <p class="help-block">Example block-level help text here.</p>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+
+                                    <header class="panel-heading custom-tab blue-tab">
+                                        <ul class="nav nav-tabs">
+                                            <li class="active">
+                                                <a data-toggle="tab" href="#home42">
+                                                    <i class="fa fa-home"></i>
+                                                    <span class="nav-tabs-name">积分</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </header>
+                                    <div class="panel-body">
+                                        <div class="tab-content">
+                                            <div id="home42" class="tab-pane active">
+                                                <div class="form-horizontal">
+                                                    <div class="row">
+                                                        <div class="col-lg-6">
+                                                            <div class="form-group">
+                                                                <label for="" class="col-lg-2 col-sm-2 control-label p-l-0">总获得积分：</label>
+                                                                <div class="col-lg-10">
+                                                                    <input type="text" class="form-control" id="" placeholder="Email">
+                                                                    <p class="help-block">Example block-level help text here.</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="" class="col-lg-2 col-sm-2 control-label p-l-0">总消费积分：</label>
+                                                                <div class="col-lg-10">
+                                                                    <input type="text" class="form-control" id="" placeholder="Password">
+                                                                    <p class="help-block">Example block-level help text here.</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="" class="col-lg-2 col-sm-2 control-label p-l-0">总过期积分：</label>
+                                                                <div class="col-lg-10">
+                                                                    <input type="text" class="form-control" id="" placeholder="Password">
+                                                                    <p class="help-block">Example block-level help text here.</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="" class="col-lg-2 col-sm-2 control-label">可用积分：</label>
+                                                                <div class="col-lg-10">
+                                                                    <input type="text" class="form-control" id="" placeholder="Password">
+                                                                    <p class="help-block">Example block-level help text here.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-center"><button class="btn btn-info" type="button">保存数据</button></div>
+                                </div>
+                                <div id="about4" class="tab-pane ">
+                                    <div class="form-horizontal">
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="form-group">
+                                                    <label for="" class="col-lg-2 col-sm-2 control-label">Email</label>
+                                                    <div class="col-lg-10">
+                                                        <input type="text" class="form-control" id="" placeholder="Email">
+                                                        <p class="help-block">Example block-level help text here.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="" class="col-lg-2 col-sm-2 control-label">Password</label>
+                                                    <div class="col-lg-10">
+                                                        <input type="text" class="form-control" id="" placeholder="Password">
+                                                        <p class="help-block">Example block-level help text here.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="" class="col-lg-2 col-sm-2 control-label">Password</label>
+                                                    <div class="col-lg-10">
+                                                        <input type="text" class="form-control" id="" placeholder="Password">
+                                                        <p class="help-block">Example block-level help text here.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="" class="col-lg-2 col-sm-2 control-label">Password</label>
+                                                    <div class="col-lg-10">
+                                                        <input type="text" class="form-control" id="" placeholder="Password">
+                                                        <p class="help-block">Example block-level help text here.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="" class="col-lg-2 col-sm-2 control-label">Password</label>
+                                                    <div class="col-lg-10">
+                                                        <input type="text" class="form-control" id="" placeholder="Password">
+                                                        <p class="help-block">Example block-level help text here.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="" class="col-lg-2 col-sm-2 control-label">Password</label>
+                                                    <div class="col-lg-10">
+                                                        <input type="text" class="form-control" id="" placeholder="Password">
+                                                        <p class="help-block">Example block-level help text here.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="form-group">
+                                                    <label for="" class="col-lg-2 col-sm-2 control-label">Email</label>
+                                                    <div class="col-lg-10">
+                                                        <input type="text" class="form-control" id="" placeholder="Email">
+                                                        <p class="help-block">Example block-level help text here.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="" class="col-lg-2 col-sm-2 control-label">Password</label>
+                                                    <div class="col-lg-10">
+                                                        <input type="text" class="form-control" id="" placeholder="Password">
+                                                        <p class="help-block">Example block-level help text here.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="" class="col-lg-2 col-sm-2 control-label">Password</label>
+                                                    <div class="col-lg-10">
+                                                        <input type="text" class="form-control" id="" placeholder="Password">
+                                                        <p class="help-block">Example block-level help text here.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="" class="col-lg-2 col-sm-2 control-label">Password</label>
+                                                    <div class="col-lg-10">
+                                                        <input type="text" class="form-control" id="" placeholder="Password">
+                                                        <p class="help-block">Example block-level help text here.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="" class="col-lg-2 col-sm-2 control-label">Password</label>
+                                                    <div class="col-lg-10">
+                                                        <input type="text" class="form-control" id="" placeholder="Password">
+                                                        <p class="help-block">Example block-level help text here.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="" class="col-lg-2 col-sm-2 control-label">Password</label>
+                                                    <div class="col-lg-10">
+                                                        <input type="text" class="form-control" id="" placeholder="Password">
+                                                        <p class="help-block">Example block-level help text here.</p>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                    <header class="panel-heading custom-tab blue-tab">
+                                        <ul class="nav nav-tabs">
+                                            <li class="active">
+                                                <a data-toggle="tab" href="#home41">
+                                                    <i class="fa fa-home"></i>
+                                                    <span class="nav-tabs-name">积分</span>
+                                                </a>
+                                            </li>
+                                            <li class="">
+                                                <a data-toggle="tab" href="#about41">
+                                                    <i class="fa fa-user"></i>
+                                                    <span class="nav-tabs-name">积分记录</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </header>
+                                    <div class="panel-body">
+                                        <div class="tab-content">
+                                            <div id="home41" class="tab-pane active">
+                                                <div class="form-horizontal">
+                                                    <div class="row">
+                                                        <div class="col-lg-6">
+                                                            <div class="form-group">
+                                                                <label for="" class="col-lg-2 col-sm-2 control-label">Email</label>
+                                                                <div class="col-lg-10">
+                                                                    <input type="text" class="form-control" id="" placeholder="Email">
+                                                                    <p class="help-block">Example block-level help text here.</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="" class="col-lg-2 col-sm-2 control-label">Password</label>
+                                                                <div class="col-lg-10">
+                                                                    <input type="text" class="form-control" id="" placeholder="Password">
+                                                                    <p class="help-block">Example block-level help text here.</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="" class="col-lg-2 col-sm-2 control-label">Password</label>
+                                                                <div class="col-lg-10">
+                                                                    <input type="text" class="form-control" id="" placeholder="Password">
+                                                                    <p class="help-block">Example block-level help text here.</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="" class="col-lg-2 col-sm-2 control-label">Password</label>
+                                                                <div class="col-lg-10">
+                                                                    <input type="text" class="form-control" id="" placeholder="Password">
+                                                                    <p class="help-block">Example block-level help text here.</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="" class="col-lg-2 col-sm-2 control-label">Password</label>
+                                                                <div class="col-lg-10">
+                                                                    <input type="text" class="form-control" id="" placeholder="Password">
+                                                                    <p class="help-block">Example block-level help text here.</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="" class="col-lg-2 col-sm-2 control-label">Password</label>
+                                                                <div class="col-lg-10">
+                                                                    <input type="text" class="form-control" id="" placeholder="Password">
+                                                                    <p class="help-block">Example block-level help text here.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <div class="form-group">
+                                                                <label for="" class="col-lg-2 col-sm-2 control-label">Email</label>
+                                                                <div class="col-lg-10">
+                                                                    <input type="text" class="form-control" id="" placeholder="Email">
+                                                                    <p class="help-block">Example block-level help text here.</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="" class="col-lg-2 col-sm-2 control-label">Password</label>
+                                                                <div class="col-lg-10">
+                                                                    <input type="text" class="form-control" id="" placeholder="Password">
+                                                                    <p class="help-block">Example block-level help text here.</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="" class="col-lg-2 col-sm-2 control-label">Password</label>
+                                                                <div class="col-lg-10">
+                                                                    <input type="text" class="form-control" id="" placeholder="Password">
+                                                                    <p class="help-block">Example block-level help text here.</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="" class="col-lg-2 col-sm-2 control-label">Password</label>
+                                                                <div class="col-lg-10">
+                                                                    <input type="text" class="form-control" id="" placeholder="Password">
+                                                                    <p class="help-block">Example block-level help text here.</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="" class="col-lg-2 col-sm-2 control-label">Password</label>
+                                                                <div class="col-lg-10">
+                                                                    <input type="text" class="form-control" id="" placeholder="Password">
+                                                                    <p class="help-block">Example block-level help text here.</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="" class="col-lg-2 col-sm-2 control-label">Password</label>
+                                                                <div class="col-lg-10">
+                                                                    <input type="text" class="form-control" id="" placeholder="Password">
+                                                                    <p class="help-block">Example block-level help text here.</p>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                            <div id="about41" class="tab-pane ">
+                                                <div class="table-box">
+                                                    <table class="table table-hover general-table">
+                                                        <thead>
+                                                        <tr>
+                                                            <th>编号</th>
+                                                            <th>会员卡号</th>
+                                                            <th>会员姓名</th>
+                                                            <th>会员性别</th>
+                                                            <th>会员生日</th>
+                                                            <th>手机号码</th>
+                                                            <th>来源</th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+
+                                                        <tr>
+                                                            <td>001 </td>
+                                                            <td>
+                                                                <a href="#">
+                                                                    54545121212154545454
+                                                                </a>
+                                                            </td>
+                                                            <td>温州</td>
+                                                            <td>男 </td>
+                                                            <td>1990-08-09</td>
+                                                            <td>
+                                                                13321226666
+                                                            </td>
+                                                            <td>556.00$ </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>001 </td>
+                                                            <td>
+                                                                <a href="#">
+                                                                    54545121212154545454
+                                                                </a>
+                                                            </td>
+                                                            <td>温州</td>
+                                                            <td>男 </td>
+                                                            <td>1990-08-09</td>
+                                                            <td>
+                                                                13321226666
+                                                            </td>
+                                                            <td>556.00$ </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>001 </td>
+                                                            <td>
+                                                                <a href="#">
+                                                                    54545121212154545454
+                                                                </a>
+                                                            </td>
+                                                            <td>温州</td>
+                                                            <td>男 </td>
+                                                            <td>1990-08-09</td>
+                                                            <td>
+                                                                13321226666
+                                                            </td>
+                                                            <td>556.00$ </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>001 </td>
+                                                            <td>
+                                                                <a href="#">
+                                                                    54545121212154545454
+                                                                </a>
+                                                            </td>
+                                                            <td>温州</td>
+                                                            <td>男 </td>
+                                                            <td>1990-08-09</td>
+                                                            <td>
+                                                                13321226666
+                                                            </td>
+                                                            <td>556.00$ </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>001 </td>
+                                                            <td>
+                                                                <a href="#">
+                                                                    54545121212154545454
+                                                                </a>
+                                                            </td>
+                                                            <td>温州</td>
+                                                            <td>男 </td>
+                                                            <td>1990-08-09</td>
+                                                            <td>
+                                                                13321226666
+                                                            </td>
+                                                            <td>556.00$ </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>001 </td>
+                                                            <td>
+                                                                <a href="#">
+                                                                    54545121212154545454
+                                                                </a>
+                                                            </td>
+                                                            <td>温州</td>
+                                                            <td>男 </td>
+                                                            <td>1990-08-09</td>
+                                                            <td>
+                                                                13321226666
+                                                            </td>
+                                                            <td>556.00$ </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>001 </td>
+                                                            <td>
+                                                                <a href="#">
+                                                                    54545121212154545454
+                                                                </a>
+                                                            </td>
+                                                            <td>温州</td>
+                                                            <td>男 </td>
+                                                            <td>1990-08-09</td>
+                                                            <td>
+                                                                13321226666
+                                                            </td>
+                                                            <td>556.00$ </td>
+                                                        </tr>
+
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div class="text-center">
+                                                    <ul class="pagination pagination-sm">
+                                                        <li><a href="#">«</a></li>
+                                                        <li><a href="#">1</a></li>
+                                                        <li><a href="#">2</a></li>
+                                                        <li class="active"><a href="#">3</a></li>
+                                                        <li><a href="#">4</a></li>
+                                                        <li><a href="#">5</a></li>
+                                                        <li><a href="#">»</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-center"><button class="btn btn-info" type="button">保存数据</button></div>
+                                </div>
+                                <div id="contact4" class="tab-pane ">
+                                    <div class="table-box">
+                                        <table class="table table-hover general-table">
+                                            <thead>
+                                            <tr>
+                                                <th>编号</th>
+                                                <th>会员卡号</th>
+                                                <th>会员姓名</th>
+                                                <th>会员性别</th>
+                                                <th>会员生日</th>
+                                                <th>手机号码</th>
+                                                <th>来源</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+
+                                            <tr>
+                                                <td>001 </td>
+                                                <td>
+                                                    <a href="#">
+                                                        54545121212154545454
+                                                    </a>
+                                                </td>
+                                                <td>温州</td>
+                                                <td>男 </td>
+                                                <td>1990-08-09</td>
+                                                <td>
+                                                    13321226666
+                                                </td>
+                                                <td>556.00$ </td>
+                                            </tr>
+                                            <tr>
+                                                <td>&nbsp;</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>&nbsp;</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>&nbsp;</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>&nbsp;</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>&nbsp;</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!--<div class="text-center"><button class="btn btn-info" type="button">保存数据</button></div>-->
+                                </div>
+                                <div id="contact5" class="tab-pane ">
+                                    <div class="form-horizontal">
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="form-group">
+                                                    <label for="" class="col-lg-2 col-sm-2 control-label">Email</label>
+                                                    <div class="col-lg-10">
+                                                        <input type="text" class="form-control" id="" placeholder="Email">
+                                                        <p class="help-block">Example block-level help text here.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="" class="col-lg-2 col-sm-2 control-label">Password</label>
+                                                    <div class="col-lg-10">
+                                                        <input type="text" class="form-control" id="" placeholder="Password">
+                                                        <p class="help-block">Example block-level help text here.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="" class="col-lg-2 col-sm-2 control-label">Password</label>
+                                                    <div class="col-lg-10">
+                                                        <input type="text" class="form-control" id="" placeholder="Password">
+                                                        <p class="help-block">Example block-level help text here.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="" class="col-lg-2 col-sm-2 control-label">Password</label>
+                                                    <div class="col-lg-10">
+                                                        <input type="text" class="form-control" id="" placeholder="Password">
+                                                        <p class="help-block">Example block-level help text here.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="" class="col-lg-2 col-sm-2 control-label">Password</label>
+                                                    <div class="col-lg-10">
+                                                        <input type="text" class="form-control" id="" placeholder="Password">
+                                                        <p class="help-block">Example block-level help text here.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="" class="col-lg-2 col-sm-2 control-label">Password</label>
+                                                    <div class="col-lg-10">
+                                                        <input type="text" class="form-control" id="" placeholder="Password">
+                                                        <p class="help-block">Example block-level help text here.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="form-group">
+                                                    <label for="" class="col-lg-2 col-sm-2 control-label">Email</label>
+                                                    <div class="col-lg-10">
+                                                        <input type="text" class="form-control" id="" placeholder="Email">
+                                                        <p class="help-block">Example block-level help text here.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="" class="col-lg-2 col-sm-2 control-label">Password</label>
+                                                    <div class="col-lg-10">
+                                                        <input type="text" class="form-control" id="" placeholder="Password">
+                                                        <p class="help-block">Example block-level help text here.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="" class="col-lg-2 col-sm-2 control-label">Password</label>
+                                                    <div class="col-lg-10">
+                                                        <input type="text" class="form-control" id="" placeholder="Password">
+                                                        <p class="help-block">Example block-level help text here.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="" class="col-lg-2 col-sm-2 control-label">Password</label>
+                                                    <div class="col-lg-10">
+                                                        <input type="text" class="form-control" id="" placeholder="Password">
+                                                        <p class="help-block">Example block-level help text here.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="" class="col-lg-2 col-sm-2 control-label">Password</label>
+                                                    <div class="col-lg-10">
+                                                        <input type="text" class="form-control" id="" placeholder="Password">
+                                                        <p class="help-block">Example block-level help text here.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="" class="col-lg-2 col-sm-2 control-label">Password</label>
+                                                    <div class="col-lg-10">
+                                                        <input type="text" class="form-control" id="" placeholder="Password">
+                                                        <p class="help-block">Example block-level help text here.</p>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="text-center"><button class="btn btn-info" type="button">保存数据</button></div>
+                                </div>
+                                <div id="contact6" class="tab-pane ">
+                                    <div class="table-box">
+                                        <table class="table table-hover general-table">
+                                            <thead>
+                                            <tr>
+                                                <th>编号</th>
+                                                <th>会员卡号</th>
+                                                <th>会员姓名</th>
+                                                <th>会员性别</th>
+                                                <th>会员生日</th>
+                                                <th>手机号码</th>
+                                                <th>来源</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+
+                                            <tr>
+                                                <td>001 </td>
+                                                <td>
+                                                    <a href="#">
+                                                        54545121212154545454
+                                                    </a>
+                                                </td>
+                                                <td>温州</td>
+                                                <td>男 </td>
+                                                <td>1990-08-09</td>
+                                                <td>
+                                                    13321226666
+                                                </td>
+                                                <td>556.00$ </td>
+                                            </tr>
+                                            <tr>
+                                                <td>001 </td>
+                                                <td>
+                                                    <a href="#">
+                                                        54545121212154545454
+                                                    </a>
+                                                </td>
+                                                <td>温州</td>
+                                                <td>男 </td>
+                                                <td>1990-08-09</td>
+                                                <td>
+                                                    13321226666
+                                                </td>
+                                                <td>556.00$ </td>
+                                            </tr>
+                                            <tr>
+                                                <td>001 </td>
+                                                <td>
+                                                    <a href="#">
+                                                        54545121212154545454
+                                                    </a>
+                                                </td>
+                                                <td>温州</td>
+                                                <td>男 </td>
+                                                <td>1990-08-09</td>
+                                                <td>
+                                                    13321226666
+                                                </td>
+                                                <td>556.00$ </td>
+                                            </tr>
+                                            <tr>
+                                                <td>001 </td>
+                                                <td>
+                                                    <a href="#">
+                                                        54545121212154545454
+                                                    </a>
+                                                </td>
+                                                <td>温州</td>
+                                                <td>男 </td>
+                                                <td>1990-08-09</td>
+                                                <td>
+                                                    13321226666
+                                                </td>
+                                                <td>556.00$ </td>
+                                            </tr>
+                                            <tr>
+                                                <td>001 </td>
+                                                <td>
+                                                    <a href="#">
+                                                        54545121212154545454
+                                                    </a>
+                                                </td>
+                                                <td>温州</td>
+                                                <td>男 </td>
+                                                <td>1990-08-09</td>
+                                                <td>
+                                                    13321226666
+                                                </td>
+                                                <td>556.00$ </td>
+                                            </tr>
+                                            <tr>
+                                                <td>001 </td>
+                                                <td>
+                                                    <a href="#">
+                                                        54545121212154545454
+                                                    </a>
+                                                </td>
+                                                <td>温州</td>
+                                                <td>男 </td>
+                                                <td>1990-08-09</td>
+                                                <td>
+                                                    13321226666
+                                                </td>
+                                                <td>556.00$ </td>
+                                            </tr>
+                                            <tr>
+                                                <td>001 </td>
+                                                <td>
+                                                    <a href="#">
+                                                        54545121212154545454
+                                                    </a>
+                                                </td>
+                                                <td>温州</td>
+                                                <td>男 </td>
+                                                <td>1990-08-09</td>
+                                                <td>
+                                                    13321226666
+                                                </td>
+                                                <td>556.00$ </td>
+                                            </tr>
+
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="text-center">
+                                        <ul class="pagination pagination-sm">
+                                            <li><a href="#">«</a></li>
+                                            <li><a href="#">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li class="active"><a href="#">3</a></li>
+                                            <li><a href="#">4</a></li>
+                                            <li><a href="#">5</a></li>
+                                            <li><a href="#">»</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div id="contact7" class="tab-pane ">
+                                    <div class="table-box">
+                                        <table class="table table-hover general-table">
+                                            <thead>
+                                            <tr>
+                                                <th>编号</th>
+                                                <th>会员卡号</th>
+                                                <th>会员姓名</th>
+                                                <th>会员性别</th>
+                                                <th>会员生日</th>
+                                                <th>手机号码</th>
+                                                <th>来源</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+
+                                            <tr>
+                                                <td>001 </td>
+                                                <td>
+                                                    <a href="#">
+                                                        54545121212154545454
+                                                    </a>
+                                                </td>
+                                                <td>温州</td>
+                                                <td>男 </td>
+                                                <td>1990-08-09</td>
+                                                <td>
+                                                    13321226666
+                                                </td>
+                                                <td>556.00$ </td>
+                                            </tr>
+                                            <tr>
+                                                <td>001 </td>
+                                                <td>
+                                                    <a href="#">
+                                                        54545121212154545454
+                                                    </a>
+                                                </td>
+                                                <td>温州</td>
+                                                <td>男 </td>
+                                                <td>1990-08-09</td>
+                                                <td>
+                                                    13321226666
+                                                </td>
+                                                <td>556.00$ </td>
+                                            </tr>
+                                            <tr>
+                                                <td>001 </td>
+                                                <td>
+                                                    <a href="#">
+                                                        54545121212154545454
+                                                    </a>
+                                                </td>
+                                                <td>温州</td>
+                                                <td>男 </td>
+                                                <td>1990-08-09</td>
+                                                <td>
+                                                    13321226666
+                                                </td>
+                                                <td>556.00$ </td>
+                                            </tr>
+                                            <tr>
+                                                <td>001 </td>
+                                                <td>
+                                                    <a href="#">
+                                                        54545121212154545454
+                                                    </a>
+                                                </td>
+                                                <td>温州</td>
+                                                <td>男 </td>
+                                                <td>1990-08-09</td>
+                                                <td>
+                                                    13321226666
+                                                </td>
+                                                <td>556.00$ </td>
+                                            </tr>
+                                            <tr>
+                                                <td>001 </td>
+                                                <td>
+                                                    <a href="#">
+                                                        54545121212154545454
+                                                    </a>
+                                                </td>
+                                                <td>温州</td>
+                                                <td>男 </td>
+                                                <td>1990-08-09</td>
+                                                <td>
+                                                    13321226666
+                                                </td>
+                                                <td>556.00$ </td>
+                                            </tr>
+                                            <tr>
+                                                <td>001 </td>
+                                                <td>
+                                                    <a href="#">
+                                                        54545121212154545454
+                                                    </a>
+                                                </td>
+                                                <td>温州</td>
+                                                <td>男 </td>
+                                                <td>1990-08-09</td>
+                                                <td>
+                                                    13321226666
+                                                </td>
+                                                <td>556.00$ </td>
+                                            </tr>
+                                            <tr>
+                                                <td>001 </td>
+                                                <td>
+                                                    <a href="#">
+                                                        54545121212154545454
+                                                    </a>
+                                                </td>
+                                                <td>温州</td>
+                                                <td>男 </td>
+                                                <td>1990-08-09</td>
+                                                <td>
+                                                    13321226666
+                                                </td>
+                                                <td>556.00$ </td>
+                                            </tr>
+
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </section>
+                </div>
+            </div>
+        </div>
+        <!--body wrapper end-->
+
+        <!--footer section start-->
+        <footer>
+            2018 &copy; josiny-CRM by <a href="jc" target="_blank">jc</a>
+        </footer>
+        <!--footer section end-->
+
+
+    </div>
+    <!-- main content end-->
+</section>
+<!-- Modal 合并卡号-->
+<div class="modal fade" id="myModal-code" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">合并卡号</h4>
+            </div>
+
+            <div class="modal-body row">
+
+                <div class="col-md-6 img-modal img-modal-line">
+                    <div class="form-group">
+                        <label> 卡号1</label>
+                        <input id="name" value="215445454521" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label> 手机号</label>
+                        <input id="title" value="1552121215" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label> 姓名</label>
+                        <input id="link" value="温小州" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label> 性别</label>
+                        <input id="link1" value="男" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label> 鞋码</label>
+                        <input id="link2" value="42" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label> 来源</label>
+                        <input id="link3" value="ipos" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label> 可用积分</label>
+                        <input id="link4" value="300" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label> 当前会籍</label>
+                        <input id="link5" value="普卡" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label> 合并理由</label>
+                        <textarea rows="2" class="form-control"></textarea>
+                    </div>
+
+                </div>
+                <div class="col-md-6">
+                    <div class="panel panel-default josiny-panel">
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <label> 卡号2</label>
+                                <input id="name2" value="215445454521" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label> 手机号</label>
+                                <input id="title" value="1552121215" class="form-control">
+                            </div>
+                            <div class="pull-right">
+                                <button class="btn btn-success btn-sm" type="button">查询</button>
+                                <button class="btn btn-danger btn-sm" type="button">重置</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label> 姓名</label>
+                        <input id="link11" value="温小州" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label> 性别</label>
+                        <input id="link12" value="男" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label> 鞋码</label>
+                        <input id="link23" value="42" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label> 来源</label>
+                        <input id="link34" value="ipos" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label> 可用积分</label>
+                        <input id="link45" value="300" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label> 当前会籍</label>
+                        <input id="link56" value="普卡" class="form-control">
+                    </div>
+                    <div class="pull-right">
+                        <button class="btn btn-success btn-sm" type="button">合并提交</button>
+                        <button class="btn btn-danger btn-sm" type="button" data-dismiss="modal" aria-hidden="true">关闭</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- modal -->
+
+
+
+<!-- Modal 异动申请 -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">异动申请</h4>
+            </div>
+
+            <div class="modal-body">
+                <div class="tabs-box">
+                    <header class="panel-heading custom-tab blue-tab">
+                        <ul class="nav nav-tabs">
+                            <li class="active">
+                                <a data-toggle="tab" href="#home01">
+                                    <i class="fa fa-home"></i>
+                                    <span class="nav-tabs-name">手机号异动</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a data-toggle="tab" href="#about02">
+                                    <i class="fa fa-user"></i>
+                                    <span class="nav-tabs-name">生日异动</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a data-toggle="tab" href="#about03">
+                                    <i class="fa fa-user"></i>
+                                    <span class="nav-tabs-name">积分异动</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </header>
+                    <div class="panel-body">
+                        <div class="tab-content">
+                            <div id="home01" class="tab-pane active">
+                                <div class="form-group">
+                                    <label> 旧手机号</label>
+                                    <input id="title" value="1552121215" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label> 新手机号</label>
+                                    <input id="title" value="1552121215" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label> 异动原因</label>
+                                    <textarea rows="2" class="form-control"></textarea>
+                                </div>
+                                <div class="text-center">
+                                    <button class="btn btn-success btn-sm" type="button">保存</button>
+                                    <button class="btn btn-danger btn-sm" type="button" data-dismiss="modal" aria-hidden="true">取消</button>
+                                </div>
+                            </div>
+                            <div id="about02" class="tab-pane">
+                                <div class="form-group">
+                                    <label> 旧生日</label>
+                                    <input id="title" value="2018-05-08" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label> 新生日</label>
+                                    <input class="form-control form-control-inline input-medium default-date-picker" size="16" type="text" value="">
+                                </div>
+                                <div class="form-group">
+                                    <label> 异动原因</label>
+                                    <textarea rows="2" class="form-control"></textarea>
+                                </div>
+                                <div class="text-center">
+                                    <button class="btn btn-success btn-sm" type="button">保存</button>
+                                    <button class="btn btn-danger btn-sm" type="button" data-dismiss="modal" aria-hidden="true">取消</button>
+                                </div>
+                            </div>
+                            <div id="about03" class="tab-pane">
+                                <div class="form-group">
+                                    <label> 异动类别</label>
+                                    <select class="form-control">
+                                        <option>1</option>
+                                        <option>1</option>
+                                        <option>1</option>
+                                        <option>1</option>
+                                        <option>1</option>
+
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label> 异动积分</label>
+                                    <input id="title" value="1552121215" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label> 开始日期</label>
+                                    <input class="form-control form-control-inline input-medium default-date-picker" size="16" type="text" value="">
+                                </div>
+                                <div class="form-group">
+                                    <label> 结束日期</label>
+                                    <input class="form-control form-control-inline input-medium default-date-picker" size="16" type="text" value="">
+                                </div>
+                                <div class="form-group">
+                                    <label> 异动原因</label>
+                                    <textarea rows="2" class="form-control"></textarea>
+                                </div>
+                                <div class="text-center">
+                                    <button class="btn btn-success btn-sm" type="button">保存</button>
+                                    <button class="btn btn-danger btn-sm" type="button" data-dismiss="modal" aria-hidden="true">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- modal -->
+<!-- Modal 新增通话-->
+<div class="modal fade" id="myModal-add" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">新增通话</h4>
+            </div>
+
+            <div class="modal-body row">
+
+                <div class="col-md-12 bottom-line">
+                    <div class="form-group">
+                        <label> 通话类型</label>
+                        <select class="form-control">
+                            <option>1</option>
+                            <option>1</option>
+                            <option>1</option>
+                            <option>1</option>
+                            <option>1</option>
+
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label> 结束时间</label>
+                        <input class="form-control form-control-inline input-medium default-date-picker" size="16" type="text" value="">
+                    </div>
+                    <div class="form-group">
+                        <label> 来电是否为本人</label>
+                        <div class="minimal-blue single-row form-inline">
+                            <div class="radio ">
+                                <input tabindex="3" type="radio"  name="demo-radio">
+                                <label>是</label>
+                            </div>
+                            <div class="radio ">
+                                <input tabindex="3" type="radio"  name="demo-radio">
+                                <label>否</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label> 非本人手机号</label>
+                        <input id="link1" value="15154458887" class="form-control">
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 p-t-sm">
+                    <div id="FlatTree3" class="tree tree-plus-minus tree-solid-line tree-unselectable">
+                        <div class = "tree-folder" style="display:none;">
+                            <div class="tree-folder-header">
+                                <i class="fa fa-folder"></i>
+                                <div class="tree-folder-name"></div>
+                            </div>
+                            <div class="tree-folder-content"></div>
+                            <div class="tree-loader" style="display:none"></div>
+                        </div>
+                        <div class="tree-item" style="display:none;">
+                            <i class="tree-dot"></i>
+                            <div class="tree-item-name"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 p-t-sm left-line bottom-line">
+                    <div class="form-group">
+                        <label> 常见问题类别</label>
+                        <input id="link1" value="15154458887" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label> 问题</label>
+                        <input id="link1" value="15154458887" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label> 洽谈记录</label>
+                        <input id="link1" value="15154458887" class="form-control">
+                    </div>
+                    <div class="table-box">
+                        <table class="table table-hover general-table">
+                            <colgroup>
+                                <col class="col-xs-2">
+                                <col class="col-xs-8">
+                                <col class="col-xs-2">
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th>通话状态</th>
+                                <th>问题</th>
+                                <th>洽谈记录</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+
+                            <tr>
+                                <td>001 </td>
+                                <td>
+                                    <a href="#">
+                                        54545121212154545454
+                                    </a>
+                                </td>
+                                <td>温州</td>
+                            </tr>
+                            <tr>
+                                <td>001 </td>
+                                <td>
+                                    <a href="#">
+                                        54545121212154545454
+                                    </a>
+                                </td>
+                                <td>温州</td>
+                            </tr>
+                            <tr>
+                                <td>001 </td>
+                                <td>
+                                    <a href="#">
+                                        54545121212154545454
+                                    </a>
+                                </td>
+                                <td>温州</td>
+                            </tr>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="row">
+                        <div class="pull-right p-b-sm">
+                            <button class="btn btn-success btn-sm" type="button">新增</button>
+                            <button class="btn btn-danger btn-sm disabled" type="button" >删除</button>
+                            <button class="btn btn-danger btn-sm" type="button">重置</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="text-center p-t-sm col-md-12">
+                    <button class="btn btn-success btn-sm" type="button">存储</button>
+                    <button class="btn btn-danger btn-sm" type="button" data-dismiss="modal" aria-hidden="true">关闭</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- modal -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Placed js at the end of the document so the pages load faster -->
+<script src="frame/AdminEx/js/jquery-1.10.2.min.js"></script>
+<script src="frame/AdminEx/js/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="frame/AdminEx/js/jquery-migrate-1.2.1.min.js"></script>
+<script src="frame/AdminEx/js/bootstrap.min.js"></script>
+<script src="frame/AdminEx/js/modernizr.min.js"></script>
+<script src="frame/AdminEx/js/jquery.nicescroll.js"></script>
+
+<!--pickers plugins-->
+<script type="text/javascript" src="frame/AdminEx/js/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="frame/AdminEx/js/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+<script type="text/javascript" src="frame/AdminEx/js/bootstrap-daterangepicker/moment.min.js"></script>
+<script type="text/javascript" src="frame/AdminEx/js/bootstrap-daterangepicker/daterangepicker.js"></script>
+<script type="text/javascript" src="frame/AdminEx/js/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
+<script type="text/javascript" src="frame/AdminEx/js/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
+
+<!--tree-->
+<script src="frame/AdminEx/js/fuelux/js/tree.min.js"></script>
+<script src="frame/AdminEx/js/tree-init.js"></script>
+
+
+<!--pickers initialization-->
+<script src="frame/AdminEx/js/pickers-init.js"></script>
+
+
+<!--common scripts for all pages-->
+<script src="frame/AdminEx/js/scripts.js"></script>
+<script type="text/javascript">
+    $(function() {
+        //tree
+        TreeView.init();
+
+        // filter items when filter link is clicked
+        $('#filters a').click(function() {
+            var selector = $(this).attr('data-filter');
+            $container.isotope({filter: selector});
+            return false;
+        });
+    });
+</script>
+</body>
+</html>

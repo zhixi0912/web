@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!--360浏览器优先以webkit内核解析-->
+    <title>活动管理</title>
+    <link rel="shortcut icon" href="../../hAdmin/favicon.ico"/>
+    <link href="../../hAdmin/css/bootstrap.min.css?v=3.3.6" rel="stylesheet"/>
+    <link href="../../hAdmin/css/font-awesome.css?v=4.4.0" rel="stylesheet"/>
+    <link href="../../frame/select2-4.0.3/css/select2.css" rel="stylesheet"/>
+    <link href="../../hAdmin/css/animate.css" rel="stylesheet"/>
+    <link href="../../hAdmin/css/style.css" rel="stylesheet"/>
+    <link href="../../hAdmin/css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet"/>
+    <link href="../../css/base.css?v=3.1.0" rel="stylesheet"/>
+    <link href="../../css/points-come/pointsCome.css" rel="stylesheet"/>
+    <style>
+        #editable_wrapper #editable_length,#editable_wrapper #editable_filter{
+            display: none;
+        }
+    </style>
+</head>
+
+</head>
+<body class="light-grey-bg">
+<div class="main">
+
+    <div class="white-bg">
+        <div class="page-header page-header-no-br">
+            <h3 class="come-h3">活动管理</h3>
+            <form class="form-horizontal m-t" id="commentForm">
+                <div class="form-group">
+                    <label class="col-sm-1 control-label">活动所属：</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control">
+                    </div>
+                    <label class="col-sm-1 control-label">活动状态：</label>
+                    <div class="col-sm-5">
+                        <select class="form-control sel-2">
+                            <option>可输入商户名称查询</option>
+                            <option>上海镒钡</option>
+                            <option>镒钡国际</option>
+                        </select>
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-1 control-label">活动名称：</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control">
+                    </div>
+
+                    <label class="col-sm-1 control-label">平台板块：</label>
+                    <div class="col-sm-5">
+                        <select class="form-control sel-2">
+                            <option>可输入商户名称查询</option>
+                            <option>上海镒钡</option>
+                            <option>镒钡国际</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-1 control-label">结束日期：</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control">
+                    </div>
+                    <label class="col-sm-1 control-label tc" style="text-align: center">到</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="col-sm-5 col-sm-offset-1">
+                        <a class="btn btn-w-m btn-default">查询</a>
+                        <a class="btn btn-w-m btn-default btn-orange">新增</a>
+                    </div>
+                </div>
+            </form>
+
+        <div class="page-body">
+
+                <table class="table table-bordered table-hover table-striped center">
+                    <thead>
+                        <tr class="bold">
+                            <th>排序</th>
+                            <th>活动动态</th>
+                            <th>结束日期</th>
+                            <th>活动所属</th>
+                            <th>活动名称</th>
+                            <th>操作</th>
+                            <th>显示</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                    <img class="tableImg" src="../../images/btableicon/upicon.png" height="29" width="29"/>
+                                    <img class="tableImg" src="../../images/btableicon/downicon.png" height="29" width="29"/>
+                                    <img class="tableImg" src="../../images/btableicon/top.png" height="29" width="29"/>
+                            </td>
+                            <td>进行中
+                            </td>
+                            <td>2018-08-02 12：32：32</td>
+                            <td>平台活动</td>
+                            <td>食之秘客户回馈</td>
+                            <td>
+                                <a class="btn-link-btn">修改</a>
+                            </td>
+                            <td>
+                                <div class="switch">
+                                    <div class="onoffswitch onoffswitch-center">
+                                        <input type="checkbox" checked class="onoffswitch-checkbox" id="example1">
+                                        <label class="onoffswitch-label" for="example1">
+                                            <span class="onoffswitch-inner"></span>
+                                            <span class="onoffswitch-switch"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="gradeC">
+                            <td class="edt-td">
+                                <img class="tableImg" src="../../images/btableicon/upicon.png" height="29" width="29"/>
+                                <img class="tableImg" src="../../images/btableicon/downicon.png" height="29" width="29"/>
+                                <img class="tableImg" src="../../images/btableicon/top.png" height="29" width="29"/>
+
+                            </td>
+                            <td>进行中
+                            </td>
+                            <td>2018-08-02 12：32：32</td>
+                            <td>平台活动</td>
+                            <td>食之秘客户回馈</td>
+                            <td>
+                                <a class="btn-link-btn">修改</a>
+                            </td>
+                            <td>食之秘客户回馈</td>
+                        </tr>
+                        <tr class="gradeA">
+                            <td class="edt-td">3</td>
+                            <td>进行中
+                            </td>
+                            <td>2018-08-02 12：32：32</td>
+                            <td>平台活动</td>
+                            <td>食之秘客户回馈</td>
+                            <td>
+                                <a class="btn-link-btn">修改</a>
+                            </td>
+                            <td>食之秘客户回馈</td>
+                        </tr>
+                    </tbody>
+                </table>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 全局js -->
+<script src="../../hAdmin/js/jquery.min.js?v=2.1.4"></script>
+<script src="../../hAdmin/js/bootstrap.min.js?v=3.3.6"></script>
+<script src="../../hAdmin/js/plugins/layer/layer.min.js"></script>
+<!-- Flot -->
+<script src="../../hAdmin/js/plugins/flot/jquery.flot.js"></script>
+<script src="../../hAdmin/js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+<script src="../../hAdmin/js/plugins/flot/jquery.flot.resize.js"></script>
+<script src="../../hAdmin/js/plugins/flot/jquery.flot.pie.js"></script>
+<!-- Data Tables -->
+<script src="../../hAdmin/js/plugins/jeditable/jquery.jeditable.js"></script>
+<script src="../../hAdmin/js/plugins/dataTables/jquery.dataTables.js"></script>
+<script src="../../hAdmin/js/plugins/dataTables/dataTables.bootstrap.js"></script>
+<!-- select2-4.0.3 -->
+<script src="../../frame/select2-4.0.3/js/select2.js"></script>
+<!-- 自定义js -->
+<script src="../../js/form-validator/points-come/pointsCome.js"></script>
+
+<style>
+    .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner.on{
+        margin-left: 0px!important;
+    }
+    .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch.on{
+        right: 0px!important;
+    }
+    .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner.off{
+        margin-left: -50px!important;
+    }
+    .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch.off{
+        right: 36px!important;
+    }
+</style>
+
+
+
+<script>
+    $(document).ready(function () {
+        $("#example1").next(".onoffswitch-label").find(".onoffswitch-inner").addClass("on");
+        $("#example1").next(".onoffswitch-label").find(".onoffswitch-switch").addClass("on");
+        $("#example1").change(function () {
+            if($(this).prop('checked'))
+            {
+                //do something
+                $(this).attr('checked');
+                $(this).next(".onoffswitch-label").find(".onoffswitch-inner").addClass("on").removeClass("off");
+                $(this).next(".onoffswitch-label").find(".onoffswitch-inner").addClass("on").removeClass("off");
+                console.log("a");
+            }else {
+                $(this).removeAttr('checked');
+                $(this).next(".onoffswitch-label").find(".onoffswitch-inner").addClass("off").removeClass("on");
+                $(this).next(".onoffswitch-label").find(".onoffswitch-inner").addClass("off").removeClass("on");
+                console.log("b");
+            }
+
+        })
+        $(".sel-2").select2();
+        /* Init DataTables */
+        var oTable = $('#editable').dataTable();
+
+        /* Apply the jEditable handlers to the table */
+        oTable.$('.edt-td').editable('../example_ajax.php', {
+            "callback": function (sValue, y) {
+                var aPos = oTable.fnGetPosition(this);
+                oTable.fnUpdate(sValue, aPos[0], aPos[1]);
+            },
+            "submitdata": function (value, settings) {
+                return {
+                    "row_id": this.parentNode.getAttribute('id'),
+                    "column": oTable.fnGetPosition(this)[2]
+                };
+            },
+
+            "width": "90%",
+            "height": "100%"
+        });
+
+
+    });
+
+    function fnClickAddRow() {
+        $('#editable').dataTable().fnAddData([
+            "Custom row",
+            "New row",
+            "New row",
+            "New row",
+            "New row"]);
+
+    }
+</script>
+</body>
+</html>

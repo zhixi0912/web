@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--360浏览器优先以webkit内核解析-->
+
+
+    <title>活动详情-新增</title>
+    <link rel="shortcut icon" href="../../hAdmin/favicon.ico">
+
+    <link href="../../hAdmin/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="../../hAdmin/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="../../hAdmin/css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="../../frame/select2-4.0.3/css/select2.css" rel="stylesheet">
+    <link href="../../hAdmin/css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="../../frame/UEditor1.2.3/themes/default/css/umeditor.css" type="text/css" rel="stylesheet">
+    <link href="../../frame/cityChoice/zyzn_1.css" type="text/css" rel="stylesheet">
+    <link href="../../hAdmin/css/animate.css" rel="stylesheet">
+    <link href="../../hAdmin/css/style.css" rel="stylesheet">
+    <link href="../../css/base.css?v=3.1.0" rel="stylesheet">
+    <link href="../../css/points-come/pointsCome.css" rel="stylesheet">
+    <style>
+        #editable_wrapper #editable_length,#editable_wrapper #editable_filter{
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="light-grey-bg">
+<div class="main">
+    <div class="white-bg">
+        <div class="page-header page-header-no-br">
+            <h3 class="come-h3">活动详情</h3>
+            <form class="form-horizontal m-t" id="">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">*活动商户：</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" placeholder="请输入活动商户">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">*活动地区：</label>
+                    <div class="fl ml12 mt5 mb10 checkbox">
+                            <label style="height: 27px">
+                                <input type="checkbox" id="btncheked">全国
+                            </label>
+
+                    </div>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="disinput" placeholder="请选择活动区域" value="" data-value=""  onclick="appendCity(this,'duoxuan')" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">*活动名称：</label>
+
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" placeholder="请输入活动名称">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">*活动图标：</label>
+                    <div class="col-sm-10">
+                        <div class="icon_img fl">
+                            <img src="../../images/btableicon/filepos.png" height="22" width="84"/>
+                        </div>
+                        <div class="fl m20">
+                            <p class="blue">替换</p>
+                            <p>广告尺寸：712X196px</p>
+                        </div>
+                        <input type="file" class="form-control posv1ab">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">*活动板块：</label>
+                    <div class="col-sm-10">
+                        <label class="checkbox-inline i-checks">
+                            <input type="checkbox" value="option1">最新活动</label>
+                        <label class="checkbox-inline i-checks">
+                            <input type="checkbox" value="option2">最热活动</label>
+                        <label class="checkbox-inline i-checks">
+                            <input type="checkbox" value="option3">c</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">*浏览数量：</label>
+
+                    <div class="col-sm-5">
+                        <div class="input-group m-b">
+                            <input type="text" class="form-control" placeholder="请输入浏览数量"> <span class="input-group-addon">起</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">*奖励内容：</label>
+
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" placeholder="最高5000积分">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">活动分类：</label>
+
+                    <div class="col-sm-10">
+                        <select class="form-control sel-2" multiple="multiple" placeholder="请输入活动分类">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">奖品分类：</label>
+
+                    <div class="col-sm-10">
+                        <select class="form-control sel-2" multiple="multiple" placeholder="请输入奖品分类">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">广告管理：</label>
+                    <div class="col-sm-10">
+                        <div id="tab-1" class="tab-pane active">
+                            <div class="panel-body">
+                                <div class="activ-t1 row mlr0">
+                                    <div class="col-sm-6">
+                                        <h3 class="come-h4">活动详情管理</h3>
+                                    </div>
+                                    <div class="col-sm-6 text-right">
+                                                <span>
+                                                    广告图尺寸：750x338px
+                                                </span>
+                                        <button onclick="fnClickAddRow();" type="button" class="btn btn-primary btn-orange">增加</button>
+                                        <button type="button" class="btn btn-primary btn-default">重置</button>
+                                    </div>
+                                </div>
+                                <table class="table table-bordered table-hover table-striped center" style="margin-top:0px !important">
+                                    <thead>
+                                    <tr>
+                                        <th>状态</th>
+                                        <th>排序</th>
+                                        <th>文件名（鼠标移入文件可预览）</th>
+                                        <th>URL链接</th>
+                                        <th>大小(K)</th>
+                                        <th>-</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr class="gradeX">
+                                        <td>有效</td>
+                                        <td class="edt-td">1
+                                        </td>
+                                        <td><div class="img-box"><span>http://img.ivsky.com/img/tupian/pre/201710/25/pubu-001.jpg</span></div></td>
+                                        <td><div class="img-box"><span>http://img.ivsky.com/img</span></div></td>
+                                        <td>4，212</td>
+                                        <td><a class="btn-link-btn">修改</a></td>
+                                    </tr>
+                                    <tr class="gradeX">
+                                        <td>有效</td>
+                                        <td class="edt-td">1
+                                        </td>
+                                        <td><div class="img-box"><span>http://img.ivsky.com/img/tupian/pre/201710/25/pubu-001.jpg</span></div></td>
+                                        <td><div class="img-box"><span>http://img.ivsky.com/img</span></div></td>
+                                        <td>4，212</td>
+                                        <td><a class="btn-link-btn">修改</a></td>
+                                    </tr>
+                                    <tr class="gradeX">
+                                        <td>有效</td>
+                                        <td class="edt-td">1
+                                        </td>
+                                        <td><div class="img-box"><span>http://img.ivsky.com/img/tupian/pre/201710/25/pubu-001.jpg</span></div></td>
+                                        <td><div class="img-box"><span>http://img.ivsky.com/img</span></div></td>
+                                        <td>4，212</td>
+                                        <td><a class="btn-link-btn">修改</a></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">参与链接：</label>
+                    <div class="col-sm-8">
+                        <input type="text"  class="form-control" placeholder="请输入参与链接" />
+                    </div>
+                    <div class="col-sm-2">
+                            <button type="button" class="btn btn-w-m btn-default btn-orange" id="choice-active" >平台活动选择</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">活动日期：</label>
+                    <div class="col-sm-3 time-line">
+                        <input type="password" placeholder="时间" class="form-control">
+                        <p class="time-icon">至</p>
+                    </div>
+                    <div class="col-sm-3">
+                        <input type="password" placeholder="时间" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">活动详情：</label>
+                    <div class="col-sm-10">
+                        <div type="text/plain" id="myEditor" style="height:240px;">
+                            <p>这里我可以写一些输入提示</p>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/template" id="active-main">
+    <div class="active-main">
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label class="col-sm-3 control-label">所属企业：</label>
+
+                <div class="col-sm-8">
+                    <input type="email" placeholder="请输入所属企业名称" class="form-control">
+                    <!--<span class="help-block m-b-none">请输入所属企业名称</span>-->
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label">活动名称：</label>
+                <div class="col-sm-8">
+                    <input type="password" placeholder="请输入所属活动名称" class="form-control">
+                    <!--<span class="help-block m-b-none">请输入所属活动名称</span>-->
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label">活动名称：</label>
+                <div class="col-sm-4 time-line">
+                    <input type="password" placeholder="时间" class="form-control">
+                    <p class="time-icon">至</p>
+                </div>
+                <div class="col-sm-4">
+                    <input type="password" placeholder="时间" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-3 col-sm-8 tr">
+                    <button class="btn btn-w-m  btn-info btn-orange" type="submit">查询</button>
+                </div>
+            </div>
+        </form>
+        <table class="table table-bordered table-hover table-striped come-table center">
+            <thead>
+            <tr>
+                <th>创建时间</th>
+                <th>活动状态</th>
+                <th>活动名称</th>
+                <th>详细</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>2018-06-01 00:00:00</td>
+                <td>进行中</td>
+                <td>食之秘客户回馈</td>
+                <td>
+                    <a class="btn-link-btn">选择</a>
+                </td>
+            </tr>
+            <tr>
+                <td>2018-06-01 00:00:00</td>
+                <td>进行中</td>
+                <td>食之秘客户回馈</td>
+                <td>
+                    <a class="btn-link-btn">选择</a>
+                </td>
+            </tr>
+            <tr>
+                <td>2018-06-01 00:00:00</td>
+                <td>进行中</td>
+                <td>食之秘客户回馈</td>
+                <td>
+                    <a class="btn-link-btn">选择</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</script>
+
+<!-- 全局js -->
+<script src="../../hAdmin/js/jquery.min.js?v=2.1.4"></script>
+<script src="../../hAdmin/js/bootstrap.min.js?v=3.3.6"></script>
+<script src="../../hAdmin/js/plugins/layer/layer.min.js"></script>
+<!--<script src="frame/vue2.1.8/vue.min.js"></script>-->
+<!-- Flot -->
+<script src="../../hAdmin/js/plugins/flot/jquery.flot.js"></script>
+<script src="../../hAdmin/js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+<script src="../../hAdmin/js/plugins/flot/jquery.flot.resize.js"></script>
+<script src="../../hAdmin/js/plugins/flot/jquery.flot.pie.js"></script>
+<!-- select2-4.0.3 -->
+<script src="../../frame/select2-4.0.3/js/select2.js"></script>
+<!-- Data Tables -->
+<script src="../../hAdmin/js/plugins/jeditable/jquery.jeditable.js"></script>
+<script src="../../hAdmin/js/plugins/dataTables/jquery.dataTables.js"></script>
+<script src="../../hAdmin/js/plugins/dataTables/dataTables.bootstrap.js"></script>
+<script src="../../hAdmin/js/plugins/iCheck/icheck.min.js"></script>
+
+<!-- UEditor1.2.3 -->
+<script type="text/javascript" charset="utf-8" src="../../frame/UEditor1.2.3/umeditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../frame/UEditor1.2.3/umeditor.min.js"></script>
+<script type="text/javascript" src="../../frame/UEditor1.2.3/lang/zh-cn/zh-cn.js"></script>
+<!-- cityChoice -->
+<script type="text/javascript" charset="utf-8" src="../../frame/cityChoice/City_data.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../frame/cityChoice/areadata.js"></script>
+
+<!-- 自定义js -->
+<script src="../../hAdmin/js/content.js"></script>
+<script src="../../js/form-validator/points-come/pointsCome.js"></script>
+<script>
+    $(function () {
+        $("#btncheked").click(function () {
+            var checked = $("#btncheked").prop("checked");
+            if (checked == true){
+                $("#btncheked").attr("checked","checked")
+                $("#disinput").hide()
+            }else{
+                $("#btncheked").removeAttr("checked")
+                $("#disinput").show()
+            }
+
+        })
+
+
+        $(".sel-2").select2();
+        $('.i-checks').iCheck({
+            checkboxClass: 'icheckbox_square-green',
+            radioClass: 'iradio_square-green',
+        });
+        //活动选择
+        $("#choice-active").click(function () {
+            layer.open({
+                title: '活动选择'
+                ,area: ['800px','520px']
+                ,btn: ['关闭']
+                ,type: 1
+                ,btnAlign: 'c'
+                ,content: $('#active-main').html()
+                ,success: function (layero) {
+                var btn = layero.find('.layui-layer-btn');
+                btn.css('text-align', 'center');
+            }
+            });
+        })
+        //图标预览
+        $(".img-box").mouseover(function () {
+            var src = $(this).find("span").text();
+            var str = "<div class='img-up'><img class='up-img' src='"+src+"/>'</div>";
+            var boxW = $(".img-up").width();
+            var boxH = $(".img-up").height();
+            $(this).find("span").after(str);
+            $(".img-up").css({top:-boxH,right:-boxW});
+        })
+        $(".img-box").mouseout(function () {
+            $(this).find(".img-up").remove();
+        })
+        /* Init DataTables */
+        var oTable = $('#editable').dataTable();
+
+        /* Apply the jEditable handlers to the table */
+        // oTable.$('.edt-td').editable('../example_ajax.php', {
+        //     "callback": function (sValue, y) {
+        //         var aPos = oTable.fnGetPosition(this);
+        //         oTable.fnUpdate(sValue, aPos[0], aPos[1]);
+        //     },
+        //     "submitdata": function (value, settings) {
+        //         return {
+        //             "row_id": this.parentNode.getAttribute('id'),
+        //             "column": oTable.fnGetPosition(this)[2]
+        //         };
+        //     },
+        //
+        //     "width": "90%",
+        //     "height": "100%"
+        // });
+
+    })
+
+    //实例化编辑器
+    var um = UM.getEditor('myEditor');
+    um.addListener('blur',function(){
+        $('#focush2').html('编辑器失去焦点了')
+    });
+    um.addListener('focus',function(){
+        $('#focush2').html('')
+    });
+    function fnClickAddRow() {
+        $('#editable').dataTable().fnAddData([
+            "Custom row",
+            "New row",
+            "New row",
+            "New row",
+            "New row"
+        ]);
+    }
+</script>
+
+
+
+
+</body>
+</html>

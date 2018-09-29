@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="formmain" id="app">
+        <div class="forinput">
+            <label>姓名：</label>
+            <input type="text" placeholder="请输入姓名"  ref="Username" v-model="Username" />
+        </div>
+        <div class="forinput">
+            <label>性别：</label>
+            <input type="radio" name="sex" id="sexnan" v-model="checkedValue" value="男" /><label for="sexnan">男</label>
+            <input type="radio" name="sex" id="sexnv" v-model="checkedValue" value="女" /><label for="sexnv">女</label>
+            <input type="radio" name="sex" id="sexbm"v-model="checkedValue" value="保密" /><label for="sexbm">保密</label>
+        </div>
+        <div class="forinput">
+            <label>年龄：</label>
+            <input type="text" placeholder="请输入年龄" ref="Userage"  v-model="Userage"/>
+        </div>
+        <button class="formbutton" type="button" v-on:click="formValidation">提交</button>
+        <p>姓名：{{Username}}</p>
+        <p>性别：{{checkedValue}}</p>
+        <p>年龄：{{Userage}}</p>
+    </div>
+<script>
+    var App = new Vue({
+        el:'#app',
+        data(){
+            return{
+                Username:'',
+                Userage:'',
+                checkedValue:'',
+            }
+        },
+        methods:{
+            formValidation:function () {
+                var Username = this.$refs.Username.value;
+                var Userage = this.$refs.Userage.value;
+                console.log(Username)
+                console.log(this.checkedValue)
+                console.log(Userage)
+                if( Username == ""){
+                    alert("姓名不能为空")
+                }else if(Username.length>5 ){
+                    alert("应少于5个字符")
+                }else{
+                    if( this.checkedValue =="" ){
+                        alert("请选择性别")
+                    }else{
+                        if( Userage == "" ){
+                            alert("年龄不能为空")
+                        }
+                    }
+                }
+            }
+        }
+    })
+</script>
+</body>
+<script src="js/formValidation.js"></script>
+</html>

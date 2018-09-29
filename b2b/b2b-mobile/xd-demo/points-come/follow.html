@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>关注公众号</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <link rel="stylesheet" href="../../frame/weui-master/style/icon.css">
+    <link rel="stylesheet" href="../../frame/weui-master/style/weui.css">
+    <link rel="stylesheet" href="../../frame/weui-master/style/weui2.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <style>
+        .follow-btn{
+            width: 40%;
+            margin: 0 auto;
+            position: fixed;
+            bottom: 20px;
+            left: 0 ;
+            right: 0;
+        }
+        .follow-bg{
+            background: url("../../images/points-come/follow-bg.jpg") #fff7f2 no-repeat ;
+            background-size: cover;
+        }
+        .btn-redback{
+            color: #ED7043;
+            border: 1px solid #ED7043;
+            border-radius: 50px;
+            background: rgba(237,112,67,.1);
+            height: 40px;
+            line-height: 40px;
+        }
+        @media only screen and (min-device-width: 320px) and (max-device-width: 375px){
+            /*.follow-er{*/
+                /*bottom: 80px;*/
+            /*}*/
+        }
+        @media only screen and (min-device-width: 375px) and (max-device-width: 667px){
+            .follow-btn{
+                bottom: 26px;
+            }
+        }
+        @media only screen and (min-device-width: 414px) and (max-device-width: 736px){
+            .follow-btn{
+                bottom: 32px;
+            }
+        }
+        @media screen and (min-device-width: 768px){
+            .follow-er{
+                max-width: 55%;
+            }
+        }
+        .follow-er{
+            width: 60%;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            position: absolute;
+        }
+</style>
+<body class="follow-bg">
+<!--<img src="../../images/points-come/follow-bg.jpg" height="1218" width="750"/>-->
+<div class="follow-er">
+    <img src="../../images/points-come/follow-er.png" height="100%" width="100%"/>
+</div>
+
+<div class="follow-btn">
+    <a href="index.html" class="weui_btn btn-redback btn-50">返回</a>
+</div>
+</body>
+
+</html>

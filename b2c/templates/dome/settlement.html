@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--360浏览器优先以webkit内核解析-->
+
+
+    <title>商户新增</title>
+
+    <link rel="shortcut icon" href="../../static/b2c-reception/frame/hAdmin/favicon.ico">
+    <link href="../../static/b2c-reception/frame/hAdmin/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="../../static/b2c-reception/frame/hAdmin/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="../../static/b2c-reception/frame/ludo-jquery-treetable-3.2.0/css/jquery.treetable.css" rel="stylesheet">
+    <link href="../../static/b2c-reception/frame/ludo-jquery-treetable-3.2.0/css/jquery.treetable.theme.default.css" rel="stylesheet">
+    <link href="../../static/b2c-reception/frame/hAdmin/css/animate.css" rel="stylesheet">
+    <link href="../../static/b2c-reception/frame/hAdmin/css/style.css?v=4.1.0" rel="stylesheet">
+    <link href="../../static/b2c-reception/frame/select2/css/select2.min.css" rel="stylesheet">
+    <link href="../../static/b2c-reception/css/style.css?v=4.1.0" rel="stylesheet">
+    <style>
+
+        .newFix .panel-default{ border-radius:10px; border: 1px solid #f2f0f0;}
+        .newFix .panel-default>.panel-heading{ background:#fff; border-radius:10px 10px 0 0; padding-top:0; padding-bottom:0; height:31px; line-height:31px; border-color: #f2f0f0;}
+        .newFix .xj-sup-title{ font-size:14px; color:#2b2b2b; margin-bottom:10px; padding-left:28px; margin-top: 0;}
+        .newFix .xj-border-bottom-gray{ border:none;}
+        .newFix .newBtnLine{ border-bottom:1px solid #f2f0f0; padding-top: 9px; padding-bottom: 9px;    padding-left: 15px; }
+        .newFix .xj-sup-title strong{ border-bottom:none; padding-bottom:0;}
+        .newFix .newBg{ margin-bottom: 15px;}
+        .newFix .xj-marginTop20{ margin-top:5px;}
+        .newFix .newBg .newRow{ width:100%; margin-bottom:20px;}
+        .newFix .newBg .newRow .newBiaoTi{ float:left; min-height:28px; line-height:28px; color: #666666;}/*é—‚å‚šå€·ç»€ä¾€å¹–é¡ã‚‡çŸ“é–ºå¤‹åššå¨²îæ•‡é–³ÑŒå‰¨éŽ·çƒ½å´’éå­˜æ«¢é—è·¨å™¦éŽ·ï¿½*/
+
+        .newFix .newBg .newRow .newBiaoTi .tabCell{display:table-cell; line-height:12px;  height:28px;  vertical-align:middle;}
+        .newShuRu{ float:left; position:relative;  min-height:28px; line-height:28px; width: 100%;}/*é—‚å‚™ç¤éŽ¼î‚¦Ë‡é¡–ç‚´å‹å©µçŠ²æ´¤ç» ä¼´æŸŸé—‚å¯¸î˜¦é–»î…ŸîšŠéŒæ¶¢åŸ„éîæ§ˆç¼‚ä½ºåª´ç¼ä¾€å¼»éˆ¥æ„å‹éŽ¼ç²¹ï¿½å……ç´Ÿé—‚ä½¸æ¹±éæ©€å¼¨é—çƒ†åš—é–¸æ›¨åéŽ·çƒ½æ•æ´æ¿‡å–šæ¿žå¯¸åª´éŽ·ï¿½*/
+        .newFix .newBg .newRow .newShuRu.s2-ln{ line-height:normal;}
+        .newFix .newBg .newRow .xj-control-star{ float:left; height:28px; line-height:28px; text-indent:1em;}/*é—‚å‚šå€·ç»€ä¾€å¹–é¡ã‚æ‹·å§˜î…Ÿå€æ¥ ç‚²ç¹˜éæ’»æ•“é”Ÿï¿½*/
+        .newFix .newBg .newRow .xj-control-solid{float:left; height:28px; line-height:28px; text-align: center;}
+        .newWidth1{ width:1% !important;min-height:1px;}
+        .newWidth2{ width:2% !important;min-height:1px;}
+        .newWidth3{ width:3% !important;min-height:1px;}
+        .newWidth4{ width:4% !important;min-height:1px;}
+        .newWidth5{ width:5% !important;min-height:1px;}
+        .newWidth6{ width:6% !important;min-height:1px;}
+        .newWidth7{ width:7% !important;min-height:1px;}
+        .newWidth8{ width:8% !important;min-height:1px;}
+        .newWidth9{ width:9% !important;min-height:1px;}
+        .newWidth10{ width:10% !important;min-height:1px;}
+        .newWidth11{width: 11% !important;min-height: 1px;}
+        .newWidth12{ width:12% !important;min-height:1px;}
+        .newWidth13{ width:13% !important;min-height:1px;}
+        .newWidth14{ width:14% !important;min-height:1px;}
+        .newWidth15{ width:15% !important;min-height:1px;}
+        .newWidth16{ width:16% !important;min-height:1px;}
+        .newWidth18{ width:18% !important;min-height:1px;}
+        .newWidth19{ width:19% !important;min-height:1px;}
+        .newWidth20{ width:20% !important;min-height:1px;}
+        .newWidth21{ width:21% !important;min-height:1px;}
+        .newWidth22{ width:22% !important;min-height:1px;}
+        .newWidth23{ width:23% !important;min-height:1px;}
+        .newWidth24{ width:24% !important;min-height:1px;}
+        .newWidth25{width:25% !important;min-height:1px;}
+        .newWidth26{width:26% !important;min-height:1px;}
+        .newWidth30{width:30% !important;min-height:1px;}
+        .newWidth31{width:31% !important;min-height:1px;}
+        .newWidth32{width:32% !important;min-height:1px;}
+        .newWidth33{width: 33% !important;min-height: 1px;}
+        .newWidth35{width: 35% !important;min-height: 1px;}
+        .newWidth38{ width:38% !important;min-height:1px;}
+        .newWidth37{ width:37% !important;min-height:1px;}
+        .newWidth39{ width:39% !important;min-height:1px;}
+        .newWidth40{ width:40% !important;min-height:1px;}
+        .newWidth41{ width:41% !important;min-height:1px;}
+        .newWidth45{ width:45% !important;min-height:1px;}
+        .newWidth49{ width:49% !important;min-height:1px;}
+        .newWidth50{ width:50% !important;min-height:1px;}
+        .newWidth64{ width:64% !important;min-height:1px;}
+        .newWidth65{ width:65% !important;min-height:1px;}
+        .newWidth80{ width:80% !important;min-height:1px;}
+        .newWidth83{ width:83% !important;min-height:1px;}
+        .newWidth89 { width:89% !important;min-height:1px;}
+        .newWidth92 { width:92% !important;min-height:1px;}
+        .newWidth95{ width:95% !important;min-height:1px;}
+        .newShuRu .form-control{ font-size: 12px; border: 1px solid #d8d8d8; box-shadow: none;  padding:0 0 0 6px;  height: 30px; float:left; color: #444 !important;}/*é—‚å‚™ç¤éŽ¼î‚¦Ë‡é¡–ç‚´å‹å©µçŠ²æ´¤ç» ä¼´æŸŸé—‚å¯¸î˜¦é–»î…ŸîšŠéŒæ¶¢åŸ„éç‚¬î…¹å©µç‚²ç“¨é—çŠ»å¼»éŠŠâ•‚å†é–¸å±¾ç¨‘é¡ï¿½*/
+        .newShuRu textarea{ min-height: 60px;}/*é—‚å‚šå€·ç»€ä¾€å¹–é¡ï¹€ç£¹ç¼å¬«ï¼•å¨²î…æ™é–¿ç†¶ç²™éå†®å§€éŠˆå——å‰­é–»åº¤î‰éå³µarea*/
+        .newShuRu .btn-select{ background: #fff;}/*å©µçŠµæ•¸é‹ç‚ºå´¹é«æ›žç®°é–¹é—´ç·¡éå‹¯æŸ›éˆ©å… îˆå´¹éƒï¿½ç»»æ¶˜î†é¡”è¤å‡¹é—ç»˜å¸Ÿé¡•Ñ‡â€¦ç’ºã„¦å´‰å¨“æ°¼åž°é“æ¿îœƒéŠˆå‘®ç¦‹æ¿žå’æŸ…lect*/
+
+    </style>
+</head>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content">
+        <div class="ibox">
+            <div class="top-title ibox-title">
+                <div class="row">
+                    <div class="col-sm-10">
+                        <div class="bs-callout bs-callout-info"><h4>彩票结算</h4></div>
+                    </div>
+                    <div class="col-sm-2">
+                        <a class="btn btn-w-m btn-info" href="javascript:void(0);">保存设置</a>
+                    </div>
+                </div>
+            </div>
+            <div class="ibox-content">
+                <form class="form-horizontal m-t" id="commentForm">
+                    <div class="newFix">
+                        <div class="newBg">
+                            <div class="newRow clearfix">
+                                <div class="newBiaoTi newWidth8"><div class="tabCell">所属渠道：</div></div>
+                                <div class="newShuRu newWidth41 clearfix">
+                                    <select class="form-control" id="merchantsState" name="merchantsState">
+                                        <option value="">请选择</option>
+                                        <option value="1">充值中</option>
+                                        <option value="2">提现中</option>
+                                        <option value="3">成功</option>
+                                        <option value="4">失败</option>
+                                    </select>
+                                </div>
+                                <div class="xj-text-danger xj-control-star newWidth2"></div>
+                                <div class="newBiaoTi newWidth8"><div class="tabCell">开奖期号：</div></div>
+                                <div class="newShuRu newWidth41 clearfix">
+                                    <select class="form-control" id="merchantsState" name="merchantsState">
+                                        <option value="">请选择</option>
+                                        <option value="1">充值中</option>
+                                        <option value="2">提现中</option>
+                                        <option value="3">成功</option>
+                                        <option value="4">失败</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="newRow clearfix">
+                                <div class="newBiaoTi newWidth8"><div class="tabCell">用户手机：</div></div>
+                                <div class="newShuRu newWidth41 clearfix">
+                                    <input type="text" class="form-control">
+                                </div>
+
+                                <div class="xj-text-danger xj-control-star newWidth2"></div>
+                                <div class="newBiaoTi newWidth8"><div class="tabCell">彩票类型：</div></div>
+                                <div class="newShuRu newWidth41 clearfix">
+                                    <select class="form-control" id="merchantsState" name="merchantsState">
+                                        <option value="">请选择</option>
+                                        <option value="1">充值中</option>
+                                        <option value="2">提现中</option>
+                                        <option value="3">成功</option>
+                                        <option value="4">失败</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="newRow clearfix">
+                                <div class="newBiaoTi newWidth8"><div class="tabCell">状态：</div></div>
+                                <div class="newShuRu newWidth41 clearfix">
+                                    <select class="form-control" id="merchantsState" name="merchantsState">
+                                        <option value="">请选择</option>
+                                        <option value="1">充值中</option>
+                                        <option value="2">提现中</option>
+                                        <option value="3">成功</option>
+                                        <option value="4">失败</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="newRow clearfix">
+                                <div class="row fr">
+                                    <div class="col-sm-12 tr text-right">
+                                        <a class="btn btn-info" href="#" id="merchantAccountListQuery">搜索</a>
+                                        <a class="btn btn-info" href="#" id="collectionRecorDerivation">导出打款信息</a>
+                                    </div>
+                                    <div class="col-sm-12 tr">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="list-group-item">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="col-sm-10 list-span">
+                                <a class="changeTabClassAndData a_active" href="#" order-month="6">近半年结算</a>
+                                <span>|</span>
+                                <a class="changeTabClassAndData" href="#" order-month="7">半年前结算</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-responsive mt15">
+                    <table class="table table-bordered">
+
+                        <thead>
+                        <tr class="active">
+                            <th>订单编号</th>
+                            <th>开奖期号</th>
+                            <th>渠道商</th>
+                            <th>彩票类型</th>
+                            <th>用户手机号</th>
+                            <th>中奖金额(元)</th>
+                            <th>银行转账流水</th>
+                            <th>状态</th>
+                            <th>操作人</th>
+                            <th>操作</th>
+
+                        </tr>
+                        </thead>
+                        <tbody id="closeAccountList">
+
+                        <tr>
+                            <td>134</td>
+                            <td>2017-09</td>
+                            <td>镒钡科技</td>
+                            <td>6</td>
+                            <td>100000000.57</td>
+                            <td>/</td>
+                            <td>100000000.57</td>
+                            <td>成功</td>
+                            <td>admin</td>
+                            <td><a onclick="paymentInformation()">详情</a>|<a onclick="particularsAlert()">打款</a></td>
+                        </tr>
+                    </table>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+    <!-- 全局js -->
+    <script src="../../static/b2c-reception/frame/hAdmin/js/jquery.min.js?v=2.1.4"></script>
+    <script src="../../static/b2c-reception/frame/hAdmin/js/bootstrap.min.js?v=3.3.6"></script>
+    <script src="../../static/b2c-reception/frame/hAdmin/js/plugins/layer/layer.min.js"></script>
+    <!-- Flot -->
+    <script src="../../static/b2c-reception/frame/hAdmin/js/plugins/flot/jquery.flot.js"></script>
+    <script src="../../static/b2c-reception/frame/hAdmin/js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+    <script src="../../static/b2c-reception/frame/hAdmin/js/plugins/flot/jquery.flot.resize.js"></script>
+    <script src="../../static/b2c-reception/frame/hAdmin/js/plugins/flot/jquery.flot.pie.js"></script>
+    <script src="../../static/b2c-reception/frame/select2/js/select2.min.js"></script>
+    <!-- 自定义js -->
+    <script src="../../static/b2c-reception/frame/hAdmin/js/content.js"></script>
+    <!--flotdemo-->
+
+    <script type="text/template" id="tab-line-1">
+        <div class="ibox-content">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">中奖金额：</label>
+                    <div class="col-sm-8">
+                        <p class="form-control-static" name="amount" id="amount"></p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">手机号：</label>
+                    <div class="col-sm-8">
+                        <p class="form-control-static" name="merchantName" id="merchantName"></p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">户名：</label>
+                    <div class="col-sm-8">
+                        <p class="form-control-static" name="accountName" id="accountName"></p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">开户银行：</label>
+                    <div class="col-sm-8">
+                        <p class="form-control-static" name="openAccount" id="openAccount"></p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">开户帐号：</label>
+                    <div class="col-sm-8">
+                        <p class="form-control-static" name="openAccountAccount" id="openAccountAccount"></p>
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+        <div class="ibox-content">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">银行名称：</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" name="banksName" id="banksName" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">付款流水：</label>
+
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" name="laundryList" id="laundryList" />
+                    </div>
+                </div>
+            </form>
+        </div>
+    </script>
+
+
+    <script type="text/template" id="tab-line-2">
+
+            <form class="form-horizontal">
+                <div class="ibox-content">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">结算金额：</label>
+                    <div class="col-sm-8">
+                        <p class="form-control-static" name="amount" id="amount"></p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">手机号：</label>
+                    <div class="col-sm-8">
+                        <p class="form-control-static" name="merchantName" id="merchantName"></p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">户名：</label>
+                    <div class="col-sm-8">
+                        <p class="form-control-static" name="accountName" id="accountName"></p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">开户银行：</label>
+                    <div class="col-sm-8">
+                        <p class="form-control-static" name="openAccount" id="openAccount"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="ibox-content">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">开户帐号：</label>
+                    <div class="col-sm-8">
+                        <p class="form-control-static" name="openAccountAccount" id="openAccountAccount"></p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">付款流水：</label>
+                    <div class="col-sm-8">
+                        <p class="form-control-static" name="laundryList" id="laundryList"></p>
+                    </div>
+                </div>
+                </div>
+            </form>
+
+    </script>
+    <script>
+
+            
+
+
+
+
+
+
+        
+        function particularsAlert() {
+            layer.open({
+                area: ['480px', '620px']
+                ,title: '付款信息'
+                ,btn: ['提交']
+                ,btnAlign: '1'
+                ,content: $("#tab-line-1").html()
+                ,yes: function(index, layero){
+                    var ticketObj={};
+                    ticketObj.sid=valSid;
+                    ticketObj.bankName=$("#banksName").val(); //银行名称
+                    ticketObj.bankFlow=$("#laundryList").val(); //付款流水
+                    $.ajax({
+                        type: 'post',
+                        url: base+"/finance/manager/paymentInformationInputt",
+                        data: {
+                            "ticketObj": JSON.stringify(ticketObj)
+                        },
+                        async:false,
+                        dataType:'json',
+                        success: function(data){
+                            if(data>0){
+                                initOrderList(1);
+                            }else{
+                                alert("操作失败");
+                            }
+                        },
+                        error:function(){
+                        }
+                    });
+                    layer.close(index);
+                },success: function(layero){
+//                    $.ajax({
+//                        type: 'post',
+//                        url: base+"/finance/manager/paymentInformation",
+//                        data: {
+//                            "sid":valSid
+//                        },
+//                        async:false,
+//                        dataType:'json',
+//                        success: function(data){
+//                            if(data.type==1){
+//                                $("#merchantName").text(data.merchantName);
+//                            }else if(data.type==2){
+//                                $("#storesName").text(data.storeName);
+//                                $("#merchantName").text(data.storeMerchantName);
+//                            }
+//                            $("#amount").text(data.amount);
+//                            $("#accountName").text(data.merchantBankCardInfo.cardUserName);
+//                            $("#openAccount").text(data.merchantBankCardInfo.issureBacthBank);
+//                            $("#openAccountAccount").text(data.merchantBankCardInfo.cardNo);
+//
+//                        },
+//                        error:function(){
+//                        }
+//                    });
+                }});
+        }
+        
+        
+        function paymentInformation() {
+            layer.open({
+                area: ['480px', '620px']
+                ,title: '付款信息'
+                ,btn: ['确定']
+                ,btnAlign: '1'
+                ,content: $("#tab-line-2").html()
+                ,yes: function(index, layero){
+                    layer.close(index);
+                },success: function(layero){
+//                    $.ajax({
+//                        type: 'post',
+//                        url: base+"/finance/manager/paymentInformation",
+//                        data: {
+//                            "sid":val
+//                        },
+//                        async:false,
+//                        dataType:'json',
+//                        success: function(data){
+//                            if(data.type==1){
+//                                $("#merchantName").text(data.merchantName);
+//                            }else if(data.type==2){
+//                                $("#storesName").text(data.storeName);
+//                                $("#merchantName").text(data.storeMerchantName);
+//                            }
+//                            $("#amount").text(data.amount);
+//                            $("#accountName").text(data.merchantBankCardInfo.cardUserName);
+//                            $("#openAccount").text(data.merchantBankCardInfo.issureBacthBank);
+//                            $("#openAccountAccount").text(data.merchantBankCardInfo.cardNo);
+//                            $("#laundryList").text(data.bankFlow);
+//                        },
+//                        error:function(){
+//                        }
+//                    });
+                }});
+
+
+        }
+    </script>
+</body>
+
+</html>

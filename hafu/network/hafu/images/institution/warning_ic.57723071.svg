@@ -1,0 +1,36 @@
+<svg id="组_37" data-name="组 37" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="172" height="172" viewBox="0 0 172 172">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ff8762;
+        stroke: #e5e5e5;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+        filter: url(#filter);
+      }
+
+      .cls-2 {
+        fill: #4c4c4c;
+      }
+
+      .cls-2, .cls-3 {
+        fill-rule: evenodd;
+      }
+
+      .cls-3 {
+        fill: #00ce60;
+      }
+    </style>
+    <filter id="filter" x="1" y="1" width="170" height="170" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#fff"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g style="fill: #ff8762; filter: url(#filter)">
+    <circle id="椭圆_88_拷贝_4" data-name="椭圆 88 拷贝 4" class="cls-1" cx="86" cy="86" r="85" style="stroke: inherit; filter: none; fill: inherit"/>
+  </g>
+  <use xlink:href="#椭圆_88_拷贝_4" style="stroke: #e5e5e5; filter: none; fill: none"/>
+  <path id="矩形_77_拷贝_2" data-name="矩形 77 拷贝 2" class="cls-2" d="M1189,2245.99V2271h-0.06c-0.88,17.83-20.51,25-24.94,25-2.96,0-23.99-7.17-24.94-25H1139v-28.22h0v-0.08c10.66-.97,19.71-4.28,25-8.85V2234c4.79,4.18,12.67,7.3,22.02,8.59,0.98,0.11,1.97.21,2.98,0.27v0.09h0v3.04h0Zm-3-.36c-8.9-1.21-16.63-4.07-22-7.97v-0.2a45.064,45.064,0,0,1-16,6.79V2260h-3v-15.13q-1.47.27-3,.48V2271h0.06c0.96,15.69,19.34,22,21.94,22,3.88,0,21.05-6.31,21.95-22H1186v-25.37Z" transform="translate(-1078 -2176)"/>
+  <path id="圆角矩形_122" data-name="圆角矩形 122" class="cls-3" d="M1178.7,2259.69l-18.01,18.03a0.984,0.984,0,0,1-1.4,0l-8.01-8.02a1,1,0,0,1,0-1.4,0.984,0.984,0,0,1,1.4,0l7.31,7.31,17.31-17.33a0.984,0.984,0,0,1,1.4,0A1.014,1.014,0,0,1,1178.7,2259.69Z" transform="translate(-1078 -2176)"/>
+</svg>

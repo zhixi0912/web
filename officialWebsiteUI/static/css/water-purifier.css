@@ -1,0 +1,89 @@
+
+.w1200 {
+    width: 1200px;
+    margin: auto;
+}
+.top-bg-1{
+    background: url("../images/water/water-bg.png") no-repeat center top;
+}
+.water-ban-1{
+    height: 400px;
+    position: relative;
+    background: url("../images/water/water-ban-1.png") no-repeat center top;
+}
+.water-ban-1 .go-btn{
+    width: 180px;
+    height: 46px;
+    line-height: 44px;
+    text-align: center;
+    border-radius: 20px;
+    border: 2px solid #f8b653;
+    text-align: center;
+    color: #f8b653;
+    font-size: 20px;
+    display: block;
+    position: absolute;
+    top:290px;
+    left: 160px;
+}
+.water-1{
+    height: 514px;
+    padding-top: 30px;
+    background: url("../images/water/water-1.jpg") no-repeat center bottom;
+}
+.water-2{
+    height: 252px;
+    padding-top: 30px;
+    background: url("../images/water/water-2.jpg") no-repeat center bottom;
+}
+.water-ban-2{
+    height: 700px;
+}
+.water-ban-2 .slideBox{  height:690px; overflow:hidden; position:relative;}
+.water-ban-2 .slideBox .hd{ height:15px; overflow:hidden; position:absolute; left:50%; bottom:5px; z-index:1; margin-left: -30px;}
+.water-ban-2 .slideBox .hd ul{ overflow:hidden; zoom:1; float:left;  }
+.water-ban-2 .slideBox .hd ul li{ float:left; margin-right:10px;  width:12px; height:12px; line-height:12px; text-align:center; border-radius: 50%; background:#b4b4b4;color:#b4b4b4; cursor:pointer; }
+.water-ban-2 .slideBox .hd ul li.on{ background:#f7ba5b; color:#f7ba5b; border-radius: 50%;}
+.water-ban-2 .slideBox .bd{ position:relative; height:100%; z-index:0;}
+.water-ban-2 .slideBox .bd li{ zoom:1; vertical-align:middle; }
+.water-ban-2 .slideBox .bd img{ width:1200px; height:689px; display:block; }
+
+.water-3{
+    min-height: 100px;
+    text-align: center;
+}
+.water-3 .go-btn{
+    width: 220px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 30px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 20px;
+    display: block;
+    background-color: #f7ba5b;
+    margin: 40px auto;
+}
+.top-bg-2{
+    background-color: #f8f8f8;
+}
+.top-bg-3{
+    background-color: #01193b;
+}
+.water-4{
+    height: 670px;
+    background: url("../images/water/water-3.jpg") no-repeat center bottom;
+}
+.water-5{
+    height: 380px;
+    background: url("../images/water/water-4.jpg") no-repeat center bottom;
+}
+.water-6{
+    height: 370px;
+    background: url("../images/water/water-5.jpg") no-repeat center bottom;
+}
+.water-7{
+    height: 370px;
+    background: url("../images/water/water-6.jpg") no-repeat center bottom;
+}

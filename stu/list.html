@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>列表</title>
+    <link type="text/css" href="css/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" href="css/xinjin.css" rel="stylesheet"/>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="js/datapicker/jquery-ui.css">
+    <link rel="stylesheet" href="js/datapicker/style.css">
+    <link rel="stylesheet" href="js/select2/css/select2.css">
+    <link rel="stylesheet" href="js/swiper/swiper.min.css">
+    <link href="js/ludo-jquery-treetable-3.2.0/css/jquery.treetable.css" rel="stylesheet">
+    <link href="js/ludo-jquery-treetable-3.2.0/css/jquery.treetable.theme.default.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/xinjin-alert.css">
+
+</head>
+<body id="iframe">
+<div id="wrapper">
+    <!--右侧内容-->
+    <div id="page-wrapper" class="newFix">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <table class="table table-bordered table-hover xj-table" id="table1">
+                        <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Username</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="todo in todos">
+                                <td></td>
+                                <td>{{todo.text1}}</td>
+                                <td><input type="text" v-model="todo.text1"/></td>
+                                <td></td>
+                            </tr>
+                        <tr></tr>
+                        </tbody>
+                    </table>
+                    <!--<table class="table table-striped table-bordered table-hover xj-table" id="xj-table">-->
+                        <!--<colgroup>-->
+                            <!--<col class="col-xs-2">-->
+                            <!--<col class="col-xs-10">-->
+                        <!--</colgroup>-->
+                        <!--<thead>-->
+                        <!--<tr>-->
+                            <!--<th>类型</th>-->
+                            <!--<th>操作</th>-->
+                        <!--</tr>-->
+                        <!--</thead>-->
+                        <!--<tbody>-->
+                        <!--&lt;!&ndash;3层折叠 &ndash;&gt;-->
+                        <!--<tr data-tt-id="2">-->
+                            <!--<td>展开<span class="folder"></span>-->
+                            <!--</td>-->
+                            <!--<td>3层折叠1</td>-->
+                        <!--</tr>-->
+                        <!--<tr data-tt-id="2-1" data-tt-parent-id="2" class="collapsed">-->
+                            <!--<td>展开<span class="folder"></span></td>-->
+                            <!--<td>3层折叠2</td>-->
+                        <!--</tr>-->
+                        <!--<tr data-tt-id="2-1-1" data-tt-parent-id="2-1" class="leaf collapsed">-->
+                            <!--<td>展开<span class="file"></span></td>-->
+                            <!--<td>3层折叠3</td>-->
+                        <!--</tr>-->
+                        <!--&lt;!&ndash;2层折叠 &ndash;&gt;-->
+                        <!--<tr data-tt-id="3">-->
+                            <!--<td>展开<span class="folder"></span>-->
+
+                            <!--</td>-->
+                            <!--<td>2层折叠1</td>-->
+                        <!--</tr>-->
+                        <!--<tr data-tt-id="3-1" data-tt-parent-id="3" class="collapsed">-->
+                            <!--<td>展开<span class="file"></span></td>-->
+                            <!--<td>2层折叠2</td>-->
+                        <!--</tr>-->
+
+
+                        <!--&lt;!&ndash;3层2子层折叠 &ndash;&gt;-->
+                        <!--<tr data-tt-id="4">-->
+                            <!--<td>展开<span class="folder"></span>-->
+                            <!--</td>-->
+                            <!--<td>3层2子层折叠1</td>-->
+                        <!--</tr>-->
+                        <!--<tr data-tt-id="4-1" data-tt-parent-id="4" class="collapsed">-->
+                            <!--<td>展开<span class="folder"></span></td>-->
+                            <!--<td>3层2子层折叠2</td>-->
+                        <!--</tr>-->
+                        <!--<tr data-tt-id="4-1-1" data-tt-parent-id="4-1" class="leaf collapsed">-->
+                            <!--<td>展开<span class="file"></span></td>-->
+                            <!--<td>3层2子层折叠3</td>-->
+                        <!--</tr>-->
+                        <!--<tr data-tt-id="4-2" data-tt-parent-id="4" class="collapsed">-->
+                            <!--<td>展开<span class="folder"></span></td>-->
+                            <!--<td>3层2子层折叠2</td>-->
+                        <!--</tr>-->
+                        <!--<tr data-tt-id="4-2-1" data-tt-parent-id="4-2" class="leaf collapsed">-->
+                            <!--<td>展开<span class="file"></span></td>-->
+                            <!--<td>3层2子层折叠3</td>-->
+                        <!--</tr>-->
+
+
+
+                        <!--<tr>-->
+                            <!--<td>展开<span class="glyphicon"></span></td>-->
+                            <!--<td>1</td>-->
+                        <!--</tr>-->
+                        <!--</tbody>-->
+                    <!--</table>-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/select2/js/select2.js"></script>
+<script type="text/javascript" src="js/datapicker/jquery-ui.js"></script>
+<!--<script type="text/javascript" src="http://code.jquery.com/ui/1.9.1/jquery-ui.min.js"></script>-->
+<script src="js/datetimepicker/jQuery-Timepicker-Addon/jquery-ui-timepicker-addon.js" type="text/javascript"></script>
+<script src="js/datetimepicker/js/jquery.ui.datepicker-zh-CN.js.js" type="text/javascript"></script>
+<script src="js/datetimepicker/js/jquery-ui-timepicker-zh-CN.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/swiper/swiper.js"></script>
+<script type="text/javascript" src="js/xinjin-alert.js"></script>
+<script type="text/javascript" src="js/formData/draw.js"></script>
+<script type="text/javascript" src="js/ajaxform.js"></script>
+<script type="text/javascript" src="js/vue.js"></script>
+<script src="js/ludo-jquery-treetable-3.2.0/jquery.treetable.js"></script>
+<script>
+    $(function () {
+        $(".order-btn i").click(function () {
+            if($(this).hasClass("on")){
+                $(this).removeClass("on");
+                $(this).siblings().addClass("on");
+            }else{
+                $(this).addClass("on");
+                $(this).siblings().removeClass("on");
+            }
+        })
+    })
+
+
+    var app4 = new Vue({
+        el: '#table1',
+        data: {
+            todos: [
+                { text1: '张' },
+                { text1: '张' },
+                { text1: '张' },
+
+
+                { text1: '张' },
+            ]
+        }
+    })
+</script>
+<script>
+
+    // Highlight selected row 初始化
+    $("#xj-table").treetable({ expandable: true });
+
+
+
+</script>
+</body>
+</html>

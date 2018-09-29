@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--360浏览器优先以webkit内核解析-->
+    <title>账户查询</title>
+    <link rel="shortcut icon" href="hAdmin/favicon.ico">
+    <link href="hAdmin/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="hAdmin/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="frame/datetimepicker/js/jquery-ui.css" rel="stylesheet">
+    <link href="hAdmin/css/animate.css" rel="stylesheet">
+    <link href="css/base.css?v=3.1.0" rel="stylesheet">
+    <link href="hAdmin/css/style.css?v=4.1.0" rel="stylesheet">
+    <link href="css/iframe-page.css" rel="stylesheet">
+    <link href="css/page.css" rel="stylesheet">
+    <link  href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body class="light-grey-bg">
+<div class="main">
+    <div class="row index-v3-qi">
+        <div class="col-lg-12 index-v3-qi-h3">
+            <h3>账户查询</h3>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 index-v3-top">
+            <p><strong>企业名称：</strong>   上海镒钡信息科技有限公司</p>
+            <p><strong>企业账号：</strong>  9550 8802 0026 7800 188</p>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 index-v3-top col-center">
+            <p>积分余额：<span>109,900</span>钡</p>
+        </div>
+    </div>
+
+    <!--交易记录-->
+    <div class="row index-v3-qi">
+        <div class="col-lg-12 index-v3-qi-h3">
+            <h3>交易记录</h3>
+        </div>
+        <div class="col-lg-9 col-md-9 col-sm-7 col-xs-12 ">
+            <div class="form-group index-v3-qi-input">
+                <label for="" class="col-lg-2 col-md-2 col-sm-3 control-label">交易日期</label>
+                <div class="col-lg-3 col-md-4 col-sm-3">
+                    <input type="text" id="b2b" class="form-control b2b-datetime" placeholder="2017-06-04">
+                </div>
+                <label for="" class="col-lg-1 col-md-1 col-sm-3 control-label">到</label>
+                <div class="col-lg-3 col-md-4 col-sm-3">
+                    <input type="text" class="form-control b2b-datetime"  placeholder="2017-07-04">
+                </div>
+                <div class="col-lg-3">
+                    <a href="#">前7天</a>
+                    <span>|</span>
+                    <a href="#">前一个月</a>
+                    <span>|</span>
+                    <a href="#">前三个月</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-5 col-xs-12 col-center">
+            <button class="index-v3-button">查询</button>
+            <a href=""><button class="index-v3-button botton-b">导出</button></a>
+        </div>
+    </div>
+
+
+    <!--表格-->
+    <div class="index-v3-qi-table">
+        <table>
+            <thead>
+                <tr>
+                    <th >交易日期</th>
+                    <th>交易描述</th>
+                    <th>交易金额</th>
+                    <th>积分变动</th>
+                    <th>是否开票</th>
+                    <th>积分余额</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2017-6-30 19:24:30</td>
+                    <td>线下汇款</td>
+                    <td>1000.00</td>
+                    <td class="index-v3-qi-r">+100,000</td>
+                    <td>-</td>
+                    <td>190,000</td>
+                </tr>
+                <tr>
+                    <td>2017-6-30 19:24:30</td>
+                    <td>银联支付</td>
+                    <td>1000.00</td>
+                    <td class="index-v3-qi-g">-100,000</td>
+                    <td>(是)企业营销策划费</td>
+                    <td>190,000</td>
+                </tr>
+                <tr>
+                    <td>2017-6-30 19:24:30</td>
+                    <td>线下汇款</td>
+                    <td>1000.00</td>
+                    <td class="index-v3-qi-r">+100,000</td>
+                    <td>-</td>
+                    <td>190,000</td>
+                </tr>
+                <tr>
+                    <td>2017-6-30 19:24:30</td>
+                    <td>支付宝</td>
+                    <td>1000.00</td>
+                    <td class="index-v3-qi-g">-100,000</td>
+                    <td>否</td>
+                    <td>190,000</td>
+                </tr>
+                <tr>
+                    <td>2017-6-30 19:24:30</td>
+                    <td>线下汇款</td>
+                    <td>1000.00</td>
+                    <td class="index-v3-qi-r">+100,000</td>
+                    <td>(是)企业营销策划费</td>
+                    <td>190,000</td>
+                </tr>
+                <tr>
+                    <td>2017-6-30 19:24:30</td>
+                    <td>微信支付</td>
+                    <td>1000.00</td>
+                    <td class="index-v3-qi-g">-100,000</td>
+                    <td>(是)企业营销策划费</td>
+                    <td>190,000</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<footer class="pot-footer"><p>Copyright ©2016-2020 51points.All Rights Reserved. 沪ICP备 160060</p></footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 全局js -->
+<script src="hAdmin/js/jquery.min.js?v=2.1.4"></script>
+<script src="hAdmin/js/bootstrap.min.js?v=3.3.6"></script>
+<script src="hAdmin/js/plugins/layer/layer.min.js"></script>
+<script src="frame/datetimepicker/js/jquery-ui.min.js"></script>
+<script src="frame/datetimepicker/jQuery-Timepicker-Addon/jquery-ui-timepicker-addon.js"></script>
+<script src="frame/datetimepicker/js/jquery.ui.datepicker-zh-CN.js.js"></script>
+<script src="frame/datetimepicker/js/jquery-ui-timepicker-zh-CN.js"></script>
+<!--<script src="frame/vue2.1.8/vue.min.js"></script>-->
+<!-- Flot -->
+<script src="hAdmin/js/plugins/flot/jquery.flot.js"></script>
+<script src="hAdmin/js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+<script src="hAdmin/js/plugins/flot/jquery.flot.resize.js"></script>
+<script src="hAdmin/js/plugins/flot/jquery.flot.pie.js"></script>
+<!-- 自定义js -->
+<script src="hAdmin/js/content.js"></script>
+<!--<script src="js/form-validator/index.js"></script>-->
+<script type=text/javascript>
+    $(document).ready(function () {
+        $(".menu_body:eq(0)").show();
+
+        $("p.menu_head").click(function () {
+            $(this).addClass("current").next("div.menu_body").slideToggle(300).siblings("div.menu_body").slideUp("slow");
+        });
+
+            // 时间设置
+        $('.b2b-datetime').datepicker({
+            needDay:true,
+            changeMonth: true, //显示月份
+            changeYear: true, //显示年份
+//            showButtonPanel: true, //显示按钮
+            timeFormat: "HH:mm:ss",
+            dateFormat: "yy-mm-dd"
+        });
+
+
+    });
+</script>
+</body>
+</html>

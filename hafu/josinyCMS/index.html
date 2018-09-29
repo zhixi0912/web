@@ -1,0 +1,244 @@
+ 
+ 
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>卓诗尼管理系统</title>
+<link rel="stylesheet" href="frame/layui/src/css/layui.css">
+<link rel="stylesheet" href="css/base.css">
+</head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+  <div class="layui-header">
+    <div class="layui-logo">卓诗尼管理系统</div>
+    <!-- 头部区域（可配合layui已有的水平导航） -->
+    <ul class="layui-nav layui-layout-left">
+      <li class="layui-nav-item"><a href="">会员管理</a></li>
+      <li class="layui-nav-item"><a href="">商城管理</a></li>
+      <li class="layui-nav-item"><a href="">订单管理</a></li>
+      <li class="layui-nav-item"><a href="">报表管理</a></li>
+      <li class="layui-nav-item"><a href="">运营管理</a></li>
+      <li class="layui-nav-item"><a href="">内管管理</a></li>
+      <li class="layui-nav-item"><a href="">门店管理</a></li>
+      <li class="layui-nav-item"><a href="">系统设置</a></li>
+      <li class="layui-nav-item"><a href="">订单管理</a></li>
+      <li class="layui-nav-item"><a href="">订单管理</a></li>
+    </ul>
+    <ul class="layui-nav layui-layout-right">
+      <li class="layui-nav-item">
+        <a href="javascript:;">
+          <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+          贤心
+        </a>
+        <dl class="layui-nav-child">
+          <dd><a href="">基本资料</a></dd>
+          <dd><a href="">安全设置</a></dd>
+        </dl>
+      </li>
+      <li class="layui-nav-item"><a href="">退了</a></li>
+    </ul>
+  </div>
+  
+  <div class="layui-side layui-bg-black">
+    <div class="layui-side-scroll">
+      <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+      <ul class="layui-nav layui-nav-tree"  lay-filter="hbkNavbar">
+        <li class="layui-nav-item layui-nav-itemed">
+          <a class="" href="javascript:;"><i class="layui-icon layui-icon-home"></i>商品管理</a>
+          <dl class="layui-nav-child">
+            <dd><a href="javascript:;" lay-id="111" data-options="{url:'test.html',title:'表格1'}">已上架商品列表</a></dd>
+            <dd><a href="javascript:;" lay-id="222" data-options="{url:'test.html',title:'表格2'}">待上架商品列表</a></dd>
+            <dd><a href="javascript:;" lay-id="333" data-options="{url:'test.html',title:'表格3'}">新增商品</a></dd>
+            <dd><a href="">超链接</a></dd>
+          </dl>
+        </li>
+        <li class="layui-nav-item">
+          <a href="javascript:;"><i class="layui-icon layui-icon-app"></i>类别管理</a>
+          <dl class="layui-nav-child">
+            <dd><a href="javascript:;">列表一</a></dd>
+            <dd><a href="javascript:;">列表二</a></dd>
+            <dd><a href="">超链接</a></dd>
+          </dl>
+        </li>
+        <li class="layui-nav-item"><a href=""><i class="layui-icon layui-icon-tree"></i>品牌管理</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="layui-body" id="container">
+    <!-- 内容主体区域 -->
+    <div class="layui-tab" lay-filter="tabs" lay-allowClose="true">
+      <ul class="layui-tab-title">
+        <li class="layui-this">首页</li>
+        <li>首页1</li>
+        <li>首页2</li>
+      </ul>
+      <div class="layui-tab-content">
+        <div class="">
+          <span class="layui-breadcrumb">
+            <a href="/">首页</a>
+            <a href="/demo/">演示</a>
+            <a><cite>导航元素</cite></a>
+          </span>
+          <hr>
+        </div>
+        <div class="layui-tab-item layui-show">
+          <form class="layui-form">
+            <div class="layui-form-item">
+              <div class="layui-inline">
+                <label class="layui-form-label">验证手机</label>
+                <div class="layui-input-inline">
+                  <input type="tel" name="phone" lay-verify="required|phone" autocomplete="off" class="layui-input">
+                </div>
+              </div>
+              <div class="layui-inline">
+                <label class="layui-form-label">验证邮箱</label>
+                <div class="layui-input-inline">
+                  <select name="interest" lay-filter="aihao">
+                    <option value=""></option>
+                    <option value="0">写作</option>
+                    <option value="1" selected="">阅读</option>
+                    <option value="2">游戏</option>
+                    <option value="3">音乐</option>
+                    <option value="4">旅行</option>
+                  </select>
+                </div>
+              </div>
+              <div class="layui-inline">
+                <button class="layui-btn layui-btn-normal" lay-submit="" lay-filter="demo1">立即提交</button>
+                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+              </div>
+            </div>
+            <div class="demoTable">
+              <button class="layui-btn layui-btn-normal" data-type="reload">新建</button>
+              <button class="layui-btn layui-btn-primary" data-type="reload">编辑</button>
+            </div>
+          </form>
+          <!--<table class="layui-hide" id="test"></table>-->
+
+          <table class="layui-table">
+            <colgroup>
+              <col width="150">
+              <col width="150">
+              <col width="200">
+              <col>
+            </colgroup>
+            <thead>
+            <tr>
+              <th>人物</th>
+              <th>民族</th>
+              <th>出场时间</th>
+              <th>格言</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>贤心</td>
+              <td>汉族</td>
+              <td>1989-10-14</td>
+              <td>人生似修行</td>
+            </tr>
+            <tr>
+              <td>张爱玲</td>
+              <td>汉族</td>
+              <td>1920-09-30</td>
+              <td>于千万人之中遇见你所遇见的人，于千万年之中，时间的无涯的荒野里…</td>
+            </tr>
+            <tr>
+              <td>Helen Keller</td>
+              <td>拉丁美裔</td>
+              <td>1880-06-27</td>
+              <td> Life is either a daring adventure or nothing.</td>
+            </tr>
+            <tr>
+              <td>岳飞</td>
+              <td>汉族</td>
+              <td>1103-北宋崇宁二年</td>
+              <td>教科书再滥改，也抹不去“民族英雄”的事实</td>
+            </tr>
+            <tr>
+              <td>孟子</td>
+              <td>华夏族（汉族）</td>
+              <td>公元前-372年</td>
+              <td>猿强，则国强。国强，则猿更强！ </td>
+            </tr>
+            </tbody>
+          </table>
+
+
+          <div id="demo7"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="layui-footer" style="display: none">
+    <!-- 底部固定区域 -->
+    底部固定区域
+  </div>
+</div>
+<script src="frame/layui/src/layui.js"></script>
+<script>
+
+layui.use('element', function() {
+    var element = layui.element;
+    element.on('nav(hbkNavbar)', function (elem) {
+      /*使用DOM操作获取超链接的自定义data属性值*/
+        var options = eval('(' + elem.context.children[0].dataset.options + ')');
+        var url = options.url;
+        var title = options.title;
+        element.tabAdd('tabs', {
+            title: title,
+            content: '<iframe scrolling="auto" frameborder="0"  src="' + url + '" style="width:100%;height:100%;">22</iframe>',
+            id: '111'
+        });
+    });
+
+});
+
+layui.use('table', function(){
+    var table = layui.table;
+    table.render({
+        elem: '#test'
+        ,url:'http://www.layui.com/demo/table/user/'
+        ,cellMinWidth: 80 //全局定义常规单元格的最小宽度，layui 2.2.1 新增
+        ,cols: [[
+            {field:'id', width:80, title: 'ID', sort: true}
+            ,{field:'username', width:80, title: '用户名'}
+            ,{field:'sex', width:80, title: '性别', sort: true}
+            ,{field:'city', width:80, title: '城市'}
+            ,{field:'sign', title: '签名', width: '30%', minWidth: 100} //minWidth：局部定义当前单元格的最小宽度，layui 2.2.1 新增
+            ,{field:'experience', title: '积分', sort: true}
+            ,{field:'score', title: '评分', sort: true}
+            ,{field:'classify', title: '职业'}
+            ,{field:'wealth', width:137, title: '财富', sort: true}
+        ]]
+    });
+});
+
+
+layui.use(['laypage', 'layer'], function(){
+    var laypage = layui.laypage
+        ,layer = layui.layer;
+    //完整功能
+    laypage.render({
+        elem: 'demo7'
+        ,count: 100
+        ,theme: '#1E9FFF'
+        ,layout: ['count', 'prev', 'page', 'next', 'limit', 'refresh', 'skip']
+        ,jump: function(obj){
+            console.log(obj)
+        }
+    });
+});
+
+layui.use('form', function(){
+    var form = layui.form;
+
+    //各种基于事件的操作，下面会有进一步介绍
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<svg id="组_38" data-name="组 38" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="172" height="172" viewBox="0 0 172 172">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f0c74b;
+        stroke: #e5e5e5;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+        filter: url(#filter);
+      }
+
+      .cls-2 {
+        fill: #4c4c4c;
+      }
+
+      .cls-2, .cls-3 {
+        fill-rule: evenodd;
+      }
+
+      .cls-3 {
+        fill: #00ce60;
+      }
+    </style>
+    <filter id="filter" x="1" y="1" width="170" height="170" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#fff"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g style="fill: #f0c74b; filter: url(#filter)">
+    <circle id="椭圆_88_拷贝_3" data-name="椭圆 88 拷贝 3" class="cls-1" cx="86" cy="86" r="85" style="stroke: inherit; filter: none; fill: inherit"/>
+  </g>
+  <use xlink:href="#椭圆_88_拷贝_3" style="stroke: #e5e5e5; filter: none; fill: none"/>
+  <path id="圆角矩形_117" data-name="圆角矩形 117" class="cls-2" d="M653,2295H609a4,4,0,0,1-4-4v-50a4,4,0,0,1,4-4h10v-1a2,2,0,0,1,2-2h4a6,6,0,0,1,12,0h4a2,2,0,0,1,2,2v1h10a4,4,0,0,1,4,4v50A4,4,0,0,1,653,2295Zm-13-58h-3.5a2.5,2.5,0,0,1-2.5-2.5V2234a3,3,0,0,0-6,0v0.5a2.5,2.5,0,0,1-2.5,2.5H622v5h18v-5Zm13,5a1,1,0,0,0-1-1h-9v2a2,2,0,0,1-2,2H621a2,2,0,0,1-2-2v-2h-9a1,1,0,0,0-1,1v48a1,1,0,0,0,1,1h42a1,1,0,0,0,1-1v-48Z" transform="translate(-545 -2176)"/>
+  <path id="圆角矩形_118" data-name="圆角矩形 118" class="cls-2" d="M649,2277.5a1.509,1.509,0,0,1-.032.16,9.99,9.99,0,0,1-9.3,9.31c-0.058,0-.108.03-0.167,0.03-0.035,0-.065-0.02-0.1-0.02-0.134.01-.265,0.02-0.4,0.02H614a1,1,0,0,1-1-1v-45h3v42a1,1,0,0,0,1,1h21v-6.5a1.5,1.5,0,0,1,1.5-1.5H646v-35h3v36c0,0.14-.014.27-0.02,0.4C648.983,2277.44,649,2277.47,649,2277.5Zm-8,1.5v4.67a6.991,6.991,0,0,0,4.69-4.67H641Z" transform="translate(-545 -2176)"/>
+  <path id="圆角矩形_123" data-name="圆角矩形 123" class="cls-3" d="M639,2265H622a1,1,0,0,1,0-2h17A1,1,0,0,1,639,2265Zm-4-7H622a1,1,0,0,1,0-2h13A1,1,0,0,1,635,2258Zm-13,12h7a1,1,0,0,1,0,2h-7A1,1,0,0,1,622,2270Z" transform="translate(-545 -2176)"/>
+</svg>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--360浏览器优先以webkit内核解析-->
+    <title>标签管理</title>
+    <link rel="shortcut icon" href="../../hAdmin/favicon.ico">
+    <link href="../../hAdmin/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="../../hAdmin/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="../../hAdmin/css/animate.css" rel="stylesheet">
+    <link href="../../hAdmin/css/style.css" rel="stylesheet">
+    <link href="../../frame/select2-4.0.3/css/select2.css" rel="stylesheet">
+    <link href="../../css/base.css?v=3.1.0" rel="stylesheet">
+    <link href="../../css/points-come/pointsCome.css" rel="stylesheet">
+
+</head>
+<body class="light-grey-bg">
+<div class="main">
+    <div class="white-bg">
+        <div class="page-header">
+            <h3 class="cooperh3">标签管理</h3>
+            <form class="form-horizontal clearfix">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">标签类别</label>
+                            <div class="col-sm-2">
+                                <select class="form-control sel-2">
+                                    <option>活动分类</option>
+                                    <option>有效</option>
+                                    <option>无效</option>
+                                </select>
+                            </div>
+                            <label class="col-sm-2 control-label">状态</label>
+                            <div class="col-sm-2">
+                                <select class="form-control sel-2">
+                                    <option>全部</option>
+                                    <option>有效</option>
+                                    <option>无效</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-4 tr">
+                                <button type="button"class="btn btn-bg-orange ">查询</button>
+                                <button type="button" class="btn btn-default ">新增</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </form>
+        </div>
+        <div class="page-body">
+            <table class="table table-hover mb0 text-center table-bor">
+                <colgroup>
+                    <col class="col-xs-1">
+                    <col class="col-xs-1">
+                    <col class="col-xs-3">
+                    <col class="col-xs-1">
+                    <col class="col-xs-1">
+                    <col class="col-xs-1">
+                </colgroup>
+                <thead>
+                <tr class="active">
+                    <th class="text-center">排序</th>
+                    <th class="text-center">状态</th>
+                    <th class="text-center">类别</th>
+                    <th class="text-center">标签</th>
+                    <th class="text-center">操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><div class=""><input type="text" class="inputborder wid50 mr5" placeholder="1"><a href="javascript:void(0);" class="blue">确定</a></div></td>
+                        <td>有效</td>
+                        <td>活动类别</td>
+                        <td>关注</td>
+                        <td class="blue modify">修改</td>
+                    </tr>
+                    <tr>
+                        <td><div class=""><input type="text" class="inputborder wid50 mr5" placeholder="1"><a href="javascript:void(0);" class="blue">确定</a></div></td>
+                        <td>有效</td>
+                        <td>活动类别</td>
+                        <td>下载</td>
+                        <td class="blue modify">修改</td>
+                    </tr>
+                    <tr>
+                        <td><div class=""><input type="text" class="inputborder wid50 mr5" placeholder="1"><a href="javascript:void(0);" class="blue">确定</a></div></td>
+                        <td>有效</td>
+                        <td>活动类别</td>
+                        <td>游戏</td>
+                        <td class="blue modify">修改</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="text-center">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-white"><i class="fa fa-chevron-left"></i>
+                    </button>
+                    <button class="btn btn-white">1</button>
+                    <button class="btn btn-white  active">2</button>
+                    <button class="btn btn-white">3</button>
+                    <button class="btn btn-white">4</button>
+                    <button type="button" class="btn btn-white"><i class="fa fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 全局js -->
+<script src="../../hAdmin/js/jquery.min.js?v=2.1.4"></script>
+<script src="../../hAdmin/js/bootstrap.min.js?v=3.3.6"></script>
+<script src="../../layer/layer.js"></script>
+<!-- Flot -->
+<script src="../../hAdmin/js/plugins/flot/jquery.flot.js"></script>
+<script src="../../hAdmin/js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+<script src="../../hAdmin/js/plugins/flot/jquery.flot.resize.js"></script>
+<script src="../../hAdmin/js/plugins/flot/jquery.flot.pie.js"></script>
+<!-- select2-4.0.3 -->
+<script src="../../frame/select2-4.0.3/js/select2.js"></script>
+<!-- 自定义js -->
+<script>
+    $(function () {
+        $(".sel-2").select2();
+
+        $(".modify").click(function () {
+            layer.open({
+                title: '标签修改'
+                ,content: '<form class="form-horizontal clearfix">\n' +
+                '    <div class="row">\n' +
+                '        <div class="col-sm-12">\n' +
+                '            <div class="form-group">\n' +
+                '                <label class="col-sm-3 control-label">*状态：</label>\n' +
+                '                <div class="col-sm-9">\n' +
+                '                    <div class="switch pt7">\n' +
+                '                        <div class="onoffswitch">\n' +
+                '                            <input type="checkbox" checked="" class="onoffswitch-checkbox" id="example1">\n' +
+                '                            <label class="onoffswitch-label" for="example1">\n' +
+                '                                <span class="onoffswitch-inner"></span>\n' +
+                '                                <span class="onoffswitch-switch"></span>\n' +
+                '                            </label>\n' +
+                '                        </div>\n' +
+                '                    </div>\n' +
+                '                </div>\n' +
+                '            </div>\n' +
+                '            <div class="form-group">\n' +
+                '                <label class="col-sm-3 control-label">标签类别：</label>\n' +
+                '                <div class="col-sm-9">\n' +
+                '                 <select class="form-control">' +
+                '                   <option>1</option>' +
+                '                   <option>1</option>' +
+                '                   <option>1</option>' +
+                '                   <option>1</option>' +
+                '                 </select>   ' +
+                '                </div>\n' +
+                '            </div>\n' +
+                '            <div class="form-group">\n' +
+                '                <label class="col-sm-3 control-label">*标签：</label>\n' +
+                '                <div class="col-sm-9">\n' +
+                '                    <input type="text" class="form-control" placeholder="最多输入4个字符">\n' +
+                '                </div>\n' +
+                '            </div>\n' +
+                '        </div>\n' +
+                '    </div>\n' +
+                '</form>'
+                ,area: ['500px', '280px']
+                ,btnAlign: 'c'
+                ,success: function(){
+                    $("#imgId").change(function () {
+                        $(".filetext").text($('#imgId').val())
+                    })
+                }
+            });
+        })
+    })
+</script>
+</body>
+</html>

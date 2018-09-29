@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>我的积分</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <link rel="stylesheet" href="../../frame/weui-master/style/icon.css">
+    <link rel="stylesheet" href="../../frame/weui-master/style/weui.css">
+    <link rel="stylesheet" href="../../frame/weui-master/style/weui2.css">
+    <!--<link rel="stylesheet" href="../../font/style.css">-->
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/points-come/points-come.css">
+    <script src="../../frame/weui-master/zepto.min.js"></script>
+    <script src="../../frame/weui-master/picker.js"></script>
+    <script src="../../frame/weui-master/select.js"></script>
+    <!--<script src="../../js/jQuery/jQuery-2.1.4.min.js"></script>-->
+
+</head>
+<body style="background-color: #f8f8f8;">
+    <div class="weui_panel_bd">
+        <div class="weui_media_box weui_media_text">
+            <h4 class="weui_media_title">当前积分</h4>
+            <span class=" weixin-weui_media_desc-h1">3973</span><span>
+            <a class="weui_btn weui-mt20  weui_btn_warn right weui-btn-80" href="follow.html">积分换礼</a></span>
+        </div>
+    </div>
+    <div class="weui_cells weui_cells_access" style="background-color: #f8f8f8;">
+        <div class="weui_cell f14">
+            <div class="weui_cell_bd weui_cell_primary">最近30笔积分记录</div>
+            <div class="weui_cell_bd weui_cell_primary tr">
+                <span><input class="weui_input tr" type="text" onfocus='this.blur();' value="全部" id='d1' style="width: 50%;" /></span>
+                <i class="icon icon-74"></i>
+            </div>
+        </div>
+    </div>
+    <div id="all" class="weui_panel mt0 f-17 mb50 close-picker">
+        <div class="weui_panel_bd">
+            <div class="weui-qi-cell we-qi-exchange2-span">
+                <div class=" weui_cell_primary ">
+                    <p class="f-17">大转盘游戏奖励积分</p>
+                    <p><span class="f12">2017-09-30 09:14:32</span></p>
+                </div>
+                <div class="weui_cell_ft weui-qi-cell-ft f14">
+                    <span>+</span>
+                    <span>350</span> 钡
+                </div>
+            </div>
+            <div class="weui-qi-cell we-qi-exchange2-span">
+                <div class=" weui_cell_primary ">
+                    <p class="f-17">摇摇乐游戏奖励积分</p>
+                    <p><span class="f12">2017-09-30 09:14:32</span></p>
+                </div>
+                <div class="weui_cell_ft weui-qi-cell-ft f14">
+                    <span>+</span>
+                    <span>350</span> 钡
+                </div>
+            </div>
+            <div class="weui-qi-cell we-qi-exchange2-span">
+                <div class=" weui_cell_primary ">
+                    <p class="f-17">猜猜看游戏奖励积分</p>
+                    <p><span class="f12">2017-09-30 09:14:32</span></p>
+                </div>
+                <div class="weui_cell_ft weui-qi-cell-ft f14">
+                    <span>+</span>
+                    <span>350</span> 钡
+                </div>
+            </div>
+            <div class="weui-qi-cell we-qi-exchange2-span">
+                <div class=" weui_cell_primary ">
+                    <p class="f-17">感恩回馈游戏奖励积分</p>
+                    <p><span class="f12">2017-09-30 09:14:32</span></p>
+                </div>
+                <div class="weui_cell_ft weui-qi-cell-ft f14">
+                    <span>+</span>
+                    <span>350</span> 钡
+                </div>
+            </div>
+            <div class="weui-qi-cell we-qi-exchange2-span">
+                <div class=" weui_cell_primary ">
+                    <p class="f-17">猜猜看游戏奖励积分</p>
+                    <p><span class="f12">2017-09-30 09:14:32</span></p>
+                </div>
+                <div class="weui_cell_ft weui-qi-cell-ft f14">
+                    <span>+</span>
+                    <span>350</span> 钡
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="weui-menu borNt active-list-btn">
+        <a class="weui-menu-inner borNt" href="index.html">
+            <span>个人中心</span>
+        </a>
+    </section>
+<script>
+    $(function(){
+        $("#d1").select({
+            title: "请选择",
+            autoClose:true,
+            items: ['全部','支出','收入'],
+            // onChange: function(d) {
+            //     if (d.values=='支出') {
+            //         $.post("/wechat/personal/findIntegrationDetails/2",null,back);
+            //     }else if(d.values=='收入') {
+            //         $.post("/wechat/personal/findIntegrationDetails/1",null,back);
+            //     }else{
+            //         $.post("/wechat/personal/findIntegrationDetails/3",null,back);
+            //     }
+            // }
+        });
+        function back(result){
+            var all=$("#all");
+            all.html(result);
+        }
+    })
+
+</script>
+</body>
+
+</html>

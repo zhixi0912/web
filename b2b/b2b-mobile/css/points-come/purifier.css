@@ -1,0 +1,56 @@
+html{
+    width: 100%;
+    height: calc(100% - 20px);
+}
+body{
+    padding: 10px;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+}
+.active-rules{
+    background-color: #ffffff;
+    border-radius: 8px;
+    min-height: 100%;
+    padding: 10px;
+}
+.acrive-line{
+
+    height: 0px;
+    border-bottom: 1px dotted #333333;
+    width: calc(100% + 20px);
+    margin-left: -10px;
+    position: relative;
+}
+.acrive-line:before{
+    content: " ";
+    position: absolute;
+    left: -7px;
+    top: -7px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #e64d5f;
+}
+.acrive-line:after{
+    content: " ";
+    position: absolute;
+    right: -7px;
+    top: -7px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #e64d5f;
+}
+.active-code{
+    text-align: center;
+    padding-top: 20px;
+}
+.active-code .code{
+    padding: 30px 0;
+}
+.puri-p p{
+    line-height: 30px;
+}
+.btn-50{
+    border-radius: 50px;
+}

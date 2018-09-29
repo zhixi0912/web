@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--360浏览器优先以webkit内核解析-->
+    <title>线下活动创建</title>
+    <link rel="shortcut icon" href="hAdmin/favicon.ico"/>
+    <link href="hAdmin/css/bootstrap.min.css?v=3.3.6" rel="stylesheet"/>
+    <link href="hAdmin/css/font-awesome.css?v=4.4.0" rel="stylesheet"/>
+    <link href="frame/datetimepicker/js/jquery-ui.css" rel="stylesheet"/>
+    <link href="hAdmin/css/animate.css" rel="stylesheet"/>
+    <link href="css/base.css?v=3.1.0" rel="stylesheet"/>
+    <link href="hAdmin/css/style.css?v=4.1.0" rel="stylesheet"/>
+    <link href="css/iframe-page.css" rel="stylesheet"/>
+    <link href="css/page.css" rel="stylesheet"/>
+    <link  href="css/style.css" rel="stylesheet"/>
+
+</head>
+
+<body class="light-grey-bg">
+<div class="main">
+
+    <div class="row index-v3-qi v6-top v6-margin-top ">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 index-v3-qi-h3 v3-hr">
+            <h3 class="col-lg-9 col-md-9 col-sm-5 col-xs-12">线下活动创建</h3>
+        </div>
+        <div class="col-sm-12">
+            <div class="tabs-container  margin-f">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a data-toggle="tab" href="#tab-1" aria-expanded="true">扫码获取积分</a>
+                    </li>
+                    <li class=""><a data-toggle="tab" href="#tab-2" aria-expanded="false">积点活动</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div id="tab-1" class="tab-pane active">
+                        <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="form-group index-v3-qi-input form-margin">
+
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <label for="" class="col-lg-2 col-md-2 col-sm-2 control-label">活动名称</label>
+                                    <div class="col-lg-10">
+                                        <input type="text" class="form-control" placeholder="请输入要创建的活动名称"/>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 v6-margin-top">
+                                    <label for="" class="col-lg-2 col-md-12 col-sm-12 control-label">活动展示</label>
+                                    <div class="col-lg-10">
+                                        <div class="v5-choice-1 v1-l"><input id="v5-input-5" name="y" type="radio" checked><label class="v1-2" for="v5-input-5">二维码</label></div>
+                                        <div class="v5-choice-1 v1-l"><input id="v5-input-6" name="y" type="radio"><label class="v1-2" for="v5-input-6">条形码</label></div>
+                                        <div class="v5-choice-1 v1-l"><input id="v5-input-7" name="y" type="radio"><label class="v1-2" for="v5-input-7">串码</label></div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <label for="" class="col-lg-2 col-md-2 col-sm-2 control-label">扫码规则</label>
+                                    <label for="" class="col-lg-1 col-md-12 col-sm-12 control-label">活动码生成</label>
+                                    <div class="col-lg-2">
+                                        <input type="text" class="form-control" placeholder="请输入生成张数"/>
+                                    </div>
+                                    <label for="" class="col-lg-1 col-md-12 col-sm-12 control-label">张,每张</label>
+                                    <div class="col-lg-2">
+                                        <input type="text" class="form-control" placeholder="请输入钡数"/>
+                                    </div>
+                                    <label for="" class="col-lg-1 col-md-12 col-sm-12 control-label">钡,活动期间,用户</label>
+                                    <div class="col-lg-2">
+                                        <select name="" id="" class="form-control col-lg-1">
+                                            <option value="" class="form-control">不限领取次数</option>
+                                            <option value="" class="form-control">1000</option>
+                                            <option value="" class="form-control">2000</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <label for="" class="col-lg-2 col-md-2 col-sm-3 control-label">活动周期</label>
+                                    <label for="" class="col-lg-1 col-md-12 col-sm-12 control-label">开始时期</label>
+                                    <div class="col-lg-3 col-md-4 col-sm-3">
+                                        <input type="text" id="b2b" class="form-control b2b-datetime" placeholder="2017-06-04"/>
+                                    </div>
+                                    <label for="" class="col-lg-1 col-md-12 col-sm-12 control-label">结束时间</label>
+                                    <div class="col-lg-3 col-md-4 col-sm-3">
+                                        <input type="text" class="form-control b2b-datetime"  placeholder="2017-07-04"/>
+                                    </div>
+                                </div>
+                                <div class="row  v6-top v6-margin-top ">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 v6-hei v1-bg">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 v-r">
+                                            <p>本次活动共消耗：<span>10,000</span> 钡 ，预计可为您带来 <span> 1,000 </span>位客户！</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row index-v3-qi v6-top">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 index-v3-qi-h3">
+                                        <h3 class="col-lg-1 col-md-12 col-sm-12 col-xs-12">自助功能</h3>
+                                        <div class="checkbox v1-line">
+                                            <label><input type="checkbox" checked value="">是否需要待打印</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 v6-margin-top ">
+                                        <label for="" class="col-lg-2 col-md-12 col-sm-12 control-label">代打印费用（积分抵扣）：</label>
+                                        <div class="col-lg-10 v1-align">
+                                            <p><span>11,000</span> 积分</p>
+                                        </div>
+                                        <label for="" class="col-lg-2 col-md-12 col-sm-12 control-label">代打印费用计算规则：</label>
+                                        <div class="col-lg-10 v1-align">
+                                            <p>代打印费用 = 10 积分（打印费/个）* 数量 + 1000 积分（快递费）。4个工作日左右您会收到打印物料。</p>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <input type="text" class="form-control" placeholder="请输入姓名"/>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <input type="text" class="form-control" placeholder="请输入手机号"/>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <input type="text" class="form-control" placeholder="请输入详细收货地址"/>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <textarea type="" class="form-control" placeholder="备注"></textarea>
+                                        </div>
+                                        <div class="row  v6-top v6-margin-top ">
+                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 v6-hei v1-bg">
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 v-r">
+                                                    <p>为保证您的积分礼包安全，生成完毕后是处于<span>未激活</span>状态的（扫码无效）</p>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-center">
+                                                    <button class="index-v3-button">生成</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-2" class="tab-pane">
+                        <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="form-group index-v3-qi-input form-margin">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <label for="" class="col-lg-2 col-md-2 col-sm-2 control-label">活动名称</label>
+                                    <div class="col-lg-10">
+                                        <input type="text" class="form-control" placeholder="请输入要创建的活动名称"/>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 v6-margin-top">
+                                    <label for="" class="col-lg-2 col-md-12 col-sm-12 control-label">活动展示</label>
+                                    <div class="col-lg-10">
+                                        <div class="v5-choice-1 v1-l"><input id="v5-input-2" name="x" type="radio" checked><label class="v1-2" for="v5-input-2">二维码</label></div>
+                                        <div class="v5-choice-1 v1-l"><input id="v5-input-3" name="x" type="radio" ><label class="v1-2" for="v5-input-3">条形码</label></div>
+                                        <div class="v5-choice-1 v1-l"><input id="v5-input-4" name="x" type="radio" ><label class="v1-2" for="v5-input-4">串码</label></div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <label for="" class="col-lg-2 col-md-2 col-sm-2 control-label">参与活动门店数</label>
+                                    <div class="col-lg-2">
+                                        <input type="text" class="form-control" placeholder="请输入门店数"/>
+                                    </div>
+                                    <label for="" class="col-lg-1 col-md-12 col-sm-12 control-label">家,每家生成</label>
+                                    <div class="col-lg-2">
+                                        <input type="text" class="form-control" placeholder="请输入张数"/>
+                                    </div>
+                                    <label for="" class="col-lg-2 col-md-12 col-sm-12 control-label">张,共计 <span>3000</span>张</label>
+
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <label for="" class="col-lg-2 col-md-2 col-sm-2 control-label">累计规则</label>
+                                    <label for="" class="col-lg-1 col-md-12 col-sm-12 control-label">积点累计</label>
+                                    <div class="col-lg-9">
+                                        <div class="v5-choice-1 v1-l"><input id="v5-input-9" name="n" type="radio" checked><label class="v1-2" for="v5-input-9">所有门店</label></div>
+                                        <div class="v5-choice-1 v1-l"><input id="v5-input-10" name="n" type="radio" ><label class="v1-2" for="v5-input-10">单独门店</label></div>
+                                    </div>
+                                    <label for="" class="col-lg-2 col-md-12 col-sm-12 control-label">&nbsp;</label>
+                                    <label for="" class="col-lg-1 col-md-12 col-sm-12 control-label">累计扫满</label>
+                                    <div class="col-lg-2">
+                                        <input type="text" class="form-control" placeholder="请输入次数"/>
+                                    </div>
+                                    <label for="" class="col-lg-1 col-md-12 col-sm-12 control-label">次,可得</label>
+                                    <div class="col-lg-2">
+                                        <input type="text" class="form-control" placeholder="请输入钡数"/>
+                                    </div>
+                                    <label for="" class="col-lg-1 col-md-12 col-sm-12 control-label">钡,活动期间,用户</label>
+                                    <div class="col-lg-2">
+                                        <select name="" id="" class="form-control col-lg-1">
+                                            <option value="" class="form-control">不限领取次数</option>
+                                            <option value="" class="form-control">1000</option>
+                                            <option value="" class="form-control">2000</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <label for="" class="col-lg-2 col-md-2 col-sm-3 control-label">活动周期</label>
+                                    <label for="" class="col-lg-1 col-md-12 col-sm-12 control-label">开始时期</label>
+                                    <div class="col-lg-3 col-md-4 col-sm-3">
+                                        <input type="text" id="b2b" class="form-control b2b-datetime" placeholder="2017-06-04"/>
+                                    </div>
+                                    <label for="" class="col-lg-1 col-md-12 col-sm-12 control-label">结束时间</label>
+                                    <div class="col-lg-3 col-md-4 col-sm-3">
+                                        <input type="text" class="form-control b2b-datetime"  placeholder="2017-07-04"/>
+                                    </div>
+                                </div>
+                                <div class="row  v6-top v6-margin-top ">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 v6-hei v1-bg">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 v-r">
+                                            <p>本次活动共消耗：<span>10,000</span> 钡 ，预计可为您带来 <span> 1,000 </span>位客户！</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row index-v3-qi v6-top">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 index-v3-qi-h3">
+                                        <h3 class="col-lg-1 col-md-12 col-sm-12 col-xs-12">自助功能</h3>
+                                        <div class="checkbox v1-line">
+                                            <label><input type="checkbox" checked value="">是否需要待打印</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 v6-margin-top ">
+                                        <label for="" class="col-lg-2 col-md-12 col-sm-12 control-label">代打印费用（积分抵扣）：</label>
+                                        <div class="col-lg-10 v1-align">
+                                            <p><span>11,000</span> 积分</p>
+                                        </div>
+                                        <label for="" class="col-lg-2 col-md-12 col-sm-12 control-label">代打印费用计算规则：</label>
+                                        <div class="col-lg-10 v1-align">
+                                            <p>代打印费用 = 10 积分（打印费/个）* 数量 + 1000 积分（快递费）。4个工作日左右您会收到打印物料。</p>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <input type="text" class="form-control" placeholder="请输入姓名"/>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <input type="text" class="form-control" placeholder="请输入手机号"/>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <input type="text" class="form-control" placeholder="请输入详细收货地址"/>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <textarea type="" class="form-control" placeholder="备注"></textarea>
+                                        </div>
+                                        <div class="row  v6-top v6-margin-top ">
+                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 v6-hei v1-bg">
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 v-r">
+                                                    <p>为保证您的积分礼包安全，生成完毕后是处于<span>未激活</span>状态的（扫码无效）</p>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-center">
+                                                    <button class="index-v3-button">生成</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row v1-box">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+            <h3>线下销售流程</h3>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+
+            <div class="v1-img">
+                <img src="images/v1-box.png"/>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 v1-p">
+            <div class="col-lg-12"><p>第一步：自助礼包生成（您可在活动管理中查看到生成的积分礼包详细情况）</p></div>
+            <div class="col-lg-12"><p>第二步：选择代打印服务，请填写服务内容（物流信息）。（选）</p></div>
+            <div class="col-lg-12"><p>第三步：企业活动审核人，活动申请审核。</p></div>
+            <div class="col-lg-12"><p>第四步：自助激活，活动正式开始。</p></div>
+            <div class="col-lg-12"><p>第五步：活动圆满结束。</p></div>
+        </div>
+    </div>
+</div>
+
+<footer class="pot-footer"><p>Copyright ©2016-2020 51points.All Rights Reserved. 沪ICP备 160060</p></footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 全局js -->
+<script src="hAdmin/js/jquery.min.js?v=2.1.4"></script>
+<script src="hAdmin/js/bootstrap.min.js?v=3.3.6"></script>
+<script src="hAdmin/js/plugins/layer/layer.min.js"></script>
+<script src="frame/datetimepicker/js/jquery-ui.min.js"></script>
+<script src="frame/datetimepicker/jQuery-Timepicker-Addon/jquery-ui-timepicker-addon.js"></script>
+<script src="frame/datetimepicker/js/jquery.ui.datepicker-zh-CN.js.js"></script>
+<script src="frame/datetimepicker/js/jquery-ui-timepicker-zh-CN.js"></script>
+<!--<script src="frame/vue2.1.8/vue.min.js"></script>-->
+<!-- Flot -->
+<script src="hAdmin/js/plugins/flot/jquery.flot.js"></script>
+<script src="hAdmin/js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+<script src="hAdmin/js/plugins/flot/jquery.flot.resize.js"></script>
+<script src="hAdmin/js/plugins/flot/jquery.flot.pie.js"></script>
+<!-- 自定义js -->
+<script src="hAdmin/js/content.js"></script>
+<!--<script src="js/form-validator/index.js"></script>-->
+<script>
+    $(function () {
+        $('.b2b-datetime').datepicker({
+            needDay : true,
+            changeMonth : true, //显示月份
+            changeYear : true, //显示年份
+            showButtonPanel : true, //显示按钮
+            dateFormat : "yy-mm-dd"
+        });
+    })
+</script>
+</body>
+</html>

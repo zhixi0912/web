@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>流量兑换</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <link rel="stylesheet" href="../../frame/weui-master/style/icon.css">
+    <link rel="stylesheet" href="../../frame/weui-master/style/weui.css">
+    <link rel="stylesheet" href="../../frame/weui-master/style/weui2.css">
+    <link rel="stylesheet" href="../../font/style.css">
+    <link rel="stylesheet" href="../../css/points-come/points-come.css">
+    <script src="../../frame/weui-master/zepto.min.js"></script>
+    </script><script src="../../frame/weui-master/picker.js"></script>
+    <script src="../../frame/weui-master/picker-city.js"></script>
+    <link rel="stylesheet" href="../../css/base.css">
+    <!--<script src="../../js/jQuery/jQuery-2.1.4.min.js"></script>-->
+    <!--<script src="../../frame/SuperSlide.2.1.1/jquery.SuperSlide.2.1.1.js"></script>-->
+
+</head>
+<body style="background-color: #f8f8f8;">
+
+<div class="weui_cells weui_cells_form flow-exch noneborbefore noneborafter">
+    <div class="weui_cell">
+        <div class="weui_cell_bd weui_cell_primary">
+            <input class="weui_input" type="text" pattern="[0-9]*" placeholder="请输入手机号">
+        </div>
+    </div>
+</div>
+
+<div class="weui_cells_title flow-exch-t">可兑换流量余额：<span class="tx1">350</span> M</div>
+
+<div class="weui_grids flow-exch-box">
+    <a href="javascript:;" class="weui_grid js_grid on">
+        <p class="weui_grid_label">
+            30M
+        </p>
+    </a>
+    <a href="javascript:;" class="weui_grid js_grid ">
+
+        <p class="weui_grid_label">
+            100M
+        </p>
+    </a>
+    <a href="javascript:;" class="weui_grid js_grid dt">
+
+        <p class="weui_grid_label">
+            500M
+        </p>
+    </a>
+    <a href="javascript:;" class="weui_grid js_grid dt">
+
+        <p class="weui_grid_label">
+            1G
+        </p>
+    </a>
+    <a href="javascript:;" class="weui_grid js_grid">
+
+        <p class="weui_grid_label">&nbsp;
+        </p>
+    </a>
+    <a href="javascript:;" class="weui_grid js_grid">
+
+        <p class="weui_grid_label">&nbsp;
+        </p>
+    </a>
+
+</div>
+
+
+<!--<div class="weui_btn_area weui_btn_area_inline flow-exch-btn">-->
+    <!--<a href="flowWallet.html" class="weui_btn btn-1">返回</a>-->
+    <!--<a href="flowWallet.html" class="weui_btn btn-2">兑换</a>-->
+<!--</div>-->
+
+<div class="posbtn clearfix">
+    <a href="flowWallet.html" class="posbtn1 close-popup posbtn2">返回</a>
+    <a href="flowWallet.html" class="posbtn1 close-popup ml5">兑换</a>
+</div>
+<script>
+    $(function () {
+        $(".weui_grid").click(function () {
+            $(this).addClass("on");
+            $(this).siblings().removeClass("on");
+
+        })
+    })
+</script>
+</body>
+
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--360浏览器优先以webkit内核解析-->
+    <title>辛运刮刮卡-规则设置</title>
+    <link rel="shortcut icon" href="hAdmin/favicon.ico">
+    <link href="hAdmin/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="hAdmin/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="frame/select2-4.0.3/css/select2.min.css?v=3.3.6" rel="stylesheet">
+    <link href="frame/datetimepicker/js/jquery-ui.css" rel="stylesheet">
+    <link href="frame/datetimepicker/jQuery-Timepicker-Addon/jquery-ui-timepicker-addon.css" rel="stylesheet">
+    <link href="hAdmin/css/animate.css" rel="stylesheet">
+    <link href="css/base.css?v=3.1.0" rel="stylesheet">
+    <link href="hAdmin/css/style.css?v=4.1.0" rel="stylesheet">
+    <link href="css/iframe-page.css" rel="stylesheet">
+    <link href="css/page.css" rel="stylesheet">
+    <link href="css/game/game-1.css" rel="stylesheet">
+    <link href="css/game/component.css" rel="stylesheet">
+    <!--<link href="css/game/game-3.css" rel="stylesheet">-->
+    <link href="css/game/game-4.css" rel="stylesheet">
+    <link href="css/game/game-activity.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/game/game-add-bj.css">
+</head>
+<body>
+
+
+
+<div class=" wrapper wrapper-content">
+    <div class="ibox act">
+        <div class="top-title ibox-title">
+            <div class="row">
+                <div class="col-sm-9 f16 game-index-a">
+                    <div class="form-group">
+                        <a class="" href="game-index.html">我的活动</a>
+                        <a class="game-active" href="game-index.html">模板库</a>
+                        <a class="f-gray" href="game-index.html">活动定制</a>
+                        <a class="" href="game-activity1.html">运营活动管理</a>
+                    </div>
+                </div>
+                <div class="col-sm-3 tr">
+                    <div class="form-group f-black f16">
+                        <p>账户余额：<span class="f-orange">30</span>万钡</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ibox-content">
+            <div class="row">
+                <div class="col-sm-12 clearfix text-center">
+                    <div class="my-activity clearfix">
+                        <div class="my-act-ul">
+                            <span class="my-act-radius my-act-radius1">1</span>
+                            <p>活动创建</p>
+                        </div>
+                        <div class="my-act-ul2">
+                            <span class="my-act-span my-act-radius1"></span>
+                        </div>
+                        <div class="my-act-ul">
+                            <span class="my-act-radius my-act-radius1">2</span>
+                            <p>规则设置</p>
+                        </div>
+                        <div class="my-act-ul2">
+                            <span class="my-act-span my-act-radius1"></span>
+                        </div>
+                        <div class="my-act-ul">
+                            <span class="my-act-radius">3</span>
+                            <p>奖项结算</p>
+                        </div>
+                        <div class="my-act-ul2">
+                            <span class="my-act-span bg-gray"></span>
+                        </div>
+                        <div class="my-act-ul">
+                            <span class="my-act-radius bg-gray">4</span>
+                            <p>完成</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="right-box">
+                        <form class="form-horizontal" id="form3">
+                            <!-- step 3 -->
+                            <div class="step-3 stop-box">
+                                <!--<div class="step-3 stop-box box-hide">-->
+                                <p class="text-center f20">奖品信息</p>
+                                <table class="table mt20">
+                                    <thead>
+                                    <tr class="active">
+                                        <th>序号</th>
+                                        <th>奖品类别</th>
+                                        <th>奖品名称</th>
+                                        <th>单价(钡)</th>
+                                        <th>数量</th>
+                                        <th>小计(钡)</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>通用积分</td>
+                                        <td>通用积分100钡</td>
+                                        <td>100</td>
+                                        <td>10</td>
+                                        <td>1000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>通用积分</td>
+                                        <td>通用积分100钡</td>
+                                        <td>100</td>
+                                        <td>10</td>
+                                        <td>1000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>通用积分</td>
+                                        <td>通用积分100钡</td>
+                                        <td>100</td>
+                                        <td>10</td>
+                                        <td>1000</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <p class="tr">总计：<span class="orange">31000</span> 钡</p>
+                                        <p class="tr">账户余额：<span>31000</span> 钡</p>
+                                    </div>
+                                    <div class="col-sm-12 tr mt20">
+                                        <button type="button" class="btn btn-w-m btn-default">上一步</button>
+                                        <button type="button" class="btn btn-w-m btn-danger" id="step-3">结算</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<!-- 全局js -->
+<script src="hAdmin/js/jquery.min.js"></script>
+<script src="js/jquery-migrate-1.2.1.js"></script>
+<script src="js/ajaxform.js"></script>
+<script src="frame/formvalidator4.1.3/formValidatorRegex.js"></script>
+<script src="frame/formvalidator4.1.3/formValidator-4.1.3.js"></script>
+<script src="hAdmin/js/bootstrap.min.js?v=3.3.6"></script>
+<script src="hAdmin/js/plugins/layer/layer.min.js"></script>
+<script src="frame/select2-4.0.3/js/select2.min.js"></script>
+<!--<script src="frame/vue2.1.8/vue.min.js"></script>-->
+<!-- Flot -->
+<script src="hAdmin/js/plugins/flot/jquery.flot.js"></script>
+<script src="hAdmin/js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+<script src="hAdmin/js/plugins/flot/jquery.flot.resize.js"></script>
+<script src="hAdmin/js/plugins/flot/jquery.flot.pie.js"></script>
+<script src="frame/SuperSlide.2.1.1/jquery.SuperSlide.2.1.1.js"></script>
+<script src="frame/datetimepicker/js/jquery-ui.js"></script>
+<script src="frame/datetimepicker/jQuery-Timepicker-Addon/jquery-ui-timepicker-addon.js"></script>
+<script src="frame/datetimepicker/js/jquery-ui-timepicker-zh-CN.js"></script>
+<!-- 自定义js -->
+<script src="hAdmin/js/content.js"></script>
+<script src="js/form-validator/game/game-add-2.js"></script>
+<!--<script src="js/form-validator/game/game-1.js"></script>-->
+
+
+</body>
+</html>

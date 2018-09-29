@@ -1,0 +1,150 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+body{
+    background: #df412b;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+.ggl{
+    position: relative;
+    width: 85.6%;
+    height: 90px;
+    margin: -5px auto;
+    background: url(../../images/game/ggl.png) no-repeat center center;
+    background-size: 100% 100%;
+}
+.canvas{
+    position:absolute;
+    top:2px;
+    left:2.5%;
+    width:95%;
+    height:82px;
+    line-height:82px;
+    text-align:center;
+    z-index: 2;
+
+}
+.info{
+    position:absolute;
+    top:2px;
+    left:2.5%;
+    width:95%;
+    height:82px;
+    text-align:center;
+}
+.info span{
+    display: block;
+    font-size: 18px;
+}
+#prompt{
+    line-height: 40px;
+}
+.btn{
+    position: relative;
+    width: 50%;
+    height: 35px;
+    line-height: 35px;
+    background: #df412b;
+    color: #fff;
+    border-radius: 5px;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.num{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size:14px;
+    margin-top: 5%;
+}
+#ok, #no{display: none;}
+.pop{
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: none;
+}
+.pop img{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin: 15% auto;
+}
+.game-2bodybg{
+    height: 490px;
+    background: url("../../images/game/pic01.jpg") no-repeat;
+    background-size: cover;
+}
+.logo-2{
+    text-align: center;
+}
+.logo-2 img{
+    width: 60%;
+    margin-top: 50px;
+    /*margin: 0 auto;*/
+}
+.game-rule-2{
+    width: 25%;
+    position: absolute;
+    top:0;
+}
+.game-rule-2 img{
+    width: 100%;
+}
+.logo-2-logo{
+    width: 100%;
+    margin: 160px 0 10px 0;
+    text-align: center;
+}
+.logo-2-logo img{
+    height: 40px;
+}
+.game-frequency{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom:2%;
+    text-align: center;
+}
+.game-frequency{
+    bottom: 4%!important;
+}
+.game-share a img{
+    width: 120px;
+    height: auto;
+}
+.game-frequency-numb{
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+}
+.game-mask{
+    background: url("../../images/game/pic02.jpg") no-repeat #dc4e51;
+    background-size: 100% auto;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    display: none;
+    z-index: 9;
+}
+.game-mask .game-mask-back img{
+    width: 70px;
+    /*padding: 10px;*/
+}
+.game-mask-rules{
+    margin-top: 140px;
+    color: #fff;
+    padding: 30px;
+}

@@ -1,0 +1,238 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!--360浏览器优先以webkit内核解析-->
+    <title>实物订单</title>
+    <link rel="shortcut icon" href="../../static/b2c-reception/frame/hAdmin/favicon.ico">
+    <link href="../../static/b2c-reception/frame/hAdmin/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="../../static/b2c-reception/frame/hAdmin/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="../../static/b2c-reception/frame/ludo-jquery-treetable-3.2.0/css/jquery.treetable.css" rel="stylesheet">
+    <link href="../../static/b2c-reception/frame/hAdmin/css/animate.css" rel="stylesheet">
+    <link href="../../static/b2c-reception/frame/hAdmin/css/style.css?v=4.1.0" rel="stylesheet">
+    <link href="../../static/b2c-reception/css/style.css?v=4.1.0" rel="stylesheet">
+    <link rel="stylesheet" href="../../static/css/base/base.css">
+</head>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content">
+        <div class="ibox">
+            <div class="top-title ibox-title pb15">
+                <div class="row">
+                    <div class="col-sm-10">
+                        <div class="bs-callout bs-callout-info"><h4>实物订单</h4></div>
+                    </div>
+                </div>
+            </div>
+            <div class="ibox-content">
+                <form class="form-horizontal m-t" id="commentForm">
+                    <div class="form-group">
+                        <label class="col-sm-1 control-label">商品名称：</label>
+                        <div class="col-sm-3">
+                            <input  type="text" class="form-control" />
+                        </div>
+                        <label class="col-sm-1 control-label">所属商户：</label>
+                        <div class="col-sm-3">
+                            <select  class="form-control">
+                                <option>可输入商户名称查询</option>
+                                <option>上海镒钡</option>
+                                <option>镒钡国际</option>
+                            </select>
+                        </div>
+                        <label class="col-sm-1 control-label">所属品牌：</label>
+                        <div class="col-sm-3">
+                            <select class="form-control">
+                                <option>可输入所属品牌名称查询</option>
+                                <option>上海镒钡</option>
+                                <option>镒钡国际</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-1 control-label">积分：</label>
+                        <div class="col-sm-1">
+                            <input  type="text" class="form-control" />
+                        </div>
+                        <label class="col-sm-1 col-sm-o-1 control-label tc">至</label>
+                        <div class="col-sm-1">
+                            <input  type="text" class="form-control" />
+                        </div>
+                        <label class="col-sm-1 control-label">成交时间：</label>
+                        <div class="col-sm-1">
+                            <input  type="text" class="form-control" />
+                        </div>
+                        <label class="col-sm-1 control-label tc">至</label>
+                        <div class="col-sm-1">
+                            <input  type="text" class="form-control" />
+                        </div>
+                        <label class="col-sm-1 control-label">订单编号：</label>
+                        <div class="col-sm-3">
+                            <input  type="text" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-1 control-label">买家手机：</label>
+                        <div class="col-sm-3">
+                            <input  type="text" class="form-control" />
+                        </div>
+                        <div class="col-sm-1 tr ">
+                            <a class="btn btn-w-m btn-default">提交</a>
+                        </div>
+                    </div>
+                </form>
+                <div class="list-group-item">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="col-sm-10 list-span">
+                                <a href="#" class="a_active">近3个月订单</a>
+                                <span>|</span>
+                                <a href="#">待付款</a>
+                                <span>|</span>
+                                <a href="#">待发货</a>
+                                <span>|</span>
+                                <a href="#">已发货</a>
+                                <span>|</span>
+                                <a href="#">退款中</a>
+                                <span>|</span>
+                                <a href="#">退货中</a>
+                                <span>|</span>
+                                <a href="#">成功的订单</a>
+                                <span>|</span>
+                                <a href="#">关闭的订单</a>
+                                <span>|</span>
+                                <a href="#">三个月前订单</a>
+                            </div>
+                            <div class="col-sm-2 tr"><a href="#">导出列表</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-responsive mt15">
+                    <table class="table">
+                            <colgroup>
+                                <col class="col-xs-4">
+                                <col class="col-xs-1">
+                                <col class="col-xs-1">
+                                <col class="col-xs-1">
+                                <col class="col-xs-1">
+                                <col class="col-xs-1">
+                                <col class="col-xs-1">
+                                <col class="col-xs-1">
+                                <col class="col-xs-1">
+                            </colgroup>
+                            <tr class="active">
+                                <th>商品</th>
+                                <th>积分</th>
+                                <th>数量</th>
+                                <th>售后</th>
+                                <th>用户</th>
+                                <th>交易状态</th>
+                                <th>使用积分</th>
+                                <th>支付金额(元)</th>
+                                <th>操作</th>
+                            </tr>
+                            <tr  class="active bor-top">
+                                <td>订单号: <span>31703860449845305</span>  成交时间: <span>2017-07-16 21:13:36</span></td>
+                                <td>供应商: <span>德世朗</span></td>
+                                <td>成本价：<span>78</span>元</td>
+                                <td><a href=""><i class="fa fa-commenting green"></i></a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img class="fl" src="../../static/img/wx_bill.jpg" height="40" widtd="40"/>
+                                    <div class="fl mt5 ml5">
+                                        <p>复古款式可充电灯泡灯 LED小夜灯</p>
+                                        <p>尺寸分类：黑色小</p>
+                                    </div>
+                                </td>
+                                <td>6300</td>
+                                <td>1</td>
+                                <td><span class="gold">退款完成</span></td>
+                                <td>安妮宝贝</td>
+                                <td>已发货</td>
+                                <td>2300</td>
+                                <td>9.8</td>
+                                <td class="blue"><a href="#">退款</a><span class="ml5 mr5">|</span><a href="#">拒绝退款</a></td>
+                            </tr>
+                            <tr  class="active ">
+                                <td>订单号: <span>31703860449845305</span>成交时间: <span>2017-07-16 21:13:36</span></td>
+                                <td>供应商: <span>德世朗</span></td>
+                                <td>成本价：<span>78</span>元</td>
+                                <td><a href=""><i class="fa fa-commenting green"></i></a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img class="fl" src="../../static/img/wx_bill.jpg" height="40" widtd="40"/>
+                                    <div class="fl mt5 ml5">
+                                        <p>复古款式可充电灯泡灯 LED小夜灯</p>
+                                        <p>尺寸分类：黑色小</p>
+                                    </div>
+                                </td>
+                                <td>6300</td>
+                                <td>1</td>
+                                <td><span class="orange">退款中</span></td>
+                                <td>安妮宝贝</td>
+                                <td>交易关闭</td>
+                                <td>2300</td>
+                                <td>9.8</td>
+                                <td class="blue"><a href="#">发货</a><span class="ml5 mr5">|</span><a href="#">退款</a></td>
+                            </tr>
+                        <tr  class="active ">
+                            <td>订单号: <span>31703860449845305</span>成交时间: <span>2017-07-16 21:13:36</span></td>
+                            <td>供应商: <span>德世朗</span></td>
+                            <td>成本价：<span>78</span>元</td>
+                            <td><a href=""><i class="fa fa-commenting green"></i></a></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img class="fl" src="../../static/img/wx_bill.jpg" height="40" widtd="40"/>
+                                <div class="fl mt5 ml5">
+                                    <p>复古款式可充电灯泡灯 LED小夜灯</p>
+                                    <p>尺寸分类：黑色小</p>
+                                </div>
+                            </td>
+                            <td>6300</td>
+                            <td>1</td>
+                            <td></td>
+                            <td>安妮宝贝</td>
+                            <td class="orange">用户已付款</td>
+                            <td>2300</td>
+                            <td>9.8</td>
+                            <td class="blue"><a href="#">发货</a><span class="ml5 mr5">|</span><a href="#">退款</a></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- 全局js -->
+    <script src="../../static/b2c-reception/frame/hAdmin/js/jquery.min.js?v=2.1.4"></script>
+    <script src="../../static/b2c-reception/frame/hAdmin/js/bootstrap.min.js?v=3.3.6"></script>
+    <script src="../../static/b2c-reception/frame/hAdmin/js/plugins/layer/layer.min.js"></script>
+    <!-- Flot -->
+    <script src="../../static/b2c-reception/frame/hAdmin/js/plugins/flot/jquery.flot.js"></script>
+    <script src="../../static/b2c-reception/frame/hAdmin/js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+    <script src="../../static/b2c-reception/frame/hAdmin/js/plugins/flot/jquery.flot.resize.js"></script>
+    <script src="../../static/b2c-reception/frame/hAdmin/js/plugins/flot/jquery.flot.pie.js"></script>
+    <script src="../../static/b2c-reception/frame/ludo-jquery-treetable-3.2.0/jquery.treetable.js"></script>
+    <!-- 自定义js -->
+    <script src="../../static/b2c-reception/frame/hAdmin/js/content.js"></script>
+    <script src="../../static/b2c-reception/validator/kindGoods/categoryManagement.js"></script>
+</body>
+</html>

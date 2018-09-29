@@ -1,0 +1,130 @@
+
+.wx-txtScroll-top-1{
+    background-color: #EBEBEB;
+}
+.payment-welfare-banner-2{
+    padding: 0;
+}
+.payment-welfare-banner-2 img {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+.b2b-weui_cells_access-2{
+    margin-top: 0;
+}
+.wx-txtScroll-top-1 .txtScroll-top .bd{ padding:15px;  }
+.wx-txtScroll-top-1 .txtScroll-top .infoList li{ min-height:54px;}
+.wx-txtScroll-top-1 .txtScroll-top .infoList li .date{ float:right; color:#999;  }
+.ball{
+    align-items: center;
+    /*padding: 10px;*/
+    transition: all 0.3s ease 0s;
+}
+.ball .ball-q{
+    display: inline-block;
+    border-radius: 50%;
+    margin: 0 1%;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+}
+.ball .ball-red{
+    background-color: #ff0000;
+    color: #ffffff;
+}
+.ball .ball-blue{
+    background-color: #0a6aa1;
+    color: #ffffff;
+}
+.weui_cells-lottery-list .weui_cell p{
+    padding: 5px 0px;
+}
+.point-img-2{
+    position: relative;
+}
+.point-img-2:before {
+    top: 0;
+    border-top: 1px solid #d9d9d9;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    content: " ";
+    position: absolute;
+    left: 15px;
+    /*width: 100%;*/
+    height: 1px;
+    color: #d9d9d9;
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+}
+.point-img-2 .b2b-sea-list li{
+    border: none;
+}
+.weui_cells-lottery-list-2{
+    margin-top: 0;
+}
+.weui_cells-lottery-list-2:before {
+    left: 15px;
+}
+
+.point-img-2 ul li .weui-flex{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.b2b-js-categoryInner-2{
+    background-color: rgba(242, 242, 242, 1);
+}
+.b2b-js-categoryInner-2 .weui_cell{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.details-width-2{
+    width: 200px;
+}
+.weui-margin-2 .weui_cell .weui_cell_ft{
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: flex;
+    align-items: center;
+}
+
+.weui-margin-2 .weui_cell .weui_cell_ft .form-con{
+    -webkit-flex: 1 1 0;
+    flex: 1 1 0;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    outline: none;
+    border: none;
+    background: none;
+    color: #999;
+}
+.weui-margin-2 .weui_cell .weui_cell_ft .weui_btn{
+    -webkit-flex: 1 1 0;
+    flex: 1 1 0;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    width: 60px;
+    margin-left: -15px;
+}
+
+.weui_clls_checkbox .ball{
+    padding: 15px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

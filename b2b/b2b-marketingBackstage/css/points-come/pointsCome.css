@@ -1,0 +1,217 @@
+
+
+
+/*******/
+.main{
+    padding: 0 15px;
+}
+.come-h3{
+    font-size: 20px;
+    color: #606060;
+    line-height: 50px;
+}
+
+.form-horizontal .btn-orange{
+    color: #ffffff!important;
+    background-color:#ED7043!important;
+    border-color: #ED7043!important;
+}
+
+.form-group label{
+    font-weight: inherit;
+}
+
+.come-table thead{
+    background-color: #F9F9F9;
+}
+
+
+.table-striped>tbody>tr:nth-of-type(odd) {
+    background-color:inherit;
+}
+
+.table-striped>tbody>tr:nth-of-type(even) {
+    background-color:#F9F9F9;
+}
+
+.table-hover>tbody>tr:hover {
+    background-color: #f5f5f5!important;
+}
+.btn-link-btn{
+    color: #559AC8;
+}
+
+.page-header-no-br{
+    border: none;
+}
+.choice-active .btn-orange{
+    border-color: #ED7043;
+    color: #ED7043!important;
+}
+.time-line{
+    position: relative;
+}
+.time-line .time-icon{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    text-align: center;
+    top: 0;
+    right: -15px;
+}
+
+.active-main{
+    padding: 15px 30px;
+}
+.select2-container--default .select2-selection--single {
+    border: 1px solid #cfdadd;
+    border-radius: 2px;
+}
+.select2-container--default.select2-container--focus .select2-selection--multiple {
+    border: solid #aaa 1px;
+    outline: 0;
+}
+.select2-container--default .select2-selection--multiple {
+    background-color: white;
+    border: 1px solid #cfdadd;
+    border-radius: 2px;
+    cursor: text;
+}
+
+.activ-t1{
+    background-color: #F9F9F9;
+    height: 50px;
+    line-height: 50px;
+    margin-bottom: -5px;
+}
+.activ-t1 div,.activ-t1 div h3{
+    line-height: 50px;
+}
+.activ-t1 .come-h4{
+    font-size: 18px;
+    font-weight: inherit;
+}
+.activ-t1 .btn{
+    margin-left: 15px;
+}
+.img-box{
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+.img-box .img-up{
+    position: absolute;
+}
+
+
+
+
+/***0115合作咨询****/
+.cooperh3{
+    font-size: 24px;
+    padding:0 0 20px 15px;
+}
+.btn-bg-orange{
+    background: #ED7043;
+    color: #fff!important;
+}
+.btn-bg-orange:hover{
+    background: #c05e1c;
+}
+.form-group .tc{
+    text-align: center;
+}
+.textindet2{
+    text-indent: 2em;
+}
+select.form-control {
+    padding: 2px 12px;
+}
+.table-bor{
+    border: 1px solid #f1f1f1;
+}
+.wid50{
+    width: 50px;
+}
+.inputborder{
+    border:1px solid #ccc;
+    text-align: center;
+    outline-color:#ED7043;
+}
+.hei50{
+    height: 52px;
+    line-height: 52px;
+}
+.adv-btn button{
+    vertical-align: initial;
+}
+.pt7{
+    padding-top: 7px;
+}
+.posr{
+    position: relative;
+}
+.posinput{
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 100%;
+    opacity: 0;
+}
+.posblock{
+    position: absolute;
+    right: 10px;
+    width: 60px;
+    background: #fff;
+    height: 28px;
+    top: 0;
+    line-height: 28px;
+    text-align: center;
+
+}
+
+/*0116*/
+.selection .select2-selection{
+    height: 30px;
+}
+.select2-container .select2-selection--single .select2-selection__rendered{
+    padding-left: 12px;
+}
+.form-control{
+    height: 34px;
+}
+/*0119*/
+.center tr td,th{
+    text-align: center;
+}
+.onoffswitch-center {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+.tableImg{
+    cursor: pointer;
+}
+.bold th{
+    font-weight: 800;
+}
+.ml12{
+    margin-left: 15px;
+}
+.icon_img{
+    width: 350px;
+    height: 96px;
+    background: #f6f6f6;
+    text-align: center ;
+}
+.icon_img img{
+    margin: 35px;
+}
+.posv1ab{
+    position: absolute;
+    top: 0;
+    height: 96px;
+    opacity: 0;
+    width: 400px;
+}

@@ -1,0 +1,23 @@
+.forinput{
+    margin: 20px 0;
+}
+.formmain{
+    width: 250px;
+    margin: 0 auto;
+}
+.formmain input{
+    line-height: 25px;
+}
+.formbutton{
+    width: 100px;
+    height: 30px;
+    background: #1778dd;
+    color: #fff;
+    outline: none;
+    border: none;
+    text-align: center;
+    border-radius: 5px;
+    margin: 0 auto;
+    display: block;
+    cursor: pointer;
+}

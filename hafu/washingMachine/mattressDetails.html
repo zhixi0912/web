@@ -1,0 +1,385 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!--360浏览器优先以webkit内核解析-->
+    <title>已卖出商品-发货</title>
+    <link rel="shortcut icon" href="frame/hAdmin/favicon.ico">
+    <link href="frame/hAdmin/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="frame/hAdmin/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="frame/ludo-jquery-treetable-3.2.0/css/jquery.treetable.css" rel="stylesheet">
+    <link href="frame/hAdmin/css/animate.css" rel="stylesheet">
+    <link href="frame/hAdmin/css/style.css?v=4.1.0" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet"/>
+</head>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content">
+        <div class="ibox">
+            <div class="top-title ibox-title pb15">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="bs-callout bs-callout-info"><h4>床垫详情</h4></div>
+                    </div>
+                    <div class="col-sm-6 text-right">
+                        <a class="btn btn-w-m btn-info">修改</a>
+                        <a class="btn btn-w-m btn-default">返回</a>
+                    </div>
+                </div>
+            </div>
+            <div class="ibox-content">
+                <div class="table-responsive mt15">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>床垫详情</h5>
+                        </div>
+                        <div class="ibox-content no-padding">
+                            <div class="list-group-item  ">
+                                <form role="form" class="form-inline">
+                                    <div class="form-group">
+                                        <label class="">床垫ID：</label>
+                                        <p class="form-control-static  m-r-lg">497915773</p>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="">床垫品牌：</label>
+                                        <p class="form-control-static m-r-lg">49791</p>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="">所属渠道：</label>
+                                        <p class="form-control-static m-r-lg">哈福</p>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-responsive mt15">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>数据监控</h5>
+                        </div>
+                        <div class="ibox-content no-padding">
+                            <div class="list-group-item  ">
+                                <div class=" no-padding">
+                                    <div class="list-group-item ">
+                                        <div class="row">
+                                            <div class="col-sm-12 mt20">
+                                                <div class="tabs-container">
+                                                    <ul class="nav nav-tabs">
+                                                        <li class="active"><a data-toggle="tab" href="#tab-1" aria-expanded="true"> 心率</a>
+                                                        </li>
+                                                        <li class=""><a data-toggle="tab" href="#tab-2" aria-expanded="false">呼吸率</a></li>
+                                                        <li class=""><a data-toggle="tab" href="#tab-2" aria-expanded="false">上床时间</a></li>
+                                                        <li class=""><a data-toggle="tab" href="#tab-2" aria-expanded="false">离床时间</a></li>
+                                                        <li class=""><a data-toggle="tab" href="#tab-2" aria-expanded="false">睡眠时长</a></li>
+                                                    </ul>
+                                                    <div class="tab-content">
+                                                        <div id="tab-1" class="tab-pane active">
+                                                            <div class="panel-body">
+                                                                <form action="">
+                                                                    <div class="form-horizontal">
+                                                                        <div class="form-group">
+                                                                            <label class="col-sm-2 control-label text-left" style="text-align: left;">呼吸率</label>
+                                                                            <div class="col-sm-9 text-right form-inline">
+                                                                                <label class="control-label">选择日期：</label>
+                                                                                <select class="form-control">
+                                                                                    <option>2015-08-01~2015-10-01</option>
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="col-sm-1">
+                                                                                <p class="form-control-static m-r-lg"><i class="fa fa-circle m-r-sm text-navy"></i>心率</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="">
+                                                                        <div id="flot-line-chart-moving" style="height:217px;">
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                        <div id="tab-2" class="tab-pane">
+                                                            <div class="panel-body">
+                                                                <div class="form-group">
+                                                                    <label class=" col-sm-4 control-label mt5 tr"><i class="fa fa-globe f16 mr5"></i>如果该物品无需物流运送(如虚拟产品)，您可以点击</label>
+                                                                    <div class="col-sm-2">
+                                                                        <a class="btn btn-w-m btn-info">确认发货</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div id="tab-3" class="tab-pane">
+                                                            <div class="panel-body">
+                                                                <div class="form-group">
+                                                                    <label class=" col-sm-4 control-label mt5 tr"><i class="fa fa-globe f16 mr5"></i>如果该物品无需物流运送(如虚拟产品)，您可以点击</label>
+                                                                    <div class="col-sm-2">
+                                                                        <a class="btn btn-w-m btn-info">确认发货</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div id="tab-4" class="tab-pane">
+                                                            <div class="panel-body">
+                                                                <div class="form-group">
+                                                                    <label class=" col-sm-4 control-label mt5 tr"><i class="fa fa-globe f16 mr5"></i>如果该物品无需物流运送(如虚拟产品)，您可以点击</label>
+                                                                    <div class="col-sm-2">
+                                                                        <a class="btn btn-w-m btn-info">确认发货</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div id="tab-5" class="tab-pane">
+                                                            <div class="panel-body">
+                                                                <div class="form-group">
+                                                                    <label class=" col-sm-4 control-label mt5 tr"><i class="fa fa-globe f16 mr5"></i>如果该物品无需物流运送(如虚拟产品)，您可以点击</label>
+                                                                    <div class="col-sm-2">
+                                                                        <a class="btn btn-w-m btn-info">确认发货</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+
+
+
+
+
+
+
+
+                                        <div class="ibox-content no-padding">
+                                            <div class="m-t-lg">
+                                                        <div class="tabs-container">
+                                                            <ul class="nav nav-tabs">
+                                                                <li class="active"><a data-toggle="tab" href="#tab-a-1" aria-expanded="true">报警记录</a>
+                                                                </li>
+                                                                <li class=""><a data-toggle="tab" href="#tab-a-2" aria-expanded="false">报警设置</a></li>
+                                                            </ul>
+                                                            <div class="tab-content">
+                                                                <div id="tab-a-1" class="tab-pane active">
+                                                                    <div class="panel-body">
+                                                                        <table class="table table-center text-center table-bordered">
+                                                                            <thead>
+                                                                            <tr>
+                                                                                <th>时间</th>
+                                                                                <th>报警内容</th>
+                                                                                <th>处理结果</th>
+                                                                            </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    100310019
+                                                                                </td>
+                                                                                <td>100</td>
+                                                                                <td>沪A55533</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    100310019
+                                                                                </td>
+                                                                                <td>100</td>
+                                                                                <td>沪A55533</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    100310019
+                                                                                </td>
+                                                                                <td>100</td>
+                                                                                <td>沪A55533</td>
+                                                                            </tr>
+                                                                            </tbody>
+                                                                            <thead>
+                                                                            <tr>
+                                                                                <td>
+                                                                                </td>
+                                                                                <td colspan="3">
+
+                                                                                    <ul class="pagination pull-right table-page">
+                                                                                        <li><a href="#">«</a></li>
+                                                                                        <li><a href="#">‹</a></li>
+                                                                                        <li class=" active"><a href="#">1</a></li>
+                                                                                        <li><a href="#">›</a></li>
+                                                                                        <li><a href="#">»</a></li>
+                                                                                        <li><a href="#"><input class="order-foot-input" type="text"></a></li>
+                                                                                        <li><a href="">go</a></li>
+                                                                                    </ul>
+                                                                                    <span class="order-foot-span">共有4条每页显示20条</span>
+                                                                                </td>
+                                                                            </tr>
+                                                                            </thead>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                                <div id="tab-a-2" class="tab-pane">
+                                                                    <div class="panel-body">
+                                                                        <div class="form-horizontal">
+                                                                            <div class="form-group">
+                                                                                <div class="col-lg-6">
+                                                                                <label class="col-lg-3 control-label">心率：</label>
+                                                                                <div class="col-lg-4">
+                                                                                <input class="form-control" type="text" placeholder="输入心率下限" />
+                                                                                </div>
+                                                                                <label class="col-lg-1 control-label">至</label>
+                                                                                <div class="col-lg-4">
+                                                                                <input class="form-control" type="text" placeholder="输入心率上限" />
+                                                                                </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form-group">
+                                                                                <div class="col-lg-6">
+                                                                                    <label class="col-lg-3 control-label">呼吸率：</label>
+                                                                                    <div class="col-lg-4">
+                                                                                        <input class="form-control" type="text" placeholder="输入呼吸率下限" />
+                                                                                    </div>
+                                                                                    <label class="col-lg-1 control-label">至</label>
+                                                                                    <div class="col-lg-4">
+                                                                                        <input class="form-control" placeholder="输入呼吸率上限" type="text" />
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form-group">
+                                                                                <div class="col-lg-6">
+                                                                                    <label class="col-lg-3 control-label">离床时长：</label>
+                                                                                    <div class="col-lg-4">
+                                                                                        <input class="form-control" type="text" placeholder="输入离床时长上限" />
+                                                                                    </div>
+
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form-group">
+                                                                                <div class="col-lg-6">
+                                                                                    <label class="col-lg-3 control-label">监控时段：</label>
+                                                                                    <div class="col-lg-4">
+                                                                                        <input class="form-control" type="text" placeholder="选择时间" />
+                                                                                    </div>
+                                                                                    <label class="col-lg-1 control-label">至</label>
+                                                                                    <div class="col-lg-4">
+                                                                                        <input class="form-control" type="text" placeholder="选择时间" />
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- 全局js -->
+    <script src="frame/hAdmin/js/jquery.min.js?v=2.1.4"></script>
+    <script src="frame/hAdmin/js/bootstrap.min.js?v=3.3.6"></script>
+    <script src="frame/hAdmin/js/plugins/layer/layer.min.js"></script>
+    <!-- Flot -->
+    <script src="frame/hAdmin/js/plugins/flot/jquery.flot.js"></script>
+    <script src="frame/hAdmin/js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+    <script src="frame/hAdmin/js/plugins/flot/jquery.flot.resize.js"></script>
+    <script src="frame/hAdmin/js/plugins/flot/jquery.flot.pie.js"></script>
+    <script src="frame/ludo-jquery-treetable-3.2.0/jquery.treetable.js"></script>
+    <!-- 自定义js -->
+    <script src="frame/hAdmin/js/content.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            var container = $("#flot-line-chart-moving");
+            var maximum = container.outerWidth() / 2 || 300;
+            var data = [];
+
+            function getRandomData() {
+                if (data.length) {
+                    data = data.slice(1);
+                }
+                while (data.length < maximum) {
+                    var previous = data.length ? data[data.length - 1] : 50;
+                    var y = previous + Math.random() * 10 - 5;
+                    data.push(y < 0 ? 0 : y > 100 ? 100 : y);
+                }
+                var res = [];
+                for (var i = 0; i < data.length; ++i) {
+                    res.push([i, data[i]])
+                }
+                return res;
+            }
+            series = [{
+                data: getRandomData(),
+                lines: {
+                    fill: true
+                }
+            }];
+            var plot = $.plot(container, series, {
+                grid: {
+
+                    color: "#999999",
+                    tickColor: "#f7f9fb",
+                    borderWidth:0,
+                    minBorderMargin: 20,
+                    labelMargin: 10,
+                    backgroundColor: {
+                        colors: ["#ffffff", "#ffffff"]
+                    },
+                    margin: {
+                        top: 8,
+                        bottom: 20,
+                        left: 20
+                    },
+                    markings: function(axes) {
+                        var markings = [];
+                        var xaxis = axes.xaxis;
+                        for (var x = Math.floor(xaxis.min); x < xaxis.max; x += xaxis.tickSize * 2) {
+                            markings.push({
+                                xaxis: {
+                                    from: x,
+                                    to: x + xaxis.tickSize
+                                },
+                                color: "#fff"
+                            });
+                        }
+                        return markings;
+                    }
+                },
+                colors: ["#4fc5ea"],
+                xaxis: {
+                    tickFormatter: function() {
+                        return "";
+                    }
+                },
+                yaxis: {
+                    min: 0,
+                    max: 110
+                },
+                legend: {
+                    show: true
+                }
+            });
+
+            // Update the random dataset at 25FPS for a smoothly-animating chart
+
+            setInterval(function updateRandom() {
+                series[0].data = getRandomData();
+                plot.setData(series);
+                plot.draw();
+            }, 40);
+        });
+        </script>
+</body>
+</html>

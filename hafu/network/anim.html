@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="frame/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <style>
+        a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            vertical-align: baseline;
+            font: inherit;
+            font-size: 100%;
+        }
+        .navbar.visible {
+            visibility: visible;
+        }
+        .navbar, .navbar>.navbar-container {
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 44px;
+        }
+        .navbar {
+            position: fixed;
+            z-index: 10;
+            visibility: hidden;
+            background: #fff;
+        }
+        .navbar, .navbar>.navbar-container {
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 44px;
+        }
+        .navbar .navbar-container {
+            position: absolute;
+        }
+        .navbar .navbar-container .bar.bar-header.bar-transparent {
+            background: transparent;
+        }
+
+        .navbar .navbar-container .bar.bar-header {
+            box-shadow: 0 0 10px rgba(0,0,0,.15);
+            z-index: 2;
+            padding: 5px 0;
+        }
+        .bar.bar-header {
+            box-shadow: 0 0 10px rgba(0,0,0,.15);
+        }
+        .bar-header {
+            top: 0;
+            border-top-width: 0;
+            border-bottom-width: 1px;
+        }
+        .bar {
+            border: none;
+            background-image: linear-gradient(0deg,#ddd,#ddd 50%,transparent 0);
+            background-position: bottom;
+            background-size: 100% 1px;
+            background-repeat: no-repeat;
+        }
+        .bar {
+            display: -webkit-box;
+            display: -moz-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            position: absolute;
+            right: 0;
+            left: 0;
+            z-index: 9;
+            box-sizing: border-box;
+            padding: 5px;
+            width: 100%;
+            height: 44px;
+            border-width: 0;
+            border-style: solid;
+            border-top: 1px solid transparent;
+            border-bottom: 1px solid #ddd;
+            background-color: #fff;
+            background-size: 0;
+        }
+        .bar .buttons, .bar .buttons.primary-buttons, .bar .buttons.secondary-buttons {
+            display: inherit;
+        }
+        .bar .button-bar>.button, .bar .buttons>.button {
+            min-height: 31px;
+            line-height: 32px;
+        }
+        .bar .button.button-icon, .bar button.button-icon {
+            font-size: 17px;
+            background-color: #ffffff;
+        }
+        .bar .button, .bar button {
+            z-index: 1;
+            padding: 0 8px;
+            min-width: 0;
+            min-height: 31px;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 32px;
+        }
+        .button {
+            min-height: 44px;
+        }
+        .button-icon {
+            -webkit-transition: opacity .1s;
+            transition: opacity .1s;
+            padding: 0 6px;
+            min-width: 0;
+            border-color: transparent;
+            background: none;
+        }
+        .button {
+            border: 1px solid transparent;
+            background-color: #f5f5f5;
+            color: #444;
+            position: relative;
+            display: inline-block;
+            margin: 0;
+            padding: 0 12px;
+            min-width: 52px;
+            min-height: 47px;
+            border-radius: 4px;
+            vertical-align: top;
+            text-align: center;
+            text-overflow: ellipsis;
+            font-size: 16px;
+            line-height: 42px;
+            cursor: pointer;
+        }
+        .bar .buttons span {
+            display: inline-block;
+        }
+        .navbar .navbar-container .bar.bar-header .title {
+            -webkit-transition-property: opacity,-webkit-transform;
+            transition-property: opacity,transform;
+            opacity: 0;
+        }
+        .bar .title {
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 0;
+            overflow: hidden;
+            margin: 0 10px;
+            min-width: 30px;
+            height: 43px;
+            text-align: center;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-size: 17px;
+            font-weight: 500;
+            line-height: 44px;
+        }
+    </style>
+</head>
+<body>
+<div von-nav="" class="navbar visible" style="transition: 400ms; opacity: 1; position: absolute;">
+    <div class="navbar-container">
+        <div von-navbar="active" class="bar bar-header bar-transparent">
+            <div class="buttons">
+                <button class="button button-icon"><span>返回></span></button>
+            </div>
+            <h1 class="title" style="transition: 0ms; transform: translate3d(0px, 0px, 0px); opacity: 1;">
+                <span>我是标题</span></h1> <!---->
+        </div>
+    </div>
+</div>
+
+
+
+<!--以下是另一个无关紧要别的例子-->
+    <div class="container" style="padding-top: 1200px;padding-bottom: 300px">
+        <h1 class="animate-box text-center">Title</h1>
+    </div>
+</body>
+<script type="text/javascript" src="frame/jQuery-2.1.4.min.js"></script>
+<script type="text/javascript" src="frame/jquery.waypoints.min.js"></script>
+<script>
+    $('.animate-box').waypoint( function( direction ) {
+        $(this.element).addClass("wobble animated")
+    } , { offset: '85%' } );
+</script>
+</html>

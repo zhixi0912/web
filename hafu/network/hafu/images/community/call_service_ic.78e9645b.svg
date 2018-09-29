@@ -1,0 +1,36 @@
+<svg id="组_36" data-name="组 36" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="172" height="172" viewBox="0 0 172 172">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke: #e5e5e5;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+        filter: url(#filter);
+      }
+
+      .cls-2 {
+        fill: #4c4c4c;
+      }
+
+      .cls-2, .cls-3 {
+        fill-rule: evenodd;
+      }
+
+      .cls-3 {
+        fill: #00ce60;
+      }
+    </style>
+    <filter id="filter" x="1" y="1" width="170" height="170" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#fff"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g style="fill: #fff; filter: url(#filter)">
+    <circle id="椭圆_88_拷贝" data-name="椭圆 88 拷贝" class="cls-1" cx="86" cy="86" r="85" style="stroke: inherit; filter: none; fill: inherit"/>
+  </g>
+  <use xlink:href="#椭圆_88_拷贝" style="stroke: #e5e5e5; filter: none; fill: none"/>
+  <path id="圆角矩形_112" data-name="圆角矩形 112" class="cls-2" d="M927,2057a2,2,0,0,1-2-2v-16a2,2,0,0,1,4,0v16A2,2,0,0,1,927,2057Zm-11,13h-1.679l-2.3,10.19c-1.068,4.06-1.192,5.81-4.515,5.81H892.472c-3.318,0-3.439-1.75-4.506-5.81l-2.3-10.19H884a6,6,0,0,1-6-6v-36a6,6,0,0,1,6-6h1.665l2.3-10.19c1.067-4.06,1.188-5.81,4.506-5.81H907.5c3.323,0,3.447,1.75,4.515,5.81l2.3,10.19H916a6,6,0,0,1,6,6v36A6,6,0,0,1,916,2070Zm-23,13h14a1.041,1.041,0,0,0,1-1l2.087-8H890.261l1.739,8A1.031,1.031,0,0,0,893,2083Zm-3.174-11h20.783l0.521-2H889.391ZM908,2010a1.041,1.041,0,0,0-1-1H893a1.031,1.031,0,0,0-1,1l-1.739,8h19.826Zm2.609,10H889.826l-0.435,2H911.13Zm7.391,8a2,2,0,0,0-2-2H884a2,2,0,0,0-2,2v36a2,2,0,0,0,2,2h32a2,2,0,0,0,2-2v-36Z" transform="translate(-814 -1961)"/>
+  <path id="椭圆_93" data-name="椭圆 93" class="cls-3" d="M900,2058a12,12,0,1,1,12-12A12,12,0,0,1,900,2058Zm0-22a10,10,0,1,0,10,10A10,10,0,0,0,900,2036Z" transform="translate(-814 -1961)"/>
+</svg>

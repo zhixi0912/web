@@ -1,0 +1,297 @@
+.weui_login_width{
+    width: 70%;
+    margin: 0 auto;
+}
+.weui_border{
+    border: 1px solid #eee;
+    border: 1px solid #eee;
+    border-radius: 5px;
+}
+.weui_login_yz1{
+    width: 50%;
+    float: left;
+}
+.weui_login_yz2{
+    width: 45%;
+    float: right;
+}
+.weui_login_top{
+    width: 60%;
+    padding-top: 50px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+
+
+.b2b-js-categoryInner .weui_cell{
+    padding: 0 15px;
+}
+.b2b-js-categoryInner .weui_cell:before{
+    display: none;
+}
+.b2b-sea-list li{
+    margin-top: 0;
+    margin-bottom: 0;
+    border-bottom: 1px solid #e5e5e5 ;
+}
+.bottom-btn{
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #ffffff;
+}
+
+.bottom-btn:before {
+     content: " ";
+     position: absolute;
+     left: 0;
+     top: 0;
+     width: 100%;
+     height: 1px;
+     border-top: 1px solid #d9d9d9;
+     color: #d9d9d9;
+     -webkit-transform-origin: 0 0;
+     transform-origin: 0 0;
+     -webkit-transform: scaleY(.5);
+     transform: scaleY(.5);
+ }
+.bottom-btn-2{
+    padding: 0;
+}
+.bottom-btn-2 a{
+    display: inline-block;
+    width: 49%;
+    padding: 10px 0;
+}
+.bottom-btn-2 a:first-child{
+    border-right: 1px solid #e5e5e5 ;
+}
+.weui_cell_ft_2 {
+    max-width: 60%;
+    text-align: left;
+}
+
+/*0823*/
+.purchase-logo img{
+    width: 200px;
+    margin: 40px auto;
+    display: block;
+}
+.purchase-input{
+    width: 80%;
+    text-align: right;
+    padding-right: 5px;
+}
+.put-main{
+    background: #F5F5F5;
+    padding: 20px;
+}
+.put-width{
+    width: 60%;
+    margin: 0 auto;
+    position: relative;
+    line-height: 30px;
+}
+.pur-lf{
+    float: left;
+    text-align: right;
+}
+.pur-rg{
+    float: right;
+    text-align: right;
+}
+.pur-hr{
+    width: 100%;
+    position: absolute;
+    top:90px;
+    height: 1px;
+    background: #ccc;
+}
+.pur-foot{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background: #F9F9F9;
+    color: #6A7072;
+}
+.pur-foot-lf{
+    line-height: 50px;
+    padding: 0 20px;
+    font-size: 16px;
+    float: left;
+}
+.pur-foot-rg{
+    line-height: 50px;
+    padding: 0 20px;
+    font-size: 16px;
+    float: right;
+    background: #FC6262;
+    color: #fff;
+}
+.weui-pay-img img {
+    float: left;
+    width: 35px;
+    margin: 5px 5px;
+}
+.weui-pay-img p {
+    line-height: 47px;
+    color: #666;
+}
+.weui-pay-sapn span{
+    padding: 5px;
+    border: 1px solid #FCAA62;
+    font-size: 12px!important;
+    color:#FCAA62;
+    border-radius: 3px;
+}
+.pur-foot-pay{
+    text-align: center;
+    line-height: 50px;
+    font-size: 16px;
+    color: #fff;
+    background: #FC6262;
+}
+.payment-logo{
+    background: #fff;
+    padding: 50px;
+}
+.payment-logo img{
+    width: 100px;
+    margin: 0 auto;
+    display: block;
+
+}
+.payment-welfare-banner{
+    background: #fff;
+    padding: 10px 0;
+}
+.payment-welfare-banner img{
+    width: 250px;
+    margin: 0 auto;
+    display: block;
+}
+.weui_cells {
+    font-size: 14px;
+}
+.mb50{
+    margin-bottom: 50px;
+}
+.integral-rule img{
+    width: 300px;
+    margin: 0 auto;
+    padding-top: 20px;
+    display: block;
+}
+.intergral-information{
+    background: #FFFFFF;
+    margin:10px 10px 0 10px;
+}
+.weui_tab_bd_item .weui_cells_access .weui_cell_ft:after{
+    border-color: #6A7072;
+}
+.activequery-p{
+    width:150px;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    overflow:hidden;
+
+}
+/*0824*/
+.active-pos{
+    position: absolute;
+    right: 30px;
+    top: 25%;
+}
+.f-gray {
+    color: #bbbbbb !important;
+}
+.f-grays {
+    color: #999999 !important;
+}
+.borNr {
+    border-right: none!important;
+}
+.details-width{
+    width: 80px;
+    display: block;
+}
+.active-short{
+    width: 190px;
+    word-break:break-all;
+}
+.pos{
+    position: absolute;
+}
+
+
+
+
+/* 0911 */
+#codeValidateImg{
+
+}
+.weui_login_width .weui_cells:before,.weui_cells::after{
+	border: none;
+}
+.weui_login_width .weui_cells{
+	height: 40px;
+    line-height: 40px;
+    
+}
+.weui_login_width .weui_cell{
+	padding:0!important;
+	text-indent: 1em;
+}
+.weui_cell .icon{
+	text-indent: 0.5em;
+}
+
+
+/*1218*/
+.infocontent{
+    padding-bottom: 75px;
+}
+.info-border{
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+}
+.info-img{
+    width: 50px;
+    padding: 15px 0 15px 20px;
+}
+.infoborder-bot{
+    border-bottom: 1px solid #d3d3d3;
+    margin: 0 10px 0 10px;
+}
+.infoborder-bot:last-child{
+    border-bottom: none;
+}
+.jddiv{
+    text-align: center;
+    padding-bottom: 10px;
+}
+.jddiv li{
+    width: 20%;
+    text-align: center;
+    float: left;
+    padding-top: 10px;
+}
+.jdimg img{
+    width: 50px;
+}
+.fixedbtn{
+    width: 90%;
+    position: fixed;
+    margin: 5%;
+    bottom: 0;
+}
+.infotophei{
+    height: 323px;
+    overflow: auto;
+}

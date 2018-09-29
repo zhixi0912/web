@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>个人中心</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <link rel="stylesheet" href="../../frame/weui-master/style/icon.css">
+    <link rel="stylesheet" href="../../frame/weui-master/style/weui.css">
+    <link rel="stylesheet" href="../../frame/weui-master/style/weui2.css">
+    <link rel="stylesheet" href="../../font/style.css">
+    <link rel="stylesheet" href="../../css/points-come/points-come.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <script src="../../frame/weui-master/zepto.min.js"></script>
+    <script src="../../frame/weui-master/swipe.js"></script>
+    <script src="../../frame/weui-master/select.js"></script>
+    <script>
+        $(function(){
+            $('#slide2').swipeSlide({
+                autoSwipe:true,//自动切换默认是
+                speed:3000,//速度默认4000
+                continuousScroll:true,//默认否
+                transitionType:'cubic-bezier(0.22, 0.69, 0.72, 0.88)',//过渡动画linear/ease/ease-in/ease-out/ease-in-out/cubic-bezier
+                lazyLoad:true,//懒加载默认否
+                firstCallback : function(i,sum,me){
+                    me.find('.dot').children().first().addClass('cur');
+                },
+                callback : function(i,sum,me){
+                    me.find('.dot').children().eq(i).addClass('cur').siblings().removeClass('cur');
+                }
+            });
+            $('#slide3').swipeSlide({
+                autoSwipe:true,//自动切换默认是
+                speed:3000,//速度默认4000
+                continuousScroll:true,//默认否
+                transitionType:'ease-in',
+                axisX:false
+            });
+        });
+
+    </script>
+
+</head>
+<body style="background-color: #f8f8f8;">
+<div style="position: absolute; width: 100%;">
+    <div class="weui_panel weui_panel_access come-top noneborbefore">
+        <div class="weui_panel_bd">
+            <a href="userInfor.html" class="weui_media_box weui_media_appmsg">
+                <div class="weui_media_hd">
+                    <img class="weui_media_appmsg_thumb" src="../../images/points-come/user-img.png" alt="">
+                </div>
+                <div class="weui_media_bd">
+                    <h4 class="weui_media_title f-5d6668">小钡昵称</h4>
+                    <p class="weui_media_desc f-5d6668 mt2"><span class="icon-Group-68 icon-come f-5d6668">&nbsp;13512345678</span></p>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="weui_grids grids-small come-box ">
+        <a href="myPoints.html" class="grid"  >
+            <div class="weui_grid_icon">
+                <span class="icon-Group-63 icon-2"></span>
+            </div>
+            <p class="weui_grid_label pt2">我的积分</p>
+            <p class="weui_grid_label_1">5万钡</p>
+        </a>
+        <a href="flowWallet.html" class="grid" >
+            <div class="weui_grid_icon">
+                <span class="icon-Group-62  icon-1"></span>
+            </div>
+            <p class="weui_grid_label pt2">我的流量</p>
+            <p class="weui_grid_label_1">100M</p>
+        </a>
+        <a href="http://qy.51points.com.cn/game/lotteryCenter/center/index?userId=1" class="grid" >
+            <div class="weui_grid_icon">
+                <span class="icon-Group-64 icon-3"></span>
+            </div>
+            <p class="weui_grid_label pt2">我的彩票</p>
+            <p class="weui_grid_label_1">1万元</p>
+        </a>
+        <a href="expect.html" class="grid" >
+            <div class="weui_grid_icon">
+                <span class="icon-Group-65 icon-4"></span>
+            </div>
+            <p class="weui_grid_label pt2">我的卡券</p>
+            <p class="weui_grid_label_1">敬请期待</p>
+        </a>
+
+    </div>
+    <div class="weui_panel weui_panel_access mt15 noneborbefore noneborafter">
+        <a class="weui_panel_ft noneborbefore f-343434" href="activeInfor.html">已参加的活动</a>
+        <a class="weui_panel_ft  f-343434" href="myPrize.html">我的奖品</a>
+    </div>
+    <div class="weui_cells weui_panel_access-phone mt15 noneborbefore noneborafter">
+        <div class="weui_cell">
+            <div class="weui_cell_bd weui_cell_primary ptb10">
+                <p class="line-tx pb5">客服热线： <a href="tel:4008213226">4008213226</a></p>
+                <p>工作时间： <span>9:00 到 18:00（工作日）</span></p>
+            </div>
+            <a href="tel:4008213226" class="weui_cell_ft"><span class="icon-Group-66"></span></a>
+        </div>
+    </div>
+    <!--<div style="height: 200px;"></div>-->
+</div>
+<div class="weui-weixin weui-weixin-come mt15"  style="position: fixed;bottom: 0;width: 100%;">
+    <div class="weui-weixin-ui">
+        <div class="slides" id="slide2">
+            <ul>
+                <li>
+                    <a href="freeActivity.html">
+                        <img src="../../images/points-come/userbanner.png"/>
+                    </a>
+                </li>
+                <li>
+                    <a href="freeActivity.html">
+                        <img src="../../images/points-come/userbanner-1.png"/>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+        <!--<a href="freeActivity.html" class="weui-weixin-img my-points-box game-head">-->
+            <!--<img src="../../images/points-come/userbanner.png" class="my-points-ban" style="margin: 0 auto;">-->
+        <!--</a>-->
+        <div>
+            <a href="businessCooperation.html" class="weui_btn bg-orange-b"><span class="icon-Group-67"></span>商务合作</a>
+        </div>
+    </div>
+
+</div>
+</body>
+
+</html>

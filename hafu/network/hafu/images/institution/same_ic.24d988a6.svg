@@ -1,0 +1,37 @@
+<svg id="组_30" data-name="组 30" xmlns="http://www.w3.org/2000/svg" width="80" height="98.03" viewBox="0 0 80 98.03">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f9f9f9;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2, .cls-6 {
+        fill: #d4f3e2;
+      }
+
+      .cls-3 {
+        fill: #ccf5df;
+      }
+
+      .cls-4 {
+        fill: #00ce60;
+      }
+
+      .cls-5 {
+        fill: #aeeccb;
+      }
+    </style>
+  </defs>
+  <path id="矩形_130" data-name="矩形 130" class="cls-1" d="M1430,1052.73V1118h-66v-82h50.56Z" transform="translate(-1362 -1022.97)"/>
+  <path id="矩形_131" data-name="矩形 131" class="cls-1" d="M1422,1024l18,19h-18v-19Z" transform="translate(-1362 -1022.97)"/>
+  <path id="椭圆_98" data-name="椭圆 98" class="cls-2" d="M1386,1110v-2h34v2h-34Zm0-11h34v2h-34v-2Zm0-9h34v2h-34v-2Zm-9,22a3,3,0,1,1,3-3A3,3,0,0,1,1377,1112Zm0-9a3,3,0,1,1,3-3A3,3,0,0,1,1377,1103Zm0-9a3,3,0,1,1,3-3A3,3,0,0,1,1377,1094Z" transform="translate(-1362 -1022.97)"/>
+  <path id="矩形_125" data-name="矩形 125" class="cls-3" d="M1423,1042h17v67h-10v-55h-20v-18h-36v-10h49v16Zm-11,10h17l-17-16v16Z" transform="translate(-1362 -1022.97)"/>
+  <path id="圆角矩形_138" data-name="圆角矩形 138" class="cls-4" d="M1442,1105a6,6,0,0,1-6,6h-4v-3h4a3,3,0,0,0,3-3v-61h-16.5a1.5,1.5,0,0,1-1.5-1.5V1026h-43a3,3,0,0,0-3,3v4h-3v-4a6,6,0,0,1,6-6h45v0.08a1.522,1.522,0,0,1,1.59.35l16.95,17.95a1.514,1.514,0,0,1,.34,1.62H1442v62Zm-18-77.75V1041h12.98Z" transform="translate(-1362 -1022.97)"/>
+  <path id="矩形_123" data-name="矩形 123" class="cls-5" d="M1424,1083h-51v-3h5v-27h12v27h34v3Z" transform="translate(-1362 -1022.97)"/>
+  <rect id="矩形_124" data-name="矩形 124" class="cls-6" x="32" y="43.03" width="10" height="14"/>
+  <path id="圆角矩形_137" data-name="圆角矩形 137" class="cls-4" d="M1432,1115a6,6,0,0,1-6,6h-58a6,6,0,0,1-6-6v-76a6,6,0,0,1,6-6h44a1.821,1.821,0,0,1,.52.08,1.986,1.986,0,0,1,1.93.5l16.94,17.94a2.19,2.19,0,0,1,.61,1.48v62Zm-22-62v-16h-41a3,3,0,0,0-3,3v74a3,3,0,0,0,3,3h56a3,3,0,0,0,3-3v-59h-16A2.006,2.006,0,0,1,1410,1053Zm4-13.98V1051h11.31Z" transform="translate(-1362 -1022.97)"/>
+</svg>

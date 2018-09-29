@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--360浏览器优先以webkit内核解析-->
+    <title>活动管理列表</title>
+    <link rel="shortcut icon" href="hAdmin/favicon.ico">
+    <link href="hAdmin/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="hAdmin/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="frame/select2-4.0.3/css/select2.min.css?v=3.3.6" rel="stylesheet">
+    <link href="hAdmin/css/animate.css" rel="stylesheet">
+    <link href="css/base.css?v=3.1.0" rel="stylesheet">
+    <link href="hAdmin/css/style.css?v=4.1.0" rel="stylesheet">
+    <link href="css/iframe-page.css" rel="stylesheet">
+    <link href="css/page.css" rel="stylesheet">
+    <link href="css/game/game-1.css" rel="stylesheet">
+    <link href="css/game/component.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/game/game-activity.css">
+
+
+</head>
+<body class="light-grey-bg">
+<div class="wrapper wrapper-content">
+    <form name="form1" enctype="multipart/form-data" id="form">
+        <div class="ibox act">
+            <div class="top-title ibox-title">
+                <div class="row">
+                    <div class="col-sm-10">
+                        <div class="bs-callout bs-callout-info ibox-h4-color"><p class="f16">H5活动管理</p></div>
+                    </div>
+                </div>
+            </div>
+            <div class="ibox-content">
+                <div class="form-horizontal">
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <div class="form-group">
+                                <label class="control-label col-sm-1 pl0 pr0">企业名称</label>
+                                <div class="col-sm-11">
+                                    <input type="text" class="form-control" placeholder="请输入企业名称">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-1 pl0 pr0 control-label">活动名称</label>
+                                <div class="col-sm-7">
+                                    <input  type="text" class="form-control" placeholder="请输入活动名称">
+                                </div>
+                                <label class="col-sm-2 control-label">活动状态</label>
+                                <div class="col-sm-2">
+                                    <select  class="form-control col-lg-1">
+                                        <option value="0" class="form-control">全部</option>
+                                        <option value="1" class="form-control">待处理</option>
+                                        <option value="2" class="form-control">已导出</option>
+                                        <option value="3" class="form-control">已处理</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-1 pl0 pr0 control-label">创建时间</label>
+                                <div class="col-sm-3">
+                                    <input type="text" id="start" class="form-control b2b-datetime hasDatepicker">
+                                </div>
+                                <label  class="col-sm-1 control-label tc">到</label>
+                                <div class="col-sm-3">
+                                    <input type="text" id="end" class="form-control b2b-datetime hasDatepicker">
+                                </div>
+                                <label class="col-sm-2 control-label">活动分类</label>
+                                <div class="col-sm-2">
+                                    <select  class="form-control col-lg-1">
+                                        <option value="0" class="form-control">全部</option>
+                                        <option value="1" class="form-control">待处理</option>
+                                        <option value="2" class="form-control">已导出</option>
+                                        <option value="3" class="form-control">已处理</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 pr0"><div class="form-group" style="height: 30px;"></div></div>
+                        <div class="col-sm-2 pr0"><div class="form-group" style="height: 30px;"></div></div>
+                        <div class="col-sm-2 pl0 tr">
+                            <a href="javascript:void(0);" class="btn btn-green">查询</a>
+                            <a id="export" class="btn btn-default btn-bg-gray">导出</a>
+                        </div>
+                    </div>
+                </div>
+                <table class="table mt20">
+                    <thead>
+                    <tr class="active">
+                        <th>创建时间</th>
+                        <th>活动状态</th>
+                        <th>活动分类</th>
+                        <th>活动名称</th>
+                        <th>消耗积分</th>
+                        <th>详细</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>2017-09-22  18:00:00</td>
+                        <td>进行中</td>
+                        <td>大转盘</td>
+                        <td>镒钡国际员工中秋福利发放</td>
+                        <td>1,000 </td>
+                        <td><a href="game-activity2.html" class="f-blue">查看</a></td>
+                    </tr>
+                    <tr>
+                        <td>2017-09-22  18:00:00</td>
+                        <td>进行中</td>
+                        <td>大转盘</td>
+                        <td>镒钡国际员工中秋福利发放</td>
+                        <td>1,000 </td>
+                        <td><a href="game-activity2.html" class="f-blue">查看</a></td>
+                    </tr>
+                    <tr>
+                        <td>2017-09-22  18:00:00</td>
+                        <td>进行中</td>
+                        <td>大转盘</td>
+                        <td>镒钡国际员工中秋福利发放</td>
+                        <td>1,000 </td>
+                        <td><a href="game-activity2.html" class="f-blue">查看</a></td>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+
+
+
+<!-- 全局js -->
+<script src="hAdmin/js/jquery.min.js"></script>
+<script src="js/jquery-migrate-1.2.1.js"></script>
+<script src="js/ajaxform.js"></script>
+<script src="frame/formvalidator4.1.3/formValidatorRegex.js"></script>
+<script src="frame/formvalidator4.1.3/formValidator-4.1.3.js"></script>
+<script src="hAdmin/js/bootstrap.min.js?v=3.3.6"></script>
+<script src="hAdmin/js/plugins/layer/layer.min.js"></script>
+<script src="frame/select2-4.0.3/js/select2.min.js"></script>
+<!--<script src="frame/vue2.1.8/vue.min.js"></script>-->
+<!-- Flot -->
+<script src="hAdmin/js/plugins/flot/jquery.flot.js"></script>
+<script src="hAdmin/js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+<script src="hAdmin/js/plugins/flot/jquery.flot.resize.js"></script>
+<script src="hAdmin/js/plugins/flot/jquery.flot.pie.js"></script>
+<!-- 自定义js -->
+
+</body>
+</html>

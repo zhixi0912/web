@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>帐户查询</title>
+    <link rel="stylesheet" href="frame/weui-master/style/icon.css">
+    <link rel="stylesheet" href="frame/weui-master/style/weui.css">
+    <link rel="stylesheet" href="frame/weui-master/style/weui2.css">
+    <link rel="stylesheet" href="frame/weui-master/style/weui3.css">
+    <link rel="stylesheet" href="frame/weui-master/style/weuix.min.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jQuery/jQuery-2.1.4.min.js"></script>
+    <script src="frame/weui-master/zepto.min.js"></script>
+    <script>
+        $(function(){
+            //搜索加载
+            $('.searchbar_wrap').searchBar({
+                cancelText:"取消",
+                searchText:'查询',
+                onfocus: function (value) {
+
+                },
+                onblur:function(value) {
+
+                },
+                oninput: function(value) {
+
+                },
+                onsubmit:function(value){
+                },
+                oncancel:function(){
+
+                },
+
+                onclear:function(){
+
+                }
+            });
+
+        });
+    </script>
+</head>
+<body>
+
+<div class="searchbar_wrap">
+</div>
+<div class="weui_cells_title">
+    <p>上海镒钡信息科技有限公司</p>
+    <p class="f-gray">余额：<span class="f-red">100.00</span> 钡</p>
+</div>
+<div class="page-bd point-img pb40">
+    <ul class="b2b-sea-list">
+        <li>
+            <div class="weui-flex js-category">
+                <div class="weui-flex-item">
+                    <p class="point-col-black point-mar-bottom">线下汇款</p>
+                </div>
+            </div>
+            <div class="js-categoryInner b2b-js-categoryInner">
+                <div class="weui_cell">
+                    <div class="weui_cell_bd weui_cell_primary">
+                        <p class="f-gray"><span class="f-black">100</span>元</p>
+                    </div>
+                    <div class="weui_cell_ft"><span class="red">+1000</span>钡</div>
+                </div>
+                <div class="weui_cell">
+                    <div class="weui_cell_bd weui_cell_primary">
+                        <p class="f-gray">2017-07-17  18:45</p>
+                    </div>
+                    <div class="weui_cell_ft">余额：2000钡</div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="weui-flex js-category">
+                <div class="weui-flex-item">
+                    <p class="point-col-black point-mar-bottom">支付宝</p>
+                </div>
+            </div>
+            <div class="js-categoryInner b2b-js-categoryInner">
+                <div class="weui_cell">
+                    <div class="weui_cell_bd weui_cell_primary">
+                        <p class="f-gray"><span class="f-black">100</span>元</p>
+                    </div>
+                    <div class="weui_cell_ft"><span class="red">+1000</span>钡</div>
+                </div>
+                <div class="weui_cell">
+                    <div class="weui_cell_bd weui_cell_primary">
+                        <p class="f-gray">2017-07-17  18:45</p>
+                    </div>
+                    <div class="weui_cell_ft">余额：2000钡</div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="weui-flex js-category">
+                <div class="weui-flex-item">
+                    <p class="point-col-black point-mar-bottom">2017中秋节员工福利</p>
+                </div>
+            </div>
+            <div class="js-categoryInner b2b-js-categoryInner">
+                <div class="weui_cell">
+                    <div class="weui_cell_bd weui_cell_primary">
+                        <p class="f-gray"><span class="f-black">100</span>元</p>
+                    </div>
+                    <div class="weui_cell_ft"><span class="f-blue">-1000</span>钡</div>
+                </div>
+                <div class="weui_cell">
+                    <div class="weui_cell_bd weui_cell_primary">
+                        <p class="f-gray">2017-07-17  18:45</p>
+                    </div>
+                    <div class="weui_cell_ft">余额：2000钡</div>
+                </div>
+            </div>
+        </li>
+
+    </ul>
+</div>
+
+<div class="bottom-btn">
+    返回
+</div>
+</body>
+</html>

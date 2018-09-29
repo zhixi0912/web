@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>积分采购</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <link rel="stylesheet" href="frame/weui-master/style/icon.css">
+    <link rel="stylesheet" href="frame/weui-master/style/weui.css">
+    <link rel="stylesheet" href="frame/weui-master/style/weui2.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jQuery/jQuery-2.1.4.min.js"></script>
+    <script src="frame/weui-master/zepto.min.js"></script>
+    <script src="frame/weui-master/picker.js"></script>
+    <script src="frame/weui-master/select.js"></script>
+    <script>
+        $(function(){
+            $("#d1").select({
+                title: "发票内容",
+                autoClose:true,
+                items: ['不开发票','技术开发费','技术咨询费','技术服务费','技术转让费','企业营销策划费','商务信息咨询费','企业管理咨询费'],
+                onChange: function(d) {
+                    $.alert("你选择了"+d.values);
+                }
+            });
+        });
+        $(function(){
+
+            $('#tab1').tab({defaultIndex:0,activeClass:"tab-green"});
+            $('#tab2').tab({defaultIndex:2,activeClass:"tab-red"});
+            $('#tab3').tab({defaultIndex:0,activeClass:"tab-blue"});
+            $('#tab4').tab({defaultIndex:0,activeClass:"tab-blue "}); $('#tab5').tab({defaultIndex:1,activeClass:"bg_green"});$('#tab6').tab({defaultIndex:2,activeClass:"bg_red"});
+        });
+
+    </script>
+
+</head>
+
+<body ontouchstart style="background-color: #EBEBEB;">
+<div class="purchase-logo">
+    <img src="images/purchase-logo.png"/>
+</div>
+<div class="weui_cells weui_clls_checkbox weui-margin">
+    <div class="weui_cell">
+        <div class="weui_cell_hd"><label class="weui_label f-gray">采购金额</label></div>
+        <div class="weui_cell_bd weui_cell_primary">
+            <input class="weui_input purchase-input" maxlength="10" type="number" pattern="[0-9]*" placeholder="请输入采购金额">
+        </div>
+        <span>元</span>
+    </div>
+    <div class="weui_cell">
+        <div class="weui_cell_hd">
+            <label class="weui_label select-font f-gray">发票选项</label>
+        </div>
+        <div class="weui_cell_bd weui_cell_primary">
+            <input class="weui_input purchase-input" type="text" value="不开发票" id="d1" readonly="">
+        </div>
+        <span class="icon icon-74 weui-qi-select-ico"></span>
+    </div>
+</div>
+<div class="put-main">
+    <div class="put-width clearfix">
+        <div class="pur-lf">
+            <p>采购金额</p>
+            <p>服务费</p>
+            <p>发票税点</p>
+            <p>总计</p>
+        </div>
+        <div class="pur-rg">
+            <p><span>1,000.00 </span>元</p>
+            <p>+<span>50.00</span>元</p>
+            <p>+<span>63.00</span>元</p>
+            <p><span class="f-red f16">1,113.00</span>元</p>
+        </div>
+        <div class="pur-hr"></div>
+    </div>
+</div>
+<div class="pur-foot">
+    <div class="pur-foot-lf">
+        <p>应付金额 : <span class="f-red"> 1,113.00 </span>元</p>
+    </div>
+    <div class="pur-foot-rg">
+        <p>提交订单</p>
+    </div>
+</div>
+
+</div>
+</body>
+
+</html>

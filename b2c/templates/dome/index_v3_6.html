@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!--360浏览器优先以webkit内核解析-->
+    <title>退款中订单-已发货退货订单详情</title>
+    <link rel="shortcut icon" href="../../static/b2c-reception/frame/hAdmin/favicon.ico">
+    <link href="../../static/b2c-reception/frame/hAdmin/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="../../static/b2c-reception/frame/hAdmin/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="../../static/b2c-reception/frame/ludo-jquery-treetable-3.2.0/css/jquery.treetable.css" rel="stylesheet">
+    <link href="../../static/b2c-reception/frame/hAdmin/css/animate.css" rel="stylesheet">
+    <link href="../../static/b2c-reception/frame/hAdmin/css/style.css?v=4.1.0" rel="stylesheet">
+    <link href="../../static/b2c-reception/css/style.css?v=4.1.0" rel="stylesheet">
+    <link rel="stylesheet" href="../../static/css/base/base.css">
+</head>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content">
+        <div class="ibox">
+            <div class="top-title ibox-title pb15">
+                <div class="row">
+                    <div class="col-sm-10">
+                        <div class="bs-callout bs-callout-info"><h4>已卖出商品</h4></div>
+                    </div>
+                    <div class="col-sm-2">
+                        <a class="btn btn-w-m btn-default">返回</a>
+                    </div>
+                </div>
+            </div>
+            <div class="ibox-content">
+                <div class="icon-content">
+                    <ul>
+                        <li><div class="btn btn-default btn-circle btn-yx" ><span class="f20">1</span></div><p class="tc mt5">用户申请售后</p></li>
+                        <li><div class="icon-pos" ><div class="jt"></div><i class="fa fa-arrow-right jt-icon"></i></div></li>
+                        <li><div class="btn btn-primary btn-circle btn-yx" ><span class="f20">2</span></div><p class="tc mt5">处理退货申请</p></li>
+                        <li><div class="icon-pos" ><div class="jt"></div><i class="fa fa-arrow-right jt-icon"></i></div></li>
+                        <li><div class="btn btn-default btn-circle btn-yx" ><span class="f20">3</span></div><p class="tc mt5">等待用户退货</p></li>
+                        <li><div class="icon-pos" ><div class="jt"></div><i class="fa fa-arrow-right jt-icon"></i></div></li>
+                        <li><div class="btn btn-default btn-circle btn-yx" ><span class="f20">4</span></div><p class="tc mt5">确认收货完结订单</p></li>
+                        <li><div class="icon-pos" ><div class="jt"></div><i class="fa fa-arrow-right jt-icon"></i></div></li>
+                        <li><div class="btn btn-default btn-circle btn-yx" ><span class="f20">5</span></div><p class="tc mt5">完结订单</p></li>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+                <div class="row mt20">
+                    <div class="col-sm-8">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5>退款处理</h5>
+                            </div>
+                            <div class="ibox-content no-padding">
+                                <div class="list-group">
+                                        <div class=" list-group-item">请处理退款申请<i class="fa fa-history mr10 ml10" ></i>剩余自动确认收货时间：<span class="blue">14天23小时58分</span></div>
+                                    <div class=" list-group-item">收货信息：<span class="ml10">李泓，13087471927，云南省 曲靖市 会泽县 金钟镇 钟屏路329号OPPO专卖店(明清走廊对面) ，654200</span></div>
+                                </div>
+                                <div class="list-group-item">
+                                    <p>如未发货，请同意退款给用户，如进行发货操作，则取消退款。</p>
+                                    <p>如已发货，请主动与用户联系。</p>
+                                    <p>如逾期未响应申请，视作同意用户申请，系统自动发送退货地址给用户。</p>
+                                    <div class="row mt20">
+                                        <div class="col-sm-2">
+                                            <a class="btn btn-w-m btn-info" id="sub">同意退货</a>
+                                        </div>
+                                        <div class="col-sm-1 tc">
+                                            <a class="btn btn-w-m btn-default" id="refuse">拒绝退货</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5>协商历史</h5>
+                            </div>
+                            <div class="ibox-content no-padding">
+                                <div class="list-group-item ">
+                                    <div class="row">
+                                        <img class="col-sm-1" src="../../static/img/wx_bill.jpg" height="40" widtd="40"/>
+                                        <div class="col-sm-11">
+                                            <p>用户：<span>13817145120</span><span class="gray fr">2017-07-29 15:54:25</span></p>
+                                            <p>发起了退货退款申请，货物状态：已发货，原因：排错/不想要，数额：6000钡 ，说明：商品破损。</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5>退款详情</h5>
+                            </div>
+                            <div class="ibox-content no-padding">
+                                <ul class="list-group table-hover">
+                                    <li class="list-group-item">
+                                        <div class="row">
+                                            <img class="col-sm-2" src="../../static/img/wx_bill.jpg" height="40" widtd="40"/>
+                                            <div class="col-sm-10">
+                                                <p>复古款式可充电灯泡灯 LED小夜灯</p>
+                                                <p>尺寸分类：黑色小所 <span class="blue fr">属供应商：51Points</span></p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item ">
+                                        <div class="row">
+                                            <p class="col-sm-3">用户：</p>
+                                            <p class="col-sm-9">13817145120</p>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item ">
+                                        <div class="row">
+                                            <p class="col-sm-3">订单编号：</p>
+                                            <p class="col-sm-9">31703860449845305</p>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item ">
+                                        <div class="row">
+                                            <p class="col-sm-3">成交时间：</p>
+                                            <p class="col-sm-9">2017-07-16 21:13:36 </p>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item ">
+                                        <div class="row">
+                                            <p class="col-sm-3">售价：</p>
+                                            <p class="col-sm-9">6000钡（600钡*10）</p>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item ">
+                                        <div class="row">
+                                            <p class="col-sm-3">邮费：</p>
+                                            <p class="col-sm-9">600钡</p>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item ">
+                                        <div class="row">
+                                            <p class="col-sm-3">物流公司：</p>
+                                            <p class="col-sm-9">韵达快递</p>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item ">
+                                        <div class="row">
+                                            <p class="col-sm-3">物流单号：</p>
+                                            <p class="col-sm-9">31703860449845305</p>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item ">
+                                        <div class="row">
+                                            <p class="col-sm-3">退款编号：</p>
+                                            <p class="col-sm-9">31703860449845305</p>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item ">
+                                        <div class="row">
+                                            <p class="col-sm-3">原因：</p>
+                                            <p class="col-sm-9">商品破损</p>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item ">
+                                        <div class="row">
+                                            <p class="col-sm-3">说明：</p>
+                                            <p class="col-sm-9">破太大的洞了</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- 全局js -->
+    <script src="../../static/b2c-reception/frame/hAdmin/js/jquery.min.js?v=2.1.4"></script>
+    <script src="../../static/b2c-reception/frame/hAdmin/js/bootstrap.min.js?v=3.3.6"></script>
+    <script src="../../static/b2c-reception/frame/hAdmin/js/plugins/layer/layer.min.js"></script>
+    <!-- Flot -->
+    <script src="../../static/b2c-reception/frame/hAdmin/js/plugins/flot/jquery.flot.js"></script>
+    <script src="../../static/b2c-reception/frame/hAdmin/js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+    <script src="../../static/b2c-reception/frame/hAdmin/js/plugins/flot/jquery.flot.resize.js"></script>
+    <script src="../../static/b2c-reception/frame/hAdmin/js/plugins/flot/jquery.flot.pie.js"></script>
+    <script src="../../static/b2c-reception/frame/ludo-jquery-treetable-3.2.0/jquery.treetable.js"></script>
+    <!-- 自定义js -->
+    <script src="../../static/b2c-reception/frame/hAdmin/js/content.js"></script>
+    <script src="../../static/b2c-reception/validator/kindGoods/categoryManagement.js"></script>
+    <script src="../../static/b2c-reception/frame/layer/layer.js"></script>
+    <script>
+        $(function () {
+            $("#sub").click(function () {
+                layer.open({
+                    area: ['480px', '300px']
+                    ,title: '确认退货'
+                    ,btn: ['确认', '取消并返回']
+                    ,content: '<div class="panel-body">\n' +
+                    '<form action="">\n' +
+                    '<div class="form-horizontal">\n' +
+                    '<div class="form-group">\n' +
+                    '<label class="col-sm-3 pr0 control-label pt3">选择退货地址</label>\n' +
+                    '<div class="col-sm-8">\n' +
+                    '<select class="form-control" >' +
+                    '<option>请选择</option>' +
+                    '<option>上海市杨浦区黄兴路1800号东方蓝海3号楼1806室 ，000000，运营组（收），021-56991351</option>' +
+                    '<option>上海市杨浦区黄兴路1800号东方蓝海3号楼1806室 ，000000，运营组（收），021-56991351</option>' +
+                    '</select>\n' +
+                    '</div>\n' +
+                    '</div>\n' +
+                    '<div class="form-group">\n' +
+                    '<label class="col-sm-3 control-label">注意事项</label>\n' +
+                    '<div class="col-sm-8">\n' +
+                    '<textarea type="text" class="form-control" placeholder="请输入退货注意事项">\n</textarea>' +
+                    '</div>\n' +
+                    '</div>\n' +
+                    '</div>\n' +
+                    '</form>\n' +
+                    '</div>'
+                    ,yes: function(index, layero){
+                        //do something
+
+                        layer.close(index); //如果设定了yes回调，需进行手工关闭
+                    }
+                });
+            })
+            $("#refuse").click(function () {
+                layer.open({
+                    area: ['480px', '300px']
+                    ,title: '拒绝退货'
+                    ,btn: ['拒绝申请', '取消并返回']
+                    ,content: '<div class="panel-body">\n' +
+                    '<form action="">\n' +
+                    '<div class="form-horizontal">\n' +
+                    '<div class="form-group">\n' +
+                    '<label class="col-sm-3 control-label pt3">拒绝原因</label>\n' +
+                    '<div class="col-sm-8">\n' +
+                    '<select class="form-control" >' +
+                    '<option>请选择</option>' +
+                    '<option>商品没问题，用户未举证</option>' +
+                    '<option>商品有问题，用户举证</option>' +
+                    '</select>\n' +
+                    '</div>\n' +
+                    '</div>\n' +
+                    '<div class="form-group">\n' +
+                    '<label class="col-sm-3 control-label">拒绝说明</label>\n' +
+                    '<div class="col-sm-8">\n' +
+                    '<textarea type="text" class="form-control" placeholder="请输入拒绝退货理由">\n</textarea>' +
+                    '</div>\n' +
+                    '</div>\n' +
+                    '</div>\n' +
+                    '</form>\n' +
+                    '</div>'
+                    ,yes: function(index, layero){
+                        //do something
+
+                        layer.close(index); //如果设定了yes回调，需进行手工关闭
+                    }
+                });
+            })
+        })
+    </script>
+</body>
+</html>

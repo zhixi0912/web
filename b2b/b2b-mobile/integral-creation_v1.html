@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>扫码获积分创建</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <link rel="stylesheet" href="frame/weui-master/style/icon.css">
+    <link rel="stylesheet" href="frame/weui-master/style/weui.css">
+    <link rel="stylesheet" href="frame/weui-master/style/weui2.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!--<script src="js/jQuery/jQuery-2.1.4.min.js"></script>-->
+    <script src="frame/weui-master/zepto.min.js"></script>
+    <script src="frame/weui-master/picker.js"></script>
+    <script src="frame/weui-master/select.js"></script>
+    <script src="js/Integral%20purchasing/flowWallet.js"></script>
+</head>
+
+<body ontouchstart style="background-color: #EBEBEB;">
+<div class="weui_tab " id="tab4">
+    <div class="weui_navbar">
+        <div class="weui_navbar_item  tab-blue" onclick="form2()">扫码获积分</div>
+        <div class="weui_navbar_item" onclick="form1()">积点活动</div>
+    </div>
+    <div class="weui_tab_bd weui-hidden">
+        <!--扫码获积分-->
+        <div class="weui_tab_bd_item">
+            <form id="form1">
+                <div class="weui_cells weui_clls_checkbox mt1">
+                    <div class="weui_cell">
+                        <div class="weui_cell_bd weui_cell_primary">
+                            <p>活动名称</p>
+                        </div>
+                        <div class="weui_cell_ft">
+                            <input class="weui_input purchase-input" type="text" placeholder="请输入活动名称"/>
+                        </div>
+                    </div>
+                    <div class="weui_cell">
+                        <div class="weui_cell_bd weui_cell_primary">
+                            <p>活动展示</p>
+                        </div>
+                        <div class="weui_cell_ft">
+                            <input class="weui_input purchase-input" id="selection-1" type="text" placeholder="请选择展示类型"/>
+                        </div>
+                        <i class="icon icon-74"></i>
+                    </div>
+                    <div class="weui_cell">
+                        <div class="weui_cell_bd weui_cell_primary">
+                            <p>生成数量</p>
+                        </div>
+                        <div class="weui_cell_ft">
+                            <input class="weui_input purchase-input" type="text" placeholder="请填写活动码生成数量"/>
+                        </div>
+                        <span>张</span>
+                    </div>
+                    <div class="weui_cell">
+                        <div class="weui_cell_bd weui_cell_primary">
+                            <p>单张积分</p>
+                        </div>
+                        <div class="weui_cell_ft">
+                            <input class="weui_input purchase-input" type="text" placeholder="请填写每张生成的积分"/>
+                        </div>
+                        <span>钡</span>
+                    </div>
+                    <div class="weui_cell">
+                        <div class="weui_cell_bd weui_cell_primary">
+                            <p>领取规则</p>
+                        </div>
+                        <div class="weui_cell_ft">
+                            <input class="weui_input purchase-input" id="selection-3"  type="text" placeholder="请选择领取规则"/>
+                        </div>
+                        <i class="icon icon-74"></i>
+                    </div>
+                    <div class="weui_cell">
+                        <div class="weui_cell_hd">
+                            <label class="weui_label">活动开始</label>
+                        </div>
+                        <div class="weui_cell_ft weui_cell_primary">
+                            <input class="weui_input purchase-input" type="text" value="" id='date'/>
+                        </div>
+                        <i class="icon icon-74"></i>
+                    </div>
+                    <div class="weui_cell">
+                        <div class="weui_cell_hd">
+                            <label class="weui_label">活动结束</label>
+                        </div>
+                        <div class="weui_cell_ft weui_cell_primary">
+                            <input class="weui_input purchase-input" type="text" value="" id='date1'/>
+                        </div>
+                        <i class="icon icon-74"></i>
+                    </div>
+                    <div class="weui_cell">
+                        <div class="weui_cell_hd">
+                            <label class="weui_label">每日开始</label>
+                        </div>
+                        <div class="weui_cell_ft weui_cell_primary">
+                            <input class="weui_input purchase-input" type="text" value="" id='time'/>
+                        </div>
+                        <i class="icon icon-74"></i>
+                    </div>
+                    <div class="weui_cell">
+                        <div class="weui_cell_hd">
+                            <label class="weui_label">每日结束</label>
+                        </div>
+                        <div class="weui_cell_ft weui_cell_primary">
+                            <input class="weui_input purchase-input" type="text" value="" id='time1'/>
+                        </div>
+                        <i class="icon icon-74"></i>
+                    </div>
+                    <div class="weui_cell">
+                        <div class="weui_cell_bd weui_cell_primary">
+                            <p>代打印（选填）</p>
+                        </div>
+                        <div class="weui_cell_ft">
+                            <input class="weui_input purchase-input" id="selection-2"  type="text" placeholder="请输入姓名"/>
+                        </div>
+                        <i class="icon icon-74"></i>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!--积点活动-->
+        <div class="weui_tab_bd_item" style="display: none;">
+            <form id="form2">
+                <div class="weui_cells weui_clls_checkbox mt1 mb50">
+                    <div class="weui_cell">
+                        <div class="weui_cell_bd weui_cell_primary">
+                            <p>活动名称</p>
+                        </div>
+                        <div class="weui_cell_ft">
+                            <input class="weui_input purchase-input" type="text" placeholder="请输入活动名称"/>
+                        </div>
+                    </div>
+                    <div class="weui_cell">
+                        <div class="weui_cell_bd weui_cell_primary">
+                            <p>活动展示</p>
+                        </div>
+                        <div class="weui_cell_ft">
+                            <input class="weui_input purchase-input" id="selection-1-1" type="text" placeholder="请选择展示类型"/>
+                        </div>
+                        <i class="icon icon-74"></i>
+                    </div>
+                    <div class="weui_cell">
+                        <div class="weui_cell_bd weui_cell_primary">
+                            <p>门店数量</p>
+                        </div>
+                        <div class="weui_cell_ft">
+                            <input class="weui_input purchase-input" type="text" placeholder="请填写请填写门店数"/>
+                        </div>
+                        <span>家</span>
+                    </div>
+                    <div class="weui_cell">
+                        <div class="weui_cell_bd weui_cell_primary">
+                            <p>每家生成</p>
+                        </div>
+                        <div class="weui_cell_ft">
+                            <input class="weui_input purchase-input" type="text" placeholder="每家数量共 3,000 张"/>
+                        </div>
+                        <span>张</span>
+                    </div>
+                    <div class="weui_cell">
+                        <div class="weui_cell_bd weui_cell_primary">
+                            <p>积点规则</p>
+                        </div>
+                        <div class="weui_cell_ft">
+                            <input class="weui_input purchase-input" id="selection-3-1"  type="text" placeholder="请选择积点规则"/>
+                        </div>
+                        <i class="icon icon-74"></i>
+                    </div>
+                    <div class="weui_cell">
+                        <div class="weui_cell_bd weui_cell_primary">
+                            <p>累计扫满</p>
+                        </div>
+                        <div class="weui_cell_ft">
+                            <input class="weui_input purchase-input" type="text" placeholder="请填写累计扫满次数"/>
+                        </div>
+                        <span>次</span>
+                    </div>
+                    <div class="weui_cell">
+                        <div class="weui_cell_bd weui_cell_primary">
+                            <p>可得积分</p>
+                        </div>
+                        <div class="weui_cell_ft">
+                            <input class="weui_input purchase-input" type="text" placeholder="请输填写累计扫满后可得的积分"/>
+                        </div>
+                        <span>钡</span>
+                    </div>
+                    <div class="weui_cell">
+                        <div class="weui_cell_bd weui_cell_primary">
+                            <p>领取规则</p>
+                        </div>
+                        <div class="weui_cell_ft">
+                            <input class="weui_input purchase-input" id="selection-3-2"  type="text" placeholder="请选择领取规则"/>
+                        </div>
+                        <i class="icon icon-74"></i>
+                    </div>
+                    <div class="weui_cell">
+                        <div class="weui_cell_hd">
+                            <label class="weui_label">活动开始</label>
+                        </div>
+                        <div class="weui_cell_ft weui_cell_primary">
+                            <input class="weui_input purchase-input" type="text" value="" id='date2'/>
+                        </div>
+                        <i class="icon icon-74"></i>
+                    </div>
+                    <div class="weui_cell">
+                        <div class="weui_cell_hd">
+                            <label  class="weui_label">活动结束</label>
+                        </div>
+                        <div class="weui_cell_ft weui_cell_primary">
+                            <input class="weui_input purchase-input" type="text" value="" id='date3'/>
+                        </div>
+                        <i class="icon icon-74"></i>
+                    </div>
+                    <div class="weui_cell">
+                        <div class="weui_cell_hd">
+                            <label class="weui_label">每日开始</label>
+                        </div>
+                        <div class="weui_cell_ft weui_cell_primary">
+                            <input class="weui_input purchase-input" type="text" value="" id='time2'/>
+                        </div>
+                        <i class="icon icon-74"></i>
+                    </div>
+                    <div class="weui_cell">
+                        <div class="weui_cell_hd">
+                            <label class="weui_label">每日结束</label>
+                        </div>
+                        <div class="weui_cell_ft weui_cell_primary">
+                            <input class="weui_input purchase-input" type="text" value="" id='time3'/>
+                        </div>
+                        <i class="icon icon-74"></i>
+                    </div>
+                    <div class="weui_cell">
+                        <div class="weui_cell_bd weui_cell_primary">
+                            <p>代打印（选填）</p>
+                        </div>
+                        <div class="weui_cell_ft">
+                            <input class="weui_input purchase-input" id="selection-2-1"  type="text" placeholder="请填写代打印信息"/>
+                        </div>
+                        <i class="icon icon-74"></i>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <section class="weui-menu borNt">
+        <a class="weui-menu-inner borNl" href="#">
+            <span>提交</span>
+        </a>
+        <!--<a class="weui-menu-inner" href="#">-->
+            <!--<span>积分采购</span>-->
+        <!--</a>-->
+    </section>
+
+</div>
+</body>
+
+</html>
